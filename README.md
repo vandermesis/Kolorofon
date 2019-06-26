@@ -1,7 +1,5 @@
 ![logo](/Demo/logo.png)
 
-
-
 # ColorPatterns (Game)
 
 *Ultra very early stage of some foggy idea of concept of a game ;)*

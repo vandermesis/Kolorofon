@@ -101,10 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
-				8433BF4422766CA700EDC257 /* ViewController.swift */,
-				8433BF4622766CA700EDC257 /* Main.storyboard */,
-				8433BF4922766CA800EDC257 /* Assets.xcassets */,
-				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
+				BA94BCF622C3844300D8157E /* View */,
+				BA94BCF522C3841B00D8157E /* Controller */,
+				BA94BCF722C3845600D8157E /* Supporting Files */,
 				8433BF4E22766CA800EDC257 /* Info.plist */,
 			);
 			path = ColorPatterns;
@@ -131,6 +130,31 @@
 				BA2F743222C36B55007573FF /* logo.png */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		BA94BCF522C3841B00D8157E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8433BF4422766CA700EDC257 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA94BCF622C3844300D8157E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8433BF4622766CA700EDC257 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA94BCF722C3845600D8157E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8433BF4922766CA800EDC257 /* Assets.xcassets */,
+				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */ = {
