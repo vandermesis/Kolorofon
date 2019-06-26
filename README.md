@@ -26,5 +26,4 @@ Ho!
 
 Marek Skrzelowski, mskrzelowski@vandermesis.com
 
-
-*.swift learning month one*
+.swift learning month one*
