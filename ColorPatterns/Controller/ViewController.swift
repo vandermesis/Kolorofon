@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
+    //MARK: - Variables declared
     var audioPlayer : AVAudioPlayer!
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
     var pickedColor : CGFloat = 0
@@ -19,17 +20,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var pickedColorDataBase = [CGFloat]()
     var timer:Timer?
     var timeLeft = 60
-
-    override func viewDidLoad() {
-        
-        updateColorPatterns()
-        gameTimer()
-        yourScore.isHidden = true
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     
     @IBOutlet weak var colorBar1: UIButton!
     @IBOutlet weak var colorBar2: UIButton!
@@ -40,17 +30,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var yourScore: UILabel!
     
+    //MARK: - Methods called after startup
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateColorPatterns()
+        gameTimer()
+        yourScore.isHidden = true
+    }
     
+    //MARK: - User actions
     @IBAction func colorButtonPressed(_ sender: UIButton) {
-        
-        
         playSound(selectedFile: soundsArray[sender.tag-1])
         pickedColor = colorsArray[sender.tag-1]
         pickedColorDataBase.append(pickedColor)
         if pickedColorDataBase.count > 1 {
                 pickedColorDataBase.remove(at: 1)
         }
-        
         print(pickedColorDataBase)
         updateColorPatterns()
         if pickedColor == pickedColorDataBase[0] {
@@ -63,10 +58,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         print(colorsArray)
         print(userScore)
-        
-        
         }
-   
+    
+    //FIXME: Swipe Action for updateCollorPatterns when user's color is not on screen
+    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
+        updateColorPatterns()
+        print(colorsArray)
+    }
+    
+    //  Shake action for updateColorPatterns when user's color is not on screen
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             print("Why are you shaking me?")
@@ -75,8 +75,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    //MARK: - Play sound method
     func playSound(selectedFile : String){
-        
         let soundURL = Bundle.main.url(forResource: selectedFile, withExtension: "wav")
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL!)
@@ -84,18 +84,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             print(error.localizedDescription)
         }
         audioPlayer.play()
-        
-    }
-    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
-        
-        updateColorPatterns()
-        print(colorsArray)
-    
     }
     
-    
-    
-    
+    //MARK: - Update color patterns
     func updateColorPatterns() {
     
         let color1 = CGFloat.random(in: 0.0 ... 0.99)
@@ -110,7 +101,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         let color4ToCGFloat = CGFloat((String(format: "%.1f", color4) as NSString).doubleValue)
         let color5ToCGFloat = CGFloat((String(format: "%.1f", color5) as NSString).doubleValue)
         
-    
         colorBar1.backgroundColor = UIColor(hue: color1ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
         colorBar2.backgroundColor = UIColor(hue: color2ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
         colorBar3.backgroundColor = UIColor(hue: color3ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
@@ -120,6 +110,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         colorsArray = [color1ToCGFloat, color2ToCGFloat, color3ToCGFloat, color4ToCGFloat, color5ToCGFloat]
     }
     
+    //MARK: - Timer methods
     func gameTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
@@ -128,7 +119,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timeLeft -= 1
         timeLabel.text = String(timeLeft)
         print(timeLeft)
-        
         if timeLeft <= 0 {
             timer?.invalidate()
             timer = nil
