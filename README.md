@@ -1,8 +1,19 @@
-# ColorPatterns-Game
+![logo](/Demo/logo.png)
 
+
+
+# ColorPatterns (Game)
+
+*Ultra very early stage of some foggy idea of concept of a game ;)*
+
+![platform](https://img.shields.io/badge/platform-iOS-green.svg)
+![swift](https://img.shields.io/badge/swift-5.0-brightgreen.svg)
 [![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
 
-### *Ultra very early stage of some foggy idea of concept of a game ;)*
+
+
+![animation](/Demo/animation.gif)
+
 
 
 Follow your color!
