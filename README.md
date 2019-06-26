@@ -14,14 +14,17 @@
 
 ![animation](/Demo/animation.gif)
 
+## Usage
 
-
-Follow your color!
-You have 60 seconds to pick and follow your color. Shake it if your color is not on the screen.
-
+Follow your colour!
+You have 60 seconds to pick and follow your color. Shake it if your colour is not on the screen.
 
 Simple as that!
 Ho!
+
+## Author
+
+Marek Skrzelowski, mskrzelowski@vandermesis.com
 
 
 *.swift learning month one*
