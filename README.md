@@ -24,4 +24,5 @@ Simple as that!
 Ho!
 ## Who is who
 Marek Skrzelowski, mskrzelowski@vandermesis.com
+
 *.swift learning month one*
