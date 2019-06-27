@@ -46,32 +46,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if pickedColorDataBase.count > 1 {
                 pickedColorDataBase.remove(at: 1)
         }
-        print(pickedColorDataBase)
+        print("pickedColorDataBase",pickedColorDataBase)
         updateColorPatterns()
         if pickedColor == pickedColorDataBase[0] {
             userScore += 1
             scoreLabel.text = String(userScore)
         }
         if pickedColor != pickedColorDataBase[0] {
-            userScore -= 1
             scoreLabel.text = String(userScore)
         }
-        print(colorsArray)
-        print(userScore)
+        print("colorsArray:",colorsArray)
+        print("userScore:",userScore)
         }
     
     //FIXME: Swipe Action for updateCollorPatterns when user's color is not on screen
     @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
         updateColorPatterns()
-        print(colorsArray)
+        print("colorsArray:",colorsArray)
     }
     
     //  Shake action for updateColorPatterns when user's color is not on screen
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            print("Why are you shaking me?")
             updateColorPatterns()
-            print(colorsArray)
+            print("colorsArray:",colorsArray)
         }
     }
     
@@ -88,26 +86,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Update color patterns
     func updateColorPatterns() {
-    
-        let color1 = CGFloat.random(in: 0.0 ... 0.99)
-        let color2 = CGFloat.random(in: 0.0 ... 0.99)
-        let color3 = CGFloat.random(in: 0.0 ... 0.99)
-        let color4 = CGFloat.random(in: 0.0 ... 0.99)
-        let color5 = CGFloat.random(in: 0.0 ... 0.99)
-        
-        let color1ToCGFloat = CGFloat((String(format: "%.1f", color1) as NSString).doubleValue)
-        let color2ToCGFloat = CGFloat((String(format: "%.1f", color2) as NSString).doubleValue)
-        let color3ToCGFloat = CGFloat((String(format: "%.1f", color3) as NSString).doubleValue)
-        let color4ToCGFloat = CGFloat((String(format: "%.1f", color4) as NSString).doubleValue)
-        let color5ToCGFloat = CGFloat((String(format: "%.1f", color5) as NSString).doubleValue)
-        
-        colorBar1.backgroundColor = UIColor(hue: color1ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
-        colorBar2.backgroundColor = UIColor(hue: color2ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
-        colorBar3.backgroundColor = UIColor(hue: color3ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
-        colorBar4.backgroundColor = UIColor(hue: color4ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
-        colorBar5.backgroundColor = UIColor(hue: color5ToCGFloat, saturation: 1, brightness: 1, alpha: 1)
-        
-        colorsArray = [color1ToCGFloat, color2ToCGFloat, color3ToCGFloat, color4ToCGFloat, color5ToCGFloat]
+        var randomColorsArray = [CGFloat]()
+        for _ in 1...5 {
+            let color = CGFloat.random(in: 0.0...0.99)
+            let randomColor = CGFloat((String(format: "%.1f", color) as NSString).doubleValue)
+            randomColorsArray.append(randomColor)
+            print("randomColorsArray:",randomColorsArray)
+        }
+        colorBar1.backgroundColor = UIColor(hue: randomColorsArray[0], saturation: 1, brightness: 1, alpha: 1)
+        colorBar2.backgroundColor = UIColor(hue: randomColorsArray[1], saturation: 1, brightness: 1, alpha: 1)
+        colorBar3.backgroundColor = UIColor(hue: randomColorsArray[2], saturation: 1, brightness: 1, alpha: 1)
+        colorBar4.backgroundColor = UIColor(hue: randomColorsArray[3], saturation: 1, brightness: 1, alpha: 1)
+        colorBar5.backgroundColor = UIColor(hue: randomColorsArray[4], saturation: 1, brightness: 1, alpha: 1)
+        colorsArray = [randomColorsArray[0], randomColorsArray[1], randomColorsArray[2], randomColorsArray[3], randomColorsArray[4]]
     }
     
     //MARK: - Timer methods

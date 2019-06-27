@@ -52,6 +52,7 @@
 		BA199B732292F70200CD7C64 /* note2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note2.wav; sourceTree = "<group>"; };
 		BA2F743622C374DC007573FF /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAB2923822C533EC00A4EBA5 /* ColorPatterns.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ColorPatterns.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		8433BF3622766CA700EDC257 = {
 			isa = PBXGroup;
 			children = (
+				BAB2923822C533EC00A4EBA5 /* ColorPatterns.playground */,
 				BA02700322BC491000846DDC /* README.md */,
 				BA2F742722C3597B007573FF /* Demo */,
 				8433BF4122766CA700EDC257 /* ColorPatterns */,
