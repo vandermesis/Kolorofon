@@ -29,13 +29,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var yourScore: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
     
     //MARK: - Methods called after startup
     override func viewDidLoad() {
         super.viewDidLoad()
+        yourScore.isHidden = true
+        restartButton.isHidden = true
         updateColorPatterns()
         gameTimer()
-        yourScore.isHidden = true
+        scoreLabel.layer.masksToBounds = true
+        scoreLabel.layer.cornerRadius = 13
+        timeLabel.layer.masksToBounds = true
+        timeLabel.layer.cornerRadius = 13
         print("colorsArray:",colorsArray)
     }
     
@@ -44,16 +50,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         playSound(selectedFile: soundsArray[sender.tag-1])
         pickedColor = colorsArray[sender.tag-1]
         pickedColorDataBase.append(pickedColor)
+        let rangeOfPickedColor = pickedColorDataBase[0]-0.05...pickedColorDataBase[0]+0.05
+        print("rangeOfPickedColor:",rangeOfPickedColor)
         if pickedColorDataBase.count > 1 {
                 pickedColorDataBase.remove(at: 1)
         }
         print("pickedColorDataBase",pickedColorDataBase)
         updateColorPatterns()
-        if pickedColor == pickedColorDataBase[0] {
+        if rangeOfPickedColor.contains(pickedColor) {
             userScore += 1
             scoreLabel.text = String(userScore)
         }
-        if pickedColor != pickedColorDataBase[0] {
+        if !rangeOfPickedColor.contains(pickedColor) {
+            userScore -= 1
             scoreLabel.text = String(userScore)
         }
         print("colorsArray:",colorsArray)
@@ -87,7 +96,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Update color patterns
     func updateColorPatterns() {
-        colorsArray = colorsArray.map {_ in CGFloat((String(format: "%.1f", CGFloat.random(in: 0.0...0.99)) as NSString).doubleValue)}
+        colorsArray = colorsArray.map {_ in CGFloat((String(format: "%.2f", CGFloat.random(in: 0.0...0.9)) as NSString).doubleValue)}
         colorBar1.backgroundColor = UIColor(hue: colorsArray[0], saturation: 1, brightness: 1, alpha: 1)
         colorBar2.backgroundColor = UIColor(hue: colorsArray[1], saturation: 1, brightness: 1, alpha: 1)
         colorBar3.backgroundColor = UIColor(hue: colorsArray[2], saturation: 1, brightness: 1, alpha: 1)
@@ -107,16 +116,46 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if timeLeft <= 0 {
             timer?.invalidate()
             timer = nil
-            yourScore.isHidden = false
-            colorBar1.isHidden = true
-            colorBar2.isHidden = true
-            colorBar3.isHidden = true
-            colorBar4.isHidden = true
-            colorBar5.isHidden = true
-            scoreLabel.isHidden = true
-            timeLabel.isHidden = true
-            yourScore.text = "Your score is \(userScore)"
+            uiScoreMode()
         }
     }
     
+    //MARK: - Restart game method
+    @IBAction func restartButtonPressed(_ sender: Any) {
+        userScore = 0
+        timeLeft = 60
+        scoreLabel.text = "00"
+        timeLabel.text = "60"
+        pickedColorDataBase = [CGFloat]()
+        uiGameMode()
+    }
+    
+    //MARK: - Update UI methods
+    func uiGameMode() {
+        yourScore.isHidden = true
+        restartButton.isHidden = true
+        colorBar1.isHidden = false
+        colorBar2.isHidden = false
+        colorBar3.isHidden = false
+        colorBar4.isHidden = false
+        colorBar5.isHidden = false
+        scoreLabel.isHidden = false
+        timeLabel.isHidden = false
+        updateColorPatterns()
+        gameTimer()
+        print("colorsArray:",colorsArray)
+    }
+    
+    func uiScoreMode() {
+        yourScore.text = "Your score is \(userScore)"
+        yourScore.isHidden = false
+        restartButton.isHidden = false
+        colorBar1.isHidden = true
+        colorBar2.isHidden = true
+        colorBar3.isHidden = true
+        colorBar4.isHidden = true
+        colorBar5.isHidden = true
+        scoreLabel.isHidden = true
+        timeLabel.isHidden = true
+    }
 }
