@@ -57,14 +57,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         print("pickedColorDataBase",pickedColorDataBase)
         updateColorPatterns()
-        if rangeOfPickedColor.contains(pickedColor) {
-            userScore += 1
-            scoreLabel.text = String(userScore)
-        }
-        if !rangeOfPickedColor.contains(pickedColor) {
-            userScore -= 1
-            scoreLabel.text = String(userScore)
-        }
+        userScore = rangeOfPickedColor.contains(pickedColor) ? userScore+1 : userScore-1
+        scoreLabel.text = String(userScore)
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
         }
