@@ -22,7 +22,7 @@
 		BA2F743722C374DC007573FF /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA2F743622C374DC007573FF /* animation.gif */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
-		BADB79D122C52E6C003D32A4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BADB79D022C52E6C003D32A4 /* logo.png */; };
+		BADB79D322C53046003D32A4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BADB79D222C53046003D32A4 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BADB79D022C52E6C003D32A4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		BADB79D222C53046003D32A4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				BA2F743622C374DC007573FF /* animation.gif */,
-				BADB79D022C52E6C003D32A4 /* logo.png */,
+				BADB79D222C53046003D32A4 /* logo.png */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			files = (
 				BA2F743722C374DC007573FF /* animation.gif in Resources */,
 				BA199B792292F70200CD7C64 /* note7.wav in Resources */,
-				BADB79D122C52E6C003D32A4 /* logo.png in Resources */,
+				BADB79D322C53046003D32A4 /* logo.png in Resources */,
 				BA199B7A2292F70200CD7C64 /* note2.wav in Resources */,
 				BA199B762292F70200CD7C64 /* note5.wav in Resources */,
 				BA199B782292F70200CD7C64 /* note6.wav in Resources */,
