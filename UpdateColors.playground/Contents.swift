@@ -1,6 +1,6 @@
 import UIKit
 
-var colorsArray = [CGFloat]()
+var colorsArray = [CGFloat](repeating: 0.0, count: 5)
 
 //func updateColorPatterns() {
 //
@@ -21,15 +21,25 @@ var colorsArray = [CGFloat]()
 //
 //updateColorPatterns()
 
-func updateColorArray() {
-    for _ in 1...5 {
-        let color = CGFloat.random(in: 0.0...0.99)
-        let randomColor = CGFloat((String(format: "%.1f", color) as NSString).doubleValue)
-        colorsArray.append(randomColor)
-        print(colorsArray)
-        let colorBar = String("colorBar\(colorsArray.count)")
-        print(colorBar)
-    }
+//func updateColorArray() {
+//    for _ in 1...5 {
+//        let color = CGFloat.random(in: 0.0...0.99)
+//        let randomColor = CGFloat((String(format: "%.1f", color) as NSString).doubleValue)
+//        colorsArray.append(randomColor)
+//        print(colorsArray)
+//        let colorBar = String("colorBar\(colorsArray.count)")
+//        print(colorBar)
+//    }
+//}
+//
+//updateColorArray()
+
+func mapColorArray() {
+    
+    colorsArray = colorsArray.map {_ in CGFloat.random(in: 0.0...0.99)}
+    
+   
+    print(colorsArray)
 }
 
-updateColorArray()
+mapColorArray()

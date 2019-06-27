@@ -15,7 +15,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer : AVAudioPlayer!
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
     var pickedColor : CGFloat = 0
-    var colorsArray = [CGFloat]()
+    var colorsArray = [CGFloat](repeating: 0.0, count: 5)
     var userScore = 0
     var pickedColorDataBase = [CGFloat]()
     var timer:Timer?
@@ -36,6 +36,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         updateColorPatterns()
         gameTimer()
         yourScore.isHidden = true
+        print("colorsArray:",colorsArray)
     }
     
     //MARK: - User actions
@@ -86,19 +87,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Update color patterns
     func updateColorPatterns() {
-        var randomColorsArray = [CGFloat]()
-        for _ in 1...5 {
-            let color = CGFloat.random(in: 0.0...0.99)
-            let randomColor = CGFloat((String(format: "%.1f", color) as NSString).doubleValue)
-            randomColorsArray.append(randomColor)
-            print("randomColorsArray:",randomColorsArray)
-        }
-        colorBar1.backgroundColor = UIColor(hue: randomColorsArray[0], saturation: 1, brightness: 1, alpha: 1)
-        colorBar2.backgroundColor = UIColor(hue: randomColorsArray[1], saturation: 1, brightness: 1, alpha: 1)
-        colorBar3.backgroundColor = UIColor(hue: randomColorsArray[2], saturation: 1, brightness: 1, alpha: 1)
-        colorBar4.backgroundColor = UIColor(hue: randomColorsArray[3], saturation: 1, brightness: 1, alpha: 1)
-        colorBar5.backgroundColor = UIColor(hue: randomColorsArray[4], saturation: 1, brightness: 1, alpha: 1)
-        colorsArray = [randomColorsArray[0], randomColorsArray[1], randomColorsArray[2], randomColorsArray[3], randomColorsArray[4]]
+        colorsArray = colorsArray.map {_ in CGFloat((String(format: "%.1f", CGFloat.random(in: 0.0...0.99)) as NSString).doubleValue)}
+        colorBar1.backgroundColor = UIColor(hue: colorsArray[0], saturation: 1, brightness: 1, alpha: 1)
+        colorBar2.backgroundColor = UIColor(hue: colorsArray[1], saturation: 1, brightness: 1, alpha: 1)
+        colorBar3.backgroundColor = UIColor(hue: colorsArray[2], saturation: 1, brightness: 1, alpha: 1)
+        colorBar4.backgroundColor = UIColor(hue: colorsArray[3], saturation: 1, brightness: 1, alpha: 1)
+        colorBar5.backgroundColor = UIColor(hue: colorsArray[4], saturation: 1, brightness: 1, alpha: 1)
     }
     
     //MARK: - Timer methods
