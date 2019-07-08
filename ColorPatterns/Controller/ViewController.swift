@@ -37,6 +37,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Methods called after startup
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let userSettings = defaults.value(forKeyPath: "Sound") {
+            audioOn = userSettings as! Bool
+        }
+        soundLabelToogle()
         yourScore.isHidden = true
         restartButton.isHidden = true
         updateColorPatterns()
@@ -45,8 +49,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.layer.cornerRadius = 13
         timeLabel.layer.masksToBounds = true
         timeLabel.layer.cornerRadius = 13
-        soundButton.setTitle("Sound On", for: .normal)
         print("colorsArray:",colorsArray)
+        print(audioOn)
     }
     
     //MARK: - User actions
@@ -162,6 +166,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Sound on/off using UserDefaults
     @IBAction func soundButtonPressed(_ sender: UIButton) {
         audioOn.toggle()
+        defaults.set(audioOn, forKey: "Sound")
+        soundLabelToogle()
+    }
+    
+    func soundLabelToogle() {
         if audioOn == true {
             soundButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
             soundButton.setTitle("Sound On", for: .normal)
@@ -171,5 +180,4 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             soundButton.setTitle("Sound Off", for: .normal)
         }
     }
-    
 }
