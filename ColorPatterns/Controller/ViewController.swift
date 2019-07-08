@@ -13,6 +13,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Variables declared
     var audioPlayer : AVAudioPlayer!
+    var audioOn = true
+    let defaults = UserDefaults.standard
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
     var pickedColor : CGFloat = 0
     var colorsArray = [CGFloat](repeating: 0.0, count: 5)
@@ -30,6 +32,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var yourScore: UILabel!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var soundButton: UIButton!
     
     //MARK: - Methods called after startup
     override func viewDidLoad() {
@@ -42,12 +45,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.layer.cornerRadius = 13
         timeLabel.layer.masksToBounds = true
         timeLabel.layer.cornerRadius = 13
+        soundButton.setTitle("Sound On", for: .normal)
         print("colorsArray:",colorsArray)
     }
     
     //MARK: - User actions
     @IBAction func colorButtonPressed(_ sender: UIButton) {
-        playSound(selectedFile: soundsArray[sender.tag-1])
+        if audioOn == true {
+            playSound(selectedFile: soundsArray[sender.tag-1])
+        }
         pickedColor = colorsArray[sender.tag-1]
         pickedColorDataBase.append(pickedColor)
         let rangeOfPickedColor = pickedColorDataBase[0]-0.05...pickedColorDataBase[0]+0.05
@@ -152,4 +158,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.isHidden = true
         timeLabel.isHidden = true
     }
+    
+    //MARK: - Sound on/off using UserDefaults
+    @IBAction func soundButtonPressed(_ sender: UIButton) {
+        audioOn.toggle()
+        if audioOn == true {
+            soundButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
+            soundButton.setTitle("Sound On", for: .normal)
+        }
+        if audioOn == false {
+            soundButton.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
+            soundButton.setTitle("Sound Off", for: .normal)
+        }
+    }
+    
 }
