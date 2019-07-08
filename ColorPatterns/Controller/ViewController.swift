@@ -53,7 +53,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print(audioOn)
     }
     
-    //MARK: - User actions
+    //MARK: - User actions and score calculations
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         if audioOn == true {
             playSound(selectedFile: soundsArray[sender.tag-1])
@@ -68,6 +68,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print("pickedColorDataBase",pickedColorDataBase)
         updateColorPatterns()
         userScore = rangeOfPickedColor.contains(pickedColor) ? userScore+1 : userScore-1
+        if userScore < 0 {
+            userScore = 0
+        }
         scoreLabel.text = String(userScore)
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
