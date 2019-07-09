@@ -13,7 +13,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Variables declared
     var audioPlayer : AVAudioPlayer!
-    var audioOn = true
+    var audioOn = UserDefaults.standard.bool(forKey: "Sound")
     let defaults = UserDefaults.standard
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
     var pickedColor : CGFloat = 0

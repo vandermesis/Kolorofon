@@ -9,15 +9,14 @@
 import Foundation
 
 class SettingsBundleHelper {
+    
     struct SettingsBundleKeys {
-        static let Sound = "SOUND_APP_KEY"
+        static let Sound = "Sound"
         static let BuildVersionKey = "build_preference"
         static let AppVersionKey = "version_preference"
     }
     class func checkAndExecuteSettings() {
-        if UserDefaults.standard.bool(forKey: SettingsBundleKeys.Sound) {
-            UserDefaults.standard.set(false, forKey: SettingsBundleKeys.Sound)
-        }
+        print("UserDefaults:",UserDefaults.standard.bool(forKey: SettingsBundleKeys.Sound))
     }
     
     class func setVersionAndBuildNumber() {

@@ -11,7 +11,7 @@
 		8433BF4522766CA700EDC257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4422766CA700EDC257 /* ViewController.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
 		845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 845D9E2822D51FC7007FA89E /* Settings.bundle */; };
-		845D9E2B22D52256007FA89E /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9E2A22D52256007FA89E /* SettingsBundleHelper.swift */; };
+		845D9E3322D52B0E007FA89E /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4622766CA700EDC257 /* Main.storyboard */; };
 		BA199B742292F70200CD7C64 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6D2292F70200CD7C64 /* note3.wav */; };
@@ -44,7 +44,7 @@
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D9E2822D51FC7007FA89E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		845D9E2A22D52256007FA89E /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA199B6D2292F70200CD7C64 /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
 		BA199B6E2292F70200CD7C64 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 		8433BF3622766CA700EDC257 = {
 			isa = PBXGroup;
 			children = (
-				845D9E2A22D52256007FA89E /* SettingsBundleHelper.swift */,
 				845D9E2822D51FC7007FA89E /* Settings.bundle */,
 				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
 				BA02700322BC491000846DDC /* README.md */,
@@ -107,6 +106,7 @@
 		8433BF4122766CA700EDC257 /* ColorPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */,
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				BA94BCF622C3844300D8157E /* View */,
 				BA94BCF522C3841B00D8157E /* Controller */,
@@ -286,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
-				845D9E2B22D52256007FA89E /* SettingsBundleHelper.swift in Sources */,
+				845D9E3322D52B0E007FA89E /* SettingsBundleHelper.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
