@@ -12,9 +12,8 @@ import AVFoundation
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Variables declared
-    var audioPlayer : AVAudioPlayer!
-    var audioOn = UserDefaults.standard.bool(forKey: "Sound")
     let defaults = UserDefaults.standard
+    var audioPlayer : AVAudioPlayer!
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
     var pickedColor : CGFloat = 0
     var colorsArray = [CGFloat](repeating: 0.0, count: 5)
@@ -37,10 +36,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Methods called after startup
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let userSettings = defaults.value(forKeyPath: "Sound") {
-            audioOn = userSettings as! Bool
+        NotificationCenter.default.addObserver(self, selector:#selector(updateSoundLabel), name: UIApplication.didBecomeActiveNotification, object: nil)
+        if defaults.value(forKeyPath: "Sound") == nil {
+            defaults.set(true, forKey: "Sound")
         }
-        soundLabelToogle()
+        updateSoundLabel()
         yourScore.isHidden = true
         restartButton.isHidden = true
         updateColorPatterns()
@@ -50,12 +50,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timeLabel.layer.masksToBounds = true
         timeLabel.layer.cornerRadius = 13
         print("colorsArray:",colorsArray)
-        print("audioOn: \(audioOn)")
     }
     
     //MARK: - User actions and score calculations
     @IBAction func colorButtonPressed(_ sender: UIButton) {
-        if audioOn == true {
+        if defaults.bool(forKey: "Sound") == true {
             playSound(selectedFile: soundsArray[sender.tag-1])
         }
         pickedColor = colorsArray[sender.tag-1]
@@ -167,17 +166,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Sound on/off using UserDefaults
     @IBAction func soundButtonPressed(_ sender: UIButton) {
-        audioOn.toggle()
-        defaults.set(audioOn, forKey: "Sound")
-        soundLabelToogle()
+        defaults.bool(forKey: "Sound") ? defaults.set(false, forKey: "Sound") : defaults.set(true, forKey: "Sound")
+        updateSoundLabel()
     }
     
-    func soundLabelToogle() {
-        if audioOn == true {
+    @objc func updateSoundLabel() {
+        if defaults.bool(forKey: "Sound") == true {
             soundButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
             soundButton.setTitle("Sound On", for: .normal)
         }
-        if audioOn == false {
+        if defaults.bool(forKey: "Sound") == false {
             soundButton.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
             soundButton.setTitle("Sound Off", for: .normal)
         }

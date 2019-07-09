@@ -11,14 +11,9 @@ import Foundation
 class SettingsBundleHelper {
     
     struct SettingsBundleKeys {
-        static let Sound = "Sound"
         static let BuildVersionKey = "build_preference"
         static let AppVersionKey = "version_preference"
     }
-    class func checkAndExecuteSettings() {
-        print("UserDefaults:",UserDefaults.standard.bool(forKey: SettingsBundleKeys.Sound))
-    }
-    
     class func setVersionAndBuildNumber() {
         let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         UserDefaults.standard.set(version, forKey: "version_preference")

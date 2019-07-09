@@ -12,13 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let viewController = ViewController()
-
-    //  Show lauch screen for 1 sec to display logo
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //  Show lauch screen for 1 sec to display logo
         Thread.sleep(forTimeInterval: 1.0)
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         return true
     }
 
@@ -38,16 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        //FIXME: Call soundLablelToglle to update soundLabel on app did become active
-//        viewController.soundLabelToogle()
-        SettingsBundleHelper.checkAndExecuteSettings()
         SettingsBundleHelper.setVersionAndBuildNumber()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
 }
 
