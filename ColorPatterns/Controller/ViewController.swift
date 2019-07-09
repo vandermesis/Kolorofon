@@ -50,7 +50,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timeLabel.layer.masksToBounds = true
         timeLabel.layer.cornerRadius = 13
         print("colorsArray:",colorsArray)
-        print(audioOn)
+        print("audioOn: \(audioOn)")
     }
     
     //MARK: - User actions and score calculations
@@ -119,7 +119,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func onTimerFires() {
         timeLeft -= 1
         timeLabel.text = String(timeLeft)
-        print(timeLeft)
         if timeLeft <= 0 {
             timer?.invalidate()
             timer = nil
