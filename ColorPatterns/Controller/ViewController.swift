@@ -36,15 +36,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Methods called after startup
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //  Configure swipe gesture to update color patterns if no user color is on the screen
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
+        view.addGestureRecognizer(swipeGesture)
+        
+        //  Nofify when app didBecomeActive to update sound label if needed
         NotificationCenter.default.addObserver(self, selector:#selector(updateSoundLabel), name: UIApplication.didBecomeActiveNotification, object: nil)
         if defaults.value(forKeyPath: "Sound") == nil {
             defaults.set(true, forKey: "Sound")
         }
         updateSoundLabel()
+        
+        //  Prepare UI for new game
         yourScore.isHidden = true
         restartButton.isHidden = true
         updateColorPatterns()
         gameTimer()
+        
+        //  Set label's background to round corners
         scoreLabel.layer.masksToBounds = true
         scoreLabel.layer.cornerRadius = 13
         timeLabel.layer.masksToBounds = true
@@ -52,7 +62,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print("colorsArray:",colorsArray)
     }
     
-    //MARK: - User actions and score calculations
+    //MARK: - User press color patern button actions and score calculations
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         if defaults.bool(forKey: "Sound") == true {
             playSound(selectedFile: soundsArray[sender.tag-1])
@@ -73,11 +83,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.text = String(userScore)
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
+        print("button \(sender.tag) pressed")
         }
     
-    //FIXME: Swipe Action for updateCollorPatterns when user's color is not on screen
-    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
+    //  Swipe Action for updateCollorPatterns when user's color is not on screen
+    @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
         updateColorPatterns()
+        print("swipe action")
         print("colorsArray:",colorsArray)
     }
     
