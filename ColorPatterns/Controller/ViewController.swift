@@ -50,10 +50,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         updateSoundLabel()
         
         //  Prepare UI for new game
-        yourScore.isHidden = true
-        restartButton.isHidden = true
-        updateColorPatterns()
-        gameTimer()
+        uiGameMode()
         
         //  Set label's background to round corners
         scoreLabel.layer.masksToBounds = true
@@ -65,23 +62,34 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - User press color patern button actions and score calculations
     @IBAction func colorButtonPressed(_ sender: UIButton) {
+        
+        //  Play sound as set in settings by user
         if defaults.bool(forKey: "Sound") == true {
             playSound(selectedFile: soundsArray[sender.tag-1])
         }
+        
+        //  Persist color picked by user
         pickedColor = colorsArray[sender.tag-1]
         pickedColorDataBase.append(pickedColor)
         let rangeOfPickedColor = pickedColorDataBase[0]-0.05...pickedColorDataBase[0]+0.05
         print("rangeOfPickedColor:",rangeOfPickedColor)
         if pickedColorDataBase.count > 1 {
-                pickedColorDataBase.remove(at: 1)
+            pickedColorDataBase.remove(at: 1)
         }
         print("pickedColorDataBase",pickedColorDataBase)
+        
         updateColorPatterns()
+        
+        //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
         userScore = rangeOfPickedColor.contains(pickedColor) ? userScore+1 : userScore-1
         if userScore < 0 {
             userScore = 0
         }
+        
+        //  Update score label
         scoreLabel.text = String(userScore)
+        
+        //  Prints ;) - develping helpers
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
         print("button \(sender.tag) pressed")
@@ -160,7 +168,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
         updateColorPatterns()
-        gameTimer()
         print("colorsArray:",colorsArray)
     }
     
