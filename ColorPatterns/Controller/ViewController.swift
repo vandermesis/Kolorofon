@@ -60,10 +60,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     //MARK: - User press color patern button actions and score calculations
+    //FIXME:    User gets one point when picking his colour
     @IBAction func colorButtonPressed(_ sender: UIButton) {
-        
-        //  Shuffle colors on app start
-        updateColorPatterns()
         
         //  Play sound as set in settings by user
         if defaults.bool(forKey: "Sound") == true {
@@ -84,13 +82,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             userScore = 0
         }
         
-        
         //  Update score label
         scoreLabel.text = String(userScore)
         
         if pickedColor == pickedColorDataBase[0] {
             gameTimer()
         }
+        
+        //  Shuffle colors on app start
+        updateColorPatterns()
         
         //  Prints ;) - develping helpers
         print("////////////////////////////////////////////")
