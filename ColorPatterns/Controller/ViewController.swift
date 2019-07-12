@@ -18,11 +18,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var colorsArray = [CGFloat](repeating: 0.0, count: 5)
     var pickedColor : CGFloat = 0
     var pickedColorDataBase = [CGFloat]()
-    var userColor: CGFloat? {
-        didSet {
-            gameTimer()
-        }
-    }
     var userScore = 0
     var timer:Timer?
     var timeLeft = 60
@@ -62,8 +57,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.layer.cornerRadius = 13
         timeLabel.layer.masksToBounds = true
         timeLabel.layer.cornerRadius = 13
-        
-        print("userColor: \(userColor)")
     }
     
     //MARK: - User press color patern button actions and score calculations
@@ -83,7 +76,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if pickedColorDataBase.count > 1 {
             pickedColorDataBase.remove(at: 1)
         }
-        userColor = pickedColorDataBase[0]
         
         //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
         let rangeOfPickedColor = pickedColorDataBase[0]-0.05...pickedColorDataBase[0]+0.05
@@ -91,17 +83,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if userScore < 0 {
             userScore = 0
         }
-        print("rangeOfPickedColor:",rangeOfPickedColor)
+        
         
         //  Update score label
         scoreLabel.text = String(userScore)
         
+        if pickedColor == pickedColorDataBase[0] {
+            gameTimer()
+        }
+        
         //  Prints ;) - develping helpers
+        print("////////////////////////////////////////////")
+        print("pickedColorDataBase: \(pickedColorDataBase)")
+        print("rangeOfPickedColor:",rangeOfPickedColor)
+        print("pickedColor: \(pickedColor)")
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
-        print("button \(sender.tag) pressed")
-        print("pickedColorDataBase: \(pickedColorDataBase)")
-        print("userColor: \(userColor)")
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
