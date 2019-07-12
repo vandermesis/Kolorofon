@@ -39,6 +39,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Configure swipe gesture to update color patterns if no user color is on the screen
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
+        swipeGesture.direction = .down
         view.addGestureRecognizer(swipeGesture)
         
         //  Nofify when app didBecomeActive to update sound label if needed
