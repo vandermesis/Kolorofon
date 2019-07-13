@@ -103,6 +103,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
         print("buttonPressedCount:",buttonPressedCount)
+        print("pickedColor=DB:",pickedColor == pickedColorDataBase[0])
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
@@ -157,12 +158,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     //MARK: - Restart game method
+    //FIXME:    Fix timer work twice fast after restart
     @IBAction func restartButtonPressed(_ sender: Any) {
-        userScore = 0
-        timeLeft = 60
-        scoreLabel.text = "00"
-        timeLabel.text = "60"
-        pickedColorDataBase = [CGFloat]()
         uiGameMode()
     }
     
@@ -177,6 +174,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         colorBar5.isHidden = false
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
+        buttonPressedCount = 0
+        userScore = 0
+        timer = nil
+        timeLeft = 60
+        scoreLabel.text = "00"
+        timeLabel.text = "60"
+        pickedColorDataBase = [CGFloat]()
         updateColorPatterns()
         print("colorsArray:",colorsArray)
     }
