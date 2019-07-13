@@ -19,6 +19,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var pickedColor : CGFloat = 0
     var pickedColorDataBase = [CGFloat]()
     var userScore = 0
+    var buttonPressedCount = 0
     var timer:Timer?
     var timeLeft = 60
     
@@ -60,7 +61,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     //MARK: - User press color patern button actions and score calculations
-    //FIXME:    User gets one point when picking his colour
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         
         //  Play sound as set in settings by user
@@ -77,7 +77,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
         let rangeOfPickedColor = pickedColorDataBase[0]-0.05...pickedColorDataBase[0]+0.05
-        userScore = rangeOfPickedColor.contains(pickedColor) ? userScore+1 : userScore-1
+        buttonPressedCount += 1
+        if buttonPressedCount > 1 {
+            userScore = rangeOfPickedColor.contains(pickedColor) ? userScore+1 : userScore-1
+        }
         if userScore < 0 {
             userScore = 0
         }
@@ -94,11 +97,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Prints ;) - develping helpers
         print("////////////////////////////////////////////")
-        print("pickedColorDataBase: \(pickedColorDataBase)")
+        print("pickedColorDataBase:\(pickedColorDataBase)")
         print("rangeOfPickedColor:",rangeOfPickedColor)
         print("pickedColor: \(pickedColor)")
         print("colorsArray:",colorsArray)
         print("userScore:",userScore)
+        print("buttonPressedCount:",buttonPressedCount)
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
