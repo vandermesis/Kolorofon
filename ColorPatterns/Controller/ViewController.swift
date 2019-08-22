@@ -164,6 +164,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Restart game method
     @IBAction func restartButtonPressed(_ sender: Any) {
         uiGameMode()
+        gameTimer()
     }
     
     //MARK: - Update UI methods
