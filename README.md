@@ -16,7 +16,7 @@
 ## How to use it
 
 Follow your colour!
-You have 60 seconds to pick and follow your color. Shake it if your colour is not on the screen.
+You have 60 seconds to pick and follow your color. Swipe up or shake if your colour is not on the screen.
 
 Simple as that!
 Ho!

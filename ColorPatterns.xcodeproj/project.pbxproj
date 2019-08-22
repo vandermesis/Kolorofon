@@ -14,6 +14,7 @@
 		845D9E3322D52B0E007FA89E /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
+		BA0AA47B230E934000E2A21D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA47A230E934000E2A21D /* animation.gif */; };
 		BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4622766CA700EDC257 /* Main.storyboard */; };
 		BA199B742292F70200CD7C64 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6D2292F70200CD7C64 /* note3.wav */; };
 		BA199B752292F70200CD7C64 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6E2292F70200CD7C64 /* note1.wav */; };
@@ -22,7 +23,6 @@
 		BA199B782292F70200CD7C64 /* note6.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B712292F70200CD7C64 /* note6.wav */; };
 		BA199B792292F70200CD7C64 /* note7.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B722292F70200CD7C64 /* note7.wav */; };
 		BA199B7A2292F70200CD7C64 /* note2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B732292F70200CD7C64 /* note2.wav */; };
-		BA2F743722C374DC007573FF /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA2F743622C374DC007573FF /* animation.gif */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +48,7 @@
 		845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA0AA478230E810A00E2A21D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		BA0AA47A230E934000E2A21D /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BA199B6D2292F70200CD7C64 /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
 		BA199B6E2292F70200CD7C64 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
 		BA199B6F2292F70200CD7C64 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		BA199B712292F70200CD7C64 /* note6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note6.wav; sourceTree = "<group>"; };
 		BA199B722292F70200CD7C64 /* note7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note7.wav; sourceTree = "<group>"; };
 		BA199B732292F70200CD7C64 /* note2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note2.wav; sourceTree = "<group>"; };
-		BA2F743622C374DC007573FF /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +134,7 @@
 		BA2F742722C3597B007573FF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BA2F743622C374DC007573FF /* animation.gif */,
+				BA0AA47A230E934000E2A21D /* animation.gif */,
 				BA0AA478230E810A00E2A21D /* logo.png */,
 			);
 			path = Demo;
@@ -256,8 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA2F743722C374DC007573FF /* animation.gif in Resources */,
 				BA199B792292F70200CD7C64 /* note7.wav in Resources */,
+				BA0AA47B230E934000E2A21D /* animation.gif in Resources */,
 				845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */,
 				BA199B7A2292F70200CD7C64 /* note2.wav in Resources */,
 				BA0AA479230E810A00E2A21D /* logo.png in Resources */,
