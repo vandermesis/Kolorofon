@@ -13,6 +13,7 @@
 		845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 845D9E2822D51FC7007FA89E /* Settings.bundle */; };
 		845D9E3322D52B0E007FA89E /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
+		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
 		BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4622766CA700EDC257 /* Main.storyboard */; };
 		BA199B742292F70200CD7C64 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6D2292F70200CD7C64 /* note3.wav */; };
 		BA199B752292F70200CD7C64 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6E2292F70200CD7C64 /* note1.wav */; };
@@ -46,6 +47,7 @@
 		845D9E2822D51FC7007FA89E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BA0AA478230E810A00E2A21D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BA199B6D2292F70200CD7C64 /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
 		BA199B6E2292F70200CD7C64 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
 		BA199B6F2292F70200CD7C64 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
@@ -59,7 +61,6 @@
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BADB79CE22C52D70003D32A4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BA2F743622C374DC007573FF /* animation.gif */,
-				BADB79CE22C52D70003D32A4 /* logo.png */,
+				BA0AA478230E810A00E2A21D /* logo.png */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -259,6 +260,7 @@
 				BA199B792292F70200CD7C64 /* note7.wav in Resources */,
 				845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */,
 				BA199B7A2292F70200CD7C64 /* note2.wav in Resources */,
+				BA0AA479230E810A00E2A21D /* logo.png in Resources */,
 				BA199B762292F70200CD7C64 /* note5.wav in Resources */,
 				BA199B782292F70200CD7C64 /* note6.wav in Resources */,
 				BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */,
