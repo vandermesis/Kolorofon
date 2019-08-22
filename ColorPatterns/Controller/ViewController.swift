@@ -53,6 +53,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         //  Prepare UI for new game
         uiGameMode()
         
+        // Start game timer
+        gameTimer()
+        
         //  Set label's background to round corners
         scoreLabel.layer.masksToBounds = true
         scoreLabel.layer.cornerRadius = 13
@@ -88,9 +91,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         //  Update score label
         scoreLabel.text = String(userScore)
         
-        if pickedColor == pickedColorDataBase[0] {
-            gameTimer()
-        }
+        //FIXME:    Attempt to start timer when user press color for the first time
+//        if pickedColor == pickedColorDataBase[0] {
+//            gameTimer()
+//        }
         
         //  Shuffle colors on app start
         updateColorPatterns()
@@ -158,7 +162,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     //MARK: - Restart game method
-    //FIXME:    Fix timer work twice fast after restart
     @IBAction func restartButtonPressed(_ sender: Any) {
         uiGameMode()
     }
