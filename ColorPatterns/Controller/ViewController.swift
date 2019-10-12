@@ -91,7 +91,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         //  Update score label
         scoreLabel.text = String(userScore)
         
-        //FIXME:    Attempt to start timer when user press color for the first time
+        //FIXME: Attempt to start timer when user press color for the first time
 //        if pickedColor == pickedColorDataBase[0] {
 //            gameTimer()
 //        }
