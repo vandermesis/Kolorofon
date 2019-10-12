@@ -23,16 +23,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var timer:Timer?
     var timeLeft = 60
     
-    @IBOutlet weak var colorBar1: UIButton!
-    @IBOutlet weak var colorBar2: UIButton!
-    @IBOutlet weak var colorBar3: UIButton!
-    @IBOutlet weak var colorBar4: UIButton!
-    @IBOutlet weak var colorBar5: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var yourScore: UILabel!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var soundButton: UIButton!
+    @IBOutlet var colorBars: [UIButton]!
     
     //MARK: - Methods called after startup
     override func viewDidLoad() {
@@ -91,11 +87,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         //  Update score label
         scoreLabel.text = String(userScore)
         
-        //FIXME: Attempt to start timer when user press color for the first time
-//        if pickedColor == pickedColorDataBase[0] {
-//            gameTimer()
-//        }
-        
         //  Shuffle colors on app start
         updateColorPatterns()
         
@@ -139,11 +130,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Update color patterns
     func updateColorPatterns() {
         colorsArray = colorsArray.map {_ in CGFloat((String(format: "%.2f", CGFloat.random(in: 0.0...0.9)) as NSString).doubleValue)}
-        colorBar1.backgroundColor = UIColor(hue: colorsArray[0], saturation: 1, brightness: 1, alpha: 1)
-        colorBar2.backgroundColor = UIColor(hue: colorsArray[1], saturation: 1, brightness: 1, alpha: 1)
-        colorBar3.backgroundColor = UIColor(hue: colorsArray[2], saturation: 1, brightness: 1, alpha: 1)
-        colorBar4.backgroundColor = UIColor(hue: colorsArray[3], saturation: 1, brightness: 1, alpha: 1)
-        colorBar5.backgroundColor = UIColor(hue: colorsArray[4], saturation: 1, brightness: 1, alpha: 1)
+        for i in 0...4 {
+            colorBars[i].backgroundColor = UIColor(hue: colorsArray[i], saturation: 1, brightness: 1, alpha: 1)
+        }
     }
     
     //MARK: - Timer methods
@@ -171,11 +160,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func uiGameMode() {
         yourScore.isHidden = true
         restartButton.isHidden = true
-        colorBar1.isHidden = false
-        colorBar2.isHidden = false
-        colorBar3.isHidden = false
-        colorBar4.isHidden = false
-        colorBar5.isHidden = false
+        for i in 0...4 {
+            colorBars[i].isHidden = false
+        }
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
         buttonPressedCount = 0
@@ -193,11 +180,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         yourScore.text = "Your score is \(userScore)"
         yourScore.isHidden = false
         restartButton.isHidden = false
-        colorBar1.isHidden = true
-        colorBar2.isHidden = true
-        colorBar3.isHidden = true
-        colorBar4.isHidden = true
-        colorBar5.isHidden = true
+        for i in 0...4 {
+            colorBars[i].isHidden = true
+        }
         scoreLabel.isHidden = true
         timeLabel.isHidden = true
     }

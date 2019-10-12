@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -151,16 +149,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="colorBar1" destination="8dO-Gf-FlP" id="gCI-Tv-7cd"/>
-                        <outlet property="colorBar2" destination="Zsc-uG-fQh" id="nhr-3U-77M"/>
-                        <outlet property="colorBar3" destination="hNB-um-qqw" id="55z-7r-7Vw"/>
-                        <outlet property="colorBar4" destination="dXo-Ve-Ujq" id="Mls-yh-69g"/>
-                        <outlet property="colorBar5" destination="ZTj-6P-RVz" id="vkX-h0-8ae"/>
                         <outlet property="restartButton" destination="wKb-sS-fyu" id="QPD-AI-qPh"/>
                         <outlet property="scoreLabel" destination="ekP-yw-Laj" id="l4C-Kq-wXY"/>
                         <outlet property="soundButton" destination="PQ8-Og-0TQ" id="UPM-gC-N7X"/>
                         <outlet property="timeLabel" destination="Lwq-l2-exg" id="8Vd-6F-xyJ"/>
                         <outlet property="yourScore" destination="5u5-1Q-aLb" id="E6E-fx-RzW"/>
+                        <outletCollection property="colorBars" destination="8dO-Gf-FlP" collectionClass="NSMutableArray" id="Nd9-5u-JT8"/>
+                        <outletCollection property="colorBars" destination="Zsc-uG-fQh" collectionClass="NSMutableArray" id="PUD-I4-i47"/>
+                        <outletCollection property="colorBars" destination="hNB-um-qqw" collectionClass="NSMutableArray" id="RBq-VQ-HYh"/>
+                        <outletCollection property="colorBars" destination="dXo-Ve-Ujq" collectionClass="NSMutableArray" id="Lv7-Rt-ZNq"/>
+                        <outletCollection property="colorBars" destination="ZTj-6P-RVz" collectionClass="NSMutableArray" id="n8J-rI-3gK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
