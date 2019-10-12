@@ -15,8 +15,8 @@
 
 ## What for
 
-It's for me to practise coding. I started to write code to that game from a very first lesson of Swift
-I want that this game will grow with me as I learn to code. We will see where it lead us :)
+It's for me to practise coding. I started to write code to that game from a very first lesson of Swift.
+I would like to this game would grow with me as I learn to code. We will see where it lead us :)
 
 ## How to use it
 
@@ -37,18 +37,16 @@ Ho!
 
 ## What new I've learned
 
-- Get data from DarkSky API using SwiftSky library
-- UITableView and custom cells
-- Custom cell design with custom .xib
-- UIDatePickerView
-- CoreLocation
-- CoreData
-- DateFormatter
-- NotificationCenter
+- Settings.bundle
+- MVC design pattern
+- Use Timer class
+- UISwipeGestureRecognizer for swipe down and shake
+- 
 
 ## To-do
 
-- [ ] Conform to MVC, move logic to separate structs in Model
+- [x] Add logic to shuffle colors and remember user's choice
+- [ ] Conform to MVC, move game logic to separate structs in Model
 - [ ] Make welcome screen with start and options
 - [ ] Allow user to set his name and persist his data
 - [ ] Connect with Apple Game Center

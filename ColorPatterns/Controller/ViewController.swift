@@ -14,8 +14,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Variables declared
     let defaults = UserDefaults.standard
     var audioPlayer : AVAudioPlayer!
+    var updateColors = UpdateColors()
+    
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
-    var colorsArray = [CGFloat](repeating: 0.0, count: 5)
     var pickedColor : CGFloat = 0
     var pickedColorDataBase = [CGFloat]()
     var userScore = 0
@@ -68,7 +69,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         //  Persist color picked by user
-        pickedColor = colorsArray[sender.tag-1]
+        pickedColor = updateColors.colorsArray[sender.tag-1]
         pickedColorDataBase.append(pickedColor)
         if pickedColorDataBase.count > 1 {
             pickedColorDataBase.remove(at: 1)
@@ -95,7 +96,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print("pickedColorDataBase:\(pickedColorDataBase)")
         print("rangeOfPickedColor:",rangeOfPickedColor)
         print("pickedColor: \(pickedColor)")
-        print("colorsArray:",colorsArray)
+        print("colorsArray:",updateColors.colorsArray)
         print("userScore:",userScore)
         print("buttonPressedCount:",buttonPressedCount)
         print("pickedColor=DB:",pickedColor == pickedColorDataBase[0])
@@ -105,14 +106,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
         updateColorPatterns()
         print("swipe action")
-        print("colorsArray:",colorsArray)
+        print("colorsArray:",updateColors.colorsArray)
     }
     
     //  Shake action for updateColorPatterns when user's color is not on screen
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             updateColorPatterns()
-            print("colorsArray:",colorsArray)
+            print("colorsArray:",updateColors.colorsArray)
         }
     }
     
@@ -129,9 +130,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Update color patterns
     func updateColorPatterns() {
-        colorsArray = colorsArray.map {_ in CGFloat((String(format: "%.2f", CGFloat.random(in: 0.0...0.9)) as NSString).doubleValue)}
+        let updatedColors = updateColors.shuffle()
         for i in 0...4 {
-            colorBars[i].backgroundColor = UIColor(hue: colorsArray[i], saturation: 1, brightness: 1, alpha: 1)
+            colorBars[i].backgroundColor = UIColor(hue: updatedColors[i], saturation: 1, brightness: 1, alpha: 1)
         }
     }
     
@@ -173,7 +174,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timeLabel.text = "60"
         pickedColorDataBase = [CGFloat]()
         updateColorPatterns()
-        print("colorsArray:",colorsArray)
+        print("colorsArray:",updateColors.colorsArray)
     }
     
     func uiScoreMode() {
