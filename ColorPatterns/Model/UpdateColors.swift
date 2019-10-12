@@ -11,6 +11,14 @@ import UIKit
 struct UpdateColors {
     
     var colorsArray = [CGFloat](repeating: 0.0, count: 5)
+    var pickedColor : CGFloat = 0
+    var pickedColorDataBase: [CGFloat] = [0.0] {
+        didSet {
+            if pickedColorDataBase.count > 1 {
+                pickedColorDataBase.remove(at: 1)
+            }
+        }
+    }
     
     
     mutating func shuffle() -> [CGFloat] {

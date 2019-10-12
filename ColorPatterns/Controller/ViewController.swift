@@ -15,12 +15,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     let defaults = UserDefaults.standard
     var audioPlayer : AVAudioPlayer!
     var updateColors = UpdateColors()
-    
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
-    var pickedColor : CGFloat = 0
-    var pickedColorDataBase = [CGFloat]()
     var userScore = 0
-    var buttonPressedCount = 0
+    var buttonPressedCount = false
     var timer:Timer?
     var timeLeft = 60
     
@@ -69,17 +66,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         //  Persist color picked by user
-        pickedColor = updateColors.colorsArray[sender.tag-1]
-        pickedColorDataBase.append(pickedColor)
-        if pickedColorDataBase.count > 1 {
-            pickedColorDataBase.remove(at: 1)
-        }
+        updateColors.pickedColor = updateColors.colorsArray[sender.tag-1]
+        updateColors.pickedColorDataBase.append(updateColors.pickedColor)
+        
         
         //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
-        let rangeOfPickedColor = pickedColorDataBase[0]-0.05...pickedColorDataBase[0]+0.05
-        buttonPressedCount += 1
-        if buttonPressedCount > 1 {
-            userScore = rangeOfPickedColor.contains(pickedColor) ? userScore+1 : userScore-1
+        let rangeOfPickedColor = updateColors.pickedColorDataBase[0]-0.05...updateColors.pickedColorDataBase[0]+0.05
+        buttonPressedCount = true
+        if buttonPressedCount {
+            userScore = rangeOfPickedColor.contains(updateColors.pickedColor) ? userScore+1 : userScore-1
         }
         if userScore < 0 {
             userScore = 0
@@ -93,13 +88,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Prints ;) - develping helpers
         print("////////////////////////////////////////////")
-        print("pickedColorDataBase:\(pickedColorDataBase)")
+        print("pickedColorDataBase:\(updateColors.pickedColorDataBase)")
         print("rangeOfPickedColor:",rangeOfPickedColor)
-        print("pickedColor: \(pickedColor)")
+        print("pickedColor: \(updateColors.pickedColor)")
         print("colorsArray:",updateColors.colorsArray)
         print("userScore:",userScore)
         print("buttonPressedCount:",buttonPressedCount)
-        print("pickedColor=DB:",pickedColor == pickedColorDataBase[0])
+        print("pickedColor=DB:",updateColors.pickedColor == updateColors.pickedColorDataBase[0])
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
@@ -166,13 +161,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
-        buttonPressedCount = 0
+        buttonPressedCount = false
         userScore = 0
         timer = nil
         timeLeft = 60
         scoreLabel.text = "00"
         timeLabel.text = "60"
-        pickedColorDataBase = [CGFloat]()
+        updateColors.pickedColorDataBase = [CGFloat]()
         updateColorPatterns()
         print("colorsArray:",updateColors.colorsArray)
     }
