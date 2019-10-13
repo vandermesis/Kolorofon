@@ -17,7 +17,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var colors = Colors()
     var user = User()
     
-    
     var gameStarted = false
     var timer:Timer?
     var timeLeft = 60
@@ -40,9 +39,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Nofify when app didBecomeActive to update sound label if needed
         NotificationCenter.default.addObserver(self, selector:#selector(updateSoundLabel), name: UIApplication.didBecomeActiveNotification, object: nil)
-        if defaults.value(forKeyPath: "Sound") == nil {
-            defaults.set(true, forKey: "Sound")
-        }
+        
         updateSoundLabel()
         
         //  Prepare UI for new game
@@ -50,12 +47,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         // Start game timer
         gameTimer()
-        
-        //  Set label's background to round corners
-        scoreLabel.layer.masksToBounds = true
-        scoreLabel.layer.cornerRadius = 13
-        timeLabel.layer.masksToBounds = true
-        timeLabel.layer.cornerRadius = 13
     }
     
     //MARK: - User press color patern button actions and score calculations
@@ -151,6 +142,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         for i in 0...4 {
             colorBars[i].isHidden = false
         }
+        
+        //  Set label's background to round corners
+        scoreLabel.layer.masksToBounds = true
+        scoreLabel.layer.cornerRadius = 13
+        timeLabel.layer.masksToBounds = true
+        timeLabel.layer.cornerRadius = 13
+        
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
         gameStarted = false
@@ -182,11 +180,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @objc func updateSoundLabel() {
+        if defaults.value(forKeyPath: "Sound") == nil {
+            defaults.set(true, forKey: "Sound")
+        }
         if defaults.bool(forKey: "Sound") == true {
             soundButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
             soundButton.setTitle("Sound On", for: .normal)
-        }
-        if defaults.bool(forKey: "Sound") == false {
+        } else {
             soundButton.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
             soundButton.setTitle("Sound Off", for: .normal)
         }
