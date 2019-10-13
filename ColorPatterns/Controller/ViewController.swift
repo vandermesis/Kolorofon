@@ -15,8 +15,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     let defaults = UserDefaults.standard
     var sounds = Sounds()
     var colors = Colors()
+    var user = User()
     
-    var userScore = 0
+    
     var gameStarted = false
     var timer:Timer?
     var timeLeft = 60
@@ -70,10 +71,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if gameStarted {
             
             //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
-            let rangeOfPickedColor = colors.userColor-0.05...colors.userColor+0.05
+            let colorsRange = colors.userColor-0.05...colors.userColor+0.05
             
-            userScore = rangeOfPickedColor.contains(colors.pickedColor) ? userScore+1 : userScore-1
-            print("rangeOfPickedColor:",rangeOfPickedColor)
+            user.score = colorsRange.contains(colors.pickedColor) ? user.score + 1 : user.score - 1
+            print("rangeOfPickedColor:",colorsRange)
             
         } else {
             
@@ -81,12 +82,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             colors.userColor = colors.pickedColor
         }
         
-        if userScore < 0 {
-            userScore = 0
-        }
+        
         
         //  Update score label
-        scoreLabel.text = String(userScore)
+        scoreLabel.text = String(user.score)
         
         //  Shuffle colors on app start
         updateColorPatterns()
@@ -99,7 +98,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         print("userColor:\(colors.userColor)")
         print("pickedColor: \(colors.pickedColor)")
         print("colorsArray:",colors.array)
-        print("userScore:",userScore)
+        print("userScore:",user.score)
         print("gameStarted:",gameStarted)
         print("pickedColor=DB:",colors.pickedColor == colors.userColor)
         }
@@ -158,7 +157,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
         gameStarted = false
-        userScore = 0
+        user.score = 0
         timer = nil
         timeLeft = 60
         scoreLabel.text = "00"
@@ -169,7 +168,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func uiScoreMode() {
-        yourScore.text = "Your score is \(userScore)"
+        yourScore.text = "Your score is \(user.score)"
         yourScore.isHidden = false
         restartButton.isHidden = false
         for i in 0...4 {

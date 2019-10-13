@@ -39,14 +39,15 @@ Ho!
 
 - Settings.bundle
 - MVC design pattern
-- Use Timer class
+- Try to be SOLID
+- Timer class
 - UISwipeGestureRecognizer for swipe down and shake
-- 
+- Observed properties
 
 ## To-do
 
 - [x] Add logic to shuffle colors and remember user's choice
-- [ ] Conform to MVC, move game logic to separate structs in Model
+- [x] Conform to MVC, move game logic to separate structs in Model
 - [ ] Make welcome screen with start and options
 - [ ] Allow user to set his name and persist his data
 - [ ] Connect with Apple Game Center

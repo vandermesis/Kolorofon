@@ -24,6 +24,7 @@
 		BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3554C323533779007BC724 /* SettingsBundleHelper.swift */; };
 		BA3554C62353379E007BC724 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA3554C52353379D007BC724 /* Settings.bundle */; };
 		BA8A2C2823533B11002744CB /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2723533B11002744CB /* Sounds.swift */; };
+		BA8A2C2A23533F85002744CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2923533F85002744CB /* User.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 		BAD1026823526BF900A3276F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* Colors.swift */; };
@@ -59,6 +60,7 @@
 		BA3554C323533779007BC724 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA3554C52353379D007BC724 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA8A2C2723533B11002744CB /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		BA8A2C2923533F85002744CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 			children = (
 				BAD1026723526BF900A3276F /* Colors.swift */,
 				BA8A2C2723533B11002744CB /* Sounds.swift */,
+				BA8A2C2923533F85002744CB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
 				BAD1026823526BF900A3276F /* Colors.swift in Sources */,
+				BA8A2C2A23533F85002744CB /* User.swift in Sources */,
 				BA8A2C2823533B11002744CB /* Sounds.swift in Sources */,
 				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
