@@ -11,7 +11,6 @@
 		8433BF4522766CA700EDC257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4422766CA700EDC257 /* ViewController.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
 		845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 845D9E2822D51FC7007FA89E /* Settings.bundle */; };
-		845D9E3322D52B0E007FA89E /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
 		BA0AA47B230E934000E2A21D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA47A230E934000E2A21D /* animation.gif */; };
@@ -25,7 +24,7 @@
 		BA199B7A2292F70200CD7C64 /* note2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B732292F70200CD7C64 /* note2.wav */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
-		BAD1026823526BF900A3276F /* UpdateColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* UpdateColors.swift */; };
+		BAD1026823526BF900A3276F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,6 @@
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D9E2822D51FC7007FA89E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA0AA478230E810A00E2A21D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BA0AA47A230E934000E2A21D /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
@@ -62,7 +60,7 @@
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAD1026723526BF900A3276F /* UpdateColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateColors.swift; sourceTree = "<group>"; };
+		BAD1026723526BF900A3276F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				845D9E2822D51FC7007FA89E /* Settings.bundle */,
-				845D9E3222D52B0E007FA89E /* SettingsBundleHelper.swift */,
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				BAD1026623526BC000A3276F /* Model */,
 				BA94BCF622C3844300D8157E /* View */,
 				BA94BCF522C3841B00D8157E /* Controller */,
+				BA503E3623532F8400CFA6F2 /* Settings */,
 				BA94BCF722C3845600D8157E /* Supporting Files */,
 				8433BF4E22766CA800EDC257 /* Info.plist */,
 			);
@@ -140,6 +138,13 @@
 				BA0AA478230E810A00E2A21D /* logo.png */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		BA503E3623532F8400CFA6F2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		BA94BCF522C3841B00D8157E /* Controller */ = {
@@ -180,7 +185,7 @@
 		BAD1026623526BC000A3276F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1026723526BF900A3276F /* UpdateColors.swift */,
+				BAD1026723526BF900A3276F /* Colors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,8 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
-				845D9E3322D52B0E007FA89E /* SettingsBundleHelper.swift in Sources */,
-				BAD1026823526BF900A3276F /* UpdateColors.swift in Sources */,
+				BAD1026823526BF900A3276F /* Colors.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

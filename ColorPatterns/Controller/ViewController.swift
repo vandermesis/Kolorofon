@@ -14,10 +14,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //MARK: - Variables declared
     let defaults = UserDefaults.standard
     var audioPlayer : AVAudioPlayer!
-    var updateColors = UpdateColors()
+    var colors = Colors()
     var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
     var userScore = 0
-    var buttonPressedCount = false
+    var gameStarted = false
     var timer:Timer?
     var timeLeft = 60
     
@@ -66,15 +66,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         //  Persist color picked by user
-        updateColors.pickedColor = updateColors.colorsArray[sender.tag-1]
-        updateColors.pickedColorDataBase.append(updateColors.pickedColor)
+        colors.pickedColor = colors.array[sender.tag-1]
+        colors.userColor.append(colors.pickedColor)
         
         
         //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
-        let rangeOfPickedColor = updateColors.pickedColorDataBase[0]-0.05...updateColors.pickedColorDataBase[0]+0.05
-        buttonPressedCount = true
-        if buttonPressedCount {
-            userScore = rangeOfPickedColor.contains(updateColors.pickedColor) ? userScore+1 : userScore-1
+        let rangeOfPickedColor = colors.userColor[0]-0.05...colors.userColor[0]+0.05
+        
+        if gameStarted {
+            userScore = rangeOfPickedColor.contains(colors.pickedColor) ? userScore+1 : userScore-1
         }
         if userScore < 0 {
             userScore = 0
@@ -85,30 +85,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Shuffle colors on app start
         updateColorPatterns()
+        gameStarted = true
         
         //  Prints ;) - develping helpers
         print("////////////////////////////////////////////")
-        print("pickedColorDataBase:\(updateColors.pickedColorDataBase)")
+        print("pickedColorDataBase:\(colors.userColor)")
         print("rangeOfPickedColor:",rangeOfPickedColor)
-        print("pickedColor: \(updateColors.pickedColor)")
-        print("colorsArray:",updateColors.colorsArray)
+        print("pickedColor: \(colors.pickedColor)")
+        print("colorsArray:",colors.array)
         print("userScore:",userScore)
-        print("buttonPressedCount:",buttonPressedCount)
-        print("pickedColor=DB:",updateColors.pickedColor == updateColors.pickedColorDataBase[0])
+        print("buttonPressedCount:",gameStarted)
+        print("pickedColor=DB:",colors.pickedColor == colors.userColor[0])
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
         updateColorPatterns()
         print("swipe action")
-        print("colorsArray:",updateColors.colorsArray)
+        print("colorsArray:",colors.array)
     }
     
     //  Shake action for updateColorPatterns when user's color is not on screen
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             updateColorPatterns()
-            print("colorsArray:",updateColors.colorsArray)
+            print("colorsArray:",colors.array)
         }
     }
     
@@ -125,7 +126,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Update color patterns
     func updateColorPatterns() {
-        let updatedColors = updateColors.shuffle()
+        let updatedColors = colors.shuffle()
         for i in 0...4 {
             colorBars[i].backgroundColor = UIColor(hue: updatedColors[i], saturation: 1, brightness: 1, alpha: 1)
         }
@@ -161,15 +162,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
-        buttonPressedCount = false
+        gameStarted = false
         userScore = 0
         timer = nil
         timeLeft = 60
         scoreLabel.text = "00"
         timeLabel.text = "60"
-        updateColors.pickedColorDataBase = [CGFloat]()
+        colors.userColor = [CGFloat]()
         updateColorPatterns()
-        print("colorsArray:",updateColors.colorsArray)
+        print("colorsArray:",colors.array)
     }
     
     func uiScoreMode() {
