@@ -67,15 +67,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Persist color picked by user
         colors.pickedColor = colors.array[sender.tag-1]
-        colors.userColor.append(colors.pickedColor)
+//        colors.userColor.append(colors.pickedColor)
         
         
         //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
-        let rangeOfPickedColor = colors.userColor[0]-0.05...colors.userColor[0]+0.05
+        
         
         if gameStarted {
+            let rangeOfPickedColor = colors.userColor-0.05...colors.userColor+0.05
             userScore = rangeOfPickedColor.contains(colors.pickedColor) ? userScore+1 : userScore-1
+            print("rangeOfPickedColor:",rangeOfPickedColor)
+        } else {
+            colors.userColor = colors.pickedColor
         }
+        
         if userScore < 0 {
             userScore = 0
         }
@@ -85,17 +90,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Shuffle colors on app start
         updateColorPatterns()
+        
+        // Set gameStarted
         gameStarted = true
         
         //  Prints ;) - develping helpers
         print("////////////////////////////////////////////")
-        print("pickedColorDataBase:\(colors.userColor)")
-        print("rangeOfPickedColor:",rangeOfPickedColor)
+        print("userColor:\(colors.userColor)")
         print("pickedColor: \(colors.pickedColor)")
         print("colorsArray:",colors.array)
         print("userScore:",userScore)
-        print("buttonPressedCount:",gameStarted)
-        print("pickedColor=DB:",colors.pickedColor == colors.userColor[0])
+        print("gameStarted:",gameStarted)
+        print("pickedColor=DB:",colors.pickedColor == colors.userColor)
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
@@ -168,7 +174,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timeLeft = 60
         scoreLabel.text = "00"
         timeLabel.text = "60"
-        colors.userColor = [CGFloat]()
+        colors.userColor = 0
         updateColorPatterns()
         print("colorsArray:",colors.array)
     }

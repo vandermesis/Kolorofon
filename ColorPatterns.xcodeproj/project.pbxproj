@@ -10,7 +10,6 @@
 		8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4222766CA700EDC257 /* AppDelegate.swift */; };
 		8433BF4522766CA700EDC257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4422766CA700EDC257 /* ViewController.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
-		845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 845D9E2822D51FC7007FA89E /* Settings.bundle */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
 		BA0AA47B230E934000E2A21D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA47A230E934000E2A21D /* animation.gif */; };
@@ -22,6 +21,8 @@
 		BA199B782292F70200CD7C64 /* note6.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B712292F70200CD7C64 /* note6.wav */; };
 		BA199B792292F70200CD7C64 /* note7.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B722292F70200CD7C64 /* note7.wav */; };
 		BA199B7A2292F70200CD7C64 /* note2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B732292F70200CD7C64 /* note2.wav */; };
+		BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3554C323533779007BC724 /* SettingsBundleHelper.swift */; };
+		BA3554C62353379E007BC724 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA3554C52353379D007BC724 /* Settings.bundle */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 		BAD1026823526BF900A3276F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* Colors.swift */; };
@@ -44,7 +45,6 @@
 		8433BF4722766CA700EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		845D9E2822D51FC7007FA89E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA0AA478230E810A00E2A21D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BA0AA47A230E934000E2A21D /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		BA199B712292F70200CD7C64 /* note6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note6.wav; sourceTree = "<group>"; };
 		BA199B722292F70200CD7C64 /* note7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note7.wav; sourceTree = "<group>"; };
 		BA199B732292F70200CD7C64 /* note2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note2.wav; sourceTree = "<group>"; };
+		BA3554C323533779007BC724 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		BA3554C52353379D007BC724 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +107,6 @@
 		8433BF4122766CA700EDC257 /* ColorPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				845D9E2822D51FC7007FA89E /* Settings.bundle */,
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				BAD1026623526BC000A3276F /* Model */,
 				BA94BCF622C3844300D8157E /* View */,
@@ -143,6 +144,8 @@
 		BA503E3623532F8400CFA6F2 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				BA3554C323533779007BC724 /* SettingsBundleHelper.swift */,
+				BA3554C52353379D007BC724 /* Settings.bundle */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -274,11 +277,11 @@
 			files = (
 				BA199B792292F70200CD7C64 /* note7.wav in Resources */,
 				BA0AA47B230E934000E2A21D /* animation.gif in Resources */,
-				845D9E2922D51FC7007FA89E /* Settings.bundle in Resources */,
 				BA199B7A2292F70200CD7C64 /* note2.wav in Resources */,
 				BA0AA479230E810A00E2A21D /* logo.png in Resources */,
 				BA199B762292F70200CD7C64 /* note5.wav in Resources */,
 				BA199B782292F70200CD7C64 /* note6.wav in Resources */,
+				BA3554C62353379E007BC724 /* Settings.bundle in Resources */,
 				BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */,
 				BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */,
 				BA199B772292F70200CD7C64 /* note4.wav in Resources */,
@@ -305,6 +308,7 @@
 			files = (
 				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
 				BAD1026823526BF900A3276F /* Colors.swift in Sources */,
+				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
