@@ -13,9 +13,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - Variables declared
     let defaults = UserDefaults.standard
-    var audioPlayer : AVAudioPlayer!
+    var sounds = Sounds()
     var colors = Colors()
-    var soundsArray = ["note1", "note2", "note3", "note4", "note5"]
+    
     var userScore = 0
     var gameStarted = false
     var timer:Timer?
@@ -62,22 +62,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //  Play sound as set in settings by user
         if defaults.bool(forKey: "Sound") == true {
-            playSound(selectedFile: soundsArray[sender.tag-1])
+            sounds.play(selectedFile: sounds.array[sender.tag-1])
         }
-        
-        //  Persist color picked by user
+    
         colors.pickedColor = colors.array[sender.tag-1]
-//        colors.userColor.append(colors.pickedColor)
-        
-        
-        //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
-        
         
         if gameStarted {
+            
+            //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
             let rangeOfPickedColor = colors.userColor-0.05...colors.userColor+0.05
+            
             userScore = rangeOfPickedColor.contains(colors.pickedColor) ? userScore+1 : userScore-1
             print("rangeOfPickedColor:",rangeOfPickedColor)
+            
         } else {
+            
+            //  Persist color picked by user
             colors.userColor = colors.pickedColor
         }
         
@@ -117,17 +117,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             updateColorPatterns()
             print("colorsArray:",colors.array)
         }
-    }
-    
-    //MARK: - Play sound method
-    func playSound(selectedFile : String){
-        let soundURL = Bundle.main.url(forResource: selectedFile, withExtension: "wav")
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOf: soundURL!)
-        } catch {
-            print(error.localizedDescription)
-        }
-        audioPlayer.play()
     }
     
     //MARK: - Update color patterns
