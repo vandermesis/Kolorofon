@@ -50,10 +50,10 @@ Ho!
 - [x] Conform to MVC, move game logic to separate structs in Model
 - [ ] Make welcome screen with start game and options
 - [ ] Allow user to set his name and persist his data
+- [ ] Add pause game functionality
 - [ ] Connect with Apple Game Center
 - [ ] Add difficulty levels (more/less colors to choose from, different range of colors error)
 - [ ] Change default sounds of xylophone to something better
-
 - [ ] Tailor UI and UX
 - [ ] Unit Tests
 

@@ -7,19 +7,16 @@
 //
 
 import UIKit
-import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController {
     
-    //MARK: - Variables declared
+    //MARK: - Constants and Variables declared
     let defaults = UserDefaults.standard
     var sounds = Sounds()
     var colors = Colors()
     var user = User()
-    
+    var gameTimer = GameTimer()
     var gameStarted = false
-    var timer:Timer?
-    var timeLeft = 60
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -32,25 +29,29 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //  Configure swipe gesture to update color patterns if no user color is on the screen
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
-        swipeGesture.direction = .down
-        view.addGestureRecognizer(swipeGesture)
+        // Add swipe down gesture to shuffle colors
+        addSwipe()
         
         //  Nofify when app didBecomeActive to update sound label if needed
         NotificationCenter.default.addObserver(self, selector:#selector(updateSoundLabel), name: UIApplication.didBecomeActiveNotification, object: nil)
         
-        updateSoundLabel()
-        
         //  Prepare UI for new game
         uiGameMode()
         
-        // Start game timer
-        gameTimer()
+        // GameTimer delegate
+        gameTimer.delegate = self
+    }
+    
+    private func addSwipe() {
+        
+        //  Configure swipe gesture to update color patterns if no user color is on the screen
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
+        swipeGesture.direction = .down
+        view.addGestureRecognizer(swipeGesture)
     }
     
     //MARK: - User press color patern button actions and score calculations
-    @IBAction func colorButtonPressed(_ sender: UIButton) {
+    @IBAction func colorPressed(_ sender: UIButton) {
         
         //  Play sound as set in settings by user
         if defaults.bool(forKey: "Sound") == true {
@@ -70,13 +71,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             colors.userColor = colors.pickedColor
         }
         
-        
-        
         //  Update score label
         scoreLabel.text = String(user.score)
         
-        //  Shuffle colors on app start
-        updateColorPatterns()
+        //  Shuffle colors
+        shuffleColors()
         
         // Set gameStarted
         gameStarted = true
@@ -93,56 +92,34 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
-        updateColorPatterns()
+        shuffleColors()
         print("swipe action")
         print("colorsArray:",colors.array)
     }
     
-    //  Shake action for updateColorPatterns when user's color is not on screen
+    //  Shake action for shuffleColors when user's color is not on screen
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            updateColorPatterns()
+            shuffleColors()
             print("colorsArray:",colors.array)
         }
     }
     
     //MARK: - Update color patterns
-    func updateColorPatterns() {
+    func shuffleColors() {
         let updatedColors = colors.shuffle()
         for i in 0...4 {
             colorBars[i].backgroundColor = UIColor(hue: updatedColors[i], saturation: 1, brightness: 1, alpha: 1)
         }
     }
     
-    //MARK: - Timer methods
-    func gameTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
-    }
-    
-    @objc func onTimerFires() {
-        timeLeft -= 1
-        timeLabel.text = String(timeLeft)
-        if timeLeft <= 0 {
-            timer?.invalidate()
-            timer = nil
-            uiScoreMode()
-        }
-    }
-    
     //MARK: - Restart game method
     @IBAction func restartButtonPressed(_ sender: Any) {
         uiGameMode()
-        gameTimer()
     }
     
     //MARK: - Update UI methods
     func uiGameMode() {
-        yourScore.isHidden = true
-        restartButton.isHidden = true
-        for i in 0...4 {
-            colorBars[i].isHidden = false
-        }
-        
         //  Set label's background to round corners
         scoreLabel.layer.masksToBounds = true
         scoreLabel.layer.cornerRadius = 13
@@ -151,14 +128,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         scoreLabel.isHidden = false
         timeLabel.isHidden = false
+        yourScore.isHidden = true
+        restartButton.isHidden = true
+        for i in 0...4 {
+            colorBars[i].isHidden = false
+        }
+        
         gameStarted = false
         user.score = 0
-        timer = nil
-        timeLeft = 60
-        scoreLabel.text = "00"
-        timeLabel.text = "60"
+        scoreLabel.text = String(user.score)
+        timeLabel.text = String(gameTimer.timeLeft)
         colors.userColor = 0
-        updateColorPatterns()
+        updateSoundLabel()
+        shuffleColors()
+        gameTimer.start()
         print("colorsArray:",colors.array)
     }
     
@@ -190,5 +173,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             soundButton.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
             soundButton.setTitle("Sound Off", for: .normal)
         }
+    }
+}
+
+extension ViewController: GameTimerDelegate {
+    
+    func timerUpdate() {
+        timeLabel.text = String(gameTimer.timeLeft)
+    }
+    
+    func timerEnded() {
+        uiScoreMode()
     }
 }

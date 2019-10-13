@@ -12,8 +12,8 @@ struct User {
     
     var score: Int = 0 {
         didSet {
-            if score < 0 {
-                score = 0
+            guard score > 0 else {
+                return score = 0
             }
         }
     }

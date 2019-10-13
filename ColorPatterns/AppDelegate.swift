@@ -14,9 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
-        //  Show lauch screen for 1 sec to display logo
-        Thread.sleep(forTimeInterval: 1.0)
+        //  Show lauch screen for 0.5 sec to display logo
+        Thread.sleep(forTimeInterval: 0.5)
         return true
     }
 
