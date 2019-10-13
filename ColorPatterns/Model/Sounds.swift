@@ -11,7 +11,7 @@ import AVFoundation
 struct Sounds {
     
     var audioPlayer : AVAudioPlayer!
-    var array = ["note1", "note2", "note3", "note4", "note5"]
+    let array = ["note1", "note2", "note3", "note4", "note5"]
     
     mutating func play(selectedFile : String){
         let soundURL = Bundle.main.url(forResource: selectedFile, withExtension: "wav")

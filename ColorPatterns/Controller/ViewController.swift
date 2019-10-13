@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: - Constants and Variables declared
-    let defaults = UserDefaults.standard
-    var sounds = Sounds()
-    var colors = Colors()
-    var user = User()
-    var gameTimer = GameTimer()
-    var gameStarted = false
+    private let defaults = UserDefaults.standard
+    private var sounds = Sounds()
+    private var colors = Colors()
+    private var user = User()
+    private var gameTimer = GameTimer()
+    private var gameStarted = false
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -29,56 +29,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Add swipe down gesture to shuffle colors
-        addSwipe()
-        
         //  Nofify when app didBecomeActive to update sound label if needed
         NotificationCenter.default.addObserver(self, selector:#selector(updateSoundLabel), name: UIApplication.didBecomeActiveNotification, object: nil)
         
-        //  Prepare UI for new game
-        uiGameMode()
-        
-        // GameTimer delegate
         gameTimer.delegate = self
-    }
-    
-    private func addSwipe() {
-        
-        //  Configure swipe gesture to update color patterns if no user color is on the screen
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
-        swipeGesture.direction = .down
-        view.addGestureRecognizer(swipeGesture)
+        addSwipe()
+        uiGameMode()
     }
     
     //MARK: - User press color patern button actions and score calculations
     @IBAction func colorPressed(_ sender: UIButton) {
-        
-        //  Play sound as set in settings by user
+        colors.pickedColor = colors.array[sender.tag-1]
         if defaults.bool(forKey: "Sound") == true {
             sounds.play(selectedFile: sounds.array[sender.tag-1])
         }
-    
-        colors.pickedColor = colors.array[sender.tag-1]
-        
         if gameStarted {
-            
             user.calculateScore(colors.range.contains(colors.pickedColor))
             print("rangeOfPickedColor:", colors.range)
-            
         } else {
-            
-            //  Persist first color picked by user
             colors.userColor = colors.pickedColor
         }
-        
-        //  Update score label
         scoreLabel.text = String(user.score)
-        
-        //  Shuffle colors
-        shuffleColors()
-        
-        // Set gameStarted
         gameStarted = true
+        shuffleColors()
         
         //  Prints ;) - develping helpers
         print("////////////////////////////////////////////")
@@ -91,6 +64,12 @@ class ViewController: UIViewController {
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen
+    private func addSwipe() {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
+        swipeGesture.direction = .down
+        view.addGestureRecognizer(swipeGesture)
+    }
+    
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
         shuffleColors()
         print("swipe action")
@@ -105,8 +84,8 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: - Update color patterns
-    func shuffleColors() {
+    //MARK: - Shuffle color patterns
+    private func shuffleColors() {
         let updatedColors = colors.shuffle()
         for i in 0...4 {
             colorBars[i].backgroundColor = UIColor(hue: updatedColors[i], saturation: 1, brightness: 1, alpha: 1)
@@ -119,7 +98,8 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Update UI methods
-    func uiGameMode() {
+    private func uiGameMode() {
+        
         //  Set label's background to round corners
         scoreLabel.layer.masksToBounds = true
         scoreLabel.layer.cornerRadius = 13
@@ -136,16 +116,16 @@ class ViewController: UIViewController {
         
         gameStarted = false
         user.score = 0
+        colors.userColor = 0
         scoreLabel.text = String(user.score)
         timeLabel.text = String(gameTimer.timeLeft)
-        colors.userColor = 0
         updateSoundLabel()
         shuffleColors()
         gameTimer.start()
         print("colorsArray:",colors.array)
     }
     
-    func uiScoreMode() {
+    private func uiScoreMode() {
         yourScore.text = "Your score is \(user.score)"
         yourScore.isHidden = false
         restartButton.isHidden = false
