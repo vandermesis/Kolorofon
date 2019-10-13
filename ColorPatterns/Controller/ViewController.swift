@@ -70,15 +70,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if gameStarted {
             
-            //  Calculate user score if user hit color in range(+ 0.05 -0.05) of his picked color
-            let colorsRange = colors.userColor-0.05...colors.userColor+0.05
-            
-            user.score = colorsRange.contains(colors.pickedColor) ? user.score + 1 : user.score - 1
-            print("rangeOfPickedColor:",colorsRange)
+            user.calculateScore(colors.range.contains(colors.pickedColor))
+            print("rangeOfPickedColor:", colors.range)
             
         } else {
             
-            //  Persist color picked by user
+            //  Persist first color picked by user
             colors.userColor = colors.pickedColor
         }
         

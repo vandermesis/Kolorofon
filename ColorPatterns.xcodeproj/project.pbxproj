@@ -192,9 +192,9 @@
 		BAD1026623526BC000A3276F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA8A2C2923533F85002744CB /* User.swift */,
 				BAD1026723526BF900A3276F /* Colors.swift */,
 				BA8A2C2723533B11002744CB /* Sounds.swift */,
-				BA8A2C2923533F85002744CB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
