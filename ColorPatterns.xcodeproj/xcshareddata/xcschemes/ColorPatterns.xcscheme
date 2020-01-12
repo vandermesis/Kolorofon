@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ColorPatterns.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BAC92D9122BA7B2B00D3B025"
+               BuildableName = "ColorPatternsTests.xctest"
+               BlueprintName = "ColorPatternsTests"
+               ReferencedContainer = "container:ColorPatterns.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
