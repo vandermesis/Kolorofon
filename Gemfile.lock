@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/dreampiggy/cocoapods-xcode-patch.git
+  revision: 6cfdabd0e28e746736a23be6f225ec300a19a91a
+  specs:
+    cocoapods-xcode-patch (0.2.0)
+      cocoapods (~> 1.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -255,6 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods
+  cocoapods-xcode-patch!
   danger
   danger-swiftlint
   fastlane
