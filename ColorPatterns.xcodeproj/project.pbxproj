@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,7 +72,6 @@
 		BA8A2C2923533F85002744CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAD1026723526BF900A3276F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -117,7 +116,6 @@
 				994A45569543D88502718664 /* Pods-ColorPatternsTests.debug.xcconfig */,
 				1215849A9861E9B751FEFDC0 /* Pods-ColorPatternsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +206,6 @@
 			children = (
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				8433BF4E22766CA800EDC257 /* Info.plist */,
-				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
 				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
 				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
 				BAEF491C23CAFC910090E606 /* Colors.xcassets */,
