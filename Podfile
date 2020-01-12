@@ -7,6 +7,8 @@ target 'ColorPatterns' do
 
   # Pods for ColorPatterns
   pod 'SwiftLint'
+  pod 'R.swift'
+  pod 'lottie-ios'
 
   target 'ColorPatternsTests' do
     inherit! :search_paths
