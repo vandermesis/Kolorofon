@@ -29,6 +29,22 @@ if github.pr_body.length < 3 && git.lines_of_code > 10
   warn("Please provide a summary in the Pull Request description")
 end
 
+# Slater config
+slather.configure("ColorPatterns.xcodeproj", "ColorPatterns", options: {
+  workspace: 'ColorPatterns.xcworkspace',
+  output_directory: "coverage",
+  ignore_list: [
+    "**/R.generated.swift",
+    "**/ColorPatternsTests.swift"
+  ],
+  ci_service: :travis,
+  coverage_service: :terminal,
+})
+
+slather.notify_if_coverage_is_less_than(minimum_coverage: 80)
+slather.notify_if_modified_file_is_less_than(minimum_coverage: 60)
+slather.show_coverage
+
 # 
 # ** FILE CHECKS **
 # Checks for certain rules and warns if needed.
