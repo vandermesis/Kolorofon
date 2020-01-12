@@ -8,6 +8,7 @@
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
 ![xcode](https://img.shields.io/badge/xcode-10.2-blue.svg)
 [![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
+![](https://github.com/vandermesis/ColorPatterns/workflows/CI/badge.svg)
 
 
 ## How it looks like
