@@ -246,7 +246,6 @@
 				8433BF3B22766CA700EDC257 /* Sources */,
 				8433BF3C22766CA700EDC257 /* Frameworks */,
 				8433BF3D22766CA700EDC257 /* Resources */,
-				29D6A78ACBB9143DCF8164A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,23 +347,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		29D6A78ACBB9143DCF8164A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3CAC180E706EB6E276C9402D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
