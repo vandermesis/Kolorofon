@@ -15,21 +15,16 @@ enum Level {
 struct Colors {
     
     var array = [CGFloat](repeating: 0.0, count: 5)
-    var pickedColor : CGFloat = 0
+    var pickedColor: CGFloat = 0
     var userColor: CGFloat = 0
     var range: ClosedRange<CGFloat> {
-        get {
-            let range = userColor-0.05...userColor+0.05
-            print(range)
-            return range
-        }
+        let range = userColor-0.05...userColor+0.05
+        print(range)
+        return range
     }
     
     mutating func shuffle() -> [CGFloat] {
         array = array.map {_ in CGFloat((String(format: "%.2f", CGFloat.random(in: 0.0...0.9)) as NSString).doubleValue)}
         return array
     }
-    
-    
-        
 }

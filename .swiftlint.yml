@@ -1,7 +1,6 @@
 excluded:
  - Pods
- - CleanWeather/Support/R.generated.swift
- - CleanWeatherTests
+ - ColorPatterns/Support/R.generated.swift
 
 line_length:
  warning: 180
