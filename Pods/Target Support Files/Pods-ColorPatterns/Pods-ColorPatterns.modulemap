@@ -1,6 +1,0 @@
-framework module Pods_ColorPatterns {
-  umbrella header "Pods-ColorPatterns-umbrella.h"
-
-  export *
-  module * { export * }
-}
