@@ -9,7 +9,7 @@
 import XCTest
 @testable import ColorPatterns
 
-class ColorPatternsTests: XCTestCase {
+final class ColorPatternsTests: XCTestCase {
 
     var colors = Colors()
 
@@ -27,10 +27,8 @@ class ColorPatternsTests: XCTestCase {
     }
 
     func testPerformanceExample() {
-        // This is an example of a performance test case.
         self.measure {
-            colors.shuffle()
+            _ = colors.shuffle()
         }
     }
-
 }
