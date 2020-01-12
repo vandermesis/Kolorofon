@@ -246,6 +246,7 @@
 				AD7128EED83685004225AACD /* [CP] Check Pods Manifest.lock */,
 				BAEF492023CB0A6E0090E606 /* R.swift */,
 				8433BF3B22766CA700EDC257 /* Sources */,
+				BAEF492523CB0FBB0090E606 /* SwiftLint */,
 				8433BF3C22766CA700EDC257 /* Frameworks */,
 				8433BF3D22766CA700EDC257 /* Resources */,
 				13DBD1BC5BD7E695BD70766B /* [CP] Embed Pods Frameworks */,
@@ -448,6 +449,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ColorPatterns/Support/R.generated.swift\"\n";
+		};
+		BAEF492523CB0FBB0090E606 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
