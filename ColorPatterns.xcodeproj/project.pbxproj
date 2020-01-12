@@ -32,6 +32,7 @@
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 		BAD1026823526BF900A3276F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* Colors.swift */; };
 		BAEF491D23CAFC910090E606 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEF491C23CAFC910090E606 /* Colors.xcassets */; };
+		BAEF492423CB0D850090E606 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF492323CB0D850090E606 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAD1026723526BF900A3276F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BAEF491C23CAFC910090E606 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BAEF492323CB0D850090E606 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C3C9E4959971725432D16550 /* Pods-ColorPatterns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatterns.release.xcconfig"; path = "Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
+				BAEF492323CB0D850090E606 /* R.generated.swift */,
 				8433BF4E22766CA800EDC257 /* Info.plist */,
 				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
 				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
@@ -241,6 +244,7 @@
 			buildConfigurationList = 8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "ColorPatterns" */;
 			buildPhases = (
 				AD7128EED83685004225AACD /* [CP] Check Pods Manifest.lock */,
+				BAEF492023CB0A6E0090E606 /* R.swift */,
 				8433BF3B22766CA700EDC257 /* Sources */,
 				8433BF3C22766CA700EDC257 /* Frameworks */,
 				8433BF3D22766CA700EDC257 /* Resources */,
@@ -425,6 +429,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BAEF492023CB0A6E0090E606 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/ColorPatterns/Support/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ColorPatterns/Support/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,6 +458,7 @@
 			files = (
 				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
 				BAD1026823526BF900A3276F /* Colors.swift in Sources */,
+				BAEF492423CB0D850090E606 /* R.generated.swift in Sources */,
 				BA8A2C2A23533F85002744CB /* User.swift in Sources */,
 				BA9484FD23535E0800375037 /* GameTimer.swift in Sources */,
 				BA8A2C2823533B11002744CB /* Sounds.swift in Sources */,
