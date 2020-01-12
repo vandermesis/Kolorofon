@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
 		BA0AA47B230E934000E2A21D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA47A230E934000E2A21D /* animation.gif */; };
+		BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA141A3823CBCDC70039A5DC /* R.generated.swift */; };
 		BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4622766CA700EDC257 /* Main.storyboard */; };
 		BA199B742292F70200CD7C64 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6D2292F70200CD7C64 /* note3.wav */; };
 		BA199B752292F70200CD7C64 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6E2292F70200CD7C64 /* note1.wav */; };
@@ -58,6 +59,7 @@
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA0AA478230E810A00E2A21D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BA0AA47A230E934000E2A21D /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
+		BA141A3823CBCDC70039A5DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BA199B6D2292F70200CD7C64 /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
 		BA199B6E2292F70200CD7C64 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
 		BA199B6F2292F70200CD7C64 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 				BA2F742722C3597B007573FF /* Demo */,
 				8433BF4122766CA700EDC257 /* ColorPatterns */,
 				8433BF4022766CA700EDC257 /* Products */,
-				BA199B7B2292F70D00CD7C64 /* Sounds */,
 				BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */,
 				E89C705E715439D10AC0CC5C /* Pods */,
 				E968CB20018162CE2BC346A2 /* Frameworks */,
@@ -125,13 +126,11 @@
 		8433BF4122766CA700EDC257 /* ColorPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				BAD1026623526BC000A3276F /* Model */,
 				BA94BCF622C3844300D8157E /* View */,
 				BA94BCF522C3841B00D8157E /* Controller */,
 				BA503E3623532F8400CFA6F2 /* Settings */,
-				BA94BCF722C3845600D8157E /* Supporting Files */,
-				8433BF4E22766CA800EDC257 /* Info.plist */,
+				BA94BCF722C3845600D8157E /* Support */,
 			);
 			path = ColorPatterns;
 			sourceTree = "<group>";
@@ -184,14 +183,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BA94BCF722C3845600D8157E /* Supporting Files */ = {
+		BA94BCF722C3845600D8157E /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				8433BF4E22766CA800EDC257 /* Info.plist */,
+				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
+				BA141A3823CBCDC70039A5DC /* R.generated.swift */,
 				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
-				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
 				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
+				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
+				BA199B7B2292F70D00CD7C64 /* Sounds */,
 			);
-			path = "Supporting Files";
+			path = Support;
 			sourceTree = "<group>";
 		};
 		BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */ = {
@@ -222,7 +225,6 @@
 				71C3F18AB67621B3C8A18A07 /* Pods-ColorPatternsTests.debug.xcconfig */,
 				F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,7 +245,9 @@
 			buildConfigurationList = 8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "ColorPatterns" */;
 			buildPhases = (
 				BD248D2A5B760DA3697DB235 /* [CP] Check Pods Manifest.lock */,
+				BA141A3723CBCD250039A5DC /* R.swift */,
 				8433BF3B22766CA700EDC257 /* Sources */,
+				BA141A3A23CBCEBE0039A5DC /* SwiftLint */,
 				8433BF3C22766CA700EDC257 /* Frameworks */,
 				8433BF3D22766CA700EDC257 /* Resources */,
 				033DF21086C11D516702A6CD /* [CP] Embed Pods Frameworks */,
@@ -387,6 +391,44 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA141A3723CBCD250039A5DC /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/ColorPatterns/Support/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ColorPatterns/Support/R.generated.swift\"\n";
+		};
+		BA141A3A23CBCEBE0039A5DC /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		BD248D2A5B760DA3697DB235 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,6 +478,7 @@
 				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
 				BAD1026823526BF900A3276F /* Colors.swift in Sources */,
 				BA8A2C2A23533F85002744CB /* User.swift in Sources */,
+				BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */,
 				BA9484FD23535E0800375037 /* GameTimer.swift in Sources */,
 				BA8A2C2823533B11002744CB /* Sounds.swift in Sources */,
 				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
@@ -604,7 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
-				INFOPLIST_FILE = ColorPatterns/Info.plist;
+				INFOPLIST_FILE = ColorPatterns/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,7 +667,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
-				INFOPLIST_FILE = ColorPatterns/Info.plist;
+				INFOPLIST_FILE = ColorPatterns/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

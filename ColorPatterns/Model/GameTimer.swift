@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GameTimerDelegate {
+protocol GameTimerDelegate: class {
     func timerEnded()
     func timerUpdate()
 }
@@ -16,10 +16,12 @@ protocol GameTimerDelegate {
 class GameTimer {
 
     private var timer: Timer?
-    var delegate: GameTimerDelegate?
+
+    weak var delegate: GameTimerDelegate?
+
     var timeLeft = 60
     
-    //MARK: - Timer methods
+    // MARK: - Timer methods
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
