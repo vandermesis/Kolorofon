@@ -34,11 +34,8 @@ var colorsArray = [CGFloat](repeating: 0.0, count: 5)
 //
 //updateColorArray()
 
-func mapColorArray() {
-    
+func mapColorArray() {    
     colorsArray = colorsArray.map {_ in CGFloat.random(in: 0.0...0.99)}
-    
-   
     print(colorsArray)
 }
 
