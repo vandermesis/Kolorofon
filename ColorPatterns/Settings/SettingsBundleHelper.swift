@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SettingsBundleHelper {
+final class SettingsBundleHelper {
     
     struct SettingsBundleKeys {
         static let BuildVersionKey = "build_preference"
