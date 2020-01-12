@@ -13,7 +13,7 @@ protocol GameTimerDelegate: class {
     func timerUpdate()
 }
 
-class GameTimer {
+final class GameTimer {
 
     private var timer: Timer?
 

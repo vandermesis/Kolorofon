@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // MARK: - Constants and Variables declared
     private let defaults = UserDefaults.standard

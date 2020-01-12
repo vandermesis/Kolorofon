@@ -10,7 +10,7 @@ import XCTest
 
 @testable import ColorPatterns
 
-class ColorPatternsTests: XCTestCase {
+final class ColorPatternsTests: XCTestCase {
 
     var colors = Colors()
 
