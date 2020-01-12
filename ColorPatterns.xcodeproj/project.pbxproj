@@ -29,6 +29,8 @@
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 		BAD1026823526BF900A3276F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* Colors.swift */; };
+		CBFB31709A4ABC4007B1F2B9 /* Pods_ColorPatterns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D69B6966E5619C9699393D0 /* Pods_ColorPatterns.framework */; };
+		D1D714DC5904831AADC7D3C7 /* Pods_ColorPatternsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E34595B3487C8A98C48662A /* Pods_ColorPatternsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05F61EEC823187360E5EA190 /* Pods-ColorPatternsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.release.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D69B6966E5619C9699393D0 /* Pods_ColorPatterns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatterns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ACC6A42C735F0C03276C733 /* Pods-ColorPatterns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatterns.release.xcconfig"; path = "Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns.release.xcconfig"; sourceTree = "<group>"; };
+		3E34595B3487C8A98C48662A /* Pods_ColorPatternsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatternsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5381B36B10621D17939B5025 /* Pods-ColorPatternsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.debug.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		761B470CC50B03226AC2B71D /* Pods-ColorPatterns.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatterns.debug.xcconfig"; path = "Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns.debug.xcconfig"; sourceTree = "<group>"; };
 		8433BF3F22766CA700EDC257 /* ColorPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433BF4222766CA700EDC257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8433BF4422766CA700EDC257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFB31709A4ABC4007B1F2B9 /* Pods_ColorPatterns.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D714DC5904831AADC7D3C7 /* Pods_ColorPatternsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +108,8 @@
 				8433BF4022766CA700EDC257 /* Products */,
 				BA199B7B2292F70D00CD7C64 /* Sounds */,
 				BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */,
+				BCF86AA635EB94139EF3F1D8 /* Pods */,
+				AA135CECC4BCAC16D9A07517 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +134,15 @@
 				8433BF4E22766CA800EDC257 /* Info.plist */,
 			);
 			path = ColorPatterns;
+			sourceTree = "<group>";
+		};
+		AA135CECC4BCAC16D9A07517 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D69B6966E5619C9699393D0 /* Pods_ColorPatterns.framework */,
+				3E34595B3487C8A98C48662A /* Pods_ColorPatternsTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BA199B7B2292F70D00CD7C64 /* Sounds */ = {
@@ -202,6 +223,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BCF86AA635EB94139EF3F1D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				761B470CC50B03226AC2B71D /* Pods-ColorPatterns.debug.xcconfig */,
+				1ACC6A42C735F0C03276C733 /* Pods-ColorPatterns.release.xcconfig */,
+				5381B36B10621D17939B5025 /* Pods-ColorPatternsTests.debug.xcconfig */,
+				05F61EEC823187360E5EA190 /* Pods-ColorPatternsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "ColorPatterns" */;
 			buildPhases = (
+				7410518FF27098363CEAF283 /* [CP] Check Pods Manifest.lock */,
 				8433BF3B22766CA700EDC257 /* Sources */,
 				8433BF3C22766CA700EDC257 /* Frameworks */,
 				8433BF3D22766CA700EDC257 /* Resources */,
+				29D6A78ACBB9143DCF8164A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAC92D9B22BA7B2B00D3B025 /* Build configuration list for PBXNativeTarget "ColorPatternsTests" */;
 			buildPhases = (
+				B59DB96473C38EA5A49F4032 /* [CP] Check Pods Manifest.lock */,
 				BAC92D8E22BA7B2B00D3B025 /* Sources */,
 				BAC92D8F22BA7B2B00D3B025 /* Frameworks */,
 				BAC92D9022BA7B2B00D3B025 /* Resources */,
+				3CAC180E706EB6E276C9402D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +346,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29D6A78ACBB9143DCF8164A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CAC180E706EB6E276C9402D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7410518FF27098363CEAF283 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorPatterns-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B59DB96473C38EA5A49F4032 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorPatternsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8433BF3B22766CA700EDC257 /* Sources */ = {
@@ -481,6 +599,7 @@
 		};
 		8433BF5222766CA800EDC257 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 761B470CC50B03226AC2B71D /* Pods-ColorPatterns.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +619,7 @@
 		};
 		8433BF5322766CA800EDC257 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ACC6A42C735F0C03276C733 /* Pods-ColorPatterns.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +639,7 @@
 		};
 		BAC92D9922BA7B2B00D3B025 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5381B36B10621D17939B5025 /* Pods-ColorPatternsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +661,7 @@
 		};
 		BAC92D9A22BA7B2B00D3B025 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F61EEC823187360E5EA190 /* Pods-ColorPatternsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
