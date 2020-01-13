@@ -17,9 +17,8 @@ struct Score {
             }
         }
     }
-    
-    //  Calculate user score if user hit color in range of his picked color
-    mutating func calculateScore(_ score: Bool) {
+
+    mutating func addScorePoints(_ score: Bool) {
         if score {
             self.score += 1
         } else {

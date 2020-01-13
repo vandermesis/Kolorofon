@@ -45,17 +45,13 @@ final class ViewController: UIViewController {
             sounds.play(selectedFile: sounds.array[sender.tag-1])
         }
         if gameStarted {
-            user.calculateScore(colors.range.contains(colors.pickedColor))
-            //TODO: Remove when not needed
-            print("rangeOfPickedColor:", colors.range)
+            user.addScorePoints(colors.range.contains(colors.pickedColor))
         } else {
             colors.userColor = colors.pickedColor
         }
         scoreLabel.text = String(user.score)
         gameStarted = true
         shuffleColors()
-        
-        
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen

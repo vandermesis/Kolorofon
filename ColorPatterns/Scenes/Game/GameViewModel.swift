@@ -11,28 +11,49 @@ import UIKit
 final class GameViewModel {
 
     private var colorBarsEngine: GameColorBarsEngine
+    private var userScore: Score
+    private var gameStarted = false
 
-    init(colorBarsEngine: GameColorBarsEngine) {
+    init(colorBarsEngine: GameColorBarsEngine, score: Score) {
         self.colorBarsEngine = colorBarsEngine
+        self.userScore = score
     }
 }
 
 extension GameViewModel {
 
     func shuffleColors() -> [CGFloat] {
-        return colorBarsEngine.shuffleColors()
+        let colors = colorBarsEngine.shuffleColors()
+        print("colorsArray: \(colors)")
+        return colors
     }
-
+    
     func didPressColorBar(colorBar: Int) {
         colorBarsEngine.pickedColor = colorBarsEngine.array[colorBar]
+        calculateScore()
+        gameStarted = true
+        helpPrints()
+    }
+}
 
-        //TODO: Remove when not needed
+private extension GameViewModel {
+
+    private func calculateScore() {
+        if gameStarted {
+            userScore.addScorePoints(colorBarsEngine.range.contains(colorBarsEngine.pickedColor))
+        } else {
+            colorBarsEngine.userColor = colorBarsEngine.pickedColor
+        }
+    }
+
+    //TODO: Remove prints when not needed
+    private func helpPrints() {
         print("////////////////////////////////////////////")
         print("userColor: \(colorBarsEngine.userColor)")
         print("pickedColor: \(colorBarsEngine.pickedColor)")
-        print("colorsArray: \(colorBarsEngine.array)")
-//        print("userScore: \(user.score)")
-//        print("gameStarted: \(gameStarted)")
-        print("pickedColor=DB:\(colorBarsEngine.pickedColor == colorBarsEngine.userColor)")
+        print("rangeOfPickedColor: \(colorBarsEngine.range)")
+        print("pickedColor=DB:\(colorBarsEngine.range.contains(colorBarsEngine.pickedColor))")
+        print("userScore: \(userScore.score)")
+        print("gameStarted: \(gameStarted)")
     }
 }

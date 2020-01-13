@@ -18,10 +18,7 @@ struct GameColorBarsEngine {
     var pickedColor: CGFloat = 0
     var userColor: CGFloat = 0
     var range: ClosedRange<CGFloat> {
-        let range = userColor-0.05...userColor+0.05
-        //TODO: Remove when not needed
-        print(range)
-        return range
+        return userColor-0.05...userColor+0.05
     }
 }
 
