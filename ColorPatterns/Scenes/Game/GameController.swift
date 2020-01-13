@@ -15,9 +15,11 @@ final class GameController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
 
     private let viewModel: GameViewModel
+    private var gameTimer: GameTimer
 
-    init(viewModel: GameViewModel) {
+    init(viewModel: GameViewModel, timer: GameTimer) {
         self.viewModel = viewModel
+        self.gameTimer = timer
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -33,11 +35,21 @@ final class GameController: UIViewController {
         super.viewDidLoad()
         updateColorBars()
         setupSwipeDownGesture(direction: .down)
+        setupGameTimer()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
         viewModel.didPressColorBar(colorBar: sender.tag - 1)
         updateColorBars()
+    }
+}
+
+private extension GameController {
+
+    private func setupGameTimer() {
+        timeLabel.text = gameTimer.timeLeft.formatToString
+        gameTimer.start()
+        gameTimer.delegate = self
     }
 }
 
@@ -61,4 +73,13 @@ private extension GameController {
     }
 }
 
+extension GameController: GameTimerDelegate {
 
+    func timerDidEndCounting() {
+        print("Game Over")
+    }
+
+    func timerDidUpdate(seconds: Int) {
+        timeLabel.text = seconds.formatToString
+    }
+}

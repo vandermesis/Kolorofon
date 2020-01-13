@@ -9,8 +9,8 @@
 import Foundation
 
 protocol GameTimerDelegate: class {
-    func timerEnded()
-    func timerUpdate()
+    func timerDidEndCounting()
+    func timerDidUpdate(seconds: Int)
 }
 
 final class GameTimer {
@@ -22,21 +22,23 @@ final class GameTimer {
     var timeLeft = 60
 
     func start() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(onTimerFires),
+                                     userInfo: nil,
+                                     repeats: true)
     }
 }
 
 private extension GameTimer {
 
     @objc private func onTimerFires() {
-
         timeLeft -= 1
-        delegate?.timerUpdate()
-
+        delegate?.timerDidUpdate(seconds: timeLeft)
         if timeLeft <= 0 {
             timer?.invalidate()
             timer = nil
-            delegate?.timerEnded()
+            delegate?.timerDidEndCounting()
             timeLeft = 60
         }
     }
