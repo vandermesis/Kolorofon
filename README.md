@@ -9,7 +9,6 @@
 ![xcode](https://img.shields.io/badge/xcode-10.2-blue.svg)
 [![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
 
-
 ## How it looks like
 ![animation](/Demo/animation.gif)
 

@@ -6,7 +6,6 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
+gem "cocoapods"
 gem "danger"
 gem "danger-swiftlint"
-gem "fastlane"
-gem "xcode-install"
