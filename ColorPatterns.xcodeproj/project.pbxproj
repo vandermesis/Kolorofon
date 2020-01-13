@@ -126,10 +126,13 @@
 		8433BF4122766CA700EDC257 /* ColorPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1026623526BC000A3276F /* Model */,
+				BAD1026623526BC000A3276F /* Models */,
+				BAFAC24823CC8D3800C74D92 /* Scenes */,
+				BAFAC24B23CC8DB900C74D92 /* Helpers */,
+				BAFAC24C23CC8DCF00C74D92 /* Extensions */,
 				BA94BCF622C3844300D8157E /* View */,
 				BA94BCF522C3841B00D8157E /* Controller */,
-				BA503E3623532F8400CFA6F2 /* Settings */,
+				BA503E3623532F8400CFA6F2 /* GameSettings */,
 				BA94BCF722C3845600D8157E /* Support */,
 			);
 			path = ColorPatterns;
@@ -158,13 +161,13 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		BA503E3623532F8400CFA6F2 /* Settings */ = {
+		BA503E3623532F8400CFA6F2 /* GameSettings */ = {
 			isa = PBXGroup;
 			children = (
 				BA3554C323533779007BC724 /* SettingsBundleHelper.swift */,
 				BA3554C52353379D007BC724 /* Settings.bundle */,
 			);
-			path = Settings;
+			path = GameSettings;
 			sourceTree = "<group>";
 		};
 		BA94BCF522C3841B00D8157E /* Controller */ = {
@@ -206,7 +209,7 @@
 			path = ColorPatternsTests;
 			sourceTree = "<group>";
 		};
-		BAD1026623526BC000A3276F /* Model */ = {
+		BAD1026623526BC000A3276F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				BA8A2C2923533F85002744CB /* User.swift */,
@@ -214,7 +217,44 @@
 				BA8A2C2723533B11002744CB /* Sounds.swift */,
 				BA9484FC23535E0800375037 /* GameTimer.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAFAC24823CC8D3800C74D92 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BAFAC24A23CC8D6000C74D92 /* StartMenu */,
+				BAFAC24923CC8D4500C74D92 /* Game */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BAFAC24923CC8D4500C74D92 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		BAFAC24A23CC8D6000C74D92 /* StartMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StartMenu;
+			sourceTree = "<group>";
+		};
+		BAFAC24B23CC8DB900C74D92 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BAFAC24C23CC8DCF00C74D92 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E89C705E715439D10AC0CC5C /* Pods */ = {
