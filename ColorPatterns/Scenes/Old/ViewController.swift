@@ -65,7 +65,7 @@ final class ViewController: UIViewController {
         shuffleColors()
         //TODO: Remove when not needed
         print("swipe action")
-        print("colorsArray:\(colors.array)")
+        
     }
     
     //  Shake action for shuffleColors when user's color is not on screen

@@ -32,6 +32,7 @@ final class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateColorBars()
+        setupSwipeDownGesture(direction: .down)
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
@@ -48,4 +49,16 @@ private extension GameController {
             $1.backgroundColor = updatedColors[$0].uiColorFromCGFloat
         }
     }
+
+    private func setupSwipeDownGesture(direction: UISwipeGestureRecognizer.Direction) {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
+        swipeGesture.direction = direction
+        view.addGestureRecognizer(swipeGesture)
+    }
+
+    @objc func didSwipe(_ sender: UISwipeGestureRecognizer) {
+        updateColorBars()
+    }
 }
+
+

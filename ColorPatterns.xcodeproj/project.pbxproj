@@ -193,6 +193,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		BAA0769A23CD1E9B00452AA3 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				8433BF4422766CA700EDC257 /* ViewController.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 		BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +221,7 @@
 		BAFAC24823CC8D3800C74D92 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BAA0769A23CD1E9B00452AA3 /* Old */,
 				BAFAC24A23CC8D6000C74D92 /* StartMenu */,
 				BAFAC25C23CCA61200C74D92 /* OptionsMenu */,
 				BAFAC25D23CCA63C00C74D92 /* HighScores */,
@@ -225,7 +234,6 @@
 		BAFAC24923CC8D4500C74D92 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				8433BF4422766CA700EDC257 /* ViewController.swift */,
 				BAFAC25123CC912F00C74D92 /* GameCreator.swift */,
 				BAFAC25323CC91A300C74D92 /* GameViewModel.swift */,
 				BAFAC25523CC91D700C74D92 /* GameController.swift */,
