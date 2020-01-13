@@ -32,6 +32,7 @@ Ho!
 
 - Settings.bundle
 - MVC design pattern
+- MVVM design pattern
 - Try to be SOLID
 - Timer class
 - UISwipeGestureRecognizer for swipe down and shake
