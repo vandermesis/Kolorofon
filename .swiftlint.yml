@@ -3,11 +3,11 @@ excluded:
  - ColorPatterns/Support/R.generated.swift
 
 line_length:
- warning: 180
+ warning: 160
  error: 180
 
 file_length:
-  warning: 500
+  warning: 400
   error: 500
 
 function_body_length:

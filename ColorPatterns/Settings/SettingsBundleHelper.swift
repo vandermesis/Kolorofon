@@ -14,6 +14,7 @@ final class SettingsBundleHelper {
         static let BuildVersionKey = "build_preference"
         static let AppVersionKey = "version_preference"
     }
+    
     class func setVersionAndBuildNumber() {
         guard let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
         UserDefaults.standard.set(version, forKey: "version_preference")
