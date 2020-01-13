@@ -33,17 +33,19 @@ final class GameController: UIViewController {
         super.viewDidLoad()
         updateColorBars()
     }
+
+    @IBAction private func colorBarPressed(_ sender: UIButton) {
+        viewModel.didPressColorBar(colorBar: sender.tag - 1)
+        updateColorBars()
+    }
 }
 
 private extension GameController {
 
     private func updateColorBars() {
         let updatedColors = viewModel.shuffleColors()
-        for i in 0...4 {
-            colorBars[i].backgroundColor = UIColor(hue: updatedColors[i],
-                                                   saturation: 1,
-                                                   brightness: 1,
-                                                   alpha: 1)
+        colorBars.enumerated().forEach {
+            $1.backgroundColor = updatedColors[$0].uiColorFromCGFloat
         }
     }
 }

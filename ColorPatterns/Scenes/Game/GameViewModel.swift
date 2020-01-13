@@ -22,4 +22,17 @@ extension GameViewModel {
     func shuffleColors() -> [CGFloat] {
         return colorBarsEngine.shuffleColors()
     }
+
+    func didPressColorBar(colorBar: Int) {
+        colorBarsEngine.pickedColor = colorBarsEngine.array[colorBar]
+
+        //TODO: Remove when not needed
+        print("////////////////////////////////////////////")
+        print("userColor: \(colorBarsEngine.userColor)")
+        print("pickedColor: \(colorBarsEngine.pickedColor)")
+        print("colorsArray: \(colorBarsEngine.array)")
+//        print("userScore: \(user.score)")
+//        print("gameStarted: \(gameStarted)")
+        print("pickedColor=DB:\(colorBarsEngine.pickedColor == colorBarsEngine.userColor)")
+    }
 }

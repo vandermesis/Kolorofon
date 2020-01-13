@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
     private let defaults = UserDefaults.standard
     private var sounds = GameSounds()
     private var colors = GameColorBarsEngine()
-    private var user = User()
+    private var user = Score()
     private var gameTimer = GameTimer()
     private var gameStarted = false
     
@@ -55,14 +55,7 @@ final class ViewController: UIViewController {
         gameStarted = true
         shuffleColors()
         
-        //TODO: Remove when not needed
-        print("////////////////////////////////////////////")
-        print("userColor: \(colors.userColor)")
-        print("pickedColor: \(colors.pickedColor)")
-        print("colorsArray: \(colors.array)")
-        print("userScore: \(user.score)")
-        print("gameStarted: \(gameStarted)")
-        print("pickedColor=DB:\(colors.pickedColor == colors.userColor)")
+        
         }
     
     //  Swipe Action for updateCollorPatterns when user's color is not on screen

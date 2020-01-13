@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct User {
-    
+struct Score {
+
     var score: Int = 0 {
         didSet {
             guard score > 0 else {
