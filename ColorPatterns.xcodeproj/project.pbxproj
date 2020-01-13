@@ -15,7 +15,6 @@
 		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
 		BA0AA47B230E934000E2A21D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA47A230E934000E2A21D /* animation.gif */; };
 		BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA141A3823CBCDC70039A5DC /* R.generated.swift */; };
-		BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4622766CA700EDC257 /* Main.storyboard */; };
 		BA199B742292F70200CD7C64 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6D2292F70200CD7C64 /* note3.wav */; };
 		BA199B752292F70200CD7C64 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6E2292F70200CD7C64 /* note1.wav */; };
 		BA199B762292F70200CD7C64 /* note5.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA199B6F2292F70200CD7C64 /* note5.wav */; };
@@ -57,7 +56,6 @@
 		8433BF3F22766CA700EDC257 /* ColorPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433BF4222766CA700EDC257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8433BF4422766CA700EDC257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8433BF4722766CA700EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatterns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +215,10 @@
 			isa = PBXGroup;
 			children = (
 				BAFAC24A23CC8D6000C74D92 /* StartMenu */,
+				BAFAC25C23CCA61200C74D92 /* OptionsMenu */,
+				BAFAC25D23CCA63C00C74D92 /* HighScores */,
 				BAFAC24923CC8D4500C74D92 /* Game */,
+				BAFAC25B23CCA5EE00C74D92 /* GameOver */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -226,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				8433BF4422766CA700EDC257 /* ViewController.swift */,
-				8433BF4622766CA700EDC257 /* Main.storyboard */,
 				BAFAC25123CC912F00C74D92 /* GameCreator.swift */,
 				BAFAC25323CC91A300C74D92 /* GameViewModel.swift */,
 				BAFAC25523CC91D700C74D92 /* GameController.swift */,
@@ -254,6 +254,27 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BAFAC25B23CCA5EE00C74D92 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameOver;
+			sourceTree = "<group>";
+		};
+		BAFAC25C23CCA61200C74D92 /* OptionsMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OptionsMenu;
+			sourceTree = "<group>";
+		};
+		BAFAC25D23CCA63C00C74D92 /* HighScores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HighScores;
 			sourceTree = "<group>";
 		};
 		E89C705E715439D10AC0CC5C /* Pods */ = {
@@ -372,7 +393,6 @@
 				BAFAC25823CC91D700C74D92 /* GameController.xib in Resources */,
 				BA199B782292F70200CD7C64 /* note6.wav in Resources */,
 				BA3554C62353379E007BC724 /* Settings.bundle in Resources */,
-				BA199B6C2292F65000CD7C64 /* Main.storyboard in Resources */,
 				BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */,
 				BA199B772292F70200CD7C64 /* note4.wav in Resources */,
 				8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */,
@@ -549,14 +569,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8433BF4622766CA700EDC257 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8433BF4722766CA700EDC257 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

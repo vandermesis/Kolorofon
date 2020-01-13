@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameController" customModule="ColorPatterns" customModuleProvider="target">
             <connections>
+                <outlet property="scoreLabel" destination="bId-mJ-Tbd" id="oAk-M6-kUa"/>
+                <outlet property="timeLabel" destination="6Xy-5p-M5m" id="qaV-O0-CuZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="colorBars" destination="eSP-a1-KOT" collectionClass="NSMutableArray" id="gnk-X7-cWs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

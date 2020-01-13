@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct GameCreator {
+
+    func getController() -> GameController {
+
+        let viewModel = GameViewModel()
+        let controller = GameController(viewModel: viewModel)
+
+        return controller
+    }
+}
