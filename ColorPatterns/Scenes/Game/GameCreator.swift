@@ -12,7 +12,8 @@ struct GameCreator {
 
     func getController() -> GameController {
 
-        let viewModel = GameViewModel()
+        let colorBarsEngine = GameColorBarsEngine()
+        let viewModel = GameViewModel(colorBarsEngine: colorBarsEngine)
         let controller = GameController(viewModel: viewModel)
 
         return controller

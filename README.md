@@ -19,6 +19,7 @@ I would like to this game would grow with me as I learn to code. We will see whe
 
 - [x] used MVVM software architecture 
 - [x] followed coding best practices and SOLID principles
+- [x] used Gitflow
 - [ ] all critical parts of application covered by unit tests with use of Bitrise CI
 
 ## How to use it
@@ -41,6 +42,7 @@ Ho!
 - Timer class
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
+- Giflow
 
 ## To-do
 

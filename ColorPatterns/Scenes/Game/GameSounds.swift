@@ -1,5 +1,5 @@
 //
-//  Sounds.swift
+//  GameSounds.swift
 //  ColorPatterns
 //
 //  Created by Marek Skrzelowski on 13/10/2019.
@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-struct Sounds {
+struct GameSounds {
     
     var audioPlayer: AVAudioPlayer!
     let array = ["note1", "note2", "note3", "note4", "note5"]
@@ -18,6 +18,7 @@ struct Sounds {
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
         } catch {
+            //TODO: Handle error here
             print("Error in \(#function): \(error.localizedDescription)")
         }
         audioPlayer.play()

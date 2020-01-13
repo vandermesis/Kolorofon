@@ -25,11 +25,25 @@ final class GameController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override var prefersStatusBarHidden: Bool {
       return true
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateColorBars()
+    }
+}
+
+private extension GameController {
+
+    private func updateColorBars() {
+        let updatedColors = viewModel.shuffleColors()
+        for i in 0...4 {
+            colorBars[i].backgroundColor = UIColor(hue: updatedColors[i],
+                                                   saturation: 1,
+                                                   brightness: 1,
+                                                   alpha: 1)
+        }
     }
 }

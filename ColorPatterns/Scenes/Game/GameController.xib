@@ -14,6 +14,10 @@
                 <outlet property="timeLabel" destination="6Xy-5p-M5m" id="qaV-O0-CuZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="colorBars" destination="eSP-a1-KOT" collectionClass="NSMutableArray" id="gnk-X7-cWs"/>
+                <outletCollection property="colorBars" destination="toE-hA-bWZ" collectionClass="NSMutableArray" id="ysA-2o-BMg"/>
+                <outletCollection property="colorBars" destination="jTz-Ng-iAP" collectionClass="NSMutableArray" id="8Z3-LR-fg0"/>
+                <outletCollection property="colorBars" destination="tpj-px-Xha" collectionClass="NSMutableArray" id="4Q4-mu-W56"/>
+                <outletCollection property="colorBars" destination="Rdr-5w-WAl" collectionClass="NSMutableArray" id="twA-ab-GD1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -91,7 +95,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gameCounterText">
-            <color red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

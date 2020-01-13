@@ -12,8 +12,8 @@ final class ViewController: UIViewController {
     
     // MARK: - Constants and Variables declared
     private let defaults = UserDefaults.standard
-    private var sounds = Sounds()
-    private var colors = Colors()
+    private var sounds = GameSounds()
+    private var colors = GameColorBarsEngine()
     private var user = User()
     private var gameTimer = GameTimer()
     private var gameStarted = false
@@ -46,6 +46,7 @@ final class ViewController: UIViewController {
         }
         if gameStarted {
             user.calculateScore(colors.range.contains(colors.pickedColor))
+            //TODO: Remove when not needed
             print("rangeOfPickedColor:", colors.range)
         } else {
             colors.userColor = colors.pickedColor
@@ -54,7 +55,7 @@ final class ViewController: UIViewController {
         gameStarted = true
         shuffleColors()
         
-        //  Prints ;) - develping helpers
+        //TODO: Remove when not needed
         print("////////////////////////////////////////////")
         print("userColor: \(colors.userColor)")
         print("pickedColor: \(colors.pickedColor)")
@@ -73,6 +74,7 @@ final class ViewController: UIViewController {
     
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
         shuffleColors()
+        //TODO: Remove when not needed
         print("swipe action")
         print("colorsArray:\(colors.array)")
     }
@@ -81,13 +83,14 @@ final class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             shuffleColors()
+            //TODO: Remove when not needed
             print("colorsArray:\(colors.array)")
         }
     }
     
     // MARK: - Shuffle color patterns
     private func shuffleColors() {
-        let updatedColors = colors.shuffle()
+        let updatedColors = colors.shuffleColors()
         for i in 0...4 {
             colorBars[i].backgroundColor = UIColor(hue: updatedColors[i], saturation: 1, brightness: 1, alpha: 1)
         }
@@ -123,6 +126,7 @@ final class ViewController: UIViewController {
         updateSoundLabel()
         shuffleColors()
         gameTimer.start()
+        //TODO: Remove when not needed
         print("colorsArray:\(colors.array)")
     }
     

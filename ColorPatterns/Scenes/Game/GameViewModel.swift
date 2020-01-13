@@ -6,8 +6,20 @@
 //  Copyright © 2020 vandermesis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class GameViewModel {
-    
+
+    private var colorBarsEngine: GameColorBarsEngine
+
+    init(colorBarsEngine: GameColorBarsEngine) {
+        self.colorBarsEngine = colorBarsEngine
+    }
+}
+
+extension GameViewModel {
+
+    func shuffleColors() -> [CGFloat] {
+        return colorBarsEngine.shuffleColors()
+    }
 }

@@ -20,17 +20,19 @@ final class GameTimer {
     weak var delegate: GameTimerDelegate?
 
     var timeLeft = 60
-    
-    // MARK: - Timer methods
+
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
-    
+}
+
+private extension GameTimer {
+
     @objc private func onTimerFires() {
-        
+
         timeLeft -= 1
         delegate?.timerUpdate()
-        
+
         if timeLeft <= 0 {
             timer?.invalidate()
             timer = nil
