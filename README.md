@@ -12,7 +12,7 @@
 ## How it looks like
 ![animation](/Demo/animation.gif)
 
-## What for
+## What is it
 
 It's for me to practise coding. I started to write code to that game from a very first lesson of Swift.
 I would like to this game would grow with me as I learn to code. We will see where it lead us :)
@@ -20,17 +20,11 @@ I would like to this game would grow with me as I learn to code. We will see whe
 ## How to use it
 
 Follow your colour! 
-
 You have 60 seconds. 
-
 Pick your favorite color and remember it. 
-
 After colors change tap your choosen color to get a point.
-
 If your choosen color is not on the screen, swipe down or shake your phone to shuffle.
-
 If you choose wrong color you lose a point.
-
 Simple as that!
 Ho!
 
@@ -46,7 +40,7 @@ Ho!
 ## To-do
 
 - [x] Add logic to shuffle colors and remember user's choice
-- [x] Conform to MVC, move game logic to separate structs in Model
+- [ ] Use MVVM design pattern
 - [ ] Make welcome screen with start game and options
 - [ ] Allow user to set his name and persist his data
 - [ ] Add pause game functionality
@@ -56,15 +50,26 @@ Ho!
 - [ ] Tailor UI and UX
 - [ ] Unit Tests
 
-## Setup
+## What is needed
 
 - Xcode 10.3 with iOS SDK (12.2)
+- Bundler
+- CocoaPods
 
-## Credits
+## What was really helpful
 
-Im on my own here, for now ;)
+- *[Bundler](https://github.com/bundler/bundler)*
+- *[Cocoapods](https://cocoapods.org)*
+- *[SwiftLint](https://github.com/realm/SwiftLint)*
+- *[R.swift](https://github.com/mac-cain13/R.swift)*
+- *[Lottie-ios](https://github.com/airbnb/lottie-ios)*
+- *[Quick](https://github.com/Quick/Quick)*
+- *[Nimble](https://github.com/Quick/Nimble)*
+- *[Gifski](https://gif.ski)*
+- *[Typora](https://typora.io)*
 
 ## Who is who
+
 Marek Skrzelowski, mskrzelowski@vandermesis.com
 
 *.swift learning month one*
