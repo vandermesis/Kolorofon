@@ -17,6 +17,11 @@
 It's for me to practise coding. I started to write code to that game from a very first lesson of Swift.
 I would like to this game would grow with me as I learn to code. We will see where it lead us :)
 
+- [x] used MVVM software architecture 
+- [x] followed coding best practices and SOLID principles
+- [x] used Gitflow
+- [ ] all critical parts of application covered by unit tests with use of Bitrise CI
+
 ## How to use it
 
 Follow your colour! 
@@ -37,10 +42,12 @@ Ho!
 - Timer class
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
+- Giflow
 
 ## To-do
 
 - [x] Add logic to shuffle colors and remember user's choice
+- [x] Use Travis CI
 - [ ] Use MVVM design pattern
 - [ ] Make welcome screen with start game and options
 - [ ] Allow user to set his name and persist his data

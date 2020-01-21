@@ -9,13 +9,17 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //  Show lauch screen for 0.5 sec to display logo
         Thread.sleep(forTimeInterval: 0.5)
+
+        let startingController = setupStartingController()
+        displayStartingController(controller: startingController)
+
         return true
     }
 
@@ -45,5 +49,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+}
+
+private extension AppDelegate {
+
+    private func setupStartingController() -> UIViewController {
+        let controller = GameCreator().getController()
+        return controller
+    }
+
+    private func displayStartingController(controller: UIViewController) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
     }
 }
