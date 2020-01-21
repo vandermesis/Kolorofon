@@ -25,8 +25,7 @@ struct GameEngine {
 extension GameEngine {
 
     mutating func shuffleColors() -> [CGFloat] {
-        
-        colorsArray = colorsArray.map {_ in CGFloat((String(format: "%.2f", CGFloat.random(in: 0.0...0.9)) as NSString).doubleValue)}
+        colorsArray = colorsArray.map { $0.randomCGFloatWithDecimalPlaces(count: 2) }
         return colorsArray
     }
 }
