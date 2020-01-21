@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		09D5CA5B27D04F1C12EF958D /* Pods_ColorPatternsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4F57B4910FE0FB853D8AD9 /* Pods_ColorPatternsTests.framework */; };
 		8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4222766CA700EDC257 /* AppDelegate.swift */; };
-		8433BF4522766CA700EDC257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4422766CA700EDC257 /* ViewController.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0AA479230E810A00E2A21D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0AA478230E810A00E2A21D /* logo.png */; };
@@ -58,7 +57,6 @@
 		833621D2B7F92B544B5F70C6 /* Pods-ColorPatterns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatterns.release.xcconfig"; path = "Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns.release.xcconfig"; sourceTree = "<group>"; };
 		8433BF3F22766CA700EDC257 /* ColorPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433BF4222766CA700EDC257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8433BF4422766CA700EDC257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatterns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,14 +195,6 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		BAA0769A23CD1E9B00452AA3 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				8433BF4422766CA700EDC257 /* ViewController.swift */,
-			);
-			path = Old;
-			sourceTree = "<group>";
-		};
 		BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +215,6 @@
 		BAFAC24823CC8D3800C74D92 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				BAA0769A23CD1E9B00452AA3 /* Old */,
 				BAFAC24A23CC8D6000C74D92 /* StartMenu */,
 				BAFAC25C23CCA61200C74D92 /* OptionsMenu */,
 				BAFAC25D23CCA63C00C74D92 /* HighScores */,
@@ -553,7 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8433BF4522766CA700EDC257 /* ViewController.swift in Sources */,
 				BAD1026823526BF900A3276F /* GameEngine.swift in Sources */,
 				BAFAC25223CC912F00C74D92 /* GameCreator.swift in Sources */,
 				BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */,
