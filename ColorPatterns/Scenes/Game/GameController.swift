@@ -16,10 +16,18 @@ final class GameController: UIViewController {
 
     private let viewModel: GameViewModel
     private var gameTimer: GameTimer
+    private var gameSounds: GameSounds
+    private var defaults: UserDefaults
 
-    init(viewModel: GameViewModel, timer: GameTimer) {
+    init(viewModel: GameViewModel,
+         timer: GameTimer,
+         sounds: GameSounds,
+         userDefaults: UserDefaults) {
         self.viewModel = viewModel
         self.gameTimer = timer
+        self.gameSounds = sounds
+        self.defaults = userDefaults
+
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -42,6 +50,7 @@ final class GameController: UIViewController {
     @IBAction private func colorBarPressed(_ sender: UIButton) {
         viewModel.didPressColorBar(colorBar: sender.tag - 1)
         updateColorBars()
+        playSound(soundFile: sender.tag - 1)
     }
 }
 
@@ -76,6 +85,12 @@ private extension GameController {
 
     @objc func didSwipe(_ sender: UISwipeGestureRecognizer) {
         updateColorBars()
+    }
+
+    private func playSound(soundFile: Int) {
+        if defaults.bool(forKey: K.DefaultsKeys.sound) == true {
+            gameSounds.play(soundFile: soundFile)
+        }
     }
 }
 

@@ -15,8 +15,14 @@ struct GameCreator {
         let colorBarsEngine = GameColorBarsEngine()
         let score = Score()
         let gameTimer = GameTimer()
-        let viewModel = GameViewModel(colorBarsEngine: colorBarsEngine, score: score)
-        let controller = GameController(viewModel: viewModel, timer: gameTimer)
+        let gameSounds = GameSounds()
+        let userDefaults = UserDefaults.standard
+        let viewModel = GameViewModel(colorBarsEngine: colorBarsEngine,
+                                      score: score)
+        let controller = GameController(viewModel: viewModel,
+                                        timer: gameTimer,
+                                        sounds: gameSounds,
+                                        userDefaults: userDefaults)
 
         return controller
     }

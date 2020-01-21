@@ -37,6 +37,7 @@
 		BAFAC25723CC91D700C74D92 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25523CC91D700C74D92 /* GameController.swift */; };
 		BAFAC25823CC91D700C74D92 /* GameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFAC25623CC91D700C74D92 /* GameController.xib */; };
 		BAFAC25A23CC956D00C74D92 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFAC25923CC956D00C74D92 /* Colors.xcassets */; };
+		BAFF547823D77F8300CC25ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF547723D77F8300CC25ED /* Constants.swift */; };
 		DD9FFBE7BDBA54D26E4E865F /* Pods_ColorPatterns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		BAFAC25523CC91D700C74D92 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		BAFAC25623CC91D700C74D92 /* GameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameController.xib; sourceTree = "<group>"; };
 		BAFAC25923CC956D00C74D92 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BAFF547723D77F8300CC25ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.release.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +259,7 @@
 		BAFAC24B23CC8DB900C74D92 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BAFF547723D77F8300CC25ED /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				BAFAC25723CC91D700C74D92 /* GameController.swift in Sources */,
 				BA91F45A23CCF352003D466A /* CGFloat+UIColorConverter.swift in Sources */,
 				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
+				BAFF547823D77F8300CC25ED /* Constants.swift in Sources */,
 				BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
 			);

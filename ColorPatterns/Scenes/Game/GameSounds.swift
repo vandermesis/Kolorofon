@@ -10,17 +10,19 @@ import AVFoundation
 
 struct GameSounds {
     
-    var audioPlayer: AVAudioPlayer!
-    let array = ["note1", "note2", "note3", "note4", "note5"]
+    private var audioPlayer: AVAudioPlayer?
+
+    private let soundsArray = [K.Sounds.note1, K.Sounds.note2, K.Sounds.note3, K.Sounds.note4, K.Sounds.note5]
     
-    mutating func play(selectedFile: String) {
-        guard let soundURL = Bundle.main.url(forResource: selectedFile, withExtension: "wav") else { return }
+    mutating func play(soundFile: Int) {
+        guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
+                                             withExtension: K.Sounds.wavFormat) else { return }
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
         } catch {
             //TODO: Handle error here
             print("Error in \(#function): \(error.localizedDescription)")
         }
-        audioPlayer.play()
+        audioPlayer?.play()
     }
 }
