@@ -14,14 +14,14 @@ protocol GameViewModelDelegate: class {
 
 final class GameViewModel {
 
-    private var colorBarsEngine: GameColorBarsEngine
+    private var gameEngine: GameEngine
     private var userScore: Score
     private var gameStarted = false
 
     weak var delegate: GameViewModelDelegate?
 
-    init(colorBarsEngine: GameColorBarsEngine, score: Score) {
-        self.colorBarsEngine = colorBarsEngine
+    init(gameEngine: GameEngine, score: Score) {
+        self.gameEngine = gameEngine
         self.userScore = score
     }
 }
@@ -29,13 +29,13 @@ final class GameViewModel {
 extension GameViewModel {
 
     func shuffleColors() -> [CGFloat] {
-        let colors = colorBarsEngine.shuffleColors()
+        let colors = gameEngine.shuffleColors()
         print("colorsArray: \(colors)")
         return colors
     }
     
     func didPressColorBar(colorBar: Int) {
-        colorBarsEngine.pickedColor = colorBarsEngine.array[colorBar]
+        gameEngine.pickedColor = gameEngine.colorsArray[colorBar]
         calculateScore()
         gameStarted = true
         helpPrints()
@@ -46,20 +46,20 @@ private extension GameViewModel {
 
     private func calculateScore() {
         if gameStarted {
-            userScore.updateScorePoints(colorBarsEngine.range.contains(colorBarsEngine.pickedColor))
+            userScore.updateScorePoints(gameEngine.colorRange.contains(gameEngine.pickedColor))
             delegate?.didUpdateScore(score: userScore.score)
         } else {
-            colorBarsEngine.userColor = colorBarsEngine.pickedColor
+            gameEngine.userColor = gameEngine.pickedColor
         }
     }
 
     //TODO: Remove prints when not needed
     private func helpPrints() {
         print("////////////////////////////////////////////")
-        print("userColor: \(colorBarsEngine.userColor)")
-        print("pickedColor: \(colorBarsEngine.pickedColor)")
-        print("rangeOfPickedColor: \(colorBarsEngine.range)")
-        print("pickedColor=DB:\(colorBarsEngine.range.contains(colorBarsEngine.pickedColor))")
+        print("userColor: \(gameEngine.userColor)")
+        print("pickedColor: \(gameEngine.pickedColor)")
+        print("rangeOfPickedColor: \(gameEngine.colorRange)")
+        print("pickedColor=DB:\(gameEngine.colorRange.contains(gameEngine.pickedColor))")
         print("userScore: \(userScore.score)")
         print("gameStarted: \(gameStarted)")
     }

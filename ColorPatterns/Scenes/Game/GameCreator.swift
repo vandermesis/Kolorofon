@@ -12,18 +12,17 @@ struct GameCreator {
 
     func getController() -> GameController {
 
-        let colorBarsEngine = GameColorBarsEngine()
+        let gameEngine = GameEngine()
         let score = Score()
         let gameTimer = GameTimer()
         let gameSounds = GameSounds()
         let userDefaults = UserDefaults.standard
-        let viewModel = GameViewModel(colorBarsEngine: colorBarsEngine,
+        let viewModel = GameViewModel(gameEngine: gameEngine,
                                       score: score)
         let controller = GameController(viewModel: viewModel,
                                         timer: gameTimer,
                                         sounds: gameSounds,
                                         userDefaults: userDefaults)
-
         return controller
     }
 }

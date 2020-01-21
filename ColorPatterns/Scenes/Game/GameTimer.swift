@@ -15,18 +15,18 @@ protocol GameTimerDelegate: class {
 
 final class GameTimer {
 
-    private var timer: Timer?
+    private var gameTimer: Timer?
 
     weak var delegate: GameTimerDelegate?
 
     var timeLeft = 60
 
     func start() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(onTimerFires),
-                                     userInfo: nil,
-                                     repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 1.0,
+                                         target: self,
+                                         selector: #selector(onTimerFires),
+                                         userInfo: nil,
+                                         repeats: true)
     }
 }
 
@@ -36,8 +36,8 @@ private extension GameTimer {
         timeLeft -= 1
         delegate?.timerDidUpdate(seconds: timeLeft)
         if timeLeft <= 0 {
-            timer?.invalidate()
-            timer = nil
+            gameTimer?.invalidate()
+            gameTimer = nil
             delegate?.timerDidEndCounting()
             timeLeft = 60
         }

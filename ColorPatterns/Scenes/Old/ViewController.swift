@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
     // MARK: - Constants and Variables declared
     private let defaults = UserDefaults.standard
     private var sounds = GameSounds()
-    private var colors = GameColorBarsEngine()
+    private var colors = GameEngine()
     private var user = Score()
     private var gameTimer = GameTimer()
     private var gameStarted = false

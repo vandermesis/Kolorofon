@@ -45,6 +45,7 @@ final class GameController: UIViewController {
         setupSwipeDownGesture(direction: .down)
         setupGameTimer()
         setupViewModelDelegate()
+        setupScoreLabel()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
@@ -63,8 +64,11 @@ private extension GameController {
     }
 
     private func setupViewModelDelegate() {
-        scoreLabel.text = 0.formatToString
         viewModel.delegate = self
+    }
+
+    private func setupScoreLabel() {
+        scoreLabel.text = 0.formatToString
     }
 }
 
@@ -97,6 +101,7 @@ private extension GameController {
 extension GameController: GameTimerDelegate {
 
     func timerDidEndCounting() {
+        //TODO: Navigate to GameOver scene with user score
         print("Game Over")
     }
 
