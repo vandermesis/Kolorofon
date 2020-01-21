@@ -36,6 +36,7 @@ final class GameController: UIViewController {
         updateColorBars()
         setupSwipeDownGesture(direction: .down)
         setupGameTimer()
+        setupViewModelDelegate()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
@@ -50,6 +51,11 @@ private extension GameController {
         timeLabel.text = gameTimer.timeLeft.formatToString
         gameTimer.start()
         gameTimer.delegate = self
+    }
+
+    private func setupViewModelDelegate() {
+        scoreLabel.text = 0.formatToString
+        viewModel.delegate = self
     }
 }
 
@@ -81,5 +87,12 @@ extension GameController: GameTimerDelegate {
 
     func timerDidUpdate(seconds: Int) {
         timeLabel.text = seconds.formatToString
+    }
+}
+
+extension GameController: GameViewModelDelegate {
+
+    func didUpdateScore(score: Int) {
+        scoreLabel.text = score.formatToString
     }
 }

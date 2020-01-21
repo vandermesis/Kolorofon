@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol GameViewModelDelegate: class {
+    func didUpdateScore(score: Int)
+}
+
 final class GameViewModel {
 
     private var colorBarsEngine: GameColorBarsEngine
     private var userScore: Score
     private var gameStarted = false
+
+    weak var delegate: GameViewModelDelegate?
 
     init(colorBarsEngine: GameColorBarsEngine, score: Score) {
         self.colorBarsEngine = colorBarsEngine
@@ -40,7 +46,8 @@ private extension GameViewModel {
 
     private func calculateScore() {
         if gameStarted {
-            userScore.addScorePoints(colorBarsEngine.range.contains(colorBarsEngine.pickedColor))
+            userScore.updateScorePoints(colorBarsEngine.range.contains(colorBarsEngine.pickedColor))
+            delegate?.didUpdateScore(score: userScore.score)
         } else {
             colorBarsEngine.userColor = colorBarsEngine.pickedColor
         }

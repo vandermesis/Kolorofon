@@ -18,7 +18,7 @@ struct Score {
         }
     }
 
-    mutating func addScorePoints(_ score: Bool) {
+    mutating func updateScorePoints(_ score: Bool) {
         if score {
             self.score += 1
         } else {
