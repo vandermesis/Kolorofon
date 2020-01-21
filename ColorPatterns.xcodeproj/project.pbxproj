@@ -142,7 +142,6 @@
 				BAFAC24823CC8D3800C74D92 /* Scenes */,
 				BAFAC24B23CC8DB900C74D92 /* Helpers */,
 				BAFAC24C23CC8DCF00C74D92 /* Extensions */,
-				BA503E3623532F8400CFA6F2 /* GameSettings */,
 				BA94BCF722C3845600D8157E /* Support */,
 			);
 			path = ColorPatterns;
@@ -171,23 +170,15 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		BA503E3623532F8400CFA6F2 /* GameSettings */ = {
-			isa = PBXGroup;
-			children = (
-				BA3554C323533779007BC724 /* SettingsBundleHelper.swift */,
-				BA3554C52353379D007BC724 /* Settings.bundle */,
-			);
-			path = GameSettings;
-			sourceTree = "<group>";
-		};
 		BA94BCF722C3845600D8157E /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				8433BF4E22766CA800EDC257 /* Info.plist */,
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				BA141A3823CBCDC70039A5DC /* R.generated.swift */,
-				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
 				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
+				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
+				BA3554C52353379D007BC724 /* Settings.bundle */,
 				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
 				BAFAC25923CC956D00C74D92 /* Colors.xcassets */,
 				BA199B7B2292F70D00CD7C64 /* Sounds */,
@@ -249,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				BAFF547723D77F8300CC25ED /* Constants.swift */,
+				BA3554C323533779007BC724 /* SettingsBundleHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
