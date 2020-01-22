@@ -17,6 +17,11 @@
 It's for me to practise coding. I started to write code to that game from a very first lesson of Swift.
 I would like to this game would grow with me as I learn to code. We will see where it lead us :)
 
+- [x] used MVVM software architecture 
+- [x] followed coding best practices and SOLID principles
+- [x] used Gitflow
+- [x] all critical parts of application covered by unit tests with use of Bitrise CI
+
 ## How to use it
 
 Follow your colour! 
@@ -37,11 +42,15 @@ Ho!
 - Timer class
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
+- Giflow
+- Danger with SwiftLint
 
 ## To-do
 
 - [x] Add logic to shuffle colors and remember user's choice
-- [ ] Use MVVM design pattern
+- [x] Use Travis CI
+- [x] Use MVVM design pattern
+- [ ] Add Game Over screen with user score
 - [ ] Make welcome screen with start game and options
 - [ ] Allow user to set his name and persist his data
 - [ ] Add pause game functionality
@@ -49,7 +58,7 @@ Ho!
 - [ ] Add difficulty levels (more/less colors to choose from, different range of colors error)
 - [ ] Change default sounds of xylophone to something better
 - [ ] Tailor UI and UX
-- [ ] Unit Tests
+- [x] Unit Tests
 
 ## What is needed
 

@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct User {
-    
+final class Score {
+
     var score: Int = 0 {
         didSet {
             guard score > 0 else {
@@ -17,9 +17,8 @@ struct User {
             }
         }
     }
-    
-    //  Calculate user score if user hit color in range of his picked color
-    mutating func calculateScore(_ score: Bool) {
+
+    func updateScorePoints(_ score: Bool) {
         if score {
             self.score += 1
         } else {

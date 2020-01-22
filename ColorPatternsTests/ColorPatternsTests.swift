@@ -12,7 +12,7 @@ import XCTest
 
 final class ColorPatternsTests: XCTestCase {
 
-    var colors = Colors()
+    var colors = GameEngine()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,7 +29,7 @@ final class ColorPatternsTests: XCTestCase {
 
     func testPerformanceExample() {
         self.measure {
-            _ = colors.shuffle()
+            _ = colors.shuffleColors()
         }
     }
 }
