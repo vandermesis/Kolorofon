@@ -20,7 +20,7 @@ I would like to this game would grow with me as I learn to code. We will see whe
 - [x] used MVVM software architecture 
 - [x] followed coding best practices and SOLID principles
 - [x] used Gitflow
-- [ ] all critical parts of application covered by unit tests with use of Bitrise CI
+- [x] all critical parts of application covered by unit tests with use of Bitrise CI
 
 ## How to use it
 
@@ -50,7 +50,7 @@ Ho!
 - [x] Add logic to shuffle colors and remember user's choice
 - [x] Use Travis CI
 - [x] Use MVVM design pattern
-- [ ] Add Game Ober screen with user score
+- [ ] Add Game Over screen with user score
 - [ ] Make welcome screen with start game and options
 - [ ] Allow user to set his name and persist his data
 - [ ] Add pause game functionality
