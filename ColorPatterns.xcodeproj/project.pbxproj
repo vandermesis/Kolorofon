@@ -29,6 +29,8 @@
 		BA91F45A23CCF352003D466A /* CGFloat+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA91F45923CCF352003D466A /* CGFloat+Converters.swift */; };
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
+		BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */; };
+		BAC495C823D8B7940041088C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC495C723D8B7940041088C /* Localizable.strings */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 		BAD1026823526BF900A3276F /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* GameEngine.swift */; };
 		BAD7ADA623D87E9F00537D7F /* UnitTestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7ADA523D87E9F00537D7F /* UnitTestError.swift */; };
@@ -84,6 +86,8 @@
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+FriendlyMessage.swift"; sourceTree = "<group>"; };
+		BAC495C723D8B7940041088C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
 				BA141A3823CBCDC70039A5DC /* R.generated.swift */,
 				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
+				BAC495C723D8B7940041088C /* Localizable.strings */,
 				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
 				BA3554C52353379D007BC724 /* Settings.bundle */,
 				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
@@ -286,6 +291,7 @@
 			children = (
 				BA91F45923CCF352003D466A /* CGFloat+Converters.swift */,
 				BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */,
+				BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */,
 				BA199B742292F70200CD7C64 /* note3.wav in Resources */,
 				BAFAC25A23CC956D00C74D92 /* Colors.xcassets in Resources */,
+				BAC495C823D8B7940041088C /* Localizable.strings in Resources */,
 				BA199B752292F70200CD7C64 /* note1.wav in Resources */,
 				BA02700422BC491000846DDC /* README.md in Resources */,
 			);
@@ -583,6 +590,7 @@
 				BAFF547823D77F8300CC25ED /* Constants.swift in Sources */,
 				BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
+				BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

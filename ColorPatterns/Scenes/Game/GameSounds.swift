@@ -20,8 +20,7 @@ struct GameSounds {
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
         } catch {
-            //TODO: Handle error here
-            print("Error in \(#function): \(error.localizedDescription)")
+            print("Error in \(#function): \(error.developerFriendlyMessage)")
         }
         audioPlayer?.play()
     }
