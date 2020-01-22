@@ -12,7 +12,7 @@ enum Level {
     case easy, medium, hard
 }
 
-struct GameEngine {
+final class GameEngine {
     
     var colorsArray = [CGFloat](repeating: 0.0, count: 5)
     var pickedColor: CGFloat = 0
@@ -24,7 +24,7 @@ struct GameEngine {
 
 extension GameEngine {
 
-    mutating func shuffleColors() -> [CGFloat] {
+    func shuffleColors() -> [CGFloat] {
         colorsArray = colorsArray.map { $0.randomCGFloatWithDecimalPlaces(count: 2) }
         return colorsArray
     }

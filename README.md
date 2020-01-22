@@ -43,12 +43,14 @@ Ho!
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
 - Giflow
+- Danger with SwiftLint
 
 ## To-do
 
 - [x] Add logic to shuffle colors and remember user's choice
 - [x] Use Travis CI
-- [ ] Use MVVM design pattern
+- [x] Use MVVM design pattern
+- [ ] Add Game Ober screen with user score
 - [ ] Make welcome screen with start game and options
 - [ ] Allow user to set his name and persist his data
 - [ ] Add pause game functionality
@@ -56,7 +58,7 @@ Ho!
 - [ ] Add difficulty levels (more/less colors to choose from, different range of colors error)
 - [ ] Change default sounds of xylophone to something better
 - [ ] Tailor UI and UX
-- [ ] Unit Tests
+- [x] Unit Tests
 
 ## What is needed
 
