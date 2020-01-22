@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Score {
+final class Score {
 
     var score: Int = 0 {
         didSet {
@@ -18,7 +18,7 @@ struct Score {
         }
     }
 
-    mutating func updateScorePoints(_ score: Bool) {
+    func updateScorePoints(_ score: Bool) {
         if score {
             self.score += 1
         } else {

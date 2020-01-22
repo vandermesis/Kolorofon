@@ -6,7 +6,6 @@
 //  Copyright © 2020 vandermesis. All rights reserved.
 //
 
-import UIKit
 import Quick
 import Nimble
 
@@ -36,7 +35,7 @@ final class GameEngineTests: QuickSpec {
         describe("on shuffling colors") {
 
             beforeEach {
-                gameEngine?.shuffleColors()
+                _ = gameEngine?.shuffleColors()
             }
 
             it("should return array of random CGFloat numbers") {
