@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOverController" customModule="ColorPatterns" customModuleProvider="target">
+            <connections>
+                <outlet property="scoreLabel" destination="EKJ-cG-au5" id="hgk-ti-Mfw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-BO-Ic4">
+                    <rect key="frame" x="87" y="153" width="146.5" height="174.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-sv-7j9">
+                            <rect key="frame" x="0.0" y="0.0" width="146.5" height="38"/>
+                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                            <color key="textColor" name="gameBackground"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-cG-au5">
+                            <rect key="frame" x="35" y="48" width="111.5" height="126.5"/>
+                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="100"/>
+                            <color key="textColor" name="gameBackground"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-fj-xGY" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
+                    <rect key="frame" x="35" y="390" width="250" height="40"/>
+                    <color key="backgroundColor" name="gameOverButtonColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="07T-JH-uuB"/>
+                        <constraint firstAttribute="height" constant="40" id="uVH-0q-mNa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                    <state key="normal" title="Start Menu">
+                        <color key="titleColor" name="gameCounterText"/>
+                    </state>
+                    <connections>
+                        <action selector="restartGameButtonPressed:" destination="-1" eventType="touchUpInside" id="NZL-kS-v59"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="gameOverBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0d7-f8-GPr"/>
+                <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MQT-tz-6DM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Owa-fj-xGY" secondAttribute="bottom" constant="50" id="hjl-RD-ktA"/>
+                <constraint firstItem="Owa-fj-xGY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="inm-27-IRb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-26.25" y="57.5"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="gameBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gameCounterText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gameOverBackgroundColor">
+            <color red="0.99789291619999998" green="0.98671978709999997" blue="0.93136686089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gameOverButtonColor">
+            <color red="0.85648001269035534" green="0.0" blue="0.29343069784220571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
