@@ -101,8 +101,10 @@ private extension GameController {
 extension GameController: GameTimerDelegate {
 
     func timerDidEndCounting() {
-        //TODO: Navigate to GameOver scene with user score
-        print("Game Over")
+        let userScore = viewModel.userScore
+        let gameOverController = GameOverCreator().getController(score: userScore)
+        gameOverController.modalPresentationStyle = .fullScreen
+        self.present(gameOverController, animated: true, completion: nil)
     }
 
     func timerDidUpdate(seconds: Int) {

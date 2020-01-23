@@ -28,7 +28,7 @@ final class GameOverController: UIViewController {
         setupScoreLabel()
     }
 
-    @IBAction func restartGameButtonPressed(_ sender: UIButton) {
+    @IBAction private func restartGameButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 }

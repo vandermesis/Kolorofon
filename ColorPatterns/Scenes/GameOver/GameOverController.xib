@@ -38,12 +38,14 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-fj-xGY" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
-                    <rect key="frame" x="35" y="400" width="250" height="30"/>
-                    <color key="backgroundColor" name="gameCounterBackground"/>
+                    <rect key="frame" x="35" y="390" width="250" height="40"/>
+                    <color key="backgroundColor" name="gameOverButtonColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="07T-JH-uuB"/>
+                        <constraint firstAttribute="height" constant="40" id="uVH-0q-mNa"/>
                     </constraints>
-                    <state key="normal" title="Restart Game">
+                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
+                    <state key="normal" title="Start Menu">
                         <color key="titleColor" name="gameCounterText"/>
                     </state>
                     <connections>
@@ -66,11 +68,11 @@
         <namedColor name="gameBackground">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="gameCounterBackground">
-            <color red="1" green="0.14900000393390656" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="gameCounterText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gameOverButtonColor">
+            <color red="0.85648001269035534" green="0.0" blue="0.29343069784220571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
