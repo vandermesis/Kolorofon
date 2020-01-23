@@ -27,11 +27,15 @@ final class GameOverController: UIViewController {
         super.viewDidLoad()
         setupScoreLabel()
     }
+
+    @IBAction func restartGameButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 private extension GameOverController {
 
     private func setupScoreLabel() {
-
+        scoreLabel.text = viewModel.userScore.score.formatToString
     }
 }
