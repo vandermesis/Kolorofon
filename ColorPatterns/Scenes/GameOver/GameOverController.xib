@@ -26,34 +26,35 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-sv-7j9">
                             <rect key="frame" x="0.0" y="0.0" width="146.5" height="38"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
-                            <color key="textColor" name="startLabelSecondText"/>
+                            <color key="textColor" name="textDarkSecond"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-cG-au5">
                             <rect key="frame" x="35" y="48" width="111.5" height="126.5"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="100"/>
-                            <color key="textColor" name="startLabelMainText"/>
+                            <color key="textColor" name="textDarkMain"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-fj-xGY" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                     <rect key="frame" x="35" y="390" width="250" height="40"/>
-                    <color key="backgroundColor" name="gameOverButtonColor"/>
+                    <color key="backgroundColor" name="buttonMain"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="07T-JH-uuB"/>
                         <constraint firstAttribute="height" constant="40" id="uVH-0q-mNa"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                     <state key="normal" title="Start Menu">
-                        <color key="titleColor" name="gameCounterText"/>
+                        <color key="titleColor" name="textLightMain"/>
                     </state>
+                    <state key="highlighted" title="Start Menu"/>
                     <connections>
                         <action selector="restartGameButtonPressed:" destination="-1" eventType="touchUpInside" id="NZL-kS-v59"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" name="gameOverBackgroundColor"/>
+            <color key="backgroundColor" name="backgroundLight"/>
             <constraints>
                 <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0d7-f8-GPr"/>
                 <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MQT-tz-6DM"/>
@@ -65,20 +66,20 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="gameCounterText">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="gameOverBackgroundColor">
+        <namedColor name="backgroundLight">
             <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="gameOverButtonColor">
+        <namedColor name="buttonMain">
             <color red="0.85600000619888306" green="0.0" blue="0.29300001263618469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="startLabelMainText">
+        <namedColor name="textDarkMain">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="startLabelSecondText">
+        <namedColor name="textDarkSecond">
             <color red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textLightMain">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

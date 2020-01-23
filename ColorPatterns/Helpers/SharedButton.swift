@@ -25,6 +25,8 @@ final class SharedButton: UIButton {
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
         self.layer.shadowOpacity = 0.5
         self.layer.shadowRadius = 7
-        self.layer.shadowColor = R.color.gameBackground()?.cgColor
+        self.layer.shadowColor = R.color.backgroundDark()?.cgColor
+        self.layer.borderWidth = 1
+        self.layer.borderColor = R.color.buttonMain()?.cgColor
     }
 }

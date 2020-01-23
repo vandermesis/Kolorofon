@@ -31,17 +31,17 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-5p-M5m">
                             <rect key="frame" x="40" y="0.0" width="21" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" name="gameCounterText"/>
+                            <color key="textColor" name="textLightMain"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
                             <rect key="frame" x="342.5" y="6.5" width="31.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" name="gameCounterText"/>
+                            <color key="textColor" name="textLightMain"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" name="gameBackground"/>
+                    <color key="backgroundColor" name="backgroundDark"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="6Xy-5p-M5m" secondAttribute="bottom" id="6Ba-KO-0lW"/>
                         <constraint firstAttribute="height" constant="33" id="82p-Gr-JLX"/>
@@ -102,14 +102,17 @@
                 <constraint firstAttribute="trailing" secondItem="HqB-CK-PGK" secondAttribute="trailing" id="p3c-ha-viq"/>
                 <constraint firstAttribute="trailing" secondItem="vVi-v7-n0P" secondAttribute="trailing" id="wfC-EU-pzk"/>
             </constraints>
-            <point key="canvasLocation" x="47.826086956521742" y="140.625"/>
+            <point key="canvasLocation" x="33" y="1"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="backgroundDark">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="gameBackground">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="gameCounterText">
+        <namedColor name="textLightMain">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
