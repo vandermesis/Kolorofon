@@ -29,7 +29,7 @@ final class GameOverController: UIViewController {
     }
 
     @IBAction private func restartGameButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)       
     }
 }
 
