@@ -39,7 +39,7 @@ private extension GameTimer {
             gameTimer?.invalidate()
             gameTimer = nil
             delegate?.timerDidEndCounting()
-            timeLeft = 60
+            timeLeft = 60 // 2nd default value here, setting it back to default could be done in start method too
         }
     }
 }

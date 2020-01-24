@@ -14,10 +14,11 @@ protocol GameViewModelDelegate: class {
 
 final class GameViewModel {
 
+    // make a protocol for this class and then this class implementing that protocol, so you can use it in controller
     private var gameEngine: GameEngine
     private var gameStarted = false
 
-    var userScore: Score
+    private(set) var userScore: Score // to make it readonly
 
     weak var delegate: GameViewModelDelegate?
 

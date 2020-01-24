@@ -17,7 +17,7 @@ final class GameController: UIViewController {
     private let viewModel: GameViewModel
     private var gameTimer: GameTimer
     private var gameSounds: GameSounds
-    private var defaults: UserDefaults
+    private var defaults: UserDefaults // defaults? defaults what? name it userDefaults
 
     init(viewModel: GameViewModel,
          timer: GameTimer,
@@ -42,13 +42,14 @@ final class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateColorBars()
-        setupSwipeDownGesture(direction: .down)
+        setupSwipeDownGesture(direction: .down) // you can add gestures in Xib too, and just attach IBActions just likee buttons
         setupGameTimer()
         setupViewModelDelegate()
         setupScoreLabel()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
+        // try not to use tags, make an another way to identify buttons
         viewModel.didPressColorBar(colorBar: sender.tag - 1)
         updateColorBars()
         playSound(soundFile: sender.tag - 1)
@@ -58,6 +59,7 @@ final class GameController: UIViewController {
 private extension GameController {
 
     private func setupGameTimer() {
+        // you can move timer to viewmodel
         timeLabel.text = gameTimer.timeLeft.formatToString
         gameTimer.start()
         gameTimer.delegate = self
@@ -92,6 +94,7 @@ private extension GameController {
     }
 
     private func playSound(soundFile: Int) {
+        // make a helper class that does all that stuff
         if defaults.bool(forKey: K.DefaultsKeys.sound) == true {
             gameSounds.play(soundFile: soundFile)
         }

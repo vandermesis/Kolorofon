@@ -12,7 +12,7 @@ final class StartMenuController: UIViewController {
 
     @IBOutlet private var difficultyButton: [SharedButton]!
 
-    let viewModel: StartMenuViewModel
+    private let viewModel: StartMenuViewModel
 
     init(viewModel: StartMenuViewModel) {
         self.viewModel = viewModel
@@ -25,6 +25,8 @@ final class StartMenuController: UIViewController {
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
         setupDifficultyButtonColor(button: sender.tag - 1)
+        // it's not a good idea to use tags to do such things I'd go with enum difficulty: easy, med, hard and setup buttons with these values, but not use tags
+        // you could have these in viewmodel then
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
@@ -37,7 +39,7 @@ final class StartMenuController: UIViewController {
 private extension StartMenuController {
 
     private func setupDifficultyButtonColor(button: Int) {
-        let selectedButton = difficultyButton[button]
+        let selectedButton = difficultyButton[button] // crash if I do:  setupDifficultyButtonColor(button: 52) - this should be forbidden
         let unselectedButtons = difficultyButton.filter { $0 != selectedButton }
         selectedButton.backgroundColor = R.color.buttonMain()
         selectedButton.setTitleColor(R.color.textLightMain(), for: .normal)

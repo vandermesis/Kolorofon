@@ -10,6 +10,7 @@ import UIKit
 
 extension CGFloat {
 
+    // It's ok, but from my experience I can tell you that It's always a better idea to have your own set of colors and random from those. In most of cases random colors are ugly, and you can get simmilar-looking colors. Find a nice palete of raindbow saturated colors / or make your own and randomize from there :)
     var uiColorFromCGFloat: UIColor {
         return UIColor(hue: self, saturation: 1, brightness: 1, alpha: 1)
     }

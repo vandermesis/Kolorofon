@@ -13,6 +13,8 @@ import XCTest
 final class ColorPatternsTests: XCTestCase {
 
     var colors = GameEngine()
+    
+    // get rid of this file
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

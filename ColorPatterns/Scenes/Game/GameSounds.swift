@@ -12,6 +12,7 @@ struct GameSounds {
     
     private var audioPlayer: AVAudioPlayer?
 
+    // K? What is K?
     private let soundsArray = [K.Sounds.note1, K.Sounds.note2, K.Sounds.note3, K.Sounds.note4, K.Sounds.note5]
     
     mutating func play(soundFile: Int) {
@@ -19,6 +20,8 @@ struct GameSounds {
                                              withExtension: K.Sounds.wavFormat) else { return }
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
+            // youre creating new audio player for each sound? why?
+            // try lazy initialization
         } catch {
             print("Error in \(#function): \(error.developerFriendlyMessage)")
         }

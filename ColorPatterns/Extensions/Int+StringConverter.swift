@@ -10,7 +10,7 @@ import Foundation
 
 extension Int {
 
-    var formatToString: String {
+    var formatToString: String { //toString will be enough
         return String(self)
     }
 }
