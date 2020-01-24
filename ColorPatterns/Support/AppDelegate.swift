@@ -55,7 +55,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
 
     private func setupStartingController() -> UIViewController {
-        let controller = GameCreator().getController()
+        let controller = StartMenuCreator().getController()
         return controller
     }
 

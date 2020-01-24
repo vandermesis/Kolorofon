@@ -19,7 +19,7 @@ final class GameTimer {
 
     weak var delegate: GameTimerDelegate?
 
-    var timeLeft = 6
+    var timeLeft = 180
 
     func start() {
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0,
