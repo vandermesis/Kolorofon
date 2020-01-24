@@ -20,7 +20,7 @@ final class GameViewModelTests: QuickSpec {
         var viewModel: GameViewModel!
 
         beforeEach {
-            gameEngine = GameEngine()
+            gameEngine = GameEngine(level: .medium)
             userScore = Score()
             viewModel = GameViewModel(gameEngine: gameEngine, score: userScore)
         }

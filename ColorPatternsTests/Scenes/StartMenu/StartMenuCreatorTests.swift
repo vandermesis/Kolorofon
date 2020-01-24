@@ -1,8 +1,8 @@
 //
-//  GameCreatorTests.swift
+//  StartMenuCreatorTests.swift
 //  ColorPatternsTests
 //
-//  Created by Marek Skrzelowski on 22/01/2020.
+//  Created by Marek Skrzelowski on 24/01/2020.
 //  Copyright © 2020 vandermesis. All rights reserved.
 //
 
@@ -11,16 +11,16 @@ import Nimble
 
 @testable import ColorPatterns
 
-final class GameCreatorTests: QuickSpec {
+final class StartMenuCreatorTests: QuickSpec {
 
     override func spec() {
 
-        var controller: UIViewController?
+        var controller: UIViewController!
 
         describe("getting GameController") {
 
             beforeEach {
-                controller = GameCreator().getController(difficulty: .medium)
+                controller = StartMenuCreator().getController()
             }
 
             afterEach {
@@ -28,7 +28,7 @@ final class GameCreatorTests: QuickSpec {
             }
 
             it("should return valid controller") {
-                expect(controller).to(beAKindOf(GameController.self))
+                expect(controller).to(beAKindOf(StartMenuController.self))
             }
         }
     }

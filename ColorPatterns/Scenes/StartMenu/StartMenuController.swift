@@ -25,12 +25,11 @@ final class StartMenuController: UIViewController {
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
         setupDifficultyButtonColor(button: sender.tag - 1)
-        // it's not a good idea to use tags to do such things I'd go with enum difficulty: easy, med, hard and setup buttons with these values, but not use tags
-        // you could have these in viewmodel then
+        viewModel.chooseDifficultyLevel(button: sender.tag)
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
-        let gameController = GameCreator().getController()
+        let gameController = GameCreator().getController(difficulty: viewModel.difficulty)
         gameController.modalPresentationStyle = .fullScreen
         present(gameController, animated: true, completion: nil)
     }

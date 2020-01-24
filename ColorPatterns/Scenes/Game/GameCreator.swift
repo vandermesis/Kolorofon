@@ -10,10 +10,9 @@ import Foundation
 
 struct GameCreator {
 
-    func getController() -> GameController {
+    func getController(difficulty: Level) -> GameController {
 
-        // how about moving timer to viewModel? seems like it is not related to UI
-        let gameEngine = GameEngine()
+        let gameEngine = GameEngine(level: difficulty)
         let score = Score()
         let gameTimer = GameTimer()
         let gameSounds = GameSounds()
