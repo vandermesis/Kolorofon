@@ -8,9 +8,9 @@
 
 import UIKit
 
-class StartMenuController: UIViewController {
+final class StartMenuController: UIViewController {
 
-    @IBOutlet private var levelLabel: [SharedButton]!
+    @IBOutlet private var difficultyButton: [SharedButton]!
 
     let viewModel: StartMenuViewModel
 
@@ -22,13 +22,9 @@ class StartMenuController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
-    @IBAction private func levelButtonPressed(_ sender: UIButton) {
-        setupLevelButtonColor(button: sender.tag - 1)
+    @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
+        setupDifficultyButtonColor(button: sender.tag - 1)
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
@@ -40,8 +36,14 @@ class StartMenuController: UIViewController {
 
 private extension StartMenuController {
 
-    private func setupLevelButtonColor(button: Int) {
-        levelLabel[button].backgroundColor = R.color.buttonMain()
-        levelLabel[button].setTitleColor(R.color.textLightMain(), for: .normal)
+    private func setupDifficultyButtonColor(button: Int) {
+        let selectedButton = difficultyButton[button]
+        let unselectedButtons = difficultyButton.filter { $0 != selectedButton }
+        selectedButton.backgroundColor = R.color.buttonMain()
+        selectedButton.setTitleColor(R.color.textLightMain(), for: .normal)
+        unselectedButtons.forEach { button in
+            button.backgroundColor = R.color.buttonSecond()
+            button.setTitleColor(R.color.textDarkMain(), for: .normal)
+        }
     }
 }

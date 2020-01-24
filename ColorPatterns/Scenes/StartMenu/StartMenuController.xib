@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartMenuController" customModule="ColorPatterns" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="levelLabel" destination="kzr-e5-J7c" collectionClass="NSMutableArray" id="7Yv-Su-1Uw"/>
-                <outletCollection property="levelLabel" destination="5WB-iV-jci" collectionClass="NSMutableArray" id="UI4-k6-MvD"/>
-                <outletCollection property="levelLabel" destination="cba-We-U7E" collectionClass="NSMutableArray" id="kkw-qn-dX4"/>
+                <outletCollection property="difficultyButton" destination="kzr-e5-J7c" collectionClass="NSMutableArray" id="7Yv-Su-1Uw"/>
+                <outletCollection property="difficultyButton" destination="5WB-iV-jci" collectionClass="NSMutableArray" id="UI4-k6-MvD"/>
+                <outletCollection property="difficultyButton" destination="cba-We-U7E" collectionClass="NSMutableArray" id="kkw-qn-dX4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -62,7 +62,7 @@
                                 <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="levelButtonPressed:" destination="-1" eventType="touchUpInside" id="seh-pc-CC4"/>
+                                <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="seh-pc-CC4"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-iV-jci" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
@@ -77,7 +77,7 @@
                                 <color key="titleColor" name="textDarkSecond"/>
                             </state>
                             <connections>
-                                <action selector="levelButtonPressed:" destination="-1" eventType="touchUpInside" id="Gpp-xM-sMT"/>
+                                <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="Gpp-xM-sMT"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cba-We-U7E" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
@@ -92,7 +92,7 @@
                                 <color key="titleColor" name="textDarkSecond"/>
                             </state>
                             <connections>
-                                <action selector="levelButtonPressed:" destination="-1" eventType="touchUpInside" id="tji-Q2-9uG"/>
+                                <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="tji-Q2-9uG"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Lx-7Hj" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
