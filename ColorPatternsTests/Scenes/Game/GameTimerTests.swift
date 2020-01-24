@@ -35,7 +35,7 @@ final class GameTimerTests: QuickSpec {
             }
 
             it("should reduce timeLeft property by 1") {
-                expect(gameTimer.timeLeft).toEventually(beLessThan(180))
+                expect(gameTimer.timeLeft).toEventually(beLessThan(18))
             }
 
             it("should call delegate with updated data") {
