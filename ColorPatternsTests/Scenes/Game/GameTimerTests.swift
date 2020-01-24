@@ -63,8 +63,8 @@ final class GameTimerTests: QuickSpec {
                     expect(gameController.timerDidEndCountingCalled).toEventually(beTrue())
                 }
 
-                it("should reset timeLeft property back to 60 seconds") {
-                    expect(gameTimer.timeLeft).toEventually(equal(60))
+                it("should reset timeLeft property back to 180 seconds") {
+                    expect(gameTimer.timeLeft).toEventually(equal(180))
                 }
             }
         }
