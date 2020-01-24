@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -19,14 +19,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-4x-4oq">
-                    <rect key="frame" x="25" y="50" width="270.5" height="75"/>
+                    <rect key="frame" x="72" y="94" width="270.33333333333331" height="74.333333333333314"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFA-OL-Rp6">
-                            <rect key="frame" x="85" y="0.0" width="100" height="24"/>
+                            <rect key="frame" x="85.333333333333343" y="0.0" width="99.666666666666657" height="23.666666666666668"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="nhM-2f-gEi"/>
                             </constraints>
@@ -35,7 +35,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Patterns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TwK-Py-VSo">
-                            <rect key="frame" x="1" y="24" width="268.5" height="51"/>
+                            <rect key="frame" x="1" y="23.666666666666668" width="268.33333333333331" height="50.666666666666657"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
                             <color key="textColor" name="textDarkMain"/>
@@ -44,7 +44,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-S5-qSi">
-                    <rect key="frame" x="35" y="210" width="250" height="220"/>
+                    <rect key="frame" x="82" y="592" width="250" height="220"/>
                     <subviews>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzr-e5-J7c" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -53,10 +53,10 @@
                                 <constraint firstAttribute="width" constant="250" id="2Df-l6-GdK"/>
                                 <constraint firstAttribute="height" constant="40" id="WCV-QL-uSV"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <color key="tintColor" name="buttonMain"/>
                             <state key="normal" title="Easy">
-                                <color key="titleColor" name="textDarkSecond"/>
+                                <color key="titleColor" name="textDarkMain"/>
                             </state>
                             <state key="selected">
                                 <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,9 +72,9 @@
                                 <constraint firstAttribute="height" constant="40" id="4EL-Xm-jEB"/>
                                 <constraint firstAttribute="width" constant="250" id="qLw-T7-N49"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Medium">
-                                <color key="titleColor" name="textDarkSecond"/>
+                                <color key="titleColor" name="textDarkMain"/>
                             </state>
                             <connections>
                                 <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="Gpp-xM-sMT"/>
@@ -87,9 +87,9 @@
                                 <constraint firstAttribute="width" constant="250" id="iK5-D5-CBV"/>
                                 <constraint firstAttribute="height" constant="40" id="q8M-tn-4pk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Hard">
-                                <color key="titleColor" name="textDarkSecond"/>
+                                <color key="titleColor" name="textDarkMain"/>
                             </state>
                             <connections>
                                 <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="tji-Q2-9uG"/>
@@ -102,7 +102,7 @@
                                 <constraint firstAttribute="width" constant="250" id="bZm-dd-h6y"/>
                                 <constraint firstAttribute="height" constant="40" id="uNH-hf-BSY"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Start Game">
                                 <color key="titleColor" name="textLightMain"/>
                             </state>
