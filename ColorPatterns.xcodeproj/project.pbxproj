@@ -39,6 +39,7 @@
 		BAC495CC23D8BDC70041088C /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495CB23D8BDC70041088C /* GameViewModelTests.swift */; };
 		BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */; };
 		BACBC10723DB0FF400D5E4F7 /* StartMenuCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */; };
+		BACBC10923DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */; };
 		BAD1026823526BF900A3276F /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* GameEngine.swift */; };
 		BAD14BB123DA041B00FF2D15 /* GameOverCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD14BB023DA041B00FF2D15 /* GameOverCreator.swift */; };
 		BAD14BB423DA049600FF2D15 /* GameOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD14BB223DA049600FF2D15 /* GameOverController.swift */; };
@@ -111,6 +112,7 @@
 		BAC92D9422BA7B2B00D3B025 /* ColorPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternsTests.swift; sourceTree = "<group>"; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreatorTests.swift; sourceTree = "<group>"; };
+		BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModelTests.swift; sourceTree = "<group>"; };
 		BAD1026723526BF900A3276F /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		BAD14BB023DA041B00FF2D15 /* GameOverCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverCreator.swift; sourceTree = "<group>"; };
 		BAD14BB223DA049600FF2D15 /* GameOverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */,
+				BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */,
 			);
 			path = StartMenu;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				BAD7ADAB23D880F900537D7F /* GameTimerTests.swift in Sources */,
 				BAC495CC23D8BDC70041088C /* GameViewModelTests.swift in Sources */,
 				BAC92D9522BA7B2B00D3B025 /* ColorPatternsTests.swift in Sources */,
+				BACBC10923DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift in Sources */,
 				BAD7ADA923D87F1800537D7F /* GameCreatorTests.swift in Sources */,
 				BAD14BC423DA2A6000FF2D15 /* GameOverCreatorTests.swift in Sources */,
 				BAC495CA23D8BA130041088C /* GameEngineTests.swift in Sources */,
