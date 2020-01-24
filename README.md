@@ -50,12 +50,12 @@ Ho!
 - [x] Add logic to shuffle colors and remember user's choice
 - [x] Use Travis CI
 - [x] Use MVVM design pattern
-- [ ] Add Game Over screen with user score
-- [ ] Make welcome screen with start game and options
+- [x] Add Game Over screen with user score
+- [x] Make welcome screen with start game and difficulty levels
 - [ ] Allow user to set his name and persist his data
 - [ ] Add pause game functionality
 - [ ] Connect with Apple Game Center
-- [ ] Add difficulty levels (more/less colors to choose from, different range of colors error)
+- [x] Add difficulty levels (more/less colors to choose from, different range of colors error)
 - [ ] Change default sounds of xylophone to something better
 - [ ] Tailor UI and UX
 - [x] Unit Tests
