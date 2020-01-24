@@ -4,14 +4,5 @@ xcode_workspace: ColorPatterns.xcworkspace
 xcode_scheme: ColorPatterns
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone 8
 
-cache:
-directories:
-- .build
-- ~/.danger.swift
-
-install:
-- npm install -g danger
-- swift build
-
 script:
-- swift run danger-swift ci
+- bundle exec danger
