@@ -31,17 +31,18 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-5p-M5m">
                             <rect key="frame" x="40" y="0.0" width="21" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" name="textLightMain"/>
+                            <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
                             <rect key="frame" x="342.5" y="6.5" width="31.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" name="textLightMain"/>
+                            <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" name="backgroundDark"/>
+                    <color key="backgroundColor" name="backgroundPrimary"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="6Xy-5p-M5m" secondAttribute="bottom" id="6Ba-KO-0lW"/>
                         <constraint firstAttribute="height" constant="33" id="82p-Gr-JLX"/>
@@ -71,6 +72,7 @@
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Ng-iAP">
                             <rect key="frame" x="0.0" y="345" width="414" height="173"/>
                             <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <gestureRecognizers/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Kjj-gy-TPY"/>
                             </connections>
@@ -85,6 +87,7 @@
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-5w-WAl">
                             <rect key="frame" x="0.0" y="690.5" width="414" height="172.5"/>
                             <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <gestureRecognizers/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Tl7-8h-m7r"/>
                             </connections>
@@ -102,17 +105,25 @@
                 <constraint firstAttribute="trailing" secondItem="HqB-CK-PGK" secondAttribute="trailing" id="p3c-ha-viq"/>
                 <constraint firstAttribute="trailing" secondItem="vVi-v7-n0P" secondAttribute="trailing" id="wfC-EU-pzk"/>
             </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="0r4-GH-o9y" appends="YES" id="20L-kx-UDf"/>
+            </connections>
             <point key="canvasLocation" x="33" y="1"/>
         </view>
+        <swipeGestureRecognizer direction="down" id="0r4-GH-o9y">
+            <connections>
+                <action selector="didSwipeDown:" destination="-1" id="jHg-ke-kdP"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
-        <namedColor name="backgroundDark">
+        <namedColor name="backgroundPrimary">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gameBackground">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textLightMain">
+        <namedColor name="textTertiary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

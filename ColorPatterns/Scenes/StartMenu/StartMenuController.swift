@@ -12,7 +12,7 @@ final class StartMenuController: UIViewController {
 
     @IBOutlet private var difficultyButton: [SharedButton]!
 
-    private let viewModel: StartMenuViewModel
+    private var viewModel: StartMenuViewModel
 
     init(viewModel: StartMenuViewModel) {
         self.viewModel = viewModel
@@ -24,6 +24,8 @@ final class StartMenuController: UIViewController {
     }
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
+        // TODO: it's not a good idea to use tags to do such things I'd go with enum difficulty: easy, med, hard and setup buttons with these values, but not use tags
+        // you could have these in viewmodel then
         setupDifficultyButtonColor(button: sender.tag - 1)
         viewModel.chooseDifficultyLevel(button: sender.tag)
     }
@@ -38,13 +40,14 @@ final class StartMenuController: UIViewController {
 private extension StartMenuController {
 
     private func setupDifficultyButtonColor(button: Int) {
-        let selectedButton = difficultyButton[button] // crash if I do:  setupDifficultyButtonColor(button: 52) - this should be forbidden
+        // TODO: crash if I do:  setupDifficultyButtonColor(button: 52) - this should be forbidden
+        let selectedButton = difficultyButton[button]
         let unselectedButtons = difficultyButton.filter { $0 != selectedButton }
-        selectedButton.backgroundColor = R.color.buttonMain()
-        selectedButton.setTitleColor(R.color.textLightMain(), for: .normal)
+        selectedButton.backgroundColor = R.color.buttonPrimary()
+        selectedButton.setTitleColor(R.color.textTertiary(), for: .normal)
         unselectedButtons.forEach { button in
-            button.backgroundColor = R.color.buttonSecond()
-            button.setTitleColor(R.color.textDarkMain(), for: .normal)
+            button.backgroundColor = R.color.buttonSecondary()
+            button.setTitleColor(R.color.textPrimary(), for: .normal)
         }
     }
 }

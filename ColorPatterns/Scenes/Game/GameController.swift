@@ -17,7 +17,7 @@ final class GameController: UIViewController {
     private let viewModel: GameViewModel
     private var gameTimer: GameTimer
     private var gameSounds: GameSounds
-    private var defaults: UserDefaults // defaults? defaults what? name it userDefaults
+    private var userDefaults: UserDefaults
 
     init(viewModel: GameViewModel,
          timer: GameTimer,
@@ -26,7 +26,7 @@ final class GameController: UIViewController {
         self.viewModel = viewModel
         self.gameTimer = timer
         self.gameSounds = sounds
-        self.defaults = userDefaults
+        self.userDefaults = userDefaults
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -42,25 +42,27 @@ final class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateColorBars()
-        setupSwipeDownGesture(direction: .down) // you can add gestures in Xib too, and just attach IBActions just likee buttons
         setupGameTimer()
         setupViewModelDelegate()
         setupScoreLabel()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
-        // try not to use tags, make an another way to identify buttons
+        // TODO: Try not to use tags, make an another way to identify buttons
         viewModel.didPressColorBar(colorBar: sender.tag - 1)
         updateColorBars()
         playSound(soundFile: sender.tag - 1)
+    }
+    @IBAction private func didSwipeDown(_ sender: UISwipeGestureRecognizer) {
+        updateColorBars()
     }
 }
 
 private extension GameController {
 
     private func setupGameTimer() {
-        // you can move timer to viewmodel
-        timeLabel.text = gameTimer.timeLeft.formatToString
+        // TODO: You can move timer to viewmodel
+        timeLabel.text = gameTimer.timeLeft.toString
         gameTimer.start()
         gameTimer.delegate = self
     }
@@ -70,7 +72,7 @@ private extension GameController {
     }
 
     private func setupScoreLabel() {
-        scoreLabel.text = 0.formatToString
+        scoreLabel.text = 0.toString
     }
 }
 
@@ -83,19 +85,9 @@ private extension GameController {
         }
     }
 
-    private func setupSwipeDownGesture(direction: UISwipeGestureRecognizer.Direction) {
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
-        swipeGesture.direction = direction
-        view.addGestureRecognizer(swipeGesture)
-    }
-
-    @objc func didSwipe(_ sender: UISwipeGestureRecognizer) {
-        updateColorBars()
-    }
-
     private func playSound(soundFile: Int) {
-        // make a helper class that does all that stuff
-        if defaults.bool(forKey: K.DefaultsKeys.sound) == true {
+        // TODO: Make a helper class that does all that stuff
+        if userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound) == true {
             gameSounds.play(soundFile: soundFile)
         }
     }
@@ -111,13 +103,13 @@ extension GameController: GameTimerDelegate {
     }
 
     func timerDidUpdate(seconds: Int) {
-        timeLabel.text = seconds.formatToString
+        timeLabel.text = seconds.toString
     }
 }
 
 extension GameController: GameViewModelDelegate {
 
     func didUpdateScore(score: Int) {
-        scoreLabel.text = score.formatToString
+        scoreLabel.text = score.toString
     }
 }

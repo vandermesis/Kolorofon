@@ -16,7 +16,7 @@ final class Score {
         }
     }
 
-    func updateScorePoints(_ shouldIncrease: Bool) {
-        self.score += shouldIncrease ? 1 : -1
+    func updateScorePoints(_ shouldUpdate: Bool) {
+        self.score += shouldUpdate ? 1 : -1
     }
 }

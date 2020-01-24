@@ -19,9 +19,10 @@ final class GameTimer {
 
     weak var delegate: GameTimerDelegate?
 
-    var timeLeft = 180
+    var timeLeft: Int = Constants.GameTimer.gameTime
 
     func start() {
+        timeLeft = Constants.GameTimer.gameTime
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0,
                                          target: self,
                                          selector: #selector(onTimerFires),
@@ -39,7 +40,6 @@ private extension GameTimer {
             gameTimer?.invalidate()
             gameTimer = nil
             delegate?.timerDidEndCounting()
-            timeLeft = 60 // 2nd default value here, setting it back to default could be done in start method too
         }
     }
 }

@@ -25,8 +25,8 @@ final class SharedButton: UIButton {
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
         self.layer.shadowOpacity = 0.5
         self.layer.shadowRadius = 7
-        self.layer.shadowColor = R.color.backgroundDark()?.cgColor // try to think about the naming convertion, Dark? what if you switch it to Light? you'd need to change it everywhere. backgroundPrimary seems better
+        self.layer.shadowColor = R.color.backgroundPrimary()?.cgColor
         self.layer.borderWidth = 2
-        self.layer.borderColor = R.color.buttonThird()?.cgColor
+        self.layer.borderColor = R.color.buttonTertiary()?.cgColor
     }
 }

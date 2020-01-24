@@ -12,6 +12,7 @@ struct GameCreator {
 
     func getController(difficulty: Level) -> GameController {
 
+        // TODO: How about moving timer to viewModel? seems like it is not related to UI
         let gameEngine = GameEngine(level: difficulty)
         let score = Score()
         let gameTimer = GameTimer()

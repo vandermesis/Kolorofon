@@ -29,13 +29,14 @@ final class GameOverController: UIViewController {
     }
 
     @IBAction private func restartGameButtonPressed(_ sender: UIButton) {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil) // whoooho, make sure you know what you're doing, plan your navigation stack always and be always sure what is where, you'd need to change it
+        //TODO: whoooho, make sure you know what you're doing, plan your navigation stack always and be always sure what is where, you'd need to change it
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
 private extension GameOverController {
 
     private func setupScoreLabel() {
-        scoreLabel.text = viewModel.userScore.score.formatToString
+        scoreLabel.text = viewModel.userScore.score.toString
     }
 }

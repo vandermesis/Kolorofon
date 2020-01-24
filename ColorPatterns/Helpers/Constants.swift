@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct K//Constants is better than unknown 'K', I know that 'R.swift' breaks this rule, but you should not use 2-3 chars for class/variable names {
+struct Constants {
 
     struct Sounds {
 
@@ -21,8 +21,13 @@ struct K//Constants is better than unknown 'K', I know that 'R.swift' breaks thi
         static let wavFormat = "wav"
     }
 
-    struct DefaultsKeys { // what keys?
+    struct UserDefaultsKeys {
 
         static let sound = "Sound"
+    }
+
+    struct GameTimer {
+
+        static let gameTime = 180
     }
 }

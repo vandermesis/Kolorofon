@@ -12,15 +12,14 @@ struct GameSounds {
     
     private var audioPlayer: AVAudioPlayer?
 
-    // K? What is K?
-    private let soundsArray = [K.Sounds.note1, K.Sounds.note2, K.Sounds.note3, K.Sounds.note4, K.Sounds.note5]
+    private let soundsArray = [Constants.Sounds.note1, Constants.Sounds.note2, Constants.Sounds.note3, Constants.Sounds.note4, Constants.Sounds.note5]
     
     mutating func play(soundFile: Int) {
         guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
-                                             withExtension: K.Sounds.wavFormat) else { return }
+                                             withExtension: Constants.Sounds.wavFormat) else { return }
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
-            // youre creating new audio player for each sound? why?
+            // TODO: You're creating new audio player for each sound? why?
             // try lazy initialization
         } catch {
             print("Error in \(#function): \(error.developerFriendlyMessage)")

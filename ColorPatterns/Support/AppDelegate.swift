@@ -14,9 +14,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //  Show lauch screen for 0.5 sec to display logo
-        Thread.sleep(forTimeInterval: 0.5) // Never seen that kind of logic here, but It could be smarter to add subview of launchscreen to your game controller
+
+        // TODO: Never seen that kind of logic here, but It could be smarter to add subview of launchscreen to your game controller
         // This gives you a possibility to do animations and stuff, it always looks nice when you see launchscreen and then it nicely dissappears :)
+        Thread.sleep(forTimeInterval: 0.5)
 
         let startingController = setupStartingController()
         displayStartingController(controller: startingController)

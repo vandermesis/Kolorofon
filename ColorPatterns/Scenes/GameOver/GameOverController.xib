@@ -23,7 +23,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-4M-h4e">
                     <rect key="frame" x="56" y="50" width="208" height="51"/>
                     <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="textPrimary"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-BO-Ic4">
@@ -32,27 +32,27 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-sv-7j9">
                             <rect key="frame" x="0.0" y="0.0" width="146.5" height="38"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
-                            <color key="textColor" name="textDarkSecond"/>
+                            <color key="textColor" name="textSecondary"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-cG-au5">
                             <rect key="frame" x="35" y="48" width="111.5" height="126.5"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="100"/>
-                            <color key="textColor" name="textDarkMain"/>
+                            <color key="textColor" name="textPrimary"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-fj-xGY" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                     <rect key="frame" x="35" y="390" width="250" height="40"/>
-                    <color key="backgroundColor" name="buttonMain"/>
+                    <color key="backgroundColor" name="buttonPrimary"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="07T-JH-uuB"/>
                         <constraint firstAttribute="height" constant="40" id="uVH-0q-mNa"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                     <state key="normal" title="Start Menu">
-                        <color key="titleColor" name="textLightMain"/>
+                        <color key="titleColor" name="textTertiary"/>
                     </state>
                     <state key="highlighted" title="Start Menu"/>
                     <connections>
@@ -60,7 +60,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" name="backgroundLight"/>
+            <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
                 <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0d7-f8-GPr"/>
                 <constraint firstItem="may-4M-h4e" firstAttribute="centerX" secondItem="OMn-BO-Ic4" secondAttribute="centerX" id="BPK-z5-AEd"/>
@@ -74,19 +74,19 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="backgroundLight">
+        <namedColor name="backgroundSecondary">
             <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="buttonMain">
-            <color red="0.85600000619888306" green="0.0" blue="0.29300001263618469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="buttonPrimary">
+            <color red="0.8529999852180481" green="0.29800000786781311" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textDarkMain">
+        <namedColor name="textPrimary">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textDarkSecond">
+        <namedColor name="textSecondary">
             <color red="0.47600001096725464" green="0.47600001096725464" blue="0.47600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textLightMain">
+        <namedColor name="textTertiary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
