@@ -10,6 +10,8 @@ import UIKit
 
 class StartMenuController: UIViewController {
 
+    @IBOutlet private var levelLabel: [SharedButton]!
+
     let viewModel: StartMenuViewModel
 
     init(viewModel: StartMenuViewModel) {
@@ -23,5 +25,23 @@ class StartMenuController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction private func levelButtonPressed(_ sender: UIButton) {
+        setupLevelButtonColor(button: sender.tag - 1)
+    }
+
+    @IBAction private func startButtonPressed(_ sender: UIButton) {
+        let gameController = GameCreator().getController()
+        gameController.modalPresentationStyle = .fullScreen
+        present(gameController, animated: true, completion: nil)
+    }
+}
+
+private extension StartMenuController {
+
+    private func setupLevelButtonColor(button: Int) {
+        levelLabel[button].backgroundColor = R.color.buttonMain()
+        levelLabel[button].setTitleColor(R.color.textLightMain(), for: .normal)
     }
 }

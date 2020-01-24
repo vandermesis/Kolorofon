@@ -26,7 +26,7 @@ final class SharedButton: UIButton {
         self.layer.shadowOpacity = 0.5
         self.layer.shadowRadius = 7
         self.layer.shadowColor = R.color.backgroundDark()?.cgColor
-        self.layer.borderWidth = 1
-        self.layer.borderColor = R.color.buttonMain()?.cgColor
+        self.layer.borderWidth = 2
+        self.layer.borderColor = R.color.buttonThird()?.cgColor
     }
 }
