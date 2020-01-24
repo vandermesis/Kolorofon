@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-4x-4oq">
-                    <rect key="frame" x="25" y="20" width="270.5" height="75"/>
+                    <rect key="frame" x="25" y="50" width="270.5" height="75"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFA-OL-Rp6">
                             <rect key="frame" x="85" y="0.0" width="100" height="24"/>
@@ -116,7 +116,7 @@
             <color key="backgroundColor" name="backgroundLight"/>
             <constraints>
                 <constraint firstItem="cm2-S5-qSi" firstAttribute="centerX" secondItem="MrS-4x-4oq" secondAttribute="centerX" id="B7E-cO-Llm"/>
-                <constraint firstItem="MrS-4x-4oq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="n8U-Vr-jaS"/>
+                <constraint firstItem="MrS-4x-4oq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="n8U-Vr-jaS"/>
                 <constraint firstItem="MrS-4x-4oq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nRu-Xw-Ptz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cm2-S5-qSi" secondAttribute="bottom" constant="50" id="zC2-fR-eIw"/>
             </constraints>

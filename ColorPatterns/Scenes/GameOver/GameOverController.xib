@@ -20,6 +20,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-4M-h4e">
+                    <rect key="frame" x="56" y="50" width="208" height="51"/>
+                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-BO-Ic4">
                     <rect key="frame" x="87" y="153" width="146.5" height="174.5"/>
                     <subviews>
@@ -57,6 +63,8 @@
             <color key="backgroundColor" name="backgroundLight"/>
             <constraints>
                 <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0d7-f8-GPr"/>
+                <constraint firstItem="may-4M-h4e" firstAttribute="centerX" secondItem="OMn-BO-Ic4" secondAttribute="centerX" id="BPK-z5-AEd"/>
+                <constraint firstItem="may-4M-h4e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="C0L-1x-EmS"/>
                 <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MQT-tz-6DM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Owa-fj-xGY" secondAttribute="bottom" constant="50" id="hjl-RD-ktA"/>
                 <constraint firstItem="Owa-fj-xGY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="inm-27-IRb"/>
