@@ -24,7 +24,8 @@ final class StartMenuController: UIViewController {
     }
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
-        // TODO: it's not a good idea to use tags to do such things I'd go with enum difficulty: easy, med, hard and setup buttons with these values, but not use tags
+        // TODO: it's not a good idea to use tags to do such things
+        // I'd go with enum difficulty: easy, med, hard and setup buttons with these values, but not use tags
         // you could have these in viewmodel then
         setupDifficultyButtonColor(button: sender.tag - 1)
         viewModel.chooseDifficultyLevel(button: sender.tag)

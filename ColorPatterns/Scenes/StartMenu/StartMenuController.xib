@@ -67,14 +67,14 @@
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-iV-jci" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="60" width="250" height="40"/>
-                            <color key="backgroundColor" name="buttonSecondary"/>
+                            <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4EL-Xm-jEB"/>
                                 <constraint firstAttribute="width" constant="250" id="qLw-T7-N49"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Medium">
-                                <color key="titleColor" name="textPrimary"/>
+                                <color key="titleColor" name="textTertiary"/>
                             </state>
                             <connections>
                                 <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="Gpp-xM-sMT"/>
