@@ -39,7 +39,7 @@ private extension GameTimer {
             gameTimer?.invalidate()
             gameTimer = nil
             delegate?.timerDidEndCounting()
-            timeLeft = 60
+            timeLeft = 180
         }
     }
 }

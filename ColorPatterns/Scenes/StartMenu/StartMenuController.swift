@@ -12,7 +12,7 @@ final class StartMenuController: UIViewController {
 
     @IBOutlet private var difficultyButton: [SharedButton]!
 
-    let viewModel: StartMenuViewModel
+    var viewModel: StartMenuViewModel
 
     init(viewModel: StartMenuViewModel) {
         self.viewModel = viewModel
@@ -25,10 +25,11 @@ final class StartMenuController: UIViewController {
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
         setupDifficultyButtonColor(button: sender.tag - 1)
+        viewModel.chooseDifficultyLevel(button: sender.tag)
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
-        let gameController = GameCreator().getController()
+        let gameController = GameCreator().getController(difficulty: viewModel.difficulty)
         gameController.modalPresentationStyle = .fullScreen
         present(gameController, animated: true, completion: nil)
     }
