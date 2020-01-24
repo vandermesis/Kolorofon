@@ -25,10 +25,10 @@ I would like to this game would grow with me as I learn to code. We will see whe
 ## How to use it
 
 Follow your colour! 
-You have 60 seconds. 
+You have 180 seconds. 
 Pick your favorite color and remember it. 
 After colors change tap your choosen color to get a point.
-If your choosen color is not on the screen, swipe down or shake your phone to shuffle.
+If your choosen color is not on the screen, swipe down to shuffle colors.
 If you choose wrong color you lose a point.
 Simple as that!
 Ho!
