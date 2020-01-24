@@ -15,8 +15,9 @@ protocol GameViewModelDelegate: class {
 final class GameViewModel {
 
     private var gameEngine: GameEngine
-    private var userScore: Score
     private var gameStarted = false
+
+    var userScore: Score
 
     weak var delegate: GameViewModelDelegate?
 

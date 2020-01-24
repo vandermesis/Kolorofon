@@ -1,8 +1,8 @@
 //
-//  GameCreatorTests.swift
+//  GameOverCreatorTests.swift
 //  ColorPatternsTests
 //
-//  Created by Marek Skrzelowski on 22/01/2020.
+//  Created by Marek Skrzelowski on 23/01/2020.
 //  Copyright © 2020 vandermesis. All rights reserved.
 //
 
@@ -11,16 +11,18 @@ import Nimble
 
 @testable import ColorPatterns
 
-final class GameCreatorTests: QuickSpec {
+final class GameOverCreatorTests: QuickSpec {
 
     override func spec() {
 
-        var controller: UIViewController?
+        var controller: UIViewController!
+        var score: Score!
 
         describe("getting GameController") {
 
             beforeEach {
-                controller = GameCreator().getController(difficulty: .medium)
+                score = Score()
+                controller = GameOverCreator().getController(score: score)
             }
 
             afterEach {
@@ -28,7 +30,7 @@ final class GameCreatorTests: QuickSpec {
             }
 
             it("should return valid controller") {
-                expect(controller).to(beAKindOf(GameController.self))
+                expect(controller).to(beAKindOf(GameOverController.self))
             }
         }
     }

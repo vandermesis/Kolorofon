@@ -10,9 +10,9 @@ import Foundation
 
 struct GameCreator {
 
-    func getController() -> GameController {
+    func getController(difficulty: Level) -> GameController {
 
-        let gameEngine = GameEngine()
+        let gameEngine = GameEngine(level: difficulty)
         let score = Score()
         let gameTimer = GameTimer()
         let gameSounds = GameSounds()

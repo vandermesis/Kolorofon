@@ -19,7 +19,7 @@ final class GameTimer {
 
     weak var delegate: GameTimerDelegate?
 
-    var timeLeft = 60
+    var timeLeft = 180
 
     func start() {
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0,
@@ -39,7 +39,7 @@ private extension GameTimer {
             gameTimer?.invalidate()
             gameTimer = nil
             delegate?.timerDidEndCounting()
-            timeLeft = 60
+            timeLeft = 180
         }
     }
 }
