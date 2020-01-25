@@ -42,11 +42,12 @@ final class GameController: UIViewController {
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
-        // TODO: Try not to use tags, make an another way to identify buttons
-        viewModel.didPressColorBar(colorBar: sender.tag - 1)
+        guard let buttonId = sender.accessibilityLabel else { return }
+        guard let barNumber = Int(buttonId) else { return }
+        viewModel.didPressColorBar(colorBar: barNumber)
         updateColorBars()
     }
-    
+
     @IBAction private func didSwipeDown(_ sender: UISwipeGestureRecognizer) {
         updateColorBars()
     }

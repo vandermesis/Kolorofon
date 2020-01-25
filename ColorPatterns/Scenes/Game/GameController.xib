@@ -58,6 +58,7 @@
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSP-a1-KOT">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="172.5"/>
                             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="0"/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="DCz-e3-m2u"/>
                             </connections>
@@ -65,6 +66,7 @@
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toE-hA-bWZ">
                             <rect key="frame" x="0.0" y="172.5" width="414" height="172.5"/>
                             <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="1"/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="SBq-lI-dyW"/>
                             </connections>
@@ -72,6 +74,7 @@
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Ng-iAP">
                             <rect key="frame" x="0.0" y="345" width="414" height="173"/>
                             <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="2"/>
                             <gestureRecognizers/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Kjj-gy-TPY"/>
@@ -80,6 +83,7 @@
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-px-Xha">
                             <rect key="frame" x="0.0" y="518" width="414" height="172.5"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="3"/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="QhW-e1-5Go"/>
                             </connections>
@@ -87,6 +91,7 @@
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-5w-WAl">
                             <rect key="frame" x="0.0" y="690.5" width="414" height="172.5"/>
                             <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="4"/>
                             <gestureRecognizers/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Tl7-8h-m7r"/>

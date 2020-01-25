@@ -17,9 +17,9 @@ final class GameSounds {
         return soundURL
     }
     //FIXME: That doesn't work properly.
-    // Only some sounds are played because only one player is created and it has to play sound to the end
+    //Because only one player is created for each sound and it has to play sound to the end
     private lazy var audioPlayer: AVAudioPlayer = {
-        [unowned self] in
+        [weak self] in
         do {
             guard let url = url else { return AVAudioPlayer.init() }
             return try AVAudioPlayer.init(contentsOf: url)
