@@ -17,15 +17,18 @@ final class GameViewModelTests: QuickSpec {
 
         var gameEngine: GameEngine!
         var gameTimer: FakeGameTimer!
+        var gameSounds: GameSounds!
         var userScore: Score!
         var viewModel: GameViewModel!
 
         beforeEach {
             gameEngine = GameEngine(level: .medium)
             gameTimer = FakeGameTimer()
+            gameSounds = GameSounds(userDefaults: UserDefaults.standard)
             userScore = Score()
             viewModel = GameViewModelImpl(gameEngine: gameEngine,
                                           gameTimer: gameTimer,
+                                          gameSounds: gameSounds,
                                           score: userScore)
         }
 

@@ -16,7 +16,8 @@ final class GameSounds {
                                        withExtension: Constants.Sounds.wavFormat)
         return soundURL
     }
-    //FIXME: That doesn't work properly. Only some sounds are played.
+    //FIXME: That doesn't work properly.
+    // Only some sounds are played because only one player is created and it has to play sound to the end
     private lazy var audioPlayer: AVAudioPlayer = {
         [unowned self] in
         do {
