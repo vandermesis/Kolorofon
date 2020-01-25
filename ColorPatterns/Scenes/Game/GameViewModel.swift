@@ -8,27 +8,35 @@
 
 import UIKit
 
-protocol GameViewModelDelegate: class {
-    func didUpdateScore(score: Int)
+protocol GameViewModel {
+    func startTimer()
+    func shuffleColors() -> [CGFloat]
+    func didPressColorBar(colorBar: Int)
 }
 
-final class GameViewModel {
+final class GameViewModelImpl {
 
-    // TODO: Make a protocol for this class and then this class implementing that protocol, so you can use it in controller
-    private var gameEngine: GameEngine
     private var gameStarted = false
-
+    private var gameEngine: GameEngine
+    private var gameTimer: GameTimer
     private(set) var userScore: Score
 
-    weak var delegate: GameViewModelDelegate?
+    weak var controller: GameController?
 
-    init(gameEngine: GameEngine, score: Score) {
+    init(gameEngine: GameEngine,
+         gameTimer: GameTimer,
+         score: Score) {
         self.gameEngine = gameEngine
+        self.gameTimer = gameTimer
         self.userScore = score
     }
 }
 
-extension GameViewModel {
+extension GameViewModelImpl: GameViewModel {
+
+    func startTimer() {
+        gameTimer.start()
+    }
 
     func shuffleColors() -> [CGFloat] {
         let colors = gameEngine.shuffleColors()
@@ -44,12 +52,12 @@ extension GameViewModel {
     }
 }
 
-private extension GameViewModel {
+private extension GameViewModelImpl {
 
     private func calculateScore() {
         if gameStarted {
             userScore.updateScorePoints(gameEngine.colorRange.contains(gameEngine.pickedColor))
-            delegate?.didUpdateScore(score: userScore.score)
+            controller?.updateScoreLabel(score: userScore.score)
         } else {
             gameEngine.userColor = gameEngine.pickedColor
         }
@@ -64,5 +72,16 @@ private extension GameViewModel {
         print("pickedColor=DB:\(gameEngine.colorRange.contains(gameEngine.pickedColor))")
         print("userScore: \(userScore.score)")
         print("gameStarted: \(gameStarted)")
+    }
+}
+
+extension GameViewModelImpl: GameTimerDelegate {
+
+    func timerDidEndCounting() {
+        controller?.navigateToGameOver(userScore: userScore)
+    }
+
+    func timerDidUpdate(seconds: Int) {
+        controller?.updateTimeLabel(seconds: seconds)
     }
 }

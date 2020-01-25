@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol GamePresentable {
+    func updateTimeLabel(seconds: Int)
+    func updateScoreLabel(score: Int)
+    func navigateToGameOver(userScore: Score)
+}
+
 final class GameController: UIViewController {
 
     @IBOutlet private var colorBars: [UIButton]!
@@ -15,19 +21,15 @@ final class GameController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
 
     private let viewModel: GameViewModel
-    private var gameTimer: GameTimer
     private var gameSounds: GameSounds
     private var userDefaults: UserDefaults
 
     init(viewModel: GameViewModel,
-         timer: GameTimer,
          sounds: GameSounds,
          userDefaults: UserDefaults) {
         self.viewModel = viewModel
-        self.gameTimer = timer
         self.gameSounds = sounds
         self.userDefaults = userDefaults
-
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -42,9 +44,7 @@ final class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateColorBars()
-        setupGameTimer()
-        setupViewModelDelegate()
-        setupScoreLabel()
+        viewModel.startTimer()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
@@ -58,21 +58,20 @@ final class GameController: UIViewController {
     }
 }
 
-private extension GameController {
+extension GameController: GamePresentable {
 
-    private func setupGameTimer() {
-        // TODO: You can move timer to viewmodel
-        timeLabel.text = gameTimer.timeLeft.toString
-        gameTimer.start()
-        gameTimer.delegate = self
+    func updateTimeLabel(seconds: Int) {
+        timeLabel.text = seconds.toString
     }
 
-    private func setupViewModelDelegate() {
-        viewModel.delegate = self
+    func updateScoreLabel(score: Int) {
+        scoreLabel.text = score.toString
     }
 
-    private func setupScoreLabel() {
-        scoreLabel.text = 0.toString
+    func navigateToGameOver(userScore: Score) {
+        let gameOverController = GameOverCreator().getController(score: userScore)
+        gameOverController.modalPresentationStyle = .fullScreen
+        self.present(gameOverController, animated: true, completion: nil)
     }
 }
 
@@ -90,26 +89,5 @@ private extension GameController {
         if userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound) == true {
             gameSounds.play(soundFile: soundFile)
         }
-    }
-}
-
-extension GameController: GameTimerDelegate {
-
-    func timerDidEndCounting() {
-        let userScore = viewModel.userScore
-        let gameOverController = GameOverCreator().getController(score: userScore)
-        gameOverController.modalPresentationStyle = .fullScreen
-        self.present(gameOverController, animated: true, completion: nil)
-    }
-
-    func timerDidUpdate(seconds: Int) {
-        timeLabel.text = seconds.toString
-    }
-}
-
-extension GameController: GameViewModelDelegate {
-
-    func didUpdateScore(score: Int) {
-        scoreLabel.text = score.toString
     }
 }
