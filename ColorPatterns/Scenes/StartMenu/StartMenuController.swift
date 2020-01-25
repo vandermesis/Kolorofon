@@ -24,11 +24,10 @@ final class StartMenuController: UIViewController {
     }
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
-        // TODO: it's not a good idea to use tags to do such things
-        // I'd go with enum difficulty: easy, med, hard and setup buttons with these values, but not use tags
-        // you could have these in viewmodel then
-        setupDifficultyButtonColor(button: sender.tag - 1)
-        viewModel.chooseDifficultyLevel(button: sender.tag)
+        guard let buttonTitle = sender.currentTitle else { return }
+        guard let difficulty = Level(rawValue: buttonTitle.lowercased()) else { return }
+        setupDifficultyButtonColor(title: buttonTitle)
+        viewModel.chooseDifficulty(level: difficulty)
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
@@ -40,15 +39,15 @@ final class StartMenuController: UIViewController {
 
 private extension StartMenuController {
 
-    private func setupDifficultyButtonColor(button: Int) {
-        // TODO: crash if I do:  setupDifficultyButtonColor(button: 52) - this should be forbidden
-        let selectedButton = difficultyButton[button]
-        let unselectedButtons = difficultyButton.filter { $0 != selectedButton }
-        selectedButton.backgroundColor = R.color.buttonPrimary()
-        selectedButton.setTitleColor(R.color.textTertiary(), for: .normal)
-        unselectedButtons.forEach { button in
-            button.backgroundColor = R.color.buttonSecondary()
-            button.setTitleColor(R.color.textPrimary(), for: .normal)
+    private func setupDifficultyButtonColor(title: String) {
+        difficultyButton.forEach { button in
+            if button.currentTitle == title {
+                button.backgroundColor = R.color.buttonPrimary()
+                button.setTitleColor(R.color.textTertiary(), for: .normal)
+            } else {
+                button.backgroundColor = R.color.buttonSecondary()
+                button.setTitleColor(R.color.textPrimary(), for: .normal)
+            }
         }
     }
 }
