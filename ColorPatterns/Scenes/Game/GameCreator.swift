@@ -12,18 +12,17 @@ struct GameCreator {
 
     func getController(difficulty: Level) -> GameController {
 
+        let userDefaults = UserDefaults.standard
         let gameEngine = GameEngine(level: difficulty)
         let score = Score()
         let gameTimer = GameTimerImpl()
-        let gameSounds = GameSounds()
-        let userDefaults = UserDefaults.standard
+        let gameSounds = GameSounds(userDefaults: userDefaults)
         let viewModel = GameViewModelImpl(gameEngine: gameEngine,
                                           gameTimer: gameTimer,
+                                          gameSounds: gameSounds,
                                           score: score)
-        let controller = GameController(viewModel: viewModel,
-                                        sounds: gameSounds,
-                                        userDefaults: userDefaults)
-
+        let controller = GameController(viewModel: viewModel)
+        
         viewModel.controller = controller
         gameTimer.delegate = viewModel
 

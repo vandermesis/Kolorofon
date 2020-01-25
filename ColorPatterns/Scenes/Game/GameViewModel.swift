@@ -19,15 +19,18 @@ final class GameViewModelImpl {
     private var gameStarted = false
     private var gameEngine: GameEngine
     private var gameTimer: GameTimer
+    private var gameSounds: GameSounds
     private(set) var userScore: Score
 
     weak var controller: GameController?
 
     init(gameEngine: GameEngine,
          gameTimer: GameTimer,
+         gameSounds: GameSounds,
          score: Score) {
         self.gameEngine = gameEngine
         self.gameTimer = gameTimer
+        self.gameSounds = gameSounds
         self.userScore = score
     }
 }
@@ -45,6 +48,7 @@ extension GameViewModelImpl: GameViewModel {
     }
     
     func didPressColorBar(colorBar: Int) {
+        gameSounds.play(soundFile: colorBar)
         gameEngine.pickedColor = gameEngine.colorsArray[colorBar]
         calculateScore()
         gameStarted = true

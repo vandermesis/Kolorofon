@@ -8,22 +8,51 @@
 
 import AVFoundation
 
-struct GameSounds {
-    
-    private var audioPlayer: AVAudioPlayer?
+final class GameSounds {
 
-    private let soundsArray = [Constants.Sounds.note1, Constants.Sounds.note2, Constants.Sounds.note3, Constants.Sounds.note4, Constants.Sounds.note5]
-    
-    mutating func play(soundFile: Int) {
-        guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
-                                             withExtension: Constants.Sounds.wavFormat) else { return }
+    private var soundFile: Int = 0
+    private var url: URL? {
+        let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
+                                       withExtension: Constants.Sounds.wavFormat)
+        return soundURL
+    }
+    //FIXME: That doesn't work properly. Only some sounds are played.
+    private lazy var audioPlayer: AVAudioPlayer = {
+        [unowned self] in
         do {
-            try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
-            // TODO: You're creating new audio player for each sound? why?
-            // try lazy initialization
+            guard let url = url else { return AVAudioPlayer.init() }
+            return try AVAudioPlayer.init(contentsOf: url)
         } catch {
-            print("Error in \(#function): \(error.developerFriendlyMessage)")
+            return AVAudioPlayer.init()
         }
-        audioPlayer?.play()
+    }()
+
+    private let userDefaults: UserDefaults
+
+    private let soundsArray = [Constants.Sounds.note1,
+                               Constants.Sounds.note2,
+                               Constants.Sounds.note3,
+                               Constants.Sounds.note4,
+                               Constants.Sounds.note5]
+
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+    }
+
+}
+
+extension GameSounds {
+
+    func play(soundFile: Int) {
+        guard soundSettingsStatus else { return }
+        self.soundFile = soundFile
+        audioPlayer.play()
+    }
+}
+
+private extension GameSounds {
+
+    private var soundSettingsStatus: Bool {
+        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound)
     }
 }

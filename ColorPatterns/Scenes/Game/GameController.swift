@@ -21,15 +21,9 @@ final class GameController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
 
     private let viewModel: GameViewModel
-    private var gameSounds: GameSounds
-    private var userDefaults: UserDefaults
 
-    init(viewModel: GameViewModel,
-         sounds: GameSounds,
-         userDefaults: UserDefaults) {
+    init(viewModel: GameViewModel) {
         self.viewModel = viewModel
-        self.gameSounds = sounds
-        self.userDefaults = userDefaults
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -51,8 +45,8 @@ final class GameController: UIViewController {
         // TODO: Try not to use tags, make an another way to identify buttons
         viewModel.didPressColorBar(colorBar: sender.tag - 1)
         updateColorBars()
-        playSound(soundFile: sender.tag - 1)
     }
+    
     @IBAction private func didSwipeDown(_ sender: UISwipeGestureRecognizer) {
         updateColorBars()
     }
@@ -81,13 +75,6 @@ private extension GameController {
         let updatedColors = viewModel.shuffleColors()
         colorBars.enumerated().forEach {
             $1.backgroundColor = updatedColors[$0].uiColorFromCGFloat
-        }
-    }
-
-    private func playSound(soundFile: Int) {
-        // TODO: Make a helper class that does all that stuff
-        if userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound) == true {
-            gameSounds.play(soundFile: soundFile)
         }
     }
 }
