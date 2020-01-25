@@ -23,6 +23,7 @@
 		BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */; };
 		BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3554C323533779007BC724 /* SettingsBundleHelper.swift */; };
 		BA3554C62353379E007BC724 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA3554C52353379D007BC724 /* Settings.bundle */; };
+		BA59EA8223DCB963001E6502 /* FakeGameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */; };
 		BA8A2C2823533B11002744CB /* GameSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2723533B11002744CB /* GameSounds.swift */; };
 		BA8A2C2A23533F85002744CB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2923533F85002744CB /* Score.swift */; };
 		BA91F45A23CCF352003D466A /* CGFloat+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA91F45923CCF352003D466A /* CGFloat+Converters.swift */; };
@@ -92,6 +93,7 @@
 		BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StringConverter.swift"; sourceTree = "<group>"; };
 		BA3554C323533779007BC724 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA3554C52353379D007BC724 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGameTimer.swift; sourceTree = "<group>"; };
 		BA8A2C2723533B11002744CB /* GameSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSounds.swift; sourceTree = "<group>"; };
 		BA8A2C2923533F85002744CB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		BA91F45923CCF352003D466A /* CGFloat+Converters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Converters.swift"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD7ADAC23D8849D00537D7F /* FakeGameController.swift */,
+				BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */,
 				BAD7ADA823D87F1800537D7F /* GameCreatorTests.swift */,
 				BAD7ADAA23D880F900537D7F /* GameTimerTests.swift */,
 				BAC495C923D8BA130041088C /* GameEngineTests.swift */,
@@ -662,6 +665,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA59EA8223DCB963001E6502 /* FakeGameTimer.swift in Sources */,
 				BACBC10723DB0FF400D5E4F7 /* StartMenuCreatorTests.swift in Sources */,
 				BAD7ADAD23D8849D00537D7F /* FakeGameController.swift in Sources */,
 				BAD7ADA623D87E9F00537D7F /* UnitTestError.swift in Sources */,

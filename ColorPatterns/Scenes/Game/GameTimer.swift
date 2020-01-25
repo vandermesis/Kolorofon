@@ -13,7 +13,11 @@ protocol GameTimerDelegate: class {
     func timerDidUpdate(seconds: Int)
 }
 
-final class GameTimer {
+protocol GameTimer {
+    func start()
+}
+
+final class GameTimerImpl: GameTimer {
 
     private var gameTimer: Timer?
 
@@ -31,7 +35,7 @@ final class GameTimer {
     }
 }
 
-private extension GameTimer {
+private extension GameTimerImpl {
 
     @objc private func onTimerFires() {
         timeLeft -= 1

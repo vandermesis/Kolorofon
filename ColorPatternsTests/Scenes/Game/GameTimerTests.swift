@@ -15,11 +15,11 @@ final class GameTimerTests: QuickSpec {
 
     override func spec() {
 
-        var gameTimer: GameTimer!
+        var gameTimer: GameTimerImpl!
         var gameController: FakeGameController!
 
         beforeEach {
-            gameTimer = GameTimer()
+            gameTimer = GameTimerImpl()
             gameController = FakeGameController()
             gameTimer.delegate = gameController
         }

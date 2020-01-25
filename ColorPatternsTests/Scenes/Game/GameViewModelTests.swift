@@ -16,13 +16,28 @@ final class GameViewModelTests: QuickSpec {
     override func spec() {
 
         var gameEngine: GameEngine!
+        var gameTimer: FakeGameTimer!
         var userScore: Score!
         var viewModel: GameViewModel!
 
         beforeEach {
             gameEngine = GameEngine(level: .medium)
+            gameTimer = FakeGameTimer()
             userScore = Score()
-            viewModel = GameViewModel(gameEngine: gameEngine, score: userScore)
+            viewModel = GameViewModelImpl(gameEngine: gameEngine,
+                                          gameTimer: gameTimer,
+                                          score: userScore)
+        }
+
+        describe("starting Timer") {
+
+            beforeEach {
+                gameTimer.start()
+            }
+
+            it("should call timer to start counting") {
+                expect(gameTimer.startCalled).to(beTrue())
+            }
         }
 
         describe("pressing color bar") {

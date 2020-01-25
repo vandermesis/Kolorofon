@@ -14,7 +14,7 @@ struct GameCreator {
 
         let gameEngine = GameEngine(level: difficulty)
         let score = Score()
-        let gameTimer = GameTimer()
+        let gameTimer = GameTimerImpl()
         let gameSounds = GameSounds()
         let userDefaults = UserDefaults.standard
         let viewModel = GameViewModelImpl(gameEngine: gameEngine,
