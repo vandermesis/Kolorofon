@@ -22,6 +22,10 @@ final class StartMenuController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        presentLaunchScreen()
+    }
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else { return }
@@ -49,5 +53,15 @@ private extension StartMenuController {
                 button.setTitleColor(R.color.textPrimary(), for: .normal)
             }
         }
+    }
+
+    private func presentLaunchScreen() {
+        let view = LaunchScreenLogoView()
+        self.view.addSubview(view)
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       options: .curveEaseIn,
+                       animations: { view.alpha = 0 },
+                       completion: { _ in view.removeFromSuperview()})
     }
 }

@@ -37,6 +37,8 @@
 		BAC495C823D8B7940041088C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC495C723D8B7940041088C /* Localizable.strings */; };
 		BAC495CA23D8BA130041088C /* GameEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C923D8BA130041088C /* GameEngineTests.swift */; };
 		BAC495CC23D8BDC70041088C /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495CB23D8BDC70041088C /* GameViewModelTests.swift */; };
+		BAC836D823DE367C0061F894 /* LaunchScreenLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC836D723DE367C0061F894 /* LaunchScreenLogoView.swift */; };
+		BAC836DA23DE36950061F894 /* LaunchScreenLogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC836D923DE36950061F894 /* LaunchScreenLogoView.xib */; };
 		BACBC10723DB0FF400D5E4F7 /* StartMenuCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */; };
 		BACBC10923DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */; };
 		BACBC10B23DB386C00D5E4F7 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BACBC10A23DB386C00D5E4F7 /* animation.gif */; };
@@ -108,6 +110,8 @@
 		BAC495C723D8B7940041088C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BAC495C923D8BA130041088C /* GameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineTests.swift; sourceTree = "<group>"; };
 		BAC495CB23D8BDC70041088C /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
+		BAC836D723DE367C0061F894 /* LaunchScreenLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenLogoView.swift; sourceTree = "<group>"; };
+		BAC836D923DE36950061F894 /* LaunchScreenLogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreenLogoView.xib; sourceTree = "<group>"; };
 		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreatorTests.swift; sourceTree = "<group>"; };
@@ -336,6 +340,8 @@
 				BAFF547723D77F8300CC25ED /* Constants.swift */,
 				BA3554C323533779007BC724 /* SettingsBundleHelper.swift */,
 				BAD14BB823DA0DAD00FF2D15 /* SharedButton.swift */,
+				BAC836D723DE367C0061F894 /* LaunchScreenLogoView.swift */,
+				BAC836D923DE36950061F894 /* LaunchScreenLogoView.xib */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */,
 				BACBC10B23DB386C00D5E4F7 /* animation.gif in Resources */,
 				BA199B782292F70200CD7C64 /* note6.wav in Resources */,
+				BAC836DA23DE36950061F894 /* LaunchScreenLogoView.xib in Resources */,
 				BA3554C62353379E007BC724 /* Settings.bundle in Resources */,
 				BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */,
 				BA199B772292F70200CD7C64 /* note4.wav in Resources */,
@@ -643,6 +650,7 @@
 				BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */,
 				BAD14BB723DA04F500FF2D15 /* GameOverViewModel.swift in Sources */,
 				BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */,
+				BAC836D823DE367C0061F894 /* LaunchScreenLogoView.swift in Sources */,
 				BA8A2C2A23533F85002744CB /* Score.swift in Sources */,
 				BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */,
 				BA9484FD23535E0800375037 /* GameTimer.swift in Sources */,
