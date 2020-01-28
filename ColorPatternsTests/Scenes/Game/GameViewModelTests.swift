@@ -62,8 +62,6 @@ final class GameViewModelTests: QuickSpec {
                 expect(gameEngine.userColor).to(equal(gameEngine.pickedColor))
             }
 
-            // FIXME: That test doesn't work if GameEngine and Score are structs,
-            // due to struct destroy/create process
             context("after game started") {
 
                 context("and user picked his color") {

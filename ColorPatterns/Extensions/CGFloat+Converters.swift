@@ -10,7 +10,6 @@ import UIKit
 
 extension CGFloat {
 
-    // TODO: Replace with custom colors? How will I add 1000 custom colors?
     var uiColorFromCGFloat: UIColor {
         return UIColor(hue: self, saturation: 1, brightness: 1, alpha: 1)
     }
