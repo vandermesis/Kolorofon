@@ -6,11 +6,11 @@
 //  Copyright © 2020 vandermesis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct GameOverCreator {
 
-    func getController(score: Score, gameController: GameController) -> GameOverController {
+    func getController(score: Score, gameController: UIViewController) -> GameOverController {
 
         let viewModel = GameOverViewModel(userScore: score)
         let gameOverController = GameOverController(viewModel: viewModel)

@@ -12,7 +12,7 @@ final class GameOverController: UIViewController {
 
     @IBOutlet private weak var scoreLabel: UILabel!
 
-    weak var gameController: GameController?
+    weak var gameController: UIViewController?
 
     let viewModel: GameOverViewModel
 
