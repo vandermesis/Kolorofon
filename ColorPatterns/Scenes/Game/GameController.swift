@@ -64,7 +64,7 @@ extension GameController: GamePresentable {
     }
 
     func navigateToGameOver(userScore: Score) {
-        let gameOverController = GameOverCreator().getController(score: userScore)
+        let gameOverController = GameOverCreator().getController(score: userScore, gameController: self)
         gameOverController.modalPresentationStyle = .fullScreen
         self.present(gameOverController, animated: true, completion: nil)
     }

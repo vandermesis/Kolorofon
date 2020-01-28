@@ -12,6 +12,8 @@ final class GameOverController: UIViewController {
 
     @IBOutlet private weak var scoreLabel: UILabel!
 
+    weak var gameController: GameController?
+
     let viewModel: GameOverViewModel
 
     init(viewModel: GameOverViewModel) {
@@ -29,8 +31,9 @@ final class GameOverController: UIViewController {
     }
 
     @IBAction private func restartGameButtonPressed(_ sender: UIButton) {
-        //TODO: whoooho, make sure you know what you're doing, plan your navigation stack always and be always sure what is where, you'd need to change it
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false) {
+            self.gameController?.dismiss(animated: false, completion: nil)
+        }
     }
 }
 

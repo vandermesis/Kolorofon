@@ -10,11 +10,13 @@ import Foundation
 
 struct GameOverCreator {
 
-    func getController(score: Score) -> GameOverController {
+    func getController(score: Score, gameController: GameController) -> GameOverController {
 
         let viewModel = GameOverViewModel(userScore: score)
-        let controller = GameOverController(viewModel: viewModel)
+        let gameOverController = GameOverController(viewModel: viewModel)
 
-        return controller
+        gameOverController.gameController = gameController
+
+        return gameOverController
     }
 }
