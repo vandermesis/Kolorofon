@@ -30,4 +30,12 @@ struct Constants {
 
         static let gameTime = 180
     }
+
+    struct SettingsBundleKeys {
+
+        static let buildVersionKey = "build_preference"
+        static let appVersionKey = "version_preference"
+        static let cfBundleVersionStringShort = "CFBundleShortVersionString"
+        static let cfBundleVersionString = "CFBundleVersion"
+    }
 }

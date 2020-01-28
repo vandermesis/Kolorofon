@@ -23,7 +23,12 @@ final class LaunchScreenLogoView: UIView {
     }
 
     func setupView() {
-        Bundle.main.loadNibNamed("LaunchScreenLogoView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(.launchScreenLogo, owner: self, options: nil)
         addSubview(logoView)
     }
+}
+
+private extension String {
+
+    static let launchScreenLogo = "LaunchScreenLogoView"
 }

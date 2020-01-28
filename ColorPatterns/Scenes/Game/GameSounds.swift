@@ -28,12 +28,13 @@ final class GameSounds {
 extension GameSounds {
 
     func play(soundFile: Int) {
+        guard soundSettingsStatus else { return }
         guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
                                              withExtension: Constants.Sounds.wavFormat) else { return }
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
         } catch {
-            print("Error in \(#function): \(error.developerFriendlyMessage)")
+            print("Error in \(#function): \(error.localizedDescription)")
         }
         audioPlayer?.play()
     }
