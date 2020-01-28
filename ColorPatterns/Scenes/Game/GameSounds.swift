@@ -10,23 +10,7 @@ import AVFoundation
 
 final class GameSounds {
 
-    private var soundFile: Int = 0
-    private var url: URL? {
-        let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
-                                       withExtension: Constants.Sounds.wavFormat)
-        return soundURL
-    }
-    //FIXME: That doesn't work properly.
-    //Because only one player is created for each sound and it has to play sound to the end
-    private lazy var audioPlayer: AVAudioPlayer = {
-        [weak self] in
-        do {
-            guard let url = url else { return AVAudioPlayer.init() }
-            return try AVAudioPlayer.init(contentsOf: url)
-        } catch {
-            return AVAudioPlayer.init()
-        }
-    }()
+    private var audioPlayer: AVAudioPlayer?
 
     private let userDefaults: UserDefaults
 
@@ -39,15 +23,19 @@ final class GameSounds {
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
     }
-
 }
 
 extension GameSounds {
 
     func play(soundFile: Int) {
-        guard soundSettingsStatus else { return }
-        self.soundFile = soundFile
-        audioPlayer.play()
+        guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
+                                             withExtension: Constants.Sounds.wavFormat) else { return }
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
+        } catch {
+            print("Error in \(#function): \(error.developerFriendlyMessage)")
+        }
+        audioPlayer?.play()
     }
 }
 
