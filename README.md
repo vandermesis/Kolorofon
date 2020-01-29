@@ -20,7 +20,7 @@ I would like to this game would grow with me as I learn to code. We will see whe
 - [x] used MVVM software architecture 
 - [x] followed coding best practices and SOLID principles
 - [x] used Gitflow
-- [x] all critical parts of application covered by unit tests with use of Bitrise CI
+- [x] all critical parts of application covered by unit tests with use of Travis CI
 
 ## How to use it
 
@@ -52,6 +52,7 @@ Ho!
 - [x] Use MVVM design pattern
 - [x] Add Game Over screen with user score
 - [x] Make welcome screen with start game and difficulty levels
+- [x] Add animation to Start Menu
 - [ ] Allow user to set his name and persist his data
 - [ ] Add pause game functionality
 - [ ] Connect with Apple Game Center
