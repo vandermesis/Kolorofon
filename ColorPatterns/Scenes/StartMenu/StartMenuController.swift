@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Lottie
 
 final class StartMenuController: UIViewController {
 
     @IBOutlet private var difficultyButton: [SharedButton]!
+    @IBOutlet private weak var lottieView: AnimationView!
 
     private var viewModel: StartMenuViewModel
 
@@ -26,6 +28,7 @@ final class StartMenuController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presentLaunchScreen()
+        setupLottieView(animation: "990-inattentive")
     }
     
     @IBAction private func difficultyButtonPressed(_ sender: UIButton) {
@@ -66,5 +69,12 @@ private extension StartMenuController {
                        options: .curveEaseOut,
                        animations: { storyboardController.view.alpha = 0 },
                        completion: { _ in storyboardController.dismiss(animated: false, completion: nil)})
+    }
+
+    private func setupLottieView(animation: String) {
+        lottieView?.animation = Animation.named(animation)
+        lottieView?.loopMode = .loop
+        lottieView?.animationSpeed = 1
+        lottieView?.play()
     }
 }
