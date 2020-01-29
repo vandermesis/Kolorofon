@@ -29,6 +29,7 @@
 		BA91F45A23CCF352003D466A /* CGFloat+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA91F45923CCF352003D466A /* CGFloat+Converters.swift */; };
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
+		BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */; };
 		BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */; };
 		BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA223DA586900F36C8C /* StartMenuController.swift */; };
 		BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAADABA323DA586900F36C8C /* StartMenuController.xib */; };
@@ -99,6 +100,7 @@
 		BA91F45923CCF352003D466A /* CGFloat+Converters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Converters.swift"; sourceTree = "<group>"; };
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "990-inattentive.json"; sourceTree = "<group>"; };
 		BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreator.swift; sourceTree = "<group>"; };
 		BAADABA223DA586900F36C8C /* StartMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuController.swift; sourceTree = "<group>"; };
 		BAADABA323DA586900F36C8C /* StartMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMenuController.xib; sourceTree = "<group>"; };
@@ -222,9 +224,18 @@
 				BA3554C52353379D007BC724 /* Settings.bundle */,
 				BA94BCF822C38FB800D8157E /* Assets.xcassets */,
 				BAFAC25923CC956D00C74D92 /* Colors.xcassets */,
+				BA9CFF4223E23D5100AA6A3D /* LottieAnimations */,
 				BA199B7B2292F70D00CD7C64 /* Sounds */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		BA9CFF4223E23D5100AA6A3D /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */,
+			);
+			path = LottieAnimations;
 			sourceTree = "<group>";
 		};
 		BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */ = {
@@ -483,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */,
 				BA199B792292F70200CD7C64 /* note7.wav in Resources */,
 				BA199B7A2292F70200CD7C64 /* note2.wav in Resources */,
 				BA0AA479230E810A00E2A21D /* logo.png in Resources */,
