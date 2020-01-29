@@ -30,6 +30,7 @@
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */; };
+		BA9CFF4623E24BAC00AA6A3D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4523E24BAC00AA6A3D /* animation.gif */; };
 		BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */; };
 		BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA223DA586900F36C8C /* StartMenuController.swift */; };
 		BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAADABA323DA586900F36C8C /* StartMenuController.xib */; };
@@ -40,7 +41,6 @@
 		BAC495CC23D8BDC70041088C /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495CB23D8BDC70041088C /* GameViewModelTests.swift */; };
 		BACBC10723DB0FF400D5E4F7 /* StartMenuCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */; };
 		BACBC10923DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */; };
-		BACBC10B23DB386C00D5E4F7 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BACBC10A23DB386C00D5E4F7 /* animation.gif */; };
 		BAD1026823526BF900A3276F /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1026723526BF900A3276F /* GameEngine.swift */; };
 		BAD14BB123DA041B00FF2D15 /* GameOverCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD14BB023DA041B00FF2D15 /* GameOverCreator.swift */; };
 		BAD14BB423DA049600FF2D15 /* GameOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD14BB223DA049600FF2D15 /* GameOverController.swift */; };
@@ -101,6 +101,7 @@
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "990-inattentive.json"; sourceTree = "<group>"; };
+		BA9CFF4523E24BAC00AA6A3D /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreator.swift; sourceTree = "<group>"; };
 		BAADABA223DA586900F36C8C /* StartMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuController.swift; sourceTree = "<group>"; };
 		BAADABA323DA586900F36C8C /* StartMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMenuController.xib; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreatorTests.swift; sourceTree = "<group>"; };
 		BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModelTests.swift; sourceTree = "<group>"; };
-		BACBC10A23DB386C00D5E4F7 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BAD1026723526BF900A3276F /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		BAD14BB023DA041B00FF2D15 /* GameOverCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverCreator.swift; sourceTree = "<group>"; };
 		BAD14BB223DA049600FF2D15 /* GameOverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverController.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		BA2F742722C3597B007573FF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BACBC10A23DB386C00D5E4F7 /* animation.gif */,
+				BA9CFF4523E24BAC00AA6A3D /* animation.gif */,
 				BA0AA478230E810A00E2A21D /* logo.png */,
 			);
 			path = Demo;
@@ -502,12 +502,12 @@
 				BA199B762292F70200CD7C64 /* note5.wav in Resources */,
 				BAFAC25823CC91D700C74D92 /* GameController.xib in Resources */,
 				BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */,
-				BACBC10B23DB386C00D5E4F7 /* animation.gif in Resources */,
 				BA199B782292F70200CD7C64 /* note6.wav in Resources */,
 				BA3554C62353379E007BC724 /* Settings.bundle in Resources */,
 				BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */,
 				BA199B772292F70200CD7C64 /* note4.wav in Resources */,
 				8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */,
+				BA9CFF4623E24BAC00AA6A3D /* animation.gif in Resources */,
 				BA199B742292F70200CD7C64 /* note3.wav in Resources */,
 				BAFAC25A23CC956D00C74D92 /* Colors.xcassets in Resources */,
 				BAC495C823D8B7940041088C /* Localizable.strings in Resources */,
