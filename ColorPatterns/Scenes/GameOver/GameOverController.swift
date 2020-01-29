@@ -12,6 +12,8 @@ final class GameOverController: UIViewController {
 
     @IBOutlet private weak var scoreLabel: UILabel!
 
+    weak var gameController: UIViewController?
+
     let viewModel: GameOverViewModel
 
     init(viewModel: GameOverViewModel) {
@@ -29,13 +31,15 @@ final class GameOverController: UIViewController {
     }
 
     @IBAction private func restartGameButtonPressed(_ sender: UIButton) {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)       
+        self.dismiss(animated: false) {
+            self.gameController?.dismiss(animated: false, completion: nil)
+        }
     }
 }
 
 private extension GameOverController {
 
     private func setupScoreLabel() {
-        scoreLabel.text = viewModel.userScore.score.formatToString
+        scoreLabel.text = viewModel.userScore.score.toString
     }
 }

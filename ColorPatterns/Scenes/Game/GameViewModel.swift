@@ -8,26 +8,38 @@
 
 import UIKit
 
-protocol GameViewModelDelegate: class {
-    func didUpdateScore(score: Int)
+protocol GameViewModel {
+    func startTimer()
+    func shuffleColors() -> [CGFloat]
+    func didPressColorBar(colorBar: Int)
 }
 
-final class GameViewModel {
+final class GameViewModelImpl {
 
-    private var gameEngine: GameEngine
     private var gameStarted = false
+    private var gameEngine: GameEngine
+    private var gameTimer: GameTimer
+    private var gameSounds: GameSounds
+    private(set) var userScore: Score
 
-    var userScore: Score
+    weak var controller: GameController?
 
-    weak var delegate: GameViewModelDelegate?
-
-    init(gameEngine: GameEngine, score: Score) {
+    init(gameEngine: GameEngine,
+         gameTimer: GameTimer,
+         gameSounds: GameSounds,
+         score: Score) {
         self.gameEngine = gameEngine
+        self.gameTimer = gameTimer
+        self.gameSounds = gameSounds
         self.userScore = score
     }
 }
 
-extension GameViewModel {
+extension GameViewModelImpl: GameViewModel {
+
+    func startTimer() {
+        gameTimer.start()
+    }
 
     func shuffleColors() -> [CGFloat] {
         let colors = gameEngine.shuffleColors()
@@ -36,6 +48,7 @@ extension GameViewModel {
     }
     
     func didPressColorBar(colorBar: Int) {
+        gameSounds.play(soundFile: colorBar)
         gameEngine.pickedColor = gameEngine.colorsArray[colorBar]
         calculateScore()
         gameStarted = true
@@ -43,18 +56,18 @@ extension GameViewModel {
     }
 }
 
-private extension GameViewModel {
+private extension GameViewModelImpl {
 
     private func calculateScore() {
         if gameStarted {
             userScore.updateScorePoints(gameEngine.colorRange.contains(gameEngine.pickedColor))
-            delegate?.didUpdateScore(score: userScore.score)
+            controller?.updateScoreLabel(score: userScore.score)
         } else {
             gameEngine.userColor = gameEngine.pickedColor
         }
     }
 
-    //TODO: Remove prints when not needed
+    // TODO: Remove prints when not needed
     private func helpPrints() {
         print("////////////////////////////////////////////")
         print("userColor: \(gameEngine.userColor)")
@@ -63,5 +76,16 @@ private extension GameViewModel {
         print("pickedColor=DB:\(gameEngine.colorRange.contains(gameEngine.pickedColor))")
         print("userScore: \(userScore.score)")
         print("gameStarted: \(gameStarted)")
+    }
+}
+
+extension GameViewModelImpl: GameTimerDelegate {
+
+    func timerDidEndCounting() {
+        controller?.navigateToGameOver(userScore: userScore)
+    }
+
+    func timerDidUpdate(seconds: Int) {
+        controller?.updateTimeLabel(seconds: seconds)
     }
 }

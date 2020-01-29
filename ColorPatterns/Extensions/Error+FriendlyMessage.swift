@@ -16,6 +16,6 @@ extension Error {
         if self is AudioPlayerError {
             return R.string.localizable.errorAudioPlayer()
         }
-        return "Unknown Error"
+        return R.string.localizable.errorUnknown()
     }
 }

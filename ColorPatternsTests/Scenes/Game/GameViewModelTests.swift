@@ -16,13 +16,31 @@ final class GameViewModelTests: QuickSpec {
     override func spec() {
 
         var gameEngine: GameEngine!
+        var gameTimer: FakeGameTimer!
+        var gameSounds: GameSounds!
         var userScore: Score!
         var viewModel: GameViewModel!
 
         beforeEach {
             gameEngine = GameEngine(level: .medium)
+            gameTimer = FakeGameTimer()
+            gameSounds = GameSounds(userDefaults: UserDefaults.standard)
             userScore = Score()
-            viewModel = GameViewModel(gameEngine: gameEngine, score: userScore)
+            viewModel = GameViewModelImpl(gameEngine: gameEngine,
+                                          gameTimer: gameTimer,
+                                          gameSounds: gameSounds,
+                                          score: userScore)
+        }
+
+        describe("starting Timer") {
+
+            beforeEach {
+                gameTimer.start()
+            }
+
+            it("should call timer to start counting") {
+                expect(gameTimer.startCalled).to(beTrue())
+            }
         }
 
         describe("pressing color bar") {
@@ -44,8 +62,6 @@ final class GameViewModelTests: QuickSpec {
                 expect(gameEngine.userColor).to(equal(gameEngine.pickedColor))
             }
 
-            // FIXME: That test doesn't work if GameEngine and Score are structs,
-            // due to struct destroy/create process
             context("after game started") {
 
                 context("and user picked his color") {

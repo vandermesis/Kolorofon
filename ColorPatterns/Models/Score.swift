@@ -12,17 +12,11 @@ final class Score {
 
     var score: Int = 0 {
         didSet {
-            guard score > 0 else {
-                return score = 0
-            }
+            score = max(0, score)
         }
     }
 
-    func updateScorePoints(_ score: Bool) {
-        if score {
-            self.score += 1
-        } else {
-            self.score -= 1
-        }
+    func updateScorePoints(_ shouldUpdate: Bool) {
+        self.score += shouldUpdate ? 1 : -1
     }
 }

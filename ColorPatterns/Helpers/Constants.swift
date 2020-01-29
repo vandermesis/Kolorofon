@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct K {
+struct Constants {
 
     struct Sounds {
 
@@ -21,8 +21,21 @@ struct K {
         static let wavFormat = "wav"
     }
 
-    struct DefaultsKeys {
+    struct UserDefaultsKeys {
 
         static let sound = "Sound"
+    }
+
+    struct GameTimer {
+
+        static let gameTime = 180
+    }
+
+    struct SettingsBundleKeys {
+
+        static let buildVersionKey = "build_preference"
+        static let appVersionKey = "version_preference"
+        static let cfBundleVersionStringShort = "CFBundleShortVersionString"
+        static let cfBundleVersionString = "CFBundleVersion"
     }
 }
