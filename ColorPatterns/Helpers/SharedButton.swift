@@ -23,7 +23,7 @@ final class SharedButton: UIButton {
     private func privateInit() {
         self.layer.cornerRadius = 20
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
-        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 7
         self.layer.shadowColor = R.color.backgroundPrimary()?.cgColor
         self.layer.borderWidth = 2

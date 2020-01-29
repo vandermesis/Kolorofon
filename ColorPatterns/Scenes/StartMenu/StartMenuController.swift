@@ -23,7 +23,8 @@ final class StartMenuController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presentLaunchScreen()
     }
     
@@ -38,6 +39,7 @@ final class StartMenuController: UIViewController {
         let gameController = GameCreator().getController(difficulty: viewModel.difficulty)
         gameController.modalPresentationStyle = .fullScreen
         present(gameController, animated: true, completion: nil)
+
     }
 }
 
@@ -56,12 +58,13 @@ private extension StartMenuController {
     }
 
     private func presentLaunchScreen() {
-        let view = LaunchScreenLogoView()
-        self.view.addSubview(view)
+        guard let storyboardController = R.storyboard.launchScreen().instantiateInitialViewController() else { return }
+        storyboardController.modalPresentationStyle = .overFullScreen
+        present(storyboardController, animated: false, completion: nil)
         UIView.animate(withDuration: 1,
                        delay: 1,
-                       options: .curveEaseIn,
-                       animations: { view.alpha = 0 },
-                       completion: { _ in view.removeFromSuperview()})
+                       options: .curveEaseOut,
+                       animations: { storyboardController.view.alpha = 0 },
+                       completion: { _ in storyboardController.dismiss(animated: false, completion: nil)})
     }
 }

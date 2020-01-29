@@ -121,7 +121,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cm2-S5-qSi" secondAttribute="bottom" constant="50" id="zC2-fR-eIw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-10" y="-25"/>
+            <point key="canvasLocation" x="-754" y="-73"/>
         </view>
     </objects>
     <resources>
