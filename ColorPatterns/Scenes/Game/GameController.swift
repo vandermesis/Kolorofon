@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol GamePresentable {
+    func updateTimeLabel(seconds: Int)
+    func updateScoreLabel(score: Int)
+    func navigateToGameOver(userScore: Score)
+}
+
 final class GameController: UIViewController {
 
     @IBOutlet private var colorBars: [UIButton]!
@@ -15,19 +21,9 @@ final class GameController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
 
     private let viewModel: GameViewModel
-    private var gameTimer: GameTimer
-    private var gameSounds: GameSounds
-    private var defaults: UserDefaults
 
-    init(viewModel: GameViewModel,
-         timer: GameTimer,
-         sounds: GameSounds,
-         userDefaults: UserDefaults) {
+    init(viewModel: GameViewModel) {
         self.viewModel = viewModel
-        self.gameTimer = timer
-        self.gameSounds = sounds
-        self.defaults = userDefaults
-
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -42,33 +38,35 @@ final class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateColorBars()
-        setupSwipeDownGesture(direction: .down)
-        setupGameTimer()
-        setupViewModelDelegate()
-        setupScoreLabel()
+        viewModel.startTimer()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
-        viewModel.didPressColorBar(colorBar: sender.tag - 1)
+        guard let buttonId = sender.accessibilityLabel else { return }
+        guard let barNumber = Int(buttonId) else { return }
+        viewModel.didPressColorBar(colorBar: barNumber)
         updateColorBars()
-        playSound(soundFile: sender.tag - 1)
+    }
+
+    @IBAction private func didSwipeDown(_ sender: UISwipeGestureRecognizer) {
+        updateColorBars()
     }
 }
 
-private extension GameController {
+extension GameController: GamePresentable {
 
-    private func setupGameTimer() {
-        timeLabel.text = gameTimer.timeLeft.formatToString
-        gameTimer.start()
-        gameTimer.delegate = self
+    func updateTimeLabel(seconds: Int) {
+        timeLabel.text = seconds.toString
     }
 
-    private func setupViewModelDelegate() {
-        viewModel.delegate = self
+    func updateScoreLabel(score: Int) {
+        scoreLabel.text = score.toString
     }
 
-    private func setupScoreLabel() {
-        scoreLabel.text = 0.formatToString
+    func navigateToGameOver(userScore: Score) {
+        let gameOverController = GameOverCreator().getController(score: userScore, gameController: self)
+        gameOverController.modalPresentationStyle = .fullScreen
+        self.present(gameOverController, animated: true, completion: nil)
     }
 }
 
@@ -79,42 +77,5 @@ private extension GameController {
         colorBars.enumerated().forEach {
             $1.backgroundColor = updatedColors[$0].uiColorFromCGFloat
         }
-    }
-
-    private func setupSwipeDownGesture(direction: UISwipeGestureRecognizer.Direction) {
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
-        swipeGesture.direction = direction
-        view.addGestureRecognizer(swipeGesture)
-    }
-
-    @objc func didSwipe(_ sender: UISwipeGestureRecognizer) {
-        updateColorBars()
-    }
-
-    private func playSound(soundFile: Int) {
-        if defaults.bool(forKey: K.DefaultsKeys.sound) == true {
-            gameSounds.play(soundFile: soundFile)
-        }
-    }
-}
-
-extension GameController: GameTimerDelegate {
-
-    func timerDidEndCounting() {
-        let userScore = viewModel.userScore
-        let gameOverController = GameOverCreator().getController(score: userScore)
-        gameOverController.modalPresentationStyle = .fullScreen
-        self.present(gameOverController, animated: true, completion: nil)
-    }
-
-    func timerDidUpdate(seconds: Int) {
-        timeLabel.text = seconds.formatToString
-    }
-}
-
-extension GameController: GameViewModelDelegate {
-
-    func didUpdateScore(score: Int) {
-        scoreLabel.text = score.formatToString
     }
 }

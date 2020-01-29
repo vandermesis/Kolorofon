@@ -17,12 +17,14 @@ final class GameOverCreatorTests: QuickSpec {
 
         var controller: UIViewController!
         var score: Score!
+        var fakeController: UIViewController!
 
         describe("getting GameController") {
 
             beforeEach {
                 score = Score()
-                controller = GameOverCreator().getController(score: score)
+                fakeController = UIViewController()
+                controller = GameOverCreator().getController(score: score, gameController: fakeController)
             }
 
             afterEach {

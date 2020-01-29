@@ -10,3 +10,4 @@
 
 // Errors
 "Error.AudioPlayer" = "Audio Player Error";
+"Error.Unknown" = "Unknown Error";

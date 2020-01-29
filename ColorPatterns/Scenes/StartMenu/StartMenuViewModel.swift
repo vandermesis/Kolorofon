@@ -12,16 +12,7 @@ struct StartMenuViewModel {
 
     var difficulty: Level = .medium
 
-    mutating func chooseDifficultyLevel(button: Int) {
-        switch button {
-        case 1:
-            difficulty = .easy
-        case 2:
-            difficulty = .medium
-        case 3:
-            difficulty = .hard
-        default:
-            difficulty = .medium
-        }
+    mutating func chooseDifficulty(level: Level) {
+        difficulty = level
     }
 }

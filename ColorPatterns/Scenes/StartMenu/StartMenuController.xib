@@ -31,14 +31,14 @@
                                 <constraint firstAttribute="height" constant="20" id="nhM-2f-gEi"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                            <color key="textColor" name="textDarkSecond"/>
+                            <color key="textColor" name="textSecondary"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Patterns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TwK-Py-VSo">
                             <rect key="frame" x="1" y="23.666666666666668" width="268.33333333333331" height="50.666666666666657"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
-                            <color key="textColor" name="textDarkMain"/>
+                            <color key="textColor" name="textPrimary"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -48,15 +48,15 @@
                     <subviews>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzr-e5-J7c" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
-                            <color key="backgroundColor" name="buttonSecond"/>
+                            <color key="backgroundColor" name="buttonSecondary"/>
+                            <accessibility key="accessibilityConfiguration" identifier="Easy"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="2Df-l6-GdK"/>
                                 <constraint firstAttribute="height" constant="40" id="WCV-QL-uSV"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
-                            <color key="tintColor" name="buttonMain"/>
                             <state key="normal" title="Easy">
-                                <color key="titleColor" name="textDarkMain"/>
+                                <color key="titleColor" name="textPrimary"/>
                             </state>
                             <state key="selected">
                                 <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,14 +67,14 @@
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-iV-jci" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="60" width="250" height="40"/>
-                            <color key="backgroundColor" name="buttonSecond"/>
+                            <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4EL-Xm-jEB"/>
                                 <constraint firstAttribute="width" constant="250" id="qLw-T7-N49"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Medium">
-                                <color key="titleColor" name="textDarkMain"/>
+                                <color key="titleColor" name="textTertiary"/>
                             </state>
                             <connections>
                                 <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="Gpp-xM-sMT"/>
@@ -82,14 +82,14 @@
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cba-We-U7E" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="120" width="250" height="40"/>
-                            <color key="backgroundColor" name="buttonSecond"/>
+                            <color key="backgroundColor" name="buttonSecondary"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="iK5-D5-CBV"/>
                                 <constraint firstAttribute="height" constant="40" id="q8M-tn-4pk"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Hard">
-                                <color key="titleColor" name="textDarkMain"/>
+                                <color key="titleColor" name="textPrimary"/>
                             </state>
                             <connections>
                                 <action selector="difficultyButtonPressed:" destination="-1" eventType="touchUpInside" id="tji-Q2-9uG"/>
@@ -97,14 +97,14 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Lx-7Hj" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="180" width="250" height="40"/>
-                            <color key="backgroundColor" name="buttonMain"/>
+                            <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="bZm-dd-h6y"/>
                                 <constraint firstAttribute="height" constant="40" id="uNH-hf-BSY"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
                             <state key="normal" title="Start Game">
-                                <color key="titleColor" name="textLightMain"/>
+                                <color key="titleColor" name="textTertiary"/>
                             </state>
                             <connections>
                                 <action selector="startButtonPressed:" destination="-1" eventType="touchUpInside" id="bI4-e8-FiN"/>
@@ -113,7 +113,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" name="backgroundLight"/>
+            <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
                 <constraint firstItem="cm2-S5-qSi" firstAttribute="centerX" secondItem="MrS-4x-4oq" secondAttribute="centerX" id="B7E-cO-Llm"/>
                 <constraint firstItem="MrS-4x-4oq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="n8U-Vr-jaS"/>
@@ -121,26 +121,26 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cm2-S5-qSi" secondAttribute="bottom" constant="50" id="zC2-fR-eIw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-596" y="-7"/>
+            <point key="canvasLocation" x="-754" y="-73"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="backgroundLight">
+        <namedColor name="backgroundSecondary">
             <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="buttonMain">
-            <color red="0.85324807363013699" green="0.29802958051266693" blue="0.34861915697460638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="buttonPrimary">
+            <color red="0.8529999852180481" green="0.29800000786781311" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="buttonSecond">
+        <namedColor name="buttonSecondary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textDarkMain">
+        <namedColor name="textPrimary">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textDarkSecond">
+        <namedColor name="textSecondary">
             <color red="0.47600001096725464" green="0.47600001096725464" blue="0.47600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="textLightMain">
+        <namedColor name="textTertiary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

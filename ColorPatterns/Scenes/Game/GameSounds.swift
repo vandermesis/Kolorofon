@@ -8,20 +8,41 @@
 
 import AVFoundation
 
-struct GameSounds {
-    
+final class GameSounds {
+
     private var audioPlayer: AVAudioPlayer?
 
-    private let soundsArray = [K.Sounds.note1, K.Sounds.note2, K.Sounds.note3, K.Sounds.note4, K.Sounds.note5]
-    
-    mutating func play(soundFile: Int) {
+    private let userDefaults: UserDefaults
+
+    private let soundsArray = [Constants.Sounds.note1,
+                               Constants.Sounds.note2,
+                               Constants.Sounds.note3,
+                               Constants.Sounds.note4,
+                               Constants.Sounds.note5]
+
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+    }
+}
+
+extension GameSounds {
+
+    func play(soundFile: Int) {
+        guard soundSettingsStatus else { return }
         guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
-                                             withExtension: K.Sounds.wavFormat) else { return }
+                                             withExtension: Constants.Sounds.wavFormat) else { return }
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
         } catch {
-            print("Error in \(#function): \(error.developerFriendlyMessage)")
+            print("Error in \(#function): \(error.localizedDescription)")
         }
         audioPlayer?.play()
+    }
+}
+
+private extension GameSounds {
+
+    private var soundSettingsStatus: Bool {
+        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound)
     }
 }

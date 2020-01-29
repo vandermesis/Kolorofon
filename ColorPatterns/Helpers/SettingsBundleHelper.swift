@@ -10,15 +10,10 @@ import Foundation
 
 final class SettingsBundleHelper {
     
-    struct SettingsBundleKeys {
-        static let BuildVersionKey = "build_preference"
-        static let AppVersionKey = "version_preference"
-    }
-    
     class func setVersionAndBuildNumber() {
-        guard let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
-        UserDefaults.standard.set(version, forKey: "version_preference")
-        guard let build: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String else { return }
-        UserDefaults.standard.set(build, forKey: "build_preference")
+        guard let version: String = Bundle.main.object(forInfoDictionaryKey: Constants.SettingsBundleKeys.cfBundleVersionStringShort) as? String else { return }
+        UserDefaults.standard.set(version, forKey: Constants.SettingsBundleKeys.appVersionKey)
+        guard let build: String = Bundle.main.object(forInfoDictionaryKey: Constants.SettingsBundleKeys.cfBundleVersionString) as? String else { return }
+        UserDefaults.standard.set(build, forKey: Constants.SettingsBundleKeys.buildVersionKey)
     }
 }

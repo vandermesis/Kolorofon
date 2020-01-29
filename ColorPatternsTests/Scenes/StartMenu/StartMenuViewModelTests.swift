@@ -26,7 +26,7 @@ final class StartMenuViewModelTests: QuickSpec {
             context("button Easy") {
 
                 beforeEach {
-                    viewModel.chooseDifficultyLevel(button: 1)
+                    viewModel.chooseDifficulty(level: .easy)
                 }
 
                 it("should set difficulty level to easy") {
@@ -37,7 +37,7 @@ final class StartMenuViewModelTests: QuickSpec {
             context("button Medium") {
 
                 beforeEach {
-                    viewModel.chooseDifficultyLevel(button: 2)
+                    viewModel.chooseDifficulty(level: .medium)
                 }
 
                 it("should set difficulty level to medium") {
@@ -48,7 +48,7 @@ final class StartMenuViewModelTests: QuickSpec {
             context("button Hard") {
 
                 beforeEach {
-                    viewModel.chooseDifficultyLevel(button: 3)
+                    viewModel.chooseDifficulty(level: .hard)
                 }
 
                 it("should set difficulty level to hard") {
@@ -57,10 +57,6 @@ final class StartMenuViewModelTests: QuickSpec {
             }
 
             context("button not pressed") {
-                
-                beforeEach {
-                    viewModel.chooseDifficultyLevel(button: 0)
-                }
 
                 it("should set difficulty level to medium") {
                     expect(viewModel.difficulty).to(equal(.medium))

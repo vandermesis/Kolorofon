@@ -8,10 +8,19 @@
 
 import UIKit
 
-enum Level: Int {
-    case easy = 1
-    case medium = 2
-    case hard = 3
+enum Level: String {
+    case easy, medium, hard
+
+    var intValue: Int {
+        switch self {
+        case .easy:
+            return 1
+        case .medium:
+            return 2
+        case .hard:
+            return 3
+        }
+    }
 }
 
 final class GameEngine {
@@ -33,7 +42,7 @@ final class GameEngine {
 extension GameEngine {
 
     func shuffleColors() -> [CGFloat] {
-        colorsArray = colorsArray.map { $0.randomCGFloatWithDecimalPlaces(count: level.rawValue) }
+        colorsArray = colorsArray.map { $0.randomCGFloatWithDecimalPlaces(count: level.intValue) }
         return colorsArray
     }
 }

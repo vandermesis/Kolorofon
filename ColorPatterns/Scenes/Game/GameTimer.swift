@@ -13,15 +13,20 @@ protocol GameTimerDelegate: class {
     func timerDidUpdate(seconds: Int)
 }
 
-final class GameTimer {
+protocol GameTimer {
+    func start()
+}
+
+final class GameTimerImpl: GameTimer {
 
     private var gameTimer: Timer?
 
     weak var delegate: GameTimerDelegate?
 
-    var timeLeft = 180
+    var timeLeft: Int = Constants.GameTimer.gameTime
 
     func start() {
+        timeLeft = Constants.GameTimer.gameTime
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0,
                                          target: self,
                                          selector: #selector(onTimerFires),
@@ -30,7 +35,7 @@ final class GameTimer {
     }
 }
 
-private extension GameTimer {
+private extension GameTimerImpl {
 
     @objc private func onTimerFires() {
         timeLeft -= 1
@@ -39,7 +44,6 @@ private extension GameTimer {
             gameTimer?.invalidate()
             gameTimer = nil
             delegate?.timerDidEndCounting()
-            timeLeft = 180
         }
     }
 }
