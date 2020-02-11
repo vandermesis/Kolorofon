@@ -35,8 +35,8 @@
                             <color key="textColor" name="textSecondary"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Patterns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TwK-Py-VSo">
-                            <rect key="frame" x="1" y="23.666666666666668" width="268.33333333333331" height="50.666666666666657"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour Patterns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TwK-Py-VSo">
+                            <rect key="frame" x="0.0" y="23.666666666666668" width="270.33333333333331" height="50.666666666666657"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
                             <color key="textColor" name="textPrimary"/>

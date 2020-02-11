@@ -35,6 +35,7 @@
 		BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA223DA586900F36C8C /* StartMenuController.swift */; };
 		BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAADABA323DA586900F36C8C /* StartMenuController.xib */; };
 		BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */; };
+		BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC0B53823F341EF0073066A /* GameKit.framework */; };
 		BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */; };
 		BAC495C823D8B7940041088C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC495C723D8B7940041088C /* Localizable.strings */; };
 		BAC495CA23D8BA130041088C /* GameEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C923D8BA130041088C /* GameEngineTests.swift */; };
@@ -107,6 +108,7 @@
 		BAADABA323DA586900F36C8C /* StartMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMenuController.xib; sourceTree = "<group>"; };
 		BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModel.swift; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BAC0B53823F341EF0073066A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+FriendlyMessage.swift"; sourceTree = "<group>"; };
 		BAC495C723D8B7940041088C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BAC495C923D8BA130041088C /* GameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineTests.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD9FFBE7BDBA54D26E4E865F /* Pods_ColorPatterns.framework in Frameworks */,
+				BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +403,7 @@
 		E968CB20018162CE2BC346A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC0B53823F341EF0073066A /* GameKit.framework */,
 				8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */,
 				7D4F57B4910FE0FB853D8AD9 /* Pods_ColorPatternsTests.framework */,
 			);
