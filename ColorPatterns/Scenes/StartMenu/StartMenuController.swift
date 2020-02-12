@@ -89,9 +89,9 @@ private extension StartMenuController {
 
     private func setupSegmentedControll() {
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.textTertiary() as Any,
-                                                 NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 15) as Any], for: .selected)
+                                                 NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 20) as Any], for: .selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black,
-                                                 NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 15) as Any], for: .normal)
+                                                 NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 20) as Any], for: .normal)
     }
 
     private func checkGameCenterStatus() {
