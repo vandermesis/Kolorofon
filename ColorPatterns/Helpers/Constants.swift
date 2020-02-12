@@ -41,6 +41,8 @@ struct Constants {
 
     struct GameCenter {
 
-        static let leaderBoardID = "com.bestscores.colourpatterns"
+        static let easyLeaderBoardID = "com.bestscores.colourpatterns"
+        static let mediumLeaderBoardID = "com.mediumbestscores.colourpatterns"
+        static let hardLeaderBoardID = "com.hardbestscores.colourpatterns"
     }
 }

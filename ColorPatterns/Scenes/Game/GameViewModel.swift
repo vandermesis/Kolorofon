@@ -82,7 +82,7 @@ private extension GameViewModelImpl {
 extension GameViewModelImpl: GameTimerDelegate {
 
     func timerDidEndCounting() {
-        controller?.navigateToGameOver(userScore: userScore)
+        controller?.navigateToGameOver(userScore: userScore, level: gameEngine.level)
     }
 
     func timerDidUpdate(seconds: Int) {

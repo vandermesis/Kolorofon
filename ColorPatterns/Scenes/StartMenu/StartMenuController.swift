@@ -83,7 +83,7 @@ private extension StartMenuController {
         let gameCenterController = GKGameCenterViewController()
         gameCenterController.gameCenterDelegate = self
         gameCenterController.viewState = .leaderboards
-        gameCenterController.leaderboardIdentifier = Constants.GameCenter.leaderBoardID
+        gameCenterController.leaderboardIdentifier = viewModel.difficulty.leaderboardForLevel
         present(gameCenterController, animated: false, completion: nil)
     }
 

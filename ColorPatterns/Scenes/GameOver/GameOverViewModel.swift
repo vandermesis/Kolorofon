@@ -12,13 +12,16 @@ import GameKit
 struct GameOverViewModel {
 
     let userScore: Score
+    let level: Level
 
-    init(userScore: Score) {
+    init(userScore: Score, level: Level) {
         self.userScore = userScore
+        self.level = level
     }
 
     func submitScoreToGameCenter() {
-        let bestScore = GKScore(leaderboardIdentifier: Constants.GameCenter.leaderBoardID)
+        let leaderboardForLevel = level.leaderboardForLevel
+        let bestScore = GKScore(leaderboardIdentifier: leaderboardForLevel)
         bestScore.value = Int64(userScore.score)
         GKScore.report([bestScore]) { error in
             if error != nil {

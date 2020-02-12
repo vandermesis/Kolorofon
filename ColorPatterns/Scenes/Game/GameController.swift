@@ -11,7 +11,7 @@ import UIKit
 protocol GamePresentable {
     func updateTimeLabel(seconds: Int)
     func updateScoreLabel(score: Int)
-    func navigateToGameOver(userScore: Score)
+    func navigateToGameOver(userScore: Score, level: Level)
 }
 
 final class GameController: UIViewController {
@@ -63,8 +63,10 @@ extension GameController: GamePresentable {
         scoreLabel.text = score.toString
     }
 
-    func navigateToGameOver(userScore: Score) {
-        let gameOverController = GameOverCreator().getController(score: userScore, gameController: self)
+    func navigateToGameOver(userScore: Score, level: Level) {
+        let gameOverController = GameOverCreator().getController(score: userScore,
+                                                                 level: level,
+                                                                 gameController: self)
         gameOverController.modalPresentationStyle = .fullScreen
         self.present(gameOverController, animated: true, completion: nil)
     }
