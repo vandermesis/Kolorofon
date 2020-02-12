@@ -38,4 +38,9 @@ struct Constants {
         static let cfBundleVersionStringShort = "CFBundleShortVersionString"
         static let cfBundleVersionString = "CFBundleVersion"
     }
+
+    struct GameCenter {
+
+        static let leaderBoardID = "com.bestscores.colourpatterns"
+    }
 }

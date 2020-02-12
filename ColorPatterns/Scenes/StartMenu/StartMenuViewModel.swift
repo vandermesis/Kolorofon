@@ -11,6 +11,7 @@ import Foundation
 struct StartMenuViewModel {
 
     var difficulty: Level = .medium
+    var userIsAuthenticated = false
 
     mutating func chooseDifficulty(level: Level) {
         difficulty = level

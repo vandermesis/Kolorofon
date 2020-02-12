@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameKit
 
 struct GameOverViewModel {
 
@@ -14,5 +15,17 @@ struct GameOverViewModel {
 
     init(userScore: Score) {
         self.userScore = userScore
+    }
+
+    func submitScoreToGameCenter() {
+        let bestScore = GKScore(leaderboardIdentifier: Constants.GameCenter.leaderBoardID)
+        bestScore.value = Int64(userScore.score)
+        GKScore.report([bestScore]) { error in
+            if error != nil {
+                print(error?.localizedDescription as Any)
+            } else {
+                print("Best score submitted successfully")
+            }
+        }
     }
 }
