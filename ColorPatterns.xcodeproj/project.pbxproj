@@ -30,11 +30,11 @@
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */; };
-		BA9CFF4623E24BAC00AA6A3D /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4523E24BAC00AA6A3D /* animation.gif */; };
 		BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */; };
 		BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA223DA586900F36C8C /* StartMenuController.swift */; };
 		BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAADABA323DA586900F36C8C /* StartMenuController.xib */; };
 		BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */; };
+		BABA612023F55BE90003B1B2 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BABA611F23F55BE80003B1B2 /* animation.gif */; };
 		BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC0B53823F341EF0073066A /* GameKit.framework */; };
 		BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */; };
 		BAC495C823D8B7940041088C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC495C723D8B7940041088C /* Localizable.strings */; };
@@ -103,12 +103,12 @@
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "990-inattentive.json"; sourceTree = "<group>"; };
-		BA9CFF4523E24BAC00AA6A3D /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreator.swift; sourceTree = "<group>"; };
 		BAADABA223DA586900F36C8C /* StartMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuController.swift; sourceTree = "<group>"; };
 		BAADABA323DA586900F36C8C /* StartMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMenuController.xib; sourceTree = "<group>"; };
 		BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModel.swift; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BABA611F23F55BE80003B1B2 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BAC0B53823F341EF0073066A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+FriendlyMessage.swift"; sourceTree = "<group>"; };
 		BAC495C723D8B7940041088C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		BA2F742722C3597B007573FF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BA9CFF4523E24BAC00AA6A3D /* animation.gif */,
+				BABA611F23F55BE80003B1B2 /* animation.gif */,
 				BA0AA478230E810A00E2A21D /* logo.png */,
 			);
 			path = Demo;
@@ -514,7 +514,7 @@
 				BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */,
 				BA199B772292F70200CD7C64 /* note4.wav in Resources */,
 				8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */,
-				BA9CFF4623E24BAC00AA6A3D /* animation.gif in Resources */,
+				BABA612023F55BE90003B1B2 /* animation.gif in Resources */,
 				BA199B742292F70200CD7C64 /* note3.wav in Resources */,
 				BAFAC25A23CC956D00C74D92 /* Colors.xcassets in Resources */,
 				BAC495C823D8B7940041088C /* Localizable.strings in Resources */,

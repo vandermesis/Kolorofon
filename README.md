@@ -54,14 +54,14 @@ Ho!
 - [x] Add Game Over screen with user score
 - [x] Make welcome screen with start game and difficulty levels
 - [x] Add animation to Start Menu
-- [ ] Manage app didEnterBackground cases
 - [x] Connect with Apple Game Center
 - [x] Save user scores to Game Center leaderboards
 - [x] Separate leaderboards for each difficulty level
 - [x] Add difficulty levels (more/less colors to choose from, different range of colors error)
-- [ ] Change default sounds of xylophone to something better
 - [x] Tailor UI and UX
 - [x] Unit Tests
+- [ ] Manage app didEnterBackground cases
+- [ ] Change default sounds
 
 ## What is needed
 
