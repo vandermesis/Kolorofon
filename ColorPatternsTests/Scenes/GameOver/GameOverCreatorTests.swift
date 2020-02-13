@@ -15,6 +15,7 @@ final class GameOverCreatorTests: QuickSpec {
 
     override func spec() {
 
+        var level: Level!
         var controller: UIViewController!
         var score: Score!
         var fakeController: UIViewController!
@@ -23,8 +24,9 @@ final class GameOverCreatorTests: QuickSpec {
 
             beforeEach {
                 score = Score()
+                level = .easy
                 fakeController = UIViewController()
-                controller = GameOverCreator().getController(score: score, gameController: fakeController)
+                controller = GameOverCreator().getController(score: score, level: level, gameController: fakeController)
             }
 
             afterEach {

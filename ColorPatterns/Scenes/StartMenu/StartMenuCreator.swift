@@ -15,6 +15,8 @@ struct StartMenuCreator {
         let viewModel = StartMenuViewModel()
         let controller = StartMenuController(viewModel: viewModel)
 
+        viewModel.controller = controller
+
         return controller
     }
 }
