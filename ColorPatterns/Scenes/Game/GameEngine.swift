@@ -14,11 +14,11 @@ enum Level: String {
     var intValue: Int {
         switch self {
         case .easy:
-            return 1
-        case .medium:
             return 2
-        case .hard:
+        case .medium:
             return 3
+        case .hard:
+            return 4
         }
     }
 }

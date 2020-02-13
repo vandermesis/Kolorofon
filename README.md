@@ -2,7 +2,7 @@
 
 # ColorPatterns (Game)
 
-*Ultra very early stage of some foggy idea of concept of a game ;)*
+*Simple game where you follow your favorite color. How funny is that?*
 
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
@@ -44,6 +44,7 @@ Ho!
 - Observed properties
 - Giflow
 - Danger with SwiftLint
+- Game Center
 
 ## To-do
 
@@ -53,13 +54,15 @@ Ho!
 - [x] Add Game Over screen with user score
 - [x] Make welcome screen with start game and difficulty levels
 - [x] Add animation to Start Menu
-- [ ] Allow user to set his name and persist his data
-- [ ] Add pause game functionality
-- [ ] Connect with Apple Game Center
+- [x] Connect with Apple Game Center
+- [x] Save user scores to Game Center leaderboards
+- [x] Separate leaderboards for each difficulty level
 - [x] Add difficulty levels (more/less colors to choose from, different range of colors error)
-- [ ] Change default sounds of xylophone to something better
-- [ ] Tailor UI and UX
+- [x] Tailor UI and UX
 - [x] Unit Tests
+- [x] Change default sounds
+- [ ] Manage app didEnterBackground cases
+
 
 ## What is needed
 
@@ -69,15 +72,16 @@ Ho!
 
 ## What was really helpful
 
-- *[Bundler](https://github.com/bundler/bundler)*
-- *[Cocoapods](https://cocoapods.org)*
-- *[SwiftLint](https://github.com/realm/SwiftLint)*
-- *[R.swift](https://github.com/mac-cain13/R.swift)*
-- *[Lottie-ios](https://github.com/airbnb/lottie-ios)*
-- *[Quick](https://github.com/Quick/Quick)*
-- *[Nimble](https://github.com/Quick/Nimble)*
-- *[Gifski](https://gif.ski)*
-- *[Typora](https://typora.io)*
+- *[Bundler](https://github.com/bundler/bundler)* - makes sure Ruby applications run the same code on every machine
+- *[Cocoapods](https://cocoapods.org)* - cocoa dependency manager
+- *[SwiftLint](https://github.com/realm/SwiftLint)* - enforce Swift style and conventions
+- *[R.swift](https://github.com/mac-cain13/R.swift)* - strong typed, autocompleted resources
+- *[Lottie-ios](https://github.com/airbnb/lottie-ios)* - library for Android and iOS that natively renders vector based animations
+- *[Quick](https://github.com/Quick/Quick)* - behavior-driven development framework for Swift and Objective-C
+- *[Nimble](https://github.com/Quick/Nimble)* - express the expected outcomes of Swift or Objective-C expressions
+- *[Gifski](https://gif.ski)* - converts videos to GIF animations
+- *[Typora](https://typora.io)* - a truly minimal markdown editor
+- *[JetBrains](https://www.jetbrains.com/lp/mono/)* - a typeface for developers
 
 ## Who is who
 

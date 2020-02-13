@@ -12,6 +12,7 @@ protocol GameViewModel {
     func startTimer()
     func shuffleColors() -> [CGFloat]
     func didPressColorBar(colorBar: Int)
+    func didSwipeDown()
 }
 
 final class GameViewModelImpl {
@@ -53,6 +54,10 @@ extension GameViewModelImpl: GameViewModel {
         calculateScore()
         gameStarted = true
         helpPrints()
+    }
+
+    func didSwipeDown() {
+        gameSounds.play(soundFile: 2)
     }
 }
 
