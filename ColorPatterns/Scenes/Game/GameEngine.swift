@@ -25,14 +25,14 @@ enum Level: String {
 
 final class GameEngine {
 
-    private let level: Level
-    
     var colorsArray = [CGFloat](repeating: 0.0, count: 5)
     var pickedColor: CGFloat = 0
     var userColor: CGFloat = 0
     var colorRange: ClosedRange<CGFloat> {
         return userColor-0.05...userColor+0.05
     }
+
+    let level: Level
 
     init(level: Level) {
         self.level = level

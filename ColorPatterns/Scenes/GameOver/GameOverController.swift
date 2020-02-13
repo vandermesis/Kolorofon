@@ -28,6 +28,7 @@ final class GameOverController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScoreLabel()
+        viewModel.submitScoreToGameCenter()
     }
 
     @IBAction private func restartGameButtonPressed(_ sender: UIButton) {

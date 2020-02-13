@@ -35,6 +35,7 @@
 		BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA223DA586900F36C8C /* StartMenuController.swift */; };
 		BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAADABA323DA586900F36C8C /* StartMenuController.xib */; };
 		BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */; };
+		BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC0B53823F341EF0073066A /* GameKit.framework */; };
 		BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */; };
 		BAC495C823D8B7940041088C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC495C723D8B7940041088C /* Localizable.strings */; };
 		BAC495CA23D8BA130041088C /* GameEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC495C923D8BA130041088C /* GameEngineTests.swift */; };
@@ -52,6 +53,7 @@
 		BAD7ADA923D87F1800537D7F /* GameCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7ADA823D87F1800537D7F /* GameCreatorTests.swift */; };
 		BAD7ADAB23D880F900537D7F /* GameTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7ADAA23D880F900537D7F /* GameTimerTests.swift */; };
 		BAD7ADAD23D8849D00537D7F /* FakeGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7ADAC23D8849D00537D7F /* FakeGameController.swift */; };
+		BAF38E5C23F45F9000BD772F /* Level+ChooseLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */; };
 		BAFAC25223CC912F00C74D92 /* GameCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25123CC912F00C74D92 /* GameCreator.swift */; };
 		BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25323CC91A300C74D92 /* GameViewModel.swift */; };
 		BAFAC25723CC91D700C74D92 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25523CC91D700C74D92 /* GameController.swift */; };
@@ -107,6 +109,7 @@
 		BAADABA323DA586900F36C8C /* StartMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMenuController.xib; sourceTree = "<group>"; };
 		BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModel.swift; sourceTree = "<group>"; };
 		BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UpdateColors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BAC0B53823F341EF0073066A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+FriendlyMessage.swift"; sourceTree = "<group>"; };
 		BAC495C723D8B7940041088C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BAC495C923D8BA130041088C /* GameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineTests.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		BAD7ADA823D87F1800537D7F /* GameCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCreatorTests.swift; sourceTree = "<group>"; };
 		BAD7ADAA23D880F900537D7F /* GameTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerTests.swift; sourceTree = "<group>"; };
 		BAD7ADAC23D8849D00537D7F /* FakeGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGameController.swift; sourceTree = "<group>"; };
+		BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level+ChooseLeaderboard.swift"; sourceTree = "<group>"; };
 		BAFAC25123CC912F00C74D92 /* GameCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCreator.swift; sourceTree = "<group>"; };
 		BAFAC25323CC91A300C74D92 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		BAFAC25523CC91D700C74D92 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD9FFBE7BDBA54D26E4E865F /* Pods_ColorPatterns.framework in Frameworks */,
+				BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +362,7 @@
 				BA91F45923CCF352003D466A /* CGFloat+Converters.swift */,
 				BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */,
 				BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */,
+				BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 		E968CB20018162CE2BC346A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC0B53823F341EF0073066A /* GameKit.framework */,
 				8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */,
 				7D4F57B4910FE0FB853D8AD9 /* Pods_ColorPatternsTests.framework */,
 			);
@@ -664,6 +671,7 @@
 				BA91F45A23CCF352003D466A /* CGFloat+Converters.swift in Sources */,
 				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
 				BAFF547823D77F8300CC25ED /* Constants.swift in Sources */,
+				BAF38E5C23F45F9000BD772F /* Level+ChooseLeaderboard.swift in Sources */,
 				BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */,
 				BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */,
 				BAD14BB423DA049600FF2D15 /* GameOverController.swift in Sources */,
@@ -834,6 +842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
 				INFOPLIST_FILE = ColorPatterns/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -841,6 +850,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vandermesis.ColorPatterns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -854,6 +864,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
 				INFOPLIST_FILE = ColorPatterns/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -861,6 +872,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vandermesis.ColorPatterns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

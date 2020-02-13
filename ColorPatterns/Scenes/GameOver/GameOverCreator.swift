@@ -10,9 +10,9 @@ import UIKit
 
 struct GameOverCreator {
 
-    func getController(score: Score, gameController: UIViewController) -> GameOverController {
+    func getController(score: Score, level: Level, gameController: UIViewController) -> GameOverController {
 
-        let viewModel = GameOverViewModel(userScore: score)
+        let viewModel = GameOverViewModel(userScore: score, level: level)
         let gameOverController = GameOverController(viewModel: viewModel)
 
         gameOverController.gameController = gameController
