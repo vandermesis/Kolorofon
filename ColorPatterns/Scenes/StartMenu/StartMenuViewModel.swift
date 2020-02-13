@@ -7,13 +7,36 @@
 //
 
 import Foundation
+import GameKit
 
-struct StartMenuViewModel {
+final class StartMenuViewModel {
 
     var difficulty: Level = .medium
     var userIsAuthenticated = false
 
-    mutating func chooseDifficulty(level: Level) {
+    weak var controller: StartMenuController?
+
+    func chooseDifficulty(level: Level) {
         difficulty = level
+    }
+
+    func checkGameCenterStatus() {
+        if !userIsAuthenticated {
+            authenticatePlayer()
+        }
+    }
+}
+
+private extension StartMenuViewModel {
+
+    private func authenticatePlayer() {
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
+        localPlayer.authenticateHandler = { viewController, error -> Void in
+            if let viewController = viewController {
+                self.controller?.present(viewController, animated: true, completion: nil)
+            } else if localPlayer.isAuthenticated {
+                self.userIsAuthenticated = true
+            }
+        }
     }
 }

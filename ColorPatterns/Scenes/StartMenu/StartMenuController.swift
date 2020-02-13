@@ -32,7 +32,7 @@ final class StartMenuController: UIViewController {
         presentLaunchScreen()
         setupLottieView(animation: "990-inattentive")
         setupSegmentedControll()
-        checkGameCenterStatus()
+        viewModel.checkGameCenterStatus()
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
@@ -92,22 +92,5 @@ private extension StartMenuController {
                                                  NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 20) as Any], for: .selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black,
                                                  NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 20) as Any], for: .normal)
-    }
-
-    private func checkGameCenterStatus() {
-        if !viewModel.userIsAuthenticated {
-            authenticatePlayer()
-        }
-    }
-
-    private func authenticatePlayer() {
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
-        localPlayer.authenticateHandler = { viewController, error -> Void in
-            if let viewController = viewController {
-                self.present(viewController, animated: true, completion: nil)
-            } else if localPlayer.isAuthenticated {
-                self.viewModel.userIsAuthenticated = true
-            }
-        }
     }
 }
