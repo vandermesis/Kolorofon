@@ -2,7 +2,7 @@
 
 # ColorPatterns (Game)
 
-*Ultra very early stage of some foggy idea of concept of a game ;)*
+*Simple game where you follow your favorite color. How funny is that?*
 
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
