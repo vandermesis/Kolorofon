@@ -72,15 +72,16 @@ Ho!
 
 ## What was really helpful
 
-- *[Bundler](https://github.com/bundler/bundler)*
-- *[Cocoapods](https://cocoapods.org)*
-- *[SwiftLint](https://github.com/realm/SwiftLint)*
-- *[R.swift](https://github.com/mac-cain13/R.swift)*
-- *[Lottie-ios](https://github.com/airbnb/lottie-ios)*
-- *[Quick](https://github.com/Quick/Quick)*
-- *[Nimble](https://github.com/Quick/Nimble)*
-- *[Gifski](https://gif.ski)*
-- *[Typora](https://typora.io)*
+- *[Bundler](https://github.com/bundler/bundler)* - makes sure Ruby applications run the same code on every machine
+- *[Cocoapods](https://cocoapods.org)* - cocoa dependency manager
+- *[SwiftLint](https://github.com/realm/SwiftLint)* - enforce Swift style and conventions
+- *[R.swift](https://github.com/mac-cain13/R.swift)* - strong typed, autocompleted resources
+- *[Lottie-ios](https://github.com/airbnb/lottie-ios)* - library for Android and iOS that natively renders vector based animations
+- *[Quick](https://github.com/Quick/Quick)* - behavior-driven development framework for Swift and Objective-C
+- *[Nimble](https://github.com/Quick/Nimble)* - express the expected outcomes of Swift or Objective-C expressions
+- *[Gifski](https://gif.ski)* - converts videos to GIF animations
+- *[Typora](https://typora.io)* - a truly minimal markdown editor
+- *[JetBrains](https://www.jetbrains.com/lp/mono/)* - a typeface for developers
 
 ## Who is who
 
