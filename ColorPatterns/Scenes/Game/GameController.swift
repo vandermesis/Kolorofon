@@ -49,6 +49,7 @@ final class GameController: UIViewController {
     }
 
     @IBAction private func didSwipeDown(_ sender: UISwipeGestureRecognizer) {
+        viewModel.didSwipeDown()
         updateColorBars()
     }
 }

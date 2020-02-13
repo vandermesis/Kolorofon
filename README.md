@@ -60,8 +60,9 @@ Ho!
 - [x] Add difficulty levels (more/less colors to choose from, different range of colors error)
 - [x] Tailor UI and UX
 - [x] Unit Tests
+- [x] Change default sounds
 - [ ] Manage app didEnterBackground cases
-- [ ] Change default sounds
+
 
 ## What is needed
 
