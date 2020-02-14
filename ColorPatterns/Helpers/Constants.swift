@@ -29,7 +29,7 @@ struct Constants {
 
     struct GameTimer {
 
-        static let gameTime = 180
+        static let gameTime = 90
     }
 
     struct SettingsBundleKeys {
