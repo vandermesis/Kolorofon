@@ -57,7 +57,7 @@ extension GameViewModelImpl: GameViewModel {
     }
 
     func didSwipeDown() {
-        gameSounds.play(soundFile: 2)
+        gameSounds.play(soundFile: 5)
     }
 }
 

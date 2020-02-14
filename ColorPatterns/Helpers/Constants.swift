@@ -17,7 +17,8 @@ struct Constants {
         static let note3 = "note3"
         static let note4 = "note4"
         static let note5 = "note5"
-
+        static let note6 = "note6"
+        
         static let wavFormat = "wav"
     }
 
@@ -28,7 +29,7 @@ struct Constants {
 
     struct GameTimer {
 
-        static let gameTime = 180
+        static let gameTime = 90
     }
 
     struct SettingsBundleKeys {
