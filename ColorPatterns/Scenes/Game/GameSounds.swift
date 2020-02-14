@@ -18,7 +18,8 @@ final class GameSounds {
                                Constants.Sounds.note2,
                                Constants.Sounds.note3,
                                Constants.Sounds.note4,
-                               Constants.Sounds.note5]
+                               Constants.Sounds.note5,
+                               Constants.Sounds.note6]
 
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults

@@ -34,12 +34,12 @@ final class GameTimerTests: QuickSpec {
                 gameTimer = nil
             }
 
-            it("should reset timeLeft property back to 180 seconds") {
-                expect(gameTimer.timeLeft).to(equal(180))
+            it("should reset timeLeft property back to 90 seconds") {
+                expect(gameTimer.timeLeft).to(equal(90))
             }
 
             it("should reduce timeLeft property by 1") {
-                expect(gameTimer.timeLeft).toEventually(beLessThan(180), timeout: 2)
+                expect(gameTimer.timeLeft).toEventually(beLessThan(90), timeout: 2)
             }
 
             it("should call delegate with updated data") {
