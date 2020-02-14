@@ -16,4 +16,10 @@ final class SettingsBundleHelper {
         guard let build: String = Bundle.main.object(forInfoDictionaryKey: Constants.SettingsBundleKeys.cfBundleVersionString) as? String else { return }
         UserDefaults.standard.set(build, forKey: Constants.SettingsBundleKeys.buildVersionKey)
     }
+
+    class func setSoundSettings() {
+        if UserDefaults.standard.object(forKey: Constants.UserDefaultsKeys.sound) == nil {
+            UserDefaults.standard.set(true, forKey: Constants.UserDefaultsKeys.sound)
+        }
+    }
 }
