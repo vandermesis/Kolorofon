@@ -24,11 +24,11 @@ final class GameEngineTests: QuickSpec {
         describe("setting value of property userColor") {
 
             beforeEach {
-                gameEngine?.userColor = 0.05
+                gameEngine?.userColor = 0.04
             }
 
             it("should return range of numbers") {
-                expect(gameEngine?.colorRange).to(equal(0...0.1))
+                expect(gameEngine?.colorRange).to(equal(0.03...0.05))
             }
         }
 
