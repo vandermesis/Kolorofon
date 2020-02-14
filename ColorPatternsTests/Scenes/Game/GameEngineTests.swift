@@ -18,7 +18,7 @@ final class GameEngineTests: QuickSpec {
         var gameEngine: GameEngine?
 
         beforeEach {
-            gameEngine = GameEngine(level: .medium)
+            gameEngine = GameEngine(level: .hard)
         }
 
         describe("setting value of property userColor") {
