@@ -25,11 +25,11 @@ enum Level: String {
     var userErrorRange: CGFloat {
         switch self {
         case .easy:
-            return 0.03
+            return 0.05
         case .medium:
-            return 0.01
+            return 0.03
         case .hard:
-            return 0.005
+            return 0.01
         }
     }
 }
