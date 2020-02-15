@@ -76,7 +76,7 @@ extension GameController: GamePresentable {
 private extension GameController {
 
     private func updateColorBars() {
-        let randomColors = viewModel.shuffleRandomColors()
+        let randomColors = viewModel.shuffleColors()
         colorBars.enumerated().forEach {
             $1.backgroundColor = randomColors[$0]
         }

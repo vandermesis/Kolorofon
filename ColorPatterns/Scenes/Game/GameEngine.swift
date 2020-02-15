@@ -27,7 +27,7 @@ final class GameEngine {
 
 extension GameEngine {
 
-    func shuffleColors() -> [UIColor] {
+    func getRandomColors() -> [UIColor] {
         randomColorsArray = randomColorsArray.map { $0.randomColorForLevel(level: level) }
         return randomColorsArray
     }

@@ -24,7 +24,7 @@ final class GameEngineTests: QuickSpec {
         describe("on shuffling colors") {
 
             beforeEach {
-                _ = gameEngine?.shuffleColors()
+                _ = gameEngine?.getRandomColors()
             }
 
             it("should return array of random CGFloat numbers") {

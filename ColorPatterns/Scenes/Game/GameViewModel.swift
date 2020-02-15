@@ -10,7 +10,7 @@ import UIKit
 
 protocol GameViewModel {
     func startTimer()
-    func shuffleRandomColors() -> [UIColor]
+    func shuffleColors() -> [UIColor]
     func didPressColorBar(colorBar: Int)
     func didSwipeDown()
 }
@@ -42,8 +42,8 @@ extension GameViewModelImpl: GameViewModel {
         gameTimer.start()
     }
 
-    func shuffleRandomColors() -> [UIColor] {
-        let colors = gameEngine.shuffleColors()
+    func shuffleColors() -> [UIColor] {
+        let colors = gameEngine.getRandomColors()
         return colors
     }
     
