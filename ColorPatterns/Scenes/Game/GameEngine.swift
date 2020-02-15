@@ -10,38 +10,13 @@ import UIKit
 
 enum Level: String {
     case easy, medium, hard
-
-    var numberOfColors: Int {
-        switch self {
-        case .easy:
-            return 2
-        case .medium:
-            return 3
-        case .hard:
-            return 4
-        }
-    }
-
-    var userErrorRange: CGFloat {
-        switch self {
-        case .easy:
-            return 0.05
-        case .medium:
-            return 0.03
-        case .hard:
-            return 0.01
-        }
-    }
 }
 
 final class GameEngine {
 
-    var colorsArray = [CGFloat](repeating: 0.0, count: 5)
-    var pickedColor: CGFloat = 0
-    var userColor: CGFloat = 0
-    var colorRange: ClosedRange<CGFloat> {
-        return userColor-level.userErrorRange...userColor+level.userErrorRange
-    }
+    var randomColorsArray = [UIColor](repeating: .white, count: 5)
+    var pickedColor: UIColor = .white
+    var userColor: UIColor = .white
 
     let level: Level
 
@@ -52,8 +27,8 @@ final class GameEngine {
 
 extension GameEngine {
 
-    func shuffleColors() -> [CGFloat] {
-        colorsArray = colorsArray.map { $0.randomCGFloatWithDecimalPlaces(count: level.numberOfColors) }
-        return colorsArray
+    func shuffleColors() -> [UIColor] {
+        randomColorsArray = randomColorsArray.map { $0.randomColorForLevel(level: level) }
+        return randomColorsArray
     }
 }

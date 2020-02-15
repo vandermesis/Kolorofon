@@ -17,9 +17,9 @@
 		BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3554C323533779007BC724 /* SettingsBundleHelper.swift */; };
 		BA3554C62353379E007BC724 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA3554C52353379D007BC724 /* Settings.bundle */; };
 		BA59EA8223DCB963001E6502 /* FakeGameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */; };
+		BA64C17D23F77FF100DE4FC1 /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64C17C23F77FF100DE4FC1 /* UIColor+RandomColor.swift */; };
 		BA8A2C2823533B11002744CB /* GameSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2723533B11002744CB /* GameSounds.swift */; };
 		BA8A2C2A23533F85002744CB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2923533F85002744CB /* Score.swift */; };
-		BA91F45A23CCF352003D466A /* CGFloat+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA91F45923CCF352003D466A /* CGFloat+Converters.swift */; };
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */; };
@@ -53,6 +53,7 @@
 		BAD7ADAD23D8849D00537D7F /* FakeGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7ADAC23D8849D00537D7F /* FakeGameController.swift */; };
 		BAF38E5C23F45F9000BD772F /* Level+ChooseLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */; };
 		BAF6F08B23F5689100B03374 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6F08A23F5689100B03374 /* logo.png */; };
+		BAF7A82823F808AD005A61B1 /* Double+CGFloatConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7A82723F808AD005A61B1 /* Double+CGFloatConverter.swift */; };
 		BAFAC25223CC912F00C74D92 /* GameCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25123CC912F00C74D92 /* GameCreator.swift */; };
 		BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25323CC91A300C74D92 /* GameViewModel.swift */; };
 		BAFAC25723CC91D700C74D92 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFAC25523CC91D700C74D92 /* GameController.swift */; };
@@ -89,9 +90,9 @@
 		BA3554C323533779007BC724 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA3554C52353379D007BC724 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGameTimer.swift; sourceTree = "<group>"; };
+		BA64C17C23F77FF100DE4FC1 /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
 		BA8A2C2723533B11002744CB /* GameSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSounds.swift; sourceTree = "<group>"; };
 		BA8A2C2923533F85002744CB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
-		BA91F45923CCF352003D466A /* CGFloat+Converters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Converters.swift"; sourceTree = "<group>"; };
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "990-inattentive.json"; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		BAD7ADAC23D8849D00537D7F /* FakeGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGameController.swift; sourceTree = "<group>"; };
 		BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level+ChooseLeaderboard.swift"; sourceTree = "<group>"; };
 		BAF6F08A23F5689100B03374 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		BAF7A82723F808AD005A61B1 /* Double+CGFloatConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CGFloatConverter.swift"; sourceTree = "<group>"; };
 		BAFAC25123CC912F00C74D92 /* GameCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCreator.swift; sourceTree = "<group>"; };
 		BAFAC25323CC91A300C74D92 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		BAFAC25523CC91D700C74D92 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -356,10 +358,11 @@
 		BAFAC24C23CC8DCF00C74D92 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BA91F45923CCF352003D466A /* CGFloat+Converters.swift */,
 				BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */,
 				BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */,
 				BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */,
+				BA64C17C23F77FF100DE4FC1 /* UIColor+RandomColor.swift */,
+				BAF7A82723F808AD005A61B1 /* Double+CGFloatConverter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				BAFAC25223CC912F00C74D92 /* GameCreator.swift in Sources */,
 				BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */,
 				BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */,
+				BA64C17D23F77FF100DE4FC1 /* UIColor+RandomColor.swift in Sources */,
 				BAD14BB723DA04F500FF2D15 /* GameOverViewModel.swift in Sources */,
 				BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */,
 				BA8A2C2A23533F85002744CB /* Score.swift in Sources */,
@@ -664,7 +668,6 @@
 				BAD14BB123DA041B00FF2D15 /* GameOverCreator.swift in Sources */,
 				BA8A2C2823533B11002744CB /* GameSounds.swift in Sources */,
 				BAFAC25723CC91D700C74D92 /* GameController.swift in Sources */,
-				BA91F45A23CCF352003D466A /* CGFloat+Converters.swift in Sources */,
 				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
 				BAFF547823D77F8300CC25ED /* Constants.swift in Sources */,
 				BAF38E5C23F45F9000BD772F /* Level+ChooseLeaderboard.swift in Sources */,
@@ -673,6 +676,7 @@
 				BAD14BB423DA049600FF2D15 /* GameOverController.swift in Sources */,
 				8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */,
 				BAD14BB923DA0DAD00FF2D15 /* SharedButton.swift in Sources */,
+				BAF7A82823F808AD005A61B1 /* Double+CGFloatConverter.swift in Sources */,
 				BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
