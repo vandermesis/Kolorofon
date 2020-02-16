@@ -112,12 +112,18 @@
             </constraints>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="0r4-GH-o9y" appends="YES" id="20L-kx-UDf"/>
+                <outletCollection property="gestureRecognizers" destination="YwT-bw-aIh" appends="YES" id="KH7-Br-DyL"/>
             </connections>
-            <point key="canvasLocation" x="33" y="1"/>
+            <point key="canvasLocation" x="-274" y="-30"/>
         </view>
         <swipeGestureRecognizer direction="down" id="0r4-GH-o9y">
             <connections>
                 <action selector="didSwipeDown:" destination="-1" id="jHg-ke-kdP"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="up" id="YwT-bw-aIh">
+            <connections>
+                <action selector="didSwipeUp:" destination="-1" id="bZ3-AH-76K"/>
             </connections>
         </swipeGestureRecognizer>
     </objects>

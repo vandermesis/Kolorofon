@@ -10,7 +10,7 @@ import UIKit
 
 protocol GameViewModel {
     func startTimer()
-    func shuffleColors() -> [CGFloat]
+    func shuffleColors() -> [UIColor]
     func didPressColorBar(colorBar: Int)
     func didSwipeDown()
 }
@@ -42,18 +42,16 @@ extension GameViewModelImpl: GameViewModel {
         gameTimer.start()
     }
 
-    func shuffleColors() -> [CGFloat] {
-        let colors = gameEngine.shuffleColors()
-        print("colorsArray: \(colors)")
+    func shuffleColors() -> [UIColor] {
+        let colors = gameEngine.getRandomColors()
         return colors
     }
     
     func didPressColorBar(colorBar: Int) {
         gameSounds.play(soundFile: colorBar)
-        gameEngine.pickedColor = gameEngine.colorsArray[colorBar]
+        gameEngine.pickedColor = gameEngine.randomColorsArray[colorBar]
         calculateScore()
         gameStarted = true
-        helpPrints()
     }
 
     func didSwipeDown() {
@@ -65,22 +63,11 @@ private extension GameViewModelImpl {
 
     private func calculateScore() {
         if gameStarted {
-            userScore.updateScorePoints(gameEngine.colorRange.contains(gameEngine.pickedColor))
+            userScore.updateScorePoints(gameEngine.pickedColor == gameEngine.userColor)
             controller?.updateScoreLabel(score: userScore.score)
         } else {
             gameEngine.userColor = gameEngine.pickedColor
         }
-    }
-
-    // TODO: Remove prints when not needed
-    private func helpPrints() {
-        print("////////////////////////////////////////////")
-        print("userColor: \(gameEngine.userColor)")
-        print("pickedColor: \(gameEngine.pickedColor)")
-        print("rangeOfPickedColor: \(gameEngine.colorRange)")
-        print("pickedColor=DB:\(gameEngine.colorRange.contains(gameEngine.pickedColor))")
-        print("userScore: \(userScore.score)")
-        print("gameStarted: \(gameStarted)")
     }
 }
 

@@ -26,9 +26,6 @@ struct GameOverViewModel {
         GKScore.report([bestScore]) { error in
             if error != nil {
                 print(error?.localizedDescription as Any)
-            } else {
-                //TODO: Remove prints when not needed
-                print("Best score submitted successfully")
             }
         }
     }

@@ -46,12 +46,12 @@ final class GameViewModelTests: QuickSpec {
         describe("pressing color bar") {
 
             beforeEach {
-                gameEngine.colorsArray = [0.1, 0.2, 0.3, 0.4, 0.5]
+                gameEngine.randomColorsArray = [.black, .white, .red, .green, .blue]
                 viewModel.didPressColorBar(colorBar: 1)
             }
 
             it("should call game engine save picked color") {
-                expect(gameEngine.pickedColor).to(equal(gameEngine.colorsArray[1]))
+                expect(gameEngine.pickedColor).to(equal(gameEngine.randomColorsArray[1]))
             }
 
             it("should call userScore to get score 0") {
