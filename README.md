@@ -6,7 +6,7 @@
 
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
-![xcode](https://img.shields.io/badge/xcode-10.2-blue.svg)
+![xcode](https://img.shields.io/badge/xcode-11.3.1-blue.svg)
 [![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
 
 ## How it looks like
@@ -47,7 +47,7 @@ Ho!
 - Settings.bundle
 - MVC design pattern
 - MVVM design pattern
-- Try to be SOLID
+- SOLID
 - Timer class
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
@@ -75,7 +75,7 @@ Ho!
 
 ## What is needed
 
-- Xcode 10.3 with iOS SDK (12.2)
+- Xcode 11.3.1 with iOS SDK (12.2)
 - Bundler
 - CocoaPods
 
