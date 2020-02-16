@@ -24,14 +24,23 @@ I would like to this game would grow with me as I learn to code. We will see whe
 
 ## How to use it
 
-Follow your colour! 
-You have 90 seconds. 
-Pick your favorite color and remember it. 
-After colors change tap your choosen color to get a point.
-If your choosen color is not on the screen, swipe down to shuffle colors.
-If you choose wrong color you lose a point.
+- Follow your colour! 
+- You have 90 seconds. 
+- Pick your favorite color and remember it. 
+- After colors change tap your choosen color to get a point.
+- If your choosen color is not on the screen, swipe down to shuffle colors.
+- If you choose wrong color you lose a point.
+- to exit game before time ends simple swipe up
+
+Levels:
+- Easy - 12 colors
+- Medium - 36 colors
+- Hard - 72 colors
+
 Simple as that!
 Ho!
+
+
 
 ## What new I've learned
 
