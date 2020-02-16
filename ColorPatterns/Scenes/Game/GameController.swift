@@ -52,6 +52,9 @@ final class GameController: UIViewController {
         viewModel.didSwipeDown()
         updateColorBars()
     }
+    @IBAction private func didSwipeUp(_ sender: UISwipeGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension GameController: GamePresentable {
@@ -76,9 +79,9 @@ extension GameController: GamePresentable {
 private extension GameController {
 
     private func updateColorBars() {
-        let updatedColors = viewModel.shuffleColors()
+        let randomColors = viewModel.shuffleColors()
         colorBars.enumerated().forEach {
-            $1.backgroundColor = updatedColors[$0].uiColorFromCGFloat
+            $1.backgroundColor = randomColors[$0]
         }
     }
 }
