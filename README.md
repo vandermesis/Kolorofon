@@ -6,7 +6,7 @@
 
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
-![xcode](https://img.shields.io/badge/xcode-10.2-blue.svg)
+![xcode](https://img.shields.io/badge/xcode-11.3.1-blue.svg)
 [![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
 
 ## How it looks like
@@ -24,21 +24,30 @@ I would like to this game would grow with me as I learn to code. We will see whe
 
 ## How to use it
 
-Follow your colour! 
-You have 90 seconds. 
-Pick your favorite color and remember it. 
-After colors change tap your choosen color to get a point.
-If your choosen color is not on the screen, swipe down to shuffle colors.
-If you choose wrong color you lose a point.
+- Follow your colour! 
+- You have 90 seconds. 
+- Pick your favorite color and remember it. 
+- After colors change tap your choosen color to get a point.
+- If your choosen color is not on the screen, swipe down to shuffle colors.
+- If you choose wrong color you lose a point.
+- to exit game before time ends simple swipe up
+
+Levels:
+- Easy - 12 colors
+- Medium - 36 colors
+- Hard - 72 colors
+
 Simple as that!
 Ho!
+
+
 
 ## What new I've learned
 
 - Settings.bundle
 - MVC design pattern
 - MVVM design pattern
-- Try to be SOLID
+- SOLID
 - Timer class
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
@@ -66,7 +75,7 @@ Ho!
 
 ## What is needed
 
-- Xcode 10.3 with iOS SDK (12.2)
+- Xcode 11.3.1 with iOS SDK (12.2)
 - Bundler
 - CocoaPods
 
