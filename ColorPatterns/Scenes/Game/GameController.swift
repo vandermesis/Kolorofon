@@ -11,6 +11,7 @@ import UIKit
 protocol GamePresentable {
     func updateTimeLabel(seconds: Int)
     func updateScoreLabel(score: Int)
+    func updateMultiplierLabel(multiplier: Int)
     func navigateToGameOver(userScore: Score, level: Level)
 }
 
@@ -19,6 +20,7 @@ final class GameController: UIViewController {
     @IBOutlet private var colorBars: [UIButton]!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreMultiplierLabel: UILabel!
 
     private let viewModel: GameViewModel
 
@@ -94,6 +96,10 @@ extension GameController: GamePresentable {
 
     func updateScoreLabel(score: Int) {
         scoreLabel.text = score.toString
+    }
+
+    func updateMultiplierLabel(multiplier: Int) {
+        scoreMultiplierLabel.text = multiplier.toMultiplierString
     }
 
     func navigateToGameOver(userScore: Score, level: Level) {

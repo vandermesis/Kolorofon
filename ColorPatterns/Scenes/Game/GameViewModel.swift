@@ -70,6 +70,7 @@ private extension GameViewModelImpl {
         if gameStarted {
             userScore.updateScorePoints(gameEngine.pickedColor == gameEngine.userColor)
             controller?.updateScoreLabel(score: userScore.score)
+            controller?.updateMultiplierLabel(multiplier: userScore.scoreMultiplier)
         } else {
             gameEngine.userColor = gameEngine.pickedColor
         }
