@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameController" customModule="ColorPatterns" customModuleProvider="target">
             <connections>
                 <outlet property="scoreLabel" destination="bId-mJ-Tbd" id="oAk-M6-kUa"/>
+                <outlet property="scoreMultiplierLabel" destination="7HO-N9-iVI" id="I1p-gH-p7A"/>
                 <outlet property="timeLabel" destination="6Xy-5p-M5m" id="qaV-O0-CuZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="colorBars" destination="eSP-a1-KOT" collectionClass="NSMutableArray" id="gnk-X7-cWs"/>
@@ -29,17 +30,28 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-5p-M5m">
-                            <rect key="frame" x="40" y="0.0" width="21" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="40" y="0.0" width="18" height="33"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                             <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
-                            <rect key="frame" x="363.5" y="6.5" width="10.5" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" name="textTertiary"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-Os-zKl">
+                            <rect key="frame" x="330.5" y="0.0" width="56.5" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-N9-iVI">
+                                    <rect key="frame" x="0.0" y="0.0" width="17.5" height="33"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                    <color key="textColor" name="textTertiary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
+                                    <rect key="frame" x="47.5" y="0.0" width="9" height="33"/>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                    <color key="textColor" name="textTertiary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" name="backgroundPrimary"/>
                     <gestureRecognizers/>
@@ -47,9 +59,10 @@
                         <constraint firstAttribute="bottom" secondItem="6Xy-5p-M5m" secondAttribute="bottom" id="6Ba-KO-0lW"/>
                         <constraint firstAttribute="height" constant="33" id="82p-Gr-JLX"/>
                         <constraint firstItem="6Xy-5p-M5m" firstAttribute="leading" secondItem="vVi-v7-n0P" secondAttribute="leading" constant="40" id="9YZ-Zc-tEe"/>
-                        <constraint firstItem="bId-mJ-Tbd" firstAttribute="centerY" secondItem="6Xy-5p-M5m" secondAttribute="centerY" id="WEf-g7-Dfu"/>
-                        <constraint firstAttribute="trailing" secondItem="bId-mJ-Tbd" secondAttribute="trailing" constant="40" id="b6k-BU-XMo"/>
                         <constraint firstItem="6Xy-5p-M5m" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="top" id="bdk-ag-MRY"/>
+                        <constraint firstAttribute="bottom" secondItem="o9d-Os-zKl" secondAttribute="bottom" id="uVP-hP-HNg"/>
+                        <constraint firstAttribute="trailing" secondItem="o9d-Os-zKl" secondAttribute="trailing" constant="27" id="yXM-8O-DpQ"/>
+                        <constraint firstItem="o9d-Os-zKl" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="top" id="zMb-Qh-XeI"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HqB-CK-PGK">
@@ -114,7 +127,7 @@
                 <outletCollection property="gestureRecognizers" destination="0r4-GH-o9y" appends="YES" id="20L-kx-UDf"/>
                 <outletCollection property="gestureRecognizers" destination="YwT-bw-aIh" appends="YES" id="KH7-Br-DyL"/>
             </connections>
-            <point key="canvasLocation" x="-274" y="-30"/>
+            <point key="canvasLocation" x="-488" y="-243"/>
         </view>
         <swipeGestureRecognizer direction="down" id="0r4-GH-o9y">
             <connections>

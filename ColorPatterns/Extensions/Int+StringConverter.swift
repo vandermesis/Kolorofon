@@ -11,6 +11,10 @@ import Foundation
 extension Int {
 
     var toString: String {
-        return String(self)
+        return "\(self)"
+    }
+
+    var toMultiplierString: String {
+        return "\(self)x"
     }
 }

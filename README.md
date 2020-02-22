@@ -37,6 +37,18 @@ Levels:
 - Medium - 36 colors
 - Hard - 72 colors
 
+Points count depends on winning streak:
+4 winning streak and below - 1 point
+5 winning streak - 2 points
+10 winning streak - 3 points
+20 winning streak - 4 points
+30 winning streak - 5 points
+40 winning streak - 6 points
+50 winning streak - 7 points
+60 winning streak - 8 points
+70 winning streak - 9 points
+80 winning streak and above - 10 points
+
 Simple as that!
 Ho!
 
@@ -54,6 +66,7 @@ Ho!
 - Giflow
 - Danger with SwiftLint
 - Game Center
+- Notification Center
 
 ## To-do
 
@@ -70,8 +83,9 @@ Ho!
 - [x] Tailor UI and UX
 - [x] Unit Tests
 - [x] Change default sounds
-- [ ] Manage app didEnterBackground cases
-
+- [x] Manage app didEnterBackground cases
+- [x] Change user points calculation model to add extra points for winning streak
+- [ ] Add endless difficulty mode to play without timer
 
 ## What is needed
 
