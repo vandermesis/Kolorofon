@@ -38,13 +38,13 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-Os-zKl">
                             <rect key="frame" x="330.5" y="0.0" width="56.5" height="33"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-N9-iVI">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-N9-iVI">
                                     <rect key="frame" x="0.0" y="0.0" width="17.5" height="33"/>
                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" name="textTertiary"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
                                     <rect key="frame" x="47.5" y="0.0" width="9" height="33"/>
                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" name="textTertiary"/>
@@ -65,27 +65,27 @@
                         <constraint firstItem="o9d-Os-zKl" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="top" id="zMb-Qh-XeI"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HqB-CK-PGK">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HqB-CK-PGK">
                     <rect key="frame" x="0.0" y="33" width="414" height="863"/>
                     <subviews>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSP-a1-KOT">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="172.5"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSP-a1-KOT" customClass="SharedColorTile" customModule="ColorPatterns" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="168.5"/>
                             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <accessibility key="accessibilityConfiguration" label="0"/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="DCz-e3-m2u"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toE-hA-bWZ">
-                            <rect key="frame" x="0.0" y="172.5" width="414" height="172.5"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toE-hA-bWZ" customClass="SharedColorTile" customModule="ColorPatterns" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="173.5" width="414" height="168.5"/>
                             <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <accessibility key="accessibilityConfiguration" label="1"/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="SBq-lI-dyW"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Ng-iAP">
-                            <rect key="frame" x="0.0" y="345" width="414" height="173"/>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Ng-iAP" customClass="SharedColorTile" customModule="ColorPatterns" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="347" width="414" height="169"/>
                             <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <accessibility key="accessibilityConfiguration" label="2"/>
                             <gestureRecognizers/>
@@ -93,16 +93,16 @@
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Kjj-gy-TPY"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-px-Xha">
-                            <rect key="frame" x="0.0" y="518" width="414" height="172.5"/>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-px-Xha" customClass="SharedColorTile" customModule="ColorPatterns" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="521" width="414" height="168.5"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <accessibility key="accessibilityConfiguration" label="3"/>
                             <connections>
                                 <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="QhW-e1-5Go"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-5w-WAl">
-                            <rect key="frame" x="0.0" y="690.5" width="414" height="172.5"/>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-5w-WAl" customClass="SharedColorTile" customModule="ColorPatterns" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="694.5" width="414" height="168.5"/>
                             <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <accessibility key="accessibilityConfiguration" label="4"/>
                             <gestureRecognizers/>
@@ -127,7 +127,7 @@
                 <outletCollection property="gestureRecognizers" destination="0r4-GH-o9y" appends="YES" id="20L-kx-UDf"/>
                 <outletCollection property="gestureRecognizers" destination="YwT-bw-aIh" appends="YES" id="KH7-Br-DyL"/>
             </connections>
-            <point key="canvasLocation" x="-488" y="-243"/>
+            <point key="canvasLocation" x="67" y="-242"/>
         </view>
         <swipeGestureRecognizer direction="down" id="0r4-GH-o9y">
             <connections>
