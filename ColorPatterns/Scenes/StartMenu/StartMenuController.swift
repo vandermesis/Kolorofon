@@ -33,7 +33,7 @@ final class StartMenuController: UIViewController {
         setupNotifications()
         setupLottieView(animation: .lottieAnimation)
         startAnimation()
-        setupSegmentedControll()
+        setupSegmentedControl()
         viewModel.checkGameCenterStatus()
     }
 
@@ -88,7 +88,7 @@ private extension StartMenuController {
         present(gameCenterController, animated: false, completion: nil)
     }
 
-    private func setupSegmentedControll() {
+    private func setupSegmentedControl() {
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.textTertiary() as Any,
                                                  NSAttributedString.Key.font: UIFont(name: .trebuchetMS,
                                                                                      size: .difficultyControlFontSize) as Any], for: .selected)
