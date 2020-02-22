@@ -30,7 +30,9 @@ final class StartMenuController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presentLaunchScreen()
-        setupLottieView(animation: "990-inattentive")
+        setupNotifications()
+        setupLottieView(animation: .lottieAnimation)
+        startAnimation()
         setupSegmentedControll()
         viewModel.checkGameCenterStatus()
     }
@@ -76,7 +78,6 @@ private extension StartMenuController {
         lottieView?.animation = Animation.named(animation)
         lottieView?.loopMode = .loop
         lottieView?.animationSpeed = 1
-        lottieView?.play()
     }
 
     private func presentGameCenterController() {
@@ -89,8 +90,32 @@ private extension StartMenuController {
 
     private func setupSegmentedControll() {
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.textTertiary() as Any,
-                                                 NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 20) as Any], for: .selected)
+                                                 NSAttributedString.Key.font: UIFont(name: .trebuchetMS,
+                                                                                     size: .difficultyControlFontSize) as Any], for: .selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black,
-                                                 NSAttributedString.Key.font: UIFont(name: "Trebuchet MS", size: 20) as Any], for: .normal)
+                                                 NSAttributedString.Key.font: UIFont(name: .trebuchetMS,
+                                                                                     size: .difficultyControlFontSize) as Any], for: .normal)
     }
+
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(startAnimation),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
+    }
+
+    @objc private func startAnimation() {
+        lottieView.play()
+    }
+}
+
+private extension String {
+
+    static let trebuchetMS = "Trebuchet MS"
+    static let lottieAnimation = "990-inattentive"
+}
+
+private extension CGFloat {
+
+    static let difficultyControlFontSize: CGFloat = 20
 }
