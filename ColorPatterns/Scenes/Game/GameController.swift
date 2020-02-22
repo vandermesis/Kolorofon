@@ -34,9 +34,10 @@ final class GameController: UIViewController {
     override var prefersStatusBarHidden: Bool {
       return true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNotifications()
         updateColorBars()
         viewModel.startTimer()
     }
@@ -57,6 +58,34 @@ final class GameController: UIViewController {
     }
 }
 
+private extension GameController {
+
+    private func updateColorBars() {
+        let randomColors = viewModel.shuffleColors()
+        colorBars.enumerated().forEach {
+            $1.backgroundColor = randomColors[$0]
+        }
+    }
+
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(pauseTimer),
+                                               name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(startTimer),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
+    }
+
+    @objc private func pauseTimer() {
+        viewModel.pauseTimer()
+    }
+
+    @objc private func startTimer() {
+        viewModel.startTimer()
+    }
+}
+
 extension GameController: GamePresentable {
 
     func updateTimeLabel(seconds: Int) {
@@ -73,15 +102,5 @@ extension GameController: GamePresentable {
                                                                  gameController: self)
         gameOverController.modalPresentationStyle = .fullScreen
         self.present(gameOverController, animated: true, completion: nil)
-    }
-}
-
-private extension GameController {
-
-    private func updateColorBars() {
-        let randomColors = viewModel.shuffleColors()
-        colorBars.enumerated().forEach {
-            $1.backgroundColor = randomColors[$0]
-        }
     }
 }

@@ -15,6 +15,7 @@ protocol GameTimerDelegate: class {
 
 protocol GameTimer {
     func start()
+    func pause()
 }
 
 final class GameTimerImpl: GameTimer {
@@ -26,12 +27,15 @@ final class GameTimerImpl: GameTimer {
     var timeLeft: Int = Constants.GameTimer.gameTime
 
     func start() {
-        timeLeft = Constants.GameTimer.gameTime
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0,
                                          target: self,
                                          selector: #selector(onTimerFires),
                                          userInfo: nil,
                                          repeats: true)
+    }
+
+    func pause() {
+        gameTimer?.invalidate()
     }
 }
 

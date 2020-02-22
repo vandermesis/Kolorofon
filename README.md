@@ -70,8 +70,8 @@ Ho!
 - [x] Tailor UI and UX
 - [x] Unit Tests
 - [x] Change default sounds
-- [ ] Manage app didEnterBackground cases
-
+- [x] Manage app didEnterBackground cases
+- [ ] Change user points calculation model to add extra points for winning streak
 
 ## What is needed
 

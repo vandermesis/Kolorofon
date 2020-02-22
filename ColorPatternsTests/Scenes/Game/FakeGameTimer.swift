@@ -13,8 +13,13 @@ import Foundation
 final class FakeGameTimer: GameTimer {
 
     var startCalled: Bool?
+    var pauseCalled: Bool?
 
     func start() {
         startCalled = true
+    }
+
+    func pause() {
+        pauseCalled = true
     }
 }

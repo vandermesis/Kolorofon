@@ -10,6 +10,7 @@ import UIKit
 
 protocol GameViewModel {
     func startTimer()
+    func pauseTimer()
     func shuffleColors() -> [UIColor]
     func didPressColorBar(colorBar: Int)
     func didSwipeDown()
@@ -40,6 +41,10 @@ extension GameViewModelImpl: GameViewModel {
 
     func startTimer() {
         gameTimer.start()
+    }
+
+    func pauseTimer() {
+        gameTimer.pause()
     }
 
     func shuffleColors() -> [UIColor] {
