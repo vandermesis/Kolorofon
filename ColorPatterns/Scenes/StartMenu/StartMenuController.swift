@@ -27,13 +27,14 @@ final class StartMenuController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presentLaunchScreen()
+    override func viewDidLoad() {
         setupNotifications()
-        setupLottieView(animation: .lottieAnimation)
-        startAnimation()
         setupSegmentedControl()
+        setupLottieView(animation: .lottieAnimation)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        startAnimation()
         viewModel.checkGameCenterStatus()
     }
 
@@ -55,24 +56,7 @@ final class StartMenuController: UIViewController {
 
 }
 
-extension StartMenuController: GKGameCenterControllerDelegate {
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-    }
-}
-
 private extension StartMenuController {
-
-    private func presentLaunchScreen() {
-        guard let storyboardController = R.storyboard.launchScreen().instantiateInitialViewController() else { return }
-        storyboardController.modalPresentationStyle = .overFullScreen
-        present(storyboardController, animated: false, completion: nil)
-        UIView.animate(withDuration: 1,
-                       delay: 1,
-                       options: .curveEaseOut,
-                       animations: { storyboardController.view.alpha = 0 },
-                       completion: { _ in storyboardController.dismiss(animated: false, completion: nil)})
-    }
 
     private func setupLottieView(animation: String) {
         lottieView?.animation = Animation.named(animation)
@@ -106,6 +90,12 @@ private extension StartMenuController {
 
     @objc private func startAnimation() {
         lottieView.play()
+    }
+}
+
+extension StartMenuController: GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }
 
