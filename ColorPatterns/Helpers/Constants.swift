@@ -19,7 +19,7 @@ struct Constants {
         static let note5 = "note5"
         static let note6 = "note6"
         
-        static let wavFormat = "wav"
+        static let audioFormat = "caf"
     }
 
     struct UserDefaultsKeys {
