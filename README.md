@@ -38,16 +38,16 @@ Levels:
 - Hard - 72 colors
 
 Points count depends on winning streak:
-4 winning streak and below - 1 point
-5 winning streak - 2 points
-10 winning streak - 3 points
-20 winning streak - 4 points
-30 winning streak - 5 points
-40 winning streak - 6 points
-50 winning streak - 7 points
-60 winning streak - 8 points
-70 winning streak - 9 points
-80 winning streak and above - 10 points
+- 4 winning streak and below - 1 point
+- 5 winning streak - 2 points
+- 10 winning streak - 3 points
+- 20 winning streak - 4 points
+- 30 winning streak - 5 points
+- 40 winning streak - 6 points
+- 50 winning streak - 7 points
+- 60 winning streak - 8 points
+- 70 winning streak - 9 points
+- 80 winning streak and above - 10 points
 
 Simple as that!
 Ho!

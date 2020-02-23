@@ -11,6 +11,7 @@
 		8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4222766CA700EDC257 /* AppDelegate.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
+		BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */; };
 		BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA141A3823CBCDC70039A5DC /* R.generated.swift */; };
 		BA1FD55623F6BBB300726A83 /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA1FD55523F6BBB300726A83 /* note3.wav */; };
 		BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */; };
@@ -84,6 +85,7 @@
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatterns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedColorTile.swift; sourceTree = "<group>"; };
 		BA141A3823CBCDC70039A5DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BA1FD55523F6BBB300726A83 /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
 		BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StringConverter.swift"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				BAFF547723D77F8300CC25ED /* Constants.swift */,
 				BA3554C323533779007BC724 /* SettingsBundleHelper.swift */,
 				BAD14BB823DA0DAD00FF2D15 /* SharedButton.swift */,
+				BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				BAFAC25223CC912F00C74D92 /* GameCreator.swift in Sources */,
 				BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */,
 				BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */,
+				BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */,
 				BA64C17D23F77FF100DE4FC1 /* UIColor+RandomColor.swift in Sources */,
 				BAD14BB723DA04F500FF2D15 /* GameOverViewModel.swift in Sources */,
 				BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */,
