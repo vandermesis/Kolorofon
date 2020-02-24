@@ -10,10 +10,6 @@ import UIKit
 
 final class InfoController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     private let viewModel: InfoViewModel
 
     init(viewModel: InfoViewModel) {
