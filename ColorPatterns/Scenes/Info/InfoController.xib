@@ -539,7 +539,7 @@ Cg
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zNJ-3h-9rN" secondAttribute="trailing" constant="10" id="lrU-WV-auY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-510.14492753623193" y="141.96428571428569"/>
+            <point key="canvasLocation" x="-152" y="10"/>
         </view>
     </objects>
     <resources>
