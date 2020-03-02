@@ -58,7 +58,7 @@ Cg
                         <fragment content="How to use it">
                             <attributes>
                                 <font key="NSFont" size="24" name="TrebuchetMS-Bold"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
                             </attributes>
@@ -69,7 +69,7 @@ Cg
 </string>
                             <attributes>
                                 <font key="NSFont" size="18" name="TrebuchetMS"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
                             </attributes>
@@ -89,8 +89,8 @@ Cg
                             <string key="content">	•	Follow your colour!
 	•	You have 90 seconds.
 	•	Pick your favorite color and remember it.
-	•	After colors change tap your choosen color to get a point.
-	•	If your choosen color is not on the screen, swipe down to shuffle colors.
+	•	After colors change tap your chosen color to get a point.
+	•	If your chosen color is not on the screen, swipe down to shuffle colors.
 	•	If you choose wrong color you lose a point.
 	•	to exit game before time ends simple swipe up
 </string>
@@ -122,14 +122,24 @@ Cgo
                         <fragment content="Levels:">
                             <attributes>
                                 <font key="NSFont" size="24" name="TrebuchetMS-Bold"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <font key="NSFont" size="18" name="TrebuchetMS"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
                             </attributes>
                         </fragment>
                         <fragment>
                             <string key="content">
-
 Easy - 12 colors
 Medium - 36 colors
 Hard - 72 colors
@@ -146,14 +156,24 @@ Hard - 72 colors
                         <fragment content="Winning streak:">
                             <attributes>
                                 <font key="NSFont" size="24" name="TrebuchetMS-Bold"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <font key="NSFont" size="18" name="TrebuchetMS"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
                             </attributes>
                         </fragment>
                         <fragment>
                             <string key="content">
-
 4 streak - 1 point
 5 streak - 2 points
 10 streak - 3 points
@@ -207,14 +227,25 @@ CgoKA
                         <fragment content="Credits">
                             <attributes>
                                 <font key="NSFont" size="24" name="TrebuchetMS-Bold"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
                             </attributes>
                         </fragment>
                         <fragment>
                             <string key="content" base64-UTF8="YES">
-Cgo
+Cg
+</string>
+                            <attributes>
+                                <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
                                 <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
@@ -539,7 +570,7 @@ Cg
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zNJ-3h-9rN" secondAttribute="trailing" constant="10" id="lrU-WV-auY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-152" y="10"/>
+            <point key="canvasLocation" x="148" y="131"/>
         </view>
     </objects>
     <resources>
