@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PauseViewController" customModule="ColorPatterns" customModuleProvider="target">
             <connections>
+                <outlet property="scoreLabel" destination="gMY-VN-jwA" id="M5k-1M-z0A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +20,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-UH-zpW">
+                    <rect key="frame" x="154.33333333333334" y="94" width="105.33333333333334" height="50.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
+                    <color key="textColor" name="textPrimary"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-1e-Tga">
+                    <rect key="frame" x="68" y="366" width="278" height="174.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNv-eU-31r">
+                            <rect key="frame" x="131.66666666666663" y="0.0" width="146.33333333333337" height="38"/>
+                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                            <color key="textColor" name="textSecondary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-VN-jwA">
+                            <rect key="frame" x="0.0" y="47.999999999999993" width="278" height="126.33333333333331"/>
+                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="100"/>
+                            <color key="textColor" name="textPrimary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vcD-mD-Jgd">
-                    <rect key="frame" x="73" y="408" width="268" height="90"/>
+                    <rect key="frame" x="73" y="732" width="268" height="90"/>
                     <subviews>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgp-YO-uau" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="268" height="40"/>
@@ -57,8 +81,12 @@
             </subviews>
             <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
-                <constraint firstItem="vcD-mD-Jgd" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="UhW-Vc-Vxw"/>
+                <constraint firstItem="RJA-1e-Tga" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="O8G-tX-NOi"/>
+                <constraint firstItem="QxO-UH-zpW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="P8b-Bg-KIv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vcD-mD-Jgd" secondAttribute="bottom" constant="40" id="S1D-uz-Ovw"/>
                 <constraint firstItem="vcD-mD-Jgd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VyW-9x-0gB"/>
+                <constraint firstItem="QxO-UH-zpW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="n1W-tC-XY1"/>
+                <constraint firstItem="RJA-1e-Tga" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="prZ-Jg-gWa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="70" y="12"/>
@@ -70,6 +98,12 @@
         </namedColor>
         <namedColor name="buttonPrimary">
             <color red="0.8529999852180481" green="0.29800000786781311" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textPrimary">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textSecondary">
+            <color red="0.47600001096725464" green="0.47600001096725464" blue="0.47600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textTertiary">
             <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

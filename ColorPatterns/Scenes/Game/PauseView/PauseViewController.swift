@@ -15,7 +15,24 @@ protocol PauseViewControlerDelegate: class {
 
 final class PauseViewController: UIViewController {
 
+    @IBOutlet private weak var scoreLabel: UILabel!
+
+    private var userScore: String
+
     weak var delegate: PauseViewControlerDelegate?
+
+    init(userScore: String) {
+        self.userScore = userScore
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        scoreLabel.text = userScore
+    }
 
     @IBAction private func restartButtonPressed(_ sender: SharedButton) {
         self.dismiss(animated: false, completion: delegate?.didPressRestart)

@@ -89,7 +89,8 @@ private extension GameController {
     }
 
     private func presentPauseController() {
-        let pauseController = PauseViewController()
+        guard let currentScore = scoreLabel.text else { return }
+        let pauseController = PauseViewController(userScore: currentScore)
         pauseController.delegate = self
         pauseController.modalPresentationStyle = .overFullScreen
         present(pauseController, animated: false, completion: nil)
@@ -122,7 +123,6 @@ extension GameController: GamePresentable {
 extension GameController: PauseViewControlerDelegate {
     func didPressRestart() {
         viewModel.startTimer()
-        updateColorBars()
     }
 
     func didPressBackButton() {
