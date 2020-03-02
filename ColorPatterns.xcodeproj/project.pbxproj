@@ -14,8 +14,8 @@
 		BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */; };
 		BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA141A3823CBCDC70039A5DC /* R.generated.swift */; };
 		BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */; };
-		BA2AD57D240D8431006245E9 /* PauseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2AD57C240D8431006245E9 /* PauseView.xib */; };
-		BA2AD57F240D8447006245E9 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2AD57E240D8447006245E9 /* PauseView.swift */; };
+		BA2AD583240D87B0006245E9 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2AD581240D87B0006245E9 /* PauseViewController.swift */; };
+		BA2AD584240D87B0006245E9 /* PauseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2AD582240D87B0006245E9 /* PauseViewController.xib */; };
 		BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3554C323533779007BC724 /* SettingsBundleHelper.swift */; };
 		BA3554C62353379E007BC724 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA3554C52353379D007BC724 /* Settings.bundle */; };
 		BA59EA8223DCB963001E6502 /* FakeGameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */; };
@@ -94,8 +94,8 @@
 		BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedColorTile.swift; sourceTree = "<group>"; };
 		BA141A3823CBCDC70039A5DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StringConverter.swift"; sourceTree = "<group>"; };
-		BA2AD57C240D8431006245E9 /* PauseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PauseView.xib; sourceTree = "<group>"; };
-		BA2AD57E240D8447006245E9 /* PauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
+		BA2AD581240D87B0006245E9 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		BA2AD582240D87B0006245E9 /* PauseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PauseViewController.xib; sourceTree = "<group>"; };
 		BA3554C323533779007BC724 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		BA3554C52353379D007BC724 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGameTimer.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		BA2AD580240D8482006245E9 /* PauseView */ = {
 			isa = PBXGroup;
 			children = (
-				BA2AD57C240D8431006245E9 /* PauseView.xib */,
-				BA2AD57E240D8447006245E9 /* PauseView.swift */,
+				BA2AD581240D87B0006245E9 /* PauseViewController.swift */,
+				BA2AD582240D87B0006245E9 /* PauseViewController.xib */,
 			);
 			path = PauseView;
 			sourceTree = "<group>";
@@ -335,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				BAFAC24A23CC8D6000C74D92 /* StartMenu */,
-				BAFAC25C23CCA61200C74D92 /* Info */,
 				BAFAC24923CC8D4500C74D92 /* Game */,
 				BAFAC25B23CCA5EE00C74D92 /* GameOver */,
 			);
@@ -360,6 +359,7 @@
 		BAFAC24A23CC8D6000C74D92 /* StartMenu */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAC25C23CCA61200C74D92 /* Info */,
 				BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */,
 				BAADABA223DA586900F36C8C /* StartMenuController.swift */,
 				BAADABA323DA586900F36C8C /* StartMenuController.xib */,
@@ -525,7 +525,6 @@
 				BAFEF41D2402D4DE001FC2C3 /* note1.caf in Resources */,
 				BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */,
 				BAD14BB523DA049600FF2D15 /* GameOverController.xib in Resources */,
-				BA2AD57D240D8431006245E9 /* PauseView.xib in Resources */,
 				BAFEF41F2402D4DE001FC2C3 /* note6.caf in Resources */,
 				BAFEF41C2402D4DE001FC2C3 /* note3.caf in Resources */,
 				BAFAC25823CC91D700C74D92 /* GameController.xib in Resources */,
@@ -536,6 +535,7 @@
 				BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */,
 				BAFEF41E2402D4DE001FC2C3 /* note2.caf in Resources */,
 				8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */,
+				BA2AD584240D87B0006245E9 /* PauseViewController.xib in Resources */,
 				BAFEF4262402D791001FC2C3 /* InfoController.xib in Resources */,
 				BABA612023F55BE90003B1B2 /* animation.gif in Resources */,
 				BAFAC25A23CC956D00C74D92 /* Colors.xcassets in Resources */,
@@ -683,6 +683,7 @@
 				BAFAC25223CC912F00C74D92 /* GameCreator.swift in Sources */,
 				BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */,
 				BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */,
+				BA2AD583240D87B0006245E9 /* PauseViewController.swift in Sources */,
 				BAFEF4282402D7D9001FC2C3 /* InfoViewModel.swift in Sources */,
 				BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */,
 				BA64C17D23F77FF100DE4FC1 /* UIColor+RandomColor.swift in Sources */,
@@ -705,7 +706,6 @@
 				BAF7A82823F808AD005A61B1 /* Double+CGFloatConverter.swift in Sources */,
 				BAC495C623D89CC60041088C /* Error+FriendlyMessage.swift in Sources */,
 				BAFEF4222402D749001FC2C3 /* InfoCreator.swift in Sources */,
-				BA2AD57F240D8447006245E9 /* PauseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
