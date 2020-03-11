@@ -44,6 +44,8 @@ extension GameSounds {
 private extension GameSounds {
 
     private var soundSettingsStatus: Bool {
-        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound)
+        return false
+        //TODO: Redo after tests
+//        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound)
     }
 }

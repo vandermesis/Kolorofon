@@ -41,13 +41,13 @@ final class StartMenuController: UIViewController {
     @IBAction private func infoButtonPressed(_ sender: UIButton) {
         let infoController = InfoCreator().getController()
         infoController.modalPresentationStyle = .fullScreen
-        present(infoController, animated: true, completion: nil)
+        present(infoController, animated: false, completion: nil)
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
         let gameController = GameCreator().getController(difficulty: viewModel.difficulty)
         gameController.modalPresentationStyle = .fullScreen
-        present(gameController, animated: true, completion: nil)
+        present(gameController, animated: false, completion: nil)
 
     }
 
