@@ -10,19 +10,20 @@ import AVFoundation
 
 final class GameSounds {
 
-    private var audioPlayer: AVAudioPlayer?
+    private var audioPlayers = [AVAudioPlayer]()
+
+    private let soundURLs = [Constants.Sounds.note1.soundFileToURL,
+                             Constants.Sounds.note2.soundFileToURL,
+                             Constants.Sounds.note3.soundFileToURL,
+                             Constants.Sounds.note4.soundFileToURL,
+                             Constants.Sounds.note5.soundFileToURL,
+                             Constants.Sounds.note6.soundFileToURL]
 
     private let userDefaults: UserDefaults
 
-    private let soundsArray = [Constants.Sounds.note1,
-                               Constants.Sounds.note2,
-                               Constants.Sounds.note3,
-                               Constants.Sounds.note4,
-                               Constants.Sounds.note5,
-                               Constants.Sounds.note6]
-
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
+        createAudioPlayersForBars()
     }
 }
 
@@ -30,18 +31,24 @@ extension GameSounds {
 
     func play(soundFile: Int) {
         guard soundSettingsStatus else { return }
-        guard let soundURL = Bundle.main.url(forResource: soundsArray[soundFile],
-                                             withExtension: Constants.Sounds.wavFormat) else { return }
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
-        } catch {
-            print("Error in \(#function): \(error.localizedDescription)")
-        }
-        audioPlayer?.play()
+        audioPlayers[soundFile].currentTime = 0
+        audioPlayers[soundFile].play()
     }
 }
 
 private extension GameSounds {
+
+    private func createAudioPlayersForBars() {
+        soundURLs.forEach { url in
+            do {
+                guard let url = url else { return }
+                let player = try AVAudioPlayer(contentsOf: url)
+                audioPlayers.append(player)
+            } catch {
+                print("Error in \(#function): \(error.localizedDescription)")
+            }
+        }
+    }
 
     private var soundSettingsStatus: Bool {
         return userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound)

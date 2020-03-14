@@ -9,7 +9,9 @@
 import UIKit
 
 enum Level: String {
-    case easy, medium, hard
+    case easy
+    case medium
+    case hard
 }
 
 final class GameEngine {

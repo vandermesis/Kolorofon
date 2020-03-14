@@ -27,9 +27,9 @@ I would like to this game would grow with me as I learn to code. We will see whe
 - Follow your colour! 
 - You have 90 seconds. 
 - Pick your favorite color and remember it. 
-- After colors change tap your choosen color to get a point.
-- If your choosen color is not on the screen, swipe down to shuffle colors.
-- If you choose wrong color you lose a point.
+- After colors change tap your chosen color to get a point.
+- If your chosen color is not on the screen, swipe down to shuffle colors.
+- If you tap wrong color you lose a point.
 - to exit game before time ends simple swipe up
 
 Levels:
@@ -38,16 +38,16 @@ Levels:
 - Hard - 72 colors
 
 Points count depends on winning streak:
-4 winning streak and below - 1 point
-5 winning streak - 2 points
-10 winning streak - 3 points
-20 winning streak - 4 points
-30 winning streak - 5 points
-40 winning streak - 6 points
-50 winning streak - 7 points
-60 winning streak - 8 points
-70 winning streak - 9 points
-80 winning streak and above - 10 points
+- 4 winning streak and below - 1 point
+- 5 winning streak - 2 points
+- 10 winning streak - 3 points
+- 20 winning streak - 4 points
+- 30 winning streak - 5 points
+- 40 winning streak - 6 points
+- 50 winning streak - 7 points
+- 60 winning streak - 8 points
+- 70 winning streak - 9 points
+- 80 winning streak and above - 10 points
 
 Simple as that!
 Ho!
@@ -100,6 +100,7 @@ Ho!
 - *[SwiftLint](https://github.com/realm/SwiftLint)* - enforce Swift style and conventions
 - *[R.swift](https://github.com/mac-cain13/R.swift)* - strong typed, autocompleted resources
 - *[Lottie-ios](https://github.com/airbnb/lottie-ios)* - library for Android and iOS that natively renders vector based animations
+- *[StartMenu Animation](https://lottiefiles.com/alboardman)* - by Al Boardman - Creative Commons License 2.0
 - *[Quick](https://github.com/Quick/Quick)* - behavior-driven development framework for Swift and Objective-C
 - *[Nimble](https://github.com/Quick/Nimble)* - express the expected outcomes of Swift or Objective-C expressions
 - *[Gifski](https://gif.ski)* - converts videos to GIF animations

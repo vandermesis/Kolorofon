@@ -27,52 +27,44 @@ final class StartMenuController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presentLaunchScreen()
+    override func viewDidLoad() {
         setupNotifications()
-        setupLottieView(animation: .lottieAnimation)
-        startAnimation()
         setupSegmentedControl()
+        setupLottieView(animation: .lottieAnimation)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        startAnimation()
         viewModel.checkGameCenterStatus()
+    }
+
+    @IBAction private func infoButtonPressed(_ sender: UIButton) {
+        let infoController = InfoCreator().getController()
+        infoController.modalPresentationStyle = .fullScreen
+        present(infoController, animated: false, completion: nil)
     }
 
     @IBAction private func startButtonPressed(_ sender: UIButton) {
         let gameController = GameCreator().getController(difficulty: viewModel.difficulty)
         gameController.modalPresentationStyle = .fullScreen
-        present(gameController, animated: true, completion: nil)
+        present(gameController, animated: false, completion: nil)
 
     }
+
     @IBAction private func difficultySegmentChanged(_ sender: UISegmentedControl) {
         let selectedSegment = sender.selectedSegmentIndex
         guard let segmentTitle = sender.titleForSegment(at: selectedSegment) else { return }
         guard let difficulty = Level(rawValue: segmentTitle.lowercased()) else { return }
         viewModel.chooseDifficulty(level: difficulty)
     }
+
     @IBAction private func bestScoresButtonPressed(_ sender: UIButton) {
         presentGameCenterController()
     }
 
 }
 
-extension StartMenuController: GKGameCenterControllerDelegate {
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-    }
-}
-
 private extension StartMenuController {
-
-    private func presentLaunchScreen() {
-        guard let storyboardController = R.storyboard.launchScreen().instantiateInitialViewController() else { return }
-        storyboardController.modalPresentationStyle = .overFullScreen
-        present(storyboardController, animated: false, completion: nil)
-        UIView.animate(withDuration: 1,
-                       delay: 1,
-                       options: .curveEaseOut,
-                       animations: { storyboardController.view.alpha = 0 },
-                       completion: { _ in storyboardController.dismiss(animated: false, completion: nil)})
-    }
 
     private func setupLottieView(animation: String) {
         lottieView?.animation = Animation.named(animation)
@@ -106,6 +98,12 @@ private extension StartMenuController {
 
     @objc private func startAnimation() {
         lottieView.play()
+    }
+}
+
+extension StartMenuController: GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }
 

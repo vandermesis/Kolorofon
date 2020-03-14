@@ -56,7 +56,8 @@ final class GameController: UIViewController {
         updateColorBars()
     }
     @IBAction private func didSwipeUp(_ sender: UISwipeGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+        presentPauseController()
+        viewModel.pauseTimer()
     }
 }
 
@@ -86,6 +87,14 @@ private extension GameController {
     @objc private func startTimer() {
         viewModel.startTimer()
     }
+
+    private func presentPauseController() {
+        guard let currentScore = scoreLabel.text else { return }
+        let pauseController = PauseViewController(userScore: currentScore)
+        pauseController.delegate = self
+        pauseController.modalPresentationStyle = .overFullScreen
+        present(pauseController, animated: false, completion: nil)
+    }
 }
 
 extension GameController: GamePresentable {
@@ -107,6 +116,16 @@ extension GameController: GamePresentable {
                                                                  level: level,
                                                                  gameController: self)
         gameOverController.modalPresentationStyle = .fullScreen
-        self.present(gameOverController, animated: true, completion: nil)
+        self.present(gameOverController, animated: false, completion: nil)
+    }
+}
+
+extension GameController: PauseViewControlerDelegate {
+    func didPressRestart() {
+        viewModel.startTimer()
+    }
+
+    func didPressBackButton() {
+        self.dismiss(animated: false, completion: nil)
     }
 }

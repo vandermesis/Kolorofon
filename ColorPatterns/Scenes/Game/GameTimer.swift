@@ -36,6 +36,7 @@ final class GameTimerImpl: GameTimer {
 
     func pause() {
         gameTimer?.invalidate()
+        gameTimer = nil
     }
 }
 
