@@ -13,10 +13,10 @@ final class GameSounds {
     private var audioPlayers = [AVAudioPlayer]()
 
     private let soundURLs = [Constants.Sounds.note1.soundFileToURL,
-                             Constants.Sounds.note2.soundFileToURL,
-                             Constants.Sounds.note3.soundFileToURL,
-                             Constants.Sounds.note4.soundFileToURL,
-                             Constants.Sounds.note5.soundFileToURL,
+//                             Constants.Sounds.note2.soundFileToURL,
+//                             Constants.Sounds.note3.soundFileToURL,
+//                             Constants.Sounds.note4.soundFileToURL,
+//                             Constants.Sounds.note5.soundFileToURL,
                              Constants.Sounds.note6.soundFileToURL]
 
     private let userDefaults: UserDefaults
