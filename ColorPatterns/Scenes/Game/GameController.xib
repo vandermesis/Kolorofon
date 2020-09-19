@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,17 +37,17 @@
                             <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-Os-zKl">
-                            <rect key="frame" x="291.33333333333331" y="0.0" width="56.666666666666686" height="33"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-Os-zKl">
+                            <rect key="frame" x="297.66666666666669" y="0.0" width="50.333333333333314" height="33"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-N9-iVI">
-                                    <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="33"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="33"/>
                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" name="textTertiary"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
-                                    <rect key="frame" x="37.666666666666686" y="0.0" width="19" height="33"/>
+                                    <rect key="frame" x="41.333333333333314" y="0.0" width="9" height="33"/>
                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                     <color key="textColor" name="textTertiary"/>
                                     <nil key="highlightedColor"/>
@@ -60,7 +61,6 @@
                         <constraint firstAttribute="bottom" secondItem="6Xy-5p-M5m" secondAttribute="bottom" id="6Ba-KO-0lW"/>
                         <constraint firstAttribute="height" constant="33" id="82p-Gr-JLX"/>
                         <constraint firstItem="6Xy-5p-M5m" firstAttribute="leading" secondItem="vVi-v7-n0P" secondAttribute="leading" constant="40" id="9YZ-Zc-tEe"/>
-                        <constraint firstItem="o9d-Os-zKl" firstAttribute="leading" secondItem="vVi-v7-n0P" secondAttribute="leading" constant="291.33333333333331" id="WC0-EK-p6U"/>
                         <constraint firstItem="6Xy-5p-M5m" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="top" id="bdk-ag-MRY"/>
                         <constraint firstAttribute="bottom" secondItem="o9d-Os-zKl" secondAttribute="bottom" id="uVP-hP-HNg"/>
                         <constraint firstAttribute="trailing" secondItem="o9d-Os-zKl" secondAttribute="trailing" constant="27" id="yXM-8O-DpQ"/>
