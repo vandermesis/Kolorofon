@@ -240,7 +240,7 @@ private class StarlingAudioPlayer {
     var state: PlayerState = PlayerState.idle()
 
     func play(_ file: AVAudioFile, identifier: SoundIdentifier) {
-        node.scheduleFile(file, at: nil, completionCallbackType: .dataPlayedBack) { [weak self] callbackType in
+        node.scheduleFile(file, at: nil, completionCallbackType: .dataPlayedBack) { [weak self] _ in
             self?.didCompletePlayback(for: identifier)
         }
         state = PlayerState(sound: identifier, status: .playing)
