@@ -6,51 +6,55 @@
 //  Copyright © 2019 vandermesis. All rights reserved.
 //
 
-import AVFoundation
+import Foundation
 
 final class GameSounds {
 
-    private var audioPlayers = [AVAudioPlayer]()
+    // MARK: Properties
 
-    private let soundURLs = [Constants.Sounds.note1.soundFileToURL,
-//                             Constants.Sounds.note2.soundFileToURL,
-//                             Constants.Sounds.note3.soundFileToURL,
-//                             Constants.Sounds.note4.soundFileToURL,
-//                             Constants.Sounds.note5.soundFileToURL,
-                             Constants.Sounds.note6.soundFileToURL]
-
+    private let starling = Starling()
+    private let gameSounds: [SoundIdentifier] = [.note1, .note2, .note3, .note4, .note5, .note6]
     private let userDefaults: UserDefaults
+
+    // MARK: Object Lifecycle
 
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
-        createAudioPlayersForBars()
+        loadSounds()
     }
-}
 
-extension GameSounds {
+    // MARK: Actions
 
     func play(soundFile: Int) {
         guard soundSettingsStatus else { return }
-        audioPlayers[soundFile].currentTime = 0
-        audioPlayers[soundFile].play()
+        starling.play(gameSounds[soundFile])
     }
-}
 
-private extension GameSounds {
+    // MARK: Private
 
-    private func createAudioPlayersForBars() {
-        soundURLs.forEach { url in
-            do {
-                guard let url = url else { return }
-                let player = try AVAudioPlayer(contentsOf: url)
-                audioPlayers.append(player)
-            } catch {
-                print("Error in \(#function): \(error.localizedDescription)")
-            }
-        }
+    private func loadSounds() {
+        starling.load(resource: Constants.Sounds.note1, type: Constants.Sounds.audioFormat, for: .note1)
+        starling.load(resource: Constants.Sounds.note2, type: Constants.Sounds.audioFormat, for: .note2)
+        starling.load(resource: Constants.Sounds.note3, type: Constants.Sounds.audioFormat, for: .note3)
+        starling.load(resource: Constants.Sounds.note4, type: Constants.Sounds.audioFormat, for: .note4)
+        starling.load(resource: Constants.Sounds.note5, type: Constants.Sounds.audioFormat, for: .note5)
+        starling.load(resource: Constants.Sounds.note6, type: Constants.Sounds.audioFormat, for: .note6)
+
     }
 
     private var soundSettingsStatus: Bool {
         return userDefaults.bool(forKey: Constants.UserDefaultsKeys.sound)
     }
+
+}
+
+extension SoundIdentifier {
+
+    static let note1 = SoundIdentifier("note1")
+    static let note2 = SoundIdentifier("note2")
+    static let note3 = SoundIdentifier("note3")
+    static let note4 = SoundIdentifier("note4")
+    static let note5 = SoundIdentifier("note5")
+    static let note6 = SoundIdentifier("note6")
+
 }

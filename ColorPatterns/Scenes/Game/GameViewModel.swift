@@ -53,14 +53,14 @@ extension GameViewModelImpl: GameViewModel {
     }
     
     func didPressColorBar(colorBar: Int) {
-        gameSounds.play(soundFile: 0)
+        gameSounds.play(soundFile: colorBar)
         gameEngine.pickedColor = gameEngine.randomColorsArray[colorBar]
         calculateScore()
         gameStarted = true
     }
 
     func didSwipeDown() {
-        gameSounds.play(soundFile: 1)
+        gameSounds.play(soundFile: 5)
     }
 }
 
