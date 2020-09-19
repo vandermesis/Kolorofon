@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,7 +98,7 @@ Cg
 	•	After colors change tap your chosen color to get a point.
 	•	If your chosen color is not on the screen, swipe down to shuffle colors.
 	•	If you tap wrong color you lose a point.
-	•	to exit game before time ends simple swipe up
+	•	To exit game before time ends simple swipe up
 </string>
                             <attributes>
                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -579,7 +579,7 @@ Cg
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58P-pd-zzn" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58P-pd-zzn" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                     <rect key="frame" x="82" y="782" width="250" height="40"/>
                     <color key="backgroundColor" name="buttonPrimary"/>
                     <constraints>
@@ -596,6 +596,7 @@ Cg
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
                 <constraint firstItem="58P-pd-zzn" firstAttribute="top" secondItem="zNJ-3h-9rN" secondAttribute="bottom" constant="10" id="Hcm-kg-Y67"/>
@@ -605,7 +606,6 @@ Cg
                 <constraint firstItem="zNJ-3h-9rN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jkt-7u-GfF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zNJ-3h-9rN" secondAttribute="trailing" constant="10" id="lrU-WV-auY"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="83" y="35"/>
         </view>
     </objects>
