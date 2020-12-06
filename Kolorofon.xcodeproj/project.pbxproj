@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09D5CA5B27D04F1C12EF958D /* Pods_ColorPatternsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4F57B4910FE0FB853D8AD9 /* Pods_ColorPatternsTests.framework */; };
+		428A983E40C70585F085F365 /* Pods_KolorofonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F88BFE55D77016DA3DF549 /* Pods_KolorofonTests.framework */; };
+		443FF96AFF9B6F3B13594314 /* Pods_Kolorofon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AE472EF157388BE618E86 /* Pods_Kolorofon.framework */; };
 		8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4222766CA700EDC257 /* AppDelegate.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */; };
-		BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA141A3823CBCDC70039A5DC /* R.generated.swift */; };
 		BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */; };
 		BA280040241980780040674D /* String+URLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA28003F241980780040674D /* String+URLConverter.swift */; };
 		BA2AD583240D87B0006245E9 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2AD581240D87B0006245E9 /* PauseViewController.swift */; };
@@ -28,6 +28,7 @@
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
 		BA94BCF922C38FB800D8157E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA94BCF822C38FB800D8157E /* Assets.xcassets */; };
 		BA9CFF4423E23D7000AA6A3D /* 990-inattentive.json in Resources */ = {isa = PBXBuildFile; fileRef = BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */; };
+		BAA29974257D08B800DC7809 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA29973257D08B800DC7809 /* R.generated.swift */; };
 		BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */; };
 		BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADABA223DA586900F36C8C /* StartMenuController.swift */; };
 		BAADABA523DA586900F36C8C /* StartMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAADABA323DA586900F36C8C /* StartMenuController.xib */; };
@@ -69,7 +70,6 @@
 		BAFEF4262402D791001FC2C3 /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFEF4242402D791001FC2C3 /* InfoController.xib */; };
 		BAFEF4282402D7D9001FC2C3 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */; };
 		BAFF547823D77F8300CC25ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF547723D77F8300CC25ED /* Constants.swift */; };
-		DD9FFBE7BDBA54D26E4E865F /* Pods_ColorPatterns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,18 +83,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062AE472EF157388BE618E86 /* Pods_Kolorofon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kolorofon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		084207AB7893791BEB5647BC /* Pods-ColorPatterns.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatterns.debug.xcconfig"; path = "Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns.debug.xcconfig"; sourceTree = "<group>"; };
+		25F88BFE55D77016DA3DF549 /* Pods_KolorofonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KolorofonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		342F3CC79C8E7F6AEBC72106 /* Pods-KolorofonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolorofonTests.debug.xcconfig"; path = "Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6515FDDD4C30026FA41F676B /* Pods-KolorofonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolorofonTests.release.xcconfig"; path = "Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests.release.xcconfig"; sourceTree = "<group>"; };
 		71C3F18AB67621B3C8A18A07 /* Pods-ColorPatternsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.debug.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D4F57B4910FE0FB853D8AD9 /* Pods_ColorPatternsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatternsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F3D39118FC2352462B09C7A /* Pods-Kolorofon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.release.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.release.xcconfig"; sourceTree = "<group>"; };
 		833621D2B7F92B544B5F70C6 /* Pods-ColorPatterns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatterns.release.xcconfig"; path = "Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns.release.xcconfig"; sourceTree = "<group>"; };
-		8433BF3F22766CA700EDC257 /* ColorPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8433BF3F22766CA700EDC257 /* Kolorofon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolorofon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433BF4222766CA700EDC257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorPatterns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedColorTile.swift; sourceTree = "<group>"; };
-		BA141A3823CBCDC70039A5DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StringConverter.swift"; sourceTree = "<group>"; };
 		BA28003F241980780040674D /* String+URLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLConverter.swift"; sourceTree = "<group>"; };
 		BA2AD581240D87B0006245E9 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		BA94BCF822C38FB800D8157E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9CFF4323E23D7000AA6A3D /* 990-inattentive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "990-inattentive.json"; sourceTree = "<group>"; };
+		BAA29973257D08B800DC7809 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreator.swift; sourceTree = "<group>"; };
 		BAADABA223DA586900F36C8C /* StartMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuController.swift; sourceTree = "<group>"; };
 		BAADABA323DA586900F36C8C /* StartMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartMenuController.xib; sourceTree = "<group>"; };
@@ -120,7 +123,7 @@
 		BAC495C723D8B7940041088C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BAC495C923D8BA130041088C /* GameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineTests.swift; sourceTree = "<group>"; };
 		BAC495CB23D8BDC70041088C /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
-		BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC92D9222BA7B2B00D3B025 /* KolorofonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KolorofonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC92D9622BA7B2B00D3B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBC10623DB0FF400D5E4F7 /* StartMenuCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuCreatorTests.swift; sourceTree = "<group>"; };
 		BACBC10823DB2F5A00D5E4F7 /* StartMenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModelTests.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		BAFEF4242402D791001FC2C3 /* InfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoController.xib; sourceTree = "<group>"; };
 		BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		BAFF547723D77F8300CC25ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DC471DF7BA9E4ADF967D70A9 /* Pods-Kolorofon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.debug.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.debug.xcconfig"; sourceTree = "<group>"; };
 		F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.release.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,8 +166,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD9FFBE7BDBA54D26E4E865F /* Pods_ColorPatterns.framework in Frameworks */,
 				BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */,
+				443FF96AFF9B6F3B13594314 /* Pods_Kolorofon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D5CA5B27D04F1C12EF958D /* Pods_ColorPatternsTests.framework in Frameworks */,
+				428A983E40C70585F085F365 /* Pods_KolorofonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,9 +187,9 @@
 			children = (
 				BA02700322BC491000846DDC /* README.md */,
 				BA2F742722C3597B007573FF /* Demo */,
-				8433BF4122766CA700EDC257 /* ColorPatterns */,
+				8433BF4122766CA700EDC257 /* Kolorofon */,
 				8433BF4022766CA700EDC257 /* Products */,
-				BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */,
+				BAC92D9322BA7B2B00D3B025 /* KolorofonTests */,
 				E89C705E715439D10AC0CC5C /* Pods */,
 				E968CB20018162CE2BC346A2 /* Frameworks */,
 			);
@@ -194,13 +198,13 @@
 		8433BF4022766CA700EDC257 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8433BF3F22766CA700EDC257 /* ColorPatterns.app */,
-				BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */,
+				8433BF3F22766CA700EDC257 /* Kolorofon.app */,
+				BAC92D9222BA7B2B00D3B025 /* KolorofonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8433BF4122766CA700EDC257 /* ColorPatterns */ = {
+		8433BF4122766CA700EDC257 /* Kolorofon */ = {
 			isa = PBXGroup;
 			children = (
 				BAD1026623526BC000A3276F /* Models */,
@@ -209,7 +213,7 @@
 				BAFAC24C23CC8DCF00C74D92 /* Extensions */,
 				BA94BCF722C3845600D8157E /* Support */,
 			);
-			path = ColorPatterns;
+			path = Kolorofon;
 			sourceTree = "<group>";
 		};
 		BA199B7B2292F70D00CD7C64 /* Sounds */ = {
@@ -248,7 +252,7 @@
 			children = (
 				8433BF4E22766CA800EDC257 /* Info.plist */,
 				8433BF4222766CA700EDC257 /* AppDelegate.swift */,
-				BA141A3823CBCDC70039A5DC /* R.generated.swift */,
+				BAA29973257D08B800DC7809 /* R.generated.swift */,
 				8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */,
 				BAC495C723D8B7940041088C /* Localizable.strings */,
 				BAB2923822C533EC00A4EBA5 /* UpdateColors.playground */,
@@ -269,14 +273,14 @@
 			path = LottieAnimations;
 			sourceTree = "<group>";
 		};
-		BAC92D9322BA7B2B00D3B025 /* ColorPatternsTests */ = {
+		BAC92D9322BA7B2B00D3B025 /* KolorofonTests */ = {
 			isa = PBXGroup;
 			children = (
 				BAD7ADA423D87E6600537D7F /* Helpers */,
 				BAD7ADA323D87C9600537D7F /* Scenes */,
 				BAC92D9622BA7B2B00D3B025 /* Info.plist */,
 			);
-			path = ColorPatternsTests;
+			path = KolorofonTests;
 			sourceTree = "<group>";
 		};
 		BACBC10523DB0FD600D5E4F7 /* StartMenu */ = {
@@ -426,6 +430,10 @@
 				833621D2B7F92B544B5F70C6 /* Pods-ColorPatterns.release.xcconfig */,
 				71C3F18AB67621B3C8A18A07 /* Pods-ColorPatternsTests.debug.xcconfig */,
 				F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */,
+				DC471DF7BA9E4ADF967D70A9 /* Pods-Kolorofon.debug.xcconfig */,
+				7F3D39118FC2352462B09C7A /* Pods-Kolorofon.release.xcconfig */,
+				342F3CC79C8E7F6AEBC72106 /* Pods-KolorofonTests.debug.xcconfig */,
+				6515FDDD4C30026FA41F676B /* Pods-KolorofonTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -434,8 +442,8 @@
 			isa = PBXGroup;
 			children = (
 				BAC0B53823F341EF0073066A /* GameKit.framework */,
-				8F079FF8B3FBE553E972EE24 /* Pods_ColorPatterns.framework */,
-				7D4F57B4910FE0FB853D8AD9 /* Pods_ColorPatternsTests.framework */,
+				062AE472EF157388BE618E86 /* Pods_Kolorofon.framework */,
+				25F88BFE55D77016DA3DF549 /* Pods_KolorofonTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -443,9 +451,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8433BF3E22766CA700EDC257 /* ColorPatterns */ = {
+		8433BF3E22766CA700EDC257 /* Kolorofon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "ColorPatterns" */;
+			buildConfigurationList = 8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "Kolorofon" */;
 			buildPhases = (
 				BD248D2A5B760DA3697DB235 /* [CP] Check Pods Manifest.lock */,
 				BA141A3723CBCD250039A5DC /* R.swift */,
@@ -459,14 +467,14 @@
 			);
 			dependencies = (
 			);
-			name = ColorPatterns;
+			name = Kolorofon;
 			productName = ColorPatterns;
-			productReference = 8433BF3F22766CA700EDC257 /* ColorPatterns.app */;
+			productReference = 8433BF3F22766CA700EDC257 /* Kolorofon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BAC92D9122BA7B2B00D3B025 /* ColorPatternsTests */ = {
+		BAC92D9122BA7B2B00D3B025 /* KolorofonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAC92D9B22BA7B2B00D3B025 /* Build configuration list for PBXNativeTarget "ColorPatternsTests" */;
+			buildConfigurationList = BAC92D9B22BA7B2B00D3B025 /* Build configuration list for PBXNativeTarget "KolorofonTests" */;
 			buildPhases = (
 				A3F16866112D63C14D27516A /* [CP] Check Pods Manifest.lock */,
 				BAC92D8E22BA7B2B00D3B025 /* Sources */,
@@ -479,9 +487,9 @@
 			dependencies = (
 				BAC92D9822BA7B2B00D3B025 /* PBXTargetDependency */,
 			);
-			name = ColorPatternsTests;
+			name = KolorofonTests;
 			productName = ColorPatternsTests;
-			productReference = BAC92D9222BA7B2B00D3B025 /* ColorPatternsTests.xctest */;
+			productReference = BAC92D9222BA7B2B00D3B025 /* KolorofonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -504,7 +512,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8433BF3A22766CA700EDC257 /* Build configuration list for PBXProject "ColorPatterns" */;
+			buildConfigurationList = 8433BF3A22766CA700EDC257 /* Build configuration list for PBXProject "Kolorofon" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -517,8 +525,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8433BF3E22766CA700EDC257 /* ColorPatterns */,
-				BAC92D9122BA7B2B00D3B025 /* ColorPatternsTests */,
+				8433BF3E22766CA700EDC257 /* Kolorofon */,
+				BAC92D9122BA7B2B00D3B025 /* KolorofonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -567,15 +575,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorPatterns/Pods-ColorPatterns-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3F16866112D63C14D27516A /* [CP] Check Pods Manifest.lock */ = {
@@ -593,7 +601,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ColorPatternsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KolorofonTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -614,11 +622,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/ColorPatterns/Support/R.generated.swift,
+				$SRCROOT/Kolorofon/Support/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ColorPatterns/Support/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Kolorofon/Support/R.generated.swift\"\n";
 		};
 		BA141A3A23CBCEBE0039A5DC /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -653,7 +661,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ColorPatterns-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Kolorofon-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -666,15 +674,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -696,12 +704,12 @@
 				BAD14BB723DA04F500FF2D15 /* GameOverViewModel.swift in Sources */,
 				BAADABA123DA57DF00F36C8C /* StartMenuCreator.swift in Sources */,
 				BA8A2C2A23533F85002744CB /* Score.swift in Sources */,
-				BA141A3923CBCDC70039A5DC /* R.generated.swift in Sources */,
 				BA9484FD23535E0800375037 /* GameTimer.swift in Sources */,
 				BAD14BB123DA041B00FF2D15 /* GameOverCreator.swift in Sources */,
 				BA8A2C2823533B11002744CB /* GameSounds.swift in Sources */,
 				BAFAC25723CC91D700C74D92 /* GameController.swift in Sources */,
 				BA3554C423533779007BC724 /* SettingsBundleHelper.swift in Sources */,
+				BAA29974257D08B800DC7809 /* R.generated.swift in Sources */,
 				BAFF547823D77F8300CC25ED /* Constants.swift in Sources */,
 				BA63DBBB2516533C000C77BA /* Starling.swift in Sources */,
 				BA280040241980780040674D /* String+URLConverter.swift in Sources */,
@@ -739,7 +747,7 @@
 /* Begin PBXTargetDependency section */
 		BAC92D9822BA7B2B00D3B025 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8433BF3E22766CA700EDC257 /* ColorPatterns */;
+			target = 8433BF3E22766CA700EDC257 /* Kolorofon */;
 			targetProxy = BAC92D9722BA7B2B00D3B025 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -876,19 +884,19 @@
 		};
 		8433BF5222766CA800EDC257 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 084207AB7893791BEB5647BC /* Pods-ColorPatterns.debug.xcconfig */;
+			baseConfigurationReference = DC471DF7BA9E4ADF967D70A9 /* Pods-Kolorofon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
-				INFOPLIST_FILE = ColorPatterns/Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = Kolorofon/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vandermesis.Kolorofon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -898,19 +906,19 @@
 		};
 		8433BF5322766CA800EDC257 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 833621D2B7F92B544B5F70C6 /* Pods-ColorPatterns.release.xcconfig */;
+			baseConfigurationReference = 7F3D39118FC2352462B09C7A /* Pods-Kolorofon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
-				INFOPLIST_FILE = ColorPatterns/Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = Kolorofon/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vandermesis.Kolorofon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -920,7 +928,7 @@
 		};
 		BAC92D9922BA7B2B00D3B025 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71C3F18AB67621B3C8A18A07 /* Pods-ColorPatternsTests.debug.xcconfig */;
+			baseConfigurationReference = 342F3CC79C8E7F6AEBC72106 /* Pods-KolorofonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -936,13 +944,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorPatterns.app/ColorPatterns";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kolorofon.app/Kolorofon";
 			};
 			name = Debug;
 		};
 		BAC92D9A22BA7B2B00D3B025 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */;
+			baseConfigurationReference = 6515FDDD4C30026FA41F676B /* Pods-KolorofonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -958,14 +966,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorPatterns.app/ColorPatterns";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kolorofon.app/Kolorofon";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8433BF3A22766CA700EDC257 /* Build configuration list for PBXProject "ColorPatterns" */ = {
+		8433BF3A22766CA700EDC257 /* Build configuration list for PBXProject "Kolorofon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8433BF4F22766CA800EDC257 /* Debug */,
@@ -974,7 +982,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "ColorPatterns" */ = {
+		8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "Kolorofon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8433BF5222766CA800EDC257 /* Debug */,
@@ -983,7 +991,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAC92D9B22BA7B2B00D3B025 /* Build configuration list for PBXNativeTarget "ColorPatternsTests" */ = {
+		BAC92D9B22BA7B2B00D3B025 /* Build configuration list for PBXNativeTarget "KolorofonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BAC92D9922BA7B2B00D3B025 /* Debug */,

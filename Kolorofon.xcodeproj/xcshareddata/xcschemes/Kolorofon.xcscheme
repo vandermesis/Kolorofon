@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8433BF3E22766CA700EDC257"
-               BuildableName = "ColorPatterns.app"
-               BlueprintName = "ColorPatterns"
-               ReferencedContainer = "container:ColorPatterns.xcodeproj">
+               BuildableName = "Kolorofon.app"
+               BlueprintName = "Kolorofon"
+               ReferencedContainer = "container:Kolorofon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,18 +34,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8433BF3E22766CA700EDC257"
-            BuildableName = "ColorPatterns.app"
-            BlueprintName = "ColorPatterns"
-            ReferencedContainer = "container:ColorPatterns.xcodeproj">
+            BuildableName = "Kolorofon.app"
+            BlueprintName = "Kolorofon"
+            ReferencedContainer = "container:Kolorofon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8433BF3E22766CA700EDC257"
-            BuildableName = "ColorPatterns.app"
-            BlueprintName = "ColorPatterns"
-            ReferencedContainer = "container:ColorPatterns.xcodeproj">
+            BuildableName = "Kolorofon.app"
+            BlueprintName = "Kolorofon"
+            ReferencedContainer = "container:Kolorofon.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -54,9 +54,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BAC92D9122BA7B2B00D3B025"
-               BuildableName = "ColorPatternsTests.xctest"
-               BlueprintName = "ColorPatternsTests"
-               ReferencedContainer = "container:ColorPatterns.xcodeproj">
+               BuildableName = "KolorofonTests.xctest"
+               BlueprintName = "KolorofonTests"
+               ReferencedContainer = "container:Kolorofon.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8433BF3E22766CA700EDC257"
-            BuildableName = "ColorPatterns.app"
-            BlueprintName = "ColorPatterns"
-            ReferencedContainer = "container:ColorPatterns.xcodeproj">
+            BuildableName = "Kolorofon.app"
+            BlueprintName = "Kolorofon"
+            ReferencedContainer = "container:Kolorofon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8433BF3E22766CA700EDC257"
-            BuildableName = "ColorPatterns.app"
-            BlueprintName = "ColorPatterns"
-            ReferencedContainer = "container:ColorPatterns.xcodeproj">
+            BuildableName = "Kolorofon.app"
+            BlueprintName = "Kolorofon"
+            ReferencedContainer = "container:Kolorofon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

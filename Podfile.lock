@@ -1,11 +1,11 @@
 PODS:
-  - lottie-ios (3.1.5)
-  - Nimble (8.0.5)
-  - Quick (2.2.0)
-  - R.swift (5.1.0):
-    - R.swift.Library (~> 5.1.0)
-  - R.swift.Library (5.1.0)
-  - SwiftLint (0.38.2)
+  - lottie-ios (3.1.8)
+  - Nimble (9.0.0)
+  - Quick (3.0.0)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - SwiftLint (0.40.2)
 
 DEPENDENCIES:
   - lottie-ios
@@ -24,13 +24,13 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
-  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
-  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
-  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  SwiftLint: 1216c910d27c2633ade33b4f071bb6b930982e62
 
-PODFILE CHECKSUM: a78c406c0c56fa23743bd95ef33a5cdc31f63c4b
+PODFILE CHECKSUM: 64ec832732b49128efe4d721d6b706812a3b1d30
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
