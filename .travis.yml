@@ -3,4 +3,4 @@ osx_image: xcode12.2
 
 script:
 - bundle exec danger
-- set -o pipefail && xcodebuild -workspace Kolofofon.xcworkspace -scheme Kolorofon -destination platform\=iOS\ Simulator,OS\=14.2,name\=iPhone\ 12 Pro build test | xcpretty
+- set -o pipefail && xcodebuild -workspace Kolofofon.xcworkspace -scheme Kolorofon -destination platform\=iOS\ Simulator,OS\=14.2,name\=iPhone\ 12 build test | xcpretty
