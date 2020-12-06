@@ -8,7 +8,7 @@
 
 import Foundation
 
-@testable import ColorPatterns
+@testable import Kolorofon
 
 final class FakeGameTimer: GameTimer {
 

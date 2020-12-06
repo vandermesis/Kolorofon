@@ -8,7 +8,7 @@
 
 import UIKit
 
-@testable import ColorPatterns
+@testable import Kolorofon
 
 final class FakeGameController: UIViewController {
 

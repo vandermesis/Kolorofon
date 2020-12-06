@@ -9,7 +9,7 @@
 import Quick
 import Nimble
 
-@testable import ColorPatterns
+@testable import Kolorofon
 
 final class GameOverCreatorTests: QuickSpec {
 
