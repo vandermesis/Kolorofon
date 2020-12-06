@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +35,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour Patterns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TwK-Py-VSo">
-                            <rect key="frame" x="7.6666666666666572" y="23.666666666666668" width="255.99999999999997" height="44.333333333333329"/>
+                            <rect key="frame" x="6.3333333333333428" y="23.666666666666668" width="258.66666666666663" height="44.333333333333329"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
                             <color key="textColor" name="textPrimary"/>
@@ -54,7 +54,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-S5-qSi">
                     <rect key="frame" x="73" y="632" width="268" height="190"/>
                     <subviews>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-oU-m8d" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-oU-m8d" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="268" height="40"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
@@ -69,7 +69,7 @@
                                 <action selector="infoButtonPressed:" destination="-1" eventType="touchUpInside" id="xcU-Oq-WN1"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-iV-jci" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-iV-jci" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="50" width="268" height="40"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
@@ -101,7 +101,7 @@
                                 <action selector="difficultySegmentChanged:" destination="-1" eventType="valueChanged" id="Acj-fb-pW9"/>
                             </connections>
                         </segmentedControl>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Lx-7Hj" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Lx-7Hj" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="150" width="268" height="40"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
@@ -119,6 +119,7 @@
                     </subviews>
                 </stackView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
                 <constraint firstItem="Rpb-Hp-Vqq" firstAttribute="top" secondItem="MrS-4x-4oq" secondAttribute="bottom" id="0xI-4n-9at"/>
@@ -128,10 +129,12 @@
                 <constraint firstItem="MrS-4x-4oq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nRu-Xw-Ptz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cm2-S5-qSi" secondAttribute="bottom" constant="40" id="zC2-fR-eIw"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-57" y="-75"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Rpb-Hp-Vqq"/>
+    </designables>
     <resources>
         <namedColor name="backgroundSecondary">
             <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
