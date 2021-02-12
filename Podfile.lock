@@ -1,5 +1,4 @@
 PODS:
-  - lottie-ios (3.2.1)
   - Nimble (9.0.0)
   - Quick (3.1.2)
   - R.swift (5.3.1):
@@ -8,7 +7,6 @@ PODS:
   - SwiftLint (0.42.0)
 
 DEPENDENCIES:
-  - lottie-ios
   - Nimble
   - Quick
   - R.swift
@@ -16,7 +14,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - lottie-ios
     - Nimble
     - Quick
     - R.swift
@@ -24,13 +21,12 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
   R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 64ec832732b49128efe4d721d6b706812a3b1d30
+PODFILE CHECKSUM: ffc8d5ace515ebd1e1611661326e2876dd2a4ba6
 
 COCOAPODS: 1.10.0

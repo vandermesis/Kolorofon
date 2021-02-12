@@ -11,7 +11,6 @@ target 'Kolorofon' do
   # Pods for Kolorofon
   pod 'SwiftLint'
   pod 'R.swift'
-  pod 'lottie-ios'
 
   target 'KolorofonTests' do
     inherit! :search_paths

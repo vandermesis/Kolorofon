@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import Lottie
 import GameKit
 
 final class StartMenuController: UIViewController {
 
     @IBOutlet private var difficultyButton: [SharedButton]!
-    @IBOutlet private weak var lottieView: AnimationView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
 
     private var viewModel: StartMenuViewModel
@@ -28,13 +26,10 @@ final class StartMenuController: UIViewController {
     }
 
     override func viewDidLoad() {
-        setupNotifications()
         setupSegmentedControl()
-        setupLottieView(animation: .lottieAnimation)
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        startAnimation()
         viewModel.checkGameCenterStatus()
     }
 
@@ -66,12 +61,6 @@ final class StartMenuController: UIViewController {
 
 private extension StartMenuController {
 
-    private func setupLottieView(animation: String) {
-        lottieView?.animation = Animation.named(animation)
-        lottieView?.loopMode = .loop
-        lottieView?.animationSpeed = 1
-    }
-
     private func presentGameCenterController() {
         let gameCenterController = GKGameCenterViewController()
         gameCenterController.gameCenterDelegate = self
@@ -89,16 +78,6 @@ private extension StartMenuController {
                                                                                      size: .difficultyControlFontSize) as Any], for: .normal)
     }
 
-    private func setupNotifications() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(startAnimation),
-                                               name: UIApplication.willEnterForegroundNotification,
-                                               object: nil)
-    }
-
-    @objc private func startAnimation() {
-        lottieView.play()
-    }
 }
 
 extension StartMenuController: GKGameCenterControllerDelegate {
