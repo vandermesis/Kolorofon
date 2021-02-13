@@ -39,11 +39,11 @@ final class GameTimerTests: QuickSpec {
             }
 
             it("should reduce timeLeft property by 1") {
-                expect(gameTimer.timeLeft).toEventually(beLessThan(90), timeout: 2)
+                expect(gameTimer.timeLeft).toEventually(beLessThan(90), timeout: .seconds(2))
             }
 
             it("should call delegate with updated data") {
-                expect(gameController.timerDidUpdateCalled).toEventually(beTrue(), timeout: 2)
+                expect(gameController.timerDidUpdateCalled).toEventually(beTrue(), timeout: .seconds(2))
             }
 
             context("when timer reaches 30") {
@@ -53,7 +53,7 @@ final class GameTimerTests: QuickSpec {
                 }
 
                 it("should call delegate that 29 seconds game left") {
-                    expect(gameController.timerDidUpdateSecondsCalled).toEventually(equal(29), timeout: 2)
+                    expect(gameController.timerDidUpdateSecondsCalled).toEventually(equal(29), timeout: .seconds(2))
                 }
             }
 
@@ -64,7 +64,7 @@ final class GameTimerTests: QuickSpec {
                 }
 
                 it("should call delegate that game timer did end counting") {
-                    expect(gameController.timerDidEndCountingCalled).toEventually(beTrue(), timeout: 2)
+                    expect(gameController.timerDidEndCountingCalled).toEventually(beTrue(), timeout: .seconds(2))
                 }
             }
         }
