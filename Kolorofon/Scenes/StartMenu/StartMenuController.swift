@@ -70,11 +70,19 @@ private extension StartMenuController {
     }
 
     private func setupSegmentedControl() {
-        
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.textTertiary() as Any,
-                                                 NSAttributedString.Key.font: R.font.interRegular(size: 14) as Any], for: .selected)
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.buttonPrimary() as Any,
-                                                 NSAttributedString.Key.font: R.font.interRegular(size: 14) as Any], for: .normal)
+        segmentedControl.setTitleTextAttributes(
+            [
+                NSAttributedString.Key.foregroundColor: R.color.textTertiary() as Any,
+                NSAttributedString.Key.font: R.font.interRegular(size: 14) as Any
+            ],
+            for: .selected
+        )
+        segmentedControl.setTitleTextAttributes(
+            [
+                NSAttributedString.Key.foregroundColor: R.color.buttonPrimary() as Any,
+                NSAttributedString.Key.font: R.font.interRegular(size: 14) as Any],
+            for: .normal
+        )
     }
 
 }
@@ -83,9 +91,4 @@ extension StartMenuController: GKGameCenterControllerDelegate {
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
-}
-
-private extension CGFloat {
-
-    static let difficultyControlFontSize: CGFloat = 14
 }

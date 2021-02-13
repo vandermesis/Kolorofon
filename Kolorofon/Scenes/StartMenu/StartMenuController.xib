@@ -79,14 +79,15 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-G0-Sbs">
                             <rect key="frame" x="0.0" y="0.0" width="352" height="64"/>
                             <subviews>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-Qi-gtv">
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-Qi-gtv">
                                     <rect key="frame" x="8" y="8" width="336" height="49"/>
-                                    <color key="backgroundColor" name="backgroundSecondary"/>
+                                    <color key="backgroundColor" red="0.15292179580000001" green="0.15295472739999999" blue="0.15291747450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <segments>
                                         <segment title="EASY"/>
                                         <segment title="MEDIUM"/>
                                         <segment title="HARD"/>
                                     </segments>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="selectedSegmentTintColor" name="buttonPrimary"/>
                                     <connections>
                                         <action selector="difficultySegmentChanged:" destination="-1" eventType="valueChanged" id="Acj-fb-pW9"/>
