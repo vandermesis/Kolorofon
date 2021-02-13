@@ -31,7 +31,7 @@ private extension StartMenuViewModel {
 
     private func authenticatePlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.local
-        localPlayer.authenticateHandler = { viewController, error -> Void in
+        localPlayer.authenticateHandler = { viewController, _ -> Void in
             if let viewController = viewController {
                 self.controller?.present(viewController, animated: true, completion: nil)
             } else if localPlayer.isAuthenticated {
