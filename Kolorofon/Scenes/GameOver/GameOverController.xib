@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOverController" customModule="ColorPatterns" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOverController" customModule="Kolorofon" customModuleProvider="target">
             <connections>
                 <outlet property="scoreLabel" destination="EKJ-cG-au5" id="hgk-ti-Mfw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,74 +27,77 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-4M-h4e">
-                    <rect key="frame" x="103" y="94" width="208" height="50.666666666666657"/>
-                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
-                    <color key="textColor" name="textPrimary"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-4M-h4e">
+                    <rect key="frame" x="90.333333333333329" y="84" width="233.66666666666669" height="46.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="40"/>
+                    <color key="textColor" name="textTertiary"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-BO-Ic4">
-                    <rect key="frame" x="68" y="366" width="278" height="174.33333333333337"/>
+                    <rect key="frame" x="31" y="406.33333333333331" width="352" height="161.66666666666669"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-sv-7j9">
-                            <rect key="frame" x="131.66666666666663" y="0.0" width="146.33333333333337" height="38"/>
-                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-sv-7j9">
+                            <rect key="frame" x="156.33333333333337" y="0.0" width="195.66666666666663" height="35"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
                             <color key="textColor" name="textSecondary"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-cG-au5">
-                            <rect key="frame" x="0.0" y="47.999999999999993" width="278" height="126.33333333333331"/>
-                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="100"/>
-                            <color key="textColor" name="textPrimary"/>
+                            <rect key="frame" x="74" y="45.000000000000007" width="278" height="116.66666666666669"/>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="100"/>
+                            <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-fj-xGY" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
-                    <rect key="frame" x="82" y="782" width="250" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-fj-xGY">
+                    <rect key="frame" x="31" y="768" width="352" height="64"/>
                     <color key="backgroundColor" name="buttonPrimary"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="250" id="07T-JH-uuB"/>
-                        <constraint firstAttribute="height" constant="40" id="uVH-0q-mNa"/>
+                        <constraint firstAttribute="height" constant="64" id="uVH-0q-mNa"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
-                    <state key="normal" title="Start Menu">
+                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                    <state key="normal" title="START MENU">
                         <color key="titleColor" name="textTertiary"/>
                     </state>
                     <state key="highlighted" title="Start Menu"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="restartGameButtonPressed:" destination="-1" eventType="touchUpInside" id="NZL-kS-v59"/>
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
-                <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0d7-f8-GPr"/>
-                <constraint firstItem="may-4M-h4e" firstAttribute="centerX" secondItem="OMn-BO-Ic4" secondAttribute="centerX" id="BPK-z5-AEd"/>
-                <constraint firstItem="may-4M-h4e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="C0L-1x-EmS"/>
-                <constraint firstItem="OMn-BO-Ic4" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MQT-tz-6DM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Owa-fj-xGY" secondAttribute="bottom" constant="40" id="hjl-RD-ktA"/>
-                <constraint firstItem="Owa-fj-xGY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="inm-27-IRb"/>
+                <constraint firstItem="may-4M-h4e" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7DB-4I-RcQ"/>
+                <constraint firstItem="may-4M-h4e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="C0L-1x-EmS"/>
+                <constraint firstItem="OMn-BO-Ic4" firstAttribute="leading" secondItem="Owa-fj-xGY" secondAttribute="leading" id="Hiw-9z-sbQ"/>
+                <constraint firstItem="OMn-BO-Ic4" firstAttribute="trailing" secondItem="Owa-fj-xGY" secondAttribute="trailing" id="QIA-qM-vES"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Owa-fj-xGY" secondAttribute="trailing" constant="31" id="fw1-9z-05c"/>
+                <constraint firstAttribute="bottom" secondItem="Owa-fj-xGY" secondAttribute="bottom" constant="64" id="hjl-RD-ktA"/>
+                <constraint firstItem="Owa-fj-xGY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="mbO-zM-i1f"/>
+                <constraint firstItem="Owa-fj-xGY" firstAttribute="top" secondItem="OMn-BO-Ic4" secondAttribute="bottom" constant="200" id="o7c-nV-dRB"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="26" y="8"/>
         </view>
     </objects>
     <resources>
         <namedColor name="backgroundSecondary">
-            <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19215686274509805" green="0.19215686274509805" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonPrimary">
-            <color red="0.8529999852180481" green="0.29800000786781311" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="textPrimary">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textSecondary">
-            <color red="0.47600001096725464" green="0.47600001096725464" blue="0.47600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textTertiary">
-            <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

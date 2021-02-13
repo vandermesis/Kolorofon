@@ -34,11 +34,11 @@ final class PauseViewController: UIViewController {
         scoreLabel.text = userScore
     }
 
-    @IBAction private func restartButtonPressed(_ sender: SharedButton) {
+    @IBAction private func restartButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false, completion: delegate?.didPressRestart)
     }
 
-    @IBAction private func backButtonPressed(_ sender: SharedButton) {
+    @IBAction private func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false, completion: delegate?.didPressBackButton)
     }
 }

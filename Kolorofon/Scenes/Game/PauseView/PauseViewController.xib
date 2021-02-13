@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PauseViewController" customModule="ColorPatterns" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PauseViewController" customModule="Kolorofon" customModuleProvider="target">
             <connections>
                 <outlet property="scoreLabel" destination="gMY-VN-jwA" id="M5k-1M-z0A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,58 +27,66 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-UH-zpW">
-                    <rect key="frame" x="154.33333333333334" y="94" width="105.33333333333334" height="50.666666666666657"/>
-                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
-                    <color key="textColor" name="textPrimary"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAUSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-UH-zpW">
+                    <rect key="frame" x="143" y="84" width="128.33333333333337" height="46.666666666666657"/>
+                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="40"/>
+                    <color key="textColor" name="textTertiary"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-1e-Tga">
-                    <rect key="frame" x="68" y="366" width="278" height="174.33333333333337"/>
+                    <rect key="frame" x="31" y="332.33333333333331" width="352" height="161.66666666666669"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNv-eU-31r">
-                            <rect key="frame" x="131.66666666666663" y="0.0" width="146.33333333333337" height="38"/>
-                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNv-eU-31r">
+                            <rect key="frame" x="156.33333333333337" y="0.0" width="195.66666666666663" height="35"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
                             <color key="textColor" name="textSecondary"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-VN-jwA">
-                            <rect key="frame" x="0.0" y="47.999999999999993" width="278" height="126.33333333333331"/>
-                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="100"/>
-                            <color key="textColor" name="textPrimary"/>
+                            <rect key="frame" x="74" y="45.000000000000007" width="278" height="116.66666666666669"/>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="100"/>
+                            <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vcD-mD-Jgd">
-                    <rect key="frame" x="73" y="732" width="268" height="90"/>
+                    <rect key="frame" x="31" y="694" width="352" height="138"/>
                     <subviews>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgp-YO-uau" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="268" height="40"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgp-YO-uau">
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="64"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="268" id="loX-3Z-i9F"/>
-                                <constraint firstAttribute="height" constant="40" id="vxl-iM-OK4"/>
+                                <constraint firstAttribute="height" constant="64" id="vxl-iM-OK4"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
-                            <state key="normal" title="Restart">
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <state key="normal" title="RESTART">
                                 <color key="titleColor" name="textTertiary"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="restartButtonPressed:" destination="-1" eventType="touchUpInside" id="2Vx-YZ-kHO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ec-3w-Z3B" customClass="SharedButton" customModule="ColorPatterns" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="50" width="268" height="40"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ec-3w-Z3B">
+                            <rect key="frame" x="0.0" y="74" width="352" height="64"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Bgu-5G-0IN"/>
-                                <constraint firstAttribute="width" constant="268" id="VJ4-3H-ux0"/>
+                                <constraint firstAttribute="height" constant="64" id="Bgu-5G-0IN"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="22"/>
-                            <state key="normal" title="Main Menu">
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <state key="normal" title="MAIN MENU">
                                 <color key="titleColor" name="textTertiary"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="pm4-Lz-3cy"/>
                             </connections>
@@ -79,34 +94,33 @@
                     </subviews>
                 </stackView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
-                <constraint firstItem="RJA-1e-Tga" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="O8G-tX-NOi"/>
-                <constraint firstItem="QxO-UH-zpW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="P8b-Bg-KIv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vcD-mD-Jgd" secondAttribute="bottom" constant="40" id="S1D-uz-Ovw"/>
-                <constraint firstItem="vcD-mD-Jgd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VyW-9x-0gB"/>
+                <constraint firstItem="RJA-1e-Tga" firstAttribute="leading" secondItem="vcD-mD-Jgd" secondAttribute="leading" id="7qe-kE-zfu"/>
+                <constraint firstItem="vcD-mD-Jgd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="8Tc-Gb-gee"/>
+                <constraint firstItem="RJA-1e-Tga" firstAttribute="trailing" secondItem="vcD-mD-Jgd" secondAttribute="trailing" id="FaQ-D1-MwI"/>
+                <constraint firstItem="QxO-UH-zpW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="P8b-Bg-KIv"/>
+                <constraint firstAttribute="bottom" secondItem="vcD-mD-Jgd" secondAttribute="bottom" constant="64" id="S1D-uz-Ovw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vcD-mD-Jgd" secondAttribute="trailing" constant="31" id="cLc-Fx-6cM"/>
                 <constraint firstItem="QxO-UH-zpW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="n1W-tC-XY1"/>
-                <constraint firstItem="RJA-1e-Tga" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="prZ-Jg-gWa"/>
+                <constraint firstItem="vcD-mD-Jgd" firstAttribute="top" secondItem="RJA-1e-Tga" secondAttribute="bottom" constant="200" id="qTi-mE-rkG"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="70" y="12"/>
         </view>
     </objects>
     <resources>
         <namedColor name="backgroundSecondary">
-            <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19215686274509805" green="0.19215686274509805" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonPrimary">
-            <color red="0.8529999852180481" green="0.29800000786781311" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="textPrimary">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textSecondary">
-            <color red="0.47600001096725464" green="0.47600001096725464" blue="0.47600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textTertiary">
-            <color red="0.99800002574920654" green="0.9869999885559082" blue="0.9309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

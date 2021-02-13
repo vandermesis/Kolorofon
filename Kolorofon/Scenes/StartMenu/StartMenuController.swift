@@ -11,7 +11,7 @@ import GameKit
 
 final class StartMenuController: UIViewController {
 
-    @IBOutlet private var difficultyButton: [SharedButton]!
+    @IBOutlet private var difficultyButton: [UIButton]!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
 
     private var viewModel: StartMenuViewModel
@@ -70,12 +70,11 @@ private extension StartMenuController {
     }
 
     private func setupSegmentedControl() {
+        
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.textTertiary() as Any,
-                                                 NSAttributedString.Key.font: UIFont(name: .trebuchetMS,
-                                                                                     size: .difficultyControlFontSize) as Any], for: .selected)
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black,
-                                                 NSAttributedString.Key.font: UIFont(name: .trebuchetMS,
-                                                                                     size: .difficultyControlFontSize) as Any], for: .normal)
+                                                 NSAttributedString.Key.font: R.font.interRegular(size: 14) as Any], for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.buttonPrimary() as Any,
+                                                 NSAttributedString.Key.font: R.font.interRegular(size: 14) as Any], for: .normal)
     }
 
 }
@@ -86,13 +85,7 @@ extension StartMenuController: GKGameCenterControllerDelegate {
     }
 }
 
-private extension String {
-
-    static let trebuchetMS = "Trebuchet MS"
-    static let lottieAnimation = "990-inattentive"
-}
-
 private extension CGFloat {
 
-    static let difficultyControlFontSize: CGFloat = 20
+    static let difficultyControlFontSize: CGFloat = 14
 }
