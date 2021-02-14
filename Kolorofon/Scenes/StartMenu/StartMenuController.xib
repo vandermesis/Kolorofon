@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,7 +23,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-Px-1L1">
@@ -70,17 +71,17 @@
                         </button>
                     </subviews>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-bh-QcM">
-                    <rect key="frame" x="31" y="426" width="352" height="54"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kolorofon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-bh-QcM">
+                    <rect key="frame" x="32.333333333333343" y="391.66666666666669" width="310.66666666666663" height="38.666666666666686"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-S5-qSi">
-                    <rect key="frame" x="31" y="680" width="352" height="152"/>
+                    <rect key="frame" x="31" y="596" width="313" height="152"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-G0-Sbs">
-                            <rect key="frame" x="0.0" y="0.0" width="352" height="64"/>
+                            <rect key="frame" x="0.0" y="0.0" width="313" height="64"/>
                             <subviews>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-Qi-gtv">
-                                    <rect key="frame" x="8" y="8" width="336" height="49"/>
+                                    <rect key="frame" x="8" y="8" width="297" height="49"/>
                                     <color key="backgroundColor" red="0.15292179580000001" green="0.15295472739999999" blue="0.15291747450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <segments>
                                         <segment title="EASY"/>
@@ -109,7 +110,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Lx-7Hj">
-                            <rect key="frame" x="0.0" y="88" width="352" height="64"/>
+                            <rect key="frame" x="0.0" y="88" width="313" height="64"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="uNH-hf-BSY"/>
@@ -133,20 +134,20 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundSecondary"/>
             <constraints>
-                <constraint firstItem="cm2-S5-qSi" firstAttribute="top" secondItem="jhb-bh-QcM" secondAttribute="bottom" constant="200" id="2ZP-zG-m0P"/>
                 <constraint firstItem="HuJ-Px-1L1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="3dL-U5-iFY"/>
                 <constraint firstItem="cm2-S5-qSi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="3p8-Cc-zEx"/>
                 <constraint firstItem="HuJ-Px-1L1" firstAttribute="leading" secondItem="cm2-S5-qSi" secondAttribute="leading" id="4mU-s0-aDV"/>
-                <constraint firstItem="jhb-bh-QcM" firstAttribute="leading" secondItem="cm2-S5-qSi" secondAttribute="leading" id="W8X-lW-fmc"/>
+                <constraint firstItem="cm2-S5-qSi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jhb-bh-QcM" secondAttribute="bottom" constant="40" id="7yK-Gd-0Ul"/>
+                <constraint firstItem="jhb-bh-QcM" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" priority="750" id="UTz-N9-DSe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cm2-S5-qSi" secondAttribute="trailing" constant="31" id="Ybg-o0-652"/>
-                <constraint firstItem="jhb-bh-QcM" firstAttribute="trailing" secondItem="cm2-S5-qSi" secondAttribute="trailing" id="aBP-c4-9G3"/>
+                <constraint firstItem="jhb-bh-QcM" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qpm-49-VDi"/>
                 <constraint firstAttribute="bottom" secondItem="cm2-S5-qSi" secondAttribute="bottom" constant="64" id="zC2-fR-eIw"/>
             </constraints>
             <point key="canvasLocation" x="-57" y="-75"/>
         </view>
     </objects>
     <resources>
-        <image name="app-logo" width="344" height="54"/>
+        <image name="kolorofon-logo" width="310.66665649414062" height="38.666667938232422"/>
         <namedColor name="backgroundSecondary">
             <color red="0.19215686274509805" green="0.19215686274509805" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
