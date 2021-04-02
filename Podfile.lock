@@ -1,10 +1,10 @@
 PODS:
   - Nimble (9.0.0)
   - Quick (3.1.2)
-  - R.swift (5.3.1):
+  - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
-  - SwiftLint (0.42.0)
+  - SwiftLint (0.43.1)
 
 DEPENDENCIES:
   - Nimble
@@ -23,10 +23,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
-  R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: ffc8d5ace515ebd1e1611661326e2876dd2a4ba6
+PODFILE CHECKSUM: 2cfe310691efaa4a43eaaee21707e6a9c44187be
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
