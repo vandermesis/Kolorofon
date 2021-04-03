@@ -110,7 +110,7 @@ private extension GameController {
     }
 
     private func presentTutorial() {
-        let tutorialController = TutorialViewController()
+        let tutorialController = TutorialCreator().getController()
         tutorialController.modalPresentationStyle = .overFullScreen
         present(tutorialController, animated: false, completion: nil)
     }

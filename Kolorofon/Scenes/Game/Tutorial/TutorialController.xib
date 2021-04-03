@@ -17,8 +17,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TutorialViewController" customModule="Kolorofon" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TutorialController" customModule="Kolorofon" customModuleProvider="target">
             <connections>
+                <outlet property="messageLabel" destination="RVY-ay-BIB" id="5Ql-hn-aM4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,6 +55,9 @@
                                             <integer key="value" value="4"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="Uzw-uc-J7R"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-BX-Y2n">
                                     <rect key="frame" x="182.5" y="0.0" width="171.5" height="64"/>
@@ -70,6 +74,9 @@
                                             <integer key="value" value="4"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="quitButtonPressed:" destination="-1" eventType="touchUpInside" id="16S-QT-Vze"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -83,12 +90,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XSt-RH-ol1" secondAttribute="trailing" constant="30" id="OtE-QX-9i5"/>
                 <constraint firstItem="XSt-RH-ol1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Rax-Bx-N5V"/>
             </constraints>
-            <point key="canvasLocation" x="36" y="104"/>
+            <point key="canvasLocation" x="386" y="113"/>
         </view>
     </objects>
     <resources>
         <namedColor name="backgroundTransparent">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonPrimary">
             <color red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
