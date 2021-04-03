@@ -10,14 +10,15 @@ import Foundation
 
 struct GameCreator {
 
-    func getController(difficulty: Level) -> GameController {
+    func getController(mode: Mode = .game, difficulty: Level) -> GameController {
 
         let userDefaults = UserDefaults.standard
         let gameEngine = GameEngine(level: difficulty)
         let score = Score()
         let gameTimer = GameTimerImpl()
         let gameSounds = GameSounds(userDefaults: userDefaults)
-        let viewModel = GameViewModelImpl(gameEngine: gameEngine,
+        let viewModel = GameViewModelImpl(mode: mode,
+                                          gameEngine: gameEngine,
                                           gameTimer: gameTimer,
                                           gameSounds: gameSounds,
                                           score: score)

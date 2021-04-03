@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum Mode {
+    case tutorial
+    case game
+}
+
 protocol GameViewModel {
     func startTimer()
     func pauseTimer()
@@ -18,6 +23,7 @@ protocol GameViewModel {
 
 final class GameViewModelImpl {
 
+    private var mode: Mode
     private var gameStarted = false
     private var gameEngine: GameEngine
     private var gameTimer: GameTimer
@@ -26,10 +32,12 @@ final class GameViewModelImpl {
 
     weak var controller: GameController?
 
-    init(gameEngine: GameEngine,
+    init(mode: Mode,
+         gameEngine: GameEngine,
          gameTimer: GameTimer,
          gameSounds: GameSounds,
          score: Score) {
+        self.mode = mode
         self.gameEngine = gameEngine
         self.gameTimer = gameTimer
         self.gameSounds = gameSounds

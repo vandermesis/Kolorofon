@@ -354,9 +354,9 @@
 			isa = PBXGroup;
 			children = (
 				BA2AD580240D8482006245E9 /* PauseView */,
-				BAFAC25123CC912F00C74D92 /* GameCreator.swift */,
-				BAFAC25523CC91D700C74D92 /* GameController.swift */,
 				BAFAC25623CC91D700C74D92 /* GameController.xib */,
+				BAFAC25523CC91D700C74D92 /* GameController.swift */,
+				BAFAC25123CC912F00C74D92 /* GameCreator.swift */,
 				BAFAC25323CC91A300C74D92 /* GameViewModel.swift */,
 				BA9484FC23535E0800375037 /* GameTimer.swift */,
 				BA8A2C2723533B11002744CB /* GameSounds.swift */,
@@ -369,9 +369,9 @@
 			isa = PBXGroup;
 			children = (
 				BAFAC25C23CCA61200C74D92 /* Info */,
-				BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */,
-				BAADABA223DA586900F36C8C /* StartMenuController.swift */,
 				BAADABA323DA586900F36C8C /* StartMenuController.xib */,
+				BAADABA223DA586900F36C8C /* StartMenuController.swift */,
+				BAADABA023DA57DF00F36C8C /* StartMenuCreator.swift */,
 				BAADABA623DA588D00F36C8C /* StartMenuViewModel.swift */,
 			);
 			path = StartMenu;
@@ -404,9 +404,9 @@
 		BAFAC25B23CCA5EE00C74D92 /* GameOver */ = {
 			isa = PBXGroup;
 			children = (
-				BAD14BB023DA041B00FF2D15 /* GameOverCreator.swift */,
-				BAD14BB223DA049600FF2D15 /* GameOverController.swift */,
 				BAD14BB323DA049600FF2D15 /* GameOverController.xib */,
+				BAD14BB223DA049600FF2D15 /* GameOverController.swift */,
+				BAD14BB023DA041B00FF2D15 /* GameOverCreator.swift */,
 				BAD14BB623DA04F500FF2D15 /* GameOverViewModel.swift */,
 			);
 			path = GameOver;

@@ -33,17 +33,28 @@ final class StartMenuController: UIViewController {
         viewModel.checkGameCenterStatus()
     }
 
+    // MARK: - Actions
+
+    @IBAction private func tutorialButtonPressed(_ sender: UIButton) {
+        let gameController = GameCreator().getController(mode: .tutorial, difficulty: .easy)
+        gameController.modalPresentationStyle = .fullScreen
+        present(gameController, animated: false, completion: nil)
+    }
+
     @IBAction private func infoButtonPressed(_ sender: UIButton) {
         let infoController = InfoCreator().getController()
         infoController.modalPresentationStyle = .fullScreen
         present(infoController, animated: false, completion: nil)
     }
 
+    @IBAction private func bestScoresButtonPressed(_ sender: UIButton) {
+        presentGameCenterController()
+    }
+
     @IBAction private func startButtonPressed(_ sender: UIButton) {
         let gameController = GameCreator().getController(difficulty: viewModel.difficulty)
         gameController.modalPresentationStyle = .fullScreen
         present(gameController, animated: false, completion: nil)
-
     }
 
     @IBAction private func difficultySegmentChanged(_ sender: UISegmentedControl) {
@@ -51,10 +62,6 @@ final class StartMenuController: UIViewController {
         guard let segmentTitle = sender.titleForSegment(at: selectedSegment) else { return }
         guard let difficulty = Level(rawValue: segmentTitle.lowercased()) else { return }
         viewModel.chooseDifficulty(level: difficulty)
-    }
-
-    @IBAction private func bestScoresButtonPressed(_ sender: UIButton) {
-        presentGameCenterController()
     }
 
 }

@@ -27,10 +27,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HuJ-Px-1L1">
-                    <rect key="frame" x="31" y="84" width="90" height="40"/>
+                    <rect key="frame" x="31" y="84" width="140" height="40"/>
                     <subviews>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-oU-m8d">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXk-RX-ew7">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" name="backgroundTertiary"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="49D-kk-GHE"/>
+                                <constraint firstAttribute="width" constant="40" id="LF2-G7-JZ7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <state key="normal" title="T">
+                                <color key="titleColor" name="buttonSecondary"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tutorialButtonPressed:" destination="-1" eventType="touchUpInside" id="Erf-5a-uM5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-oU-m8d">
+                            <rect key="frame" x="50" y="0.0" width="40" height="40"/>
                             <color key="backgroundColor" name="buttonPrimary"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="oEr-Ed-kDs"/>
@@ -50,7 +70,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-iV-jci">
-                            <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="100" y="0.0" width="40" height="40"/>
                             <color key="backgroundColor" name="buttonSecondary"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4EL-Xm-jEB"/>
