@@ -41,7 +41,11 @@ final class GameController: UIViewController {
         super.viewDidLoad()
         setupNotifications()
         updateColorBars()
-        viewModel.startTimer()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupViewForCurrentMode()
     }
 
     @IBAction private func colorBarPressed(_ sender: UIButton) {
@@ -94,6 +98,21 @@ private extension GameController {
         pauseController.delegate = self
         pauseController.modalPresentationStyle = .overFullScreen
         present(pauseController, animated: false, completion: nil)
+    }
+
+    private func setupViewForCurrentMode() {
+        switch viewModel.mode {
+        case .game:
+            viewModel.startTimer()
+        case .tutorial:
+            presentTutorial()
+        }
+    }
+
+    private func presentTutorial() {
+        let tutorialController = TutorialViewController()
+        tutorialController.modalPresentationStyle = .overFullScreen
+        present(tutorialController, animated: false, completion: nil)
     }
 }
 

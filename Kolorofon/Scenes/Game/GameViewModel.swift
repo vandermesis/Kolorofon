@@ -14,6 +14,8 @@ enum Mode {
 }
 
 protocol GameViewModel {
+    var mode: Mode { get set }
+    
     func startTimer()
     func pauseTimer()
     func shuffleColors() -> [UIColor]
@@ -23,14 +25,15 @@ protocol GameViewModel {
 
 final class GameViewModelImpl {
 
-    private var mode: Mode
+    weak var controller: GameController?
+
+    var mode: Mode
+
     private var gameStarted = false
     private var gameEngine: GameEngine
     private var gameTimer: GameTimer
     private var gameSounds: GameSounds
     private(set) var userScore: Score
-
-    weak var controller: GameController?
 
     init(mode: Mode,
          gameEngine: GameEngine,

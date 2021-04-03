@@ -357,6 +357,7 @@
 		BAFAC24923CC8D4500C74D92 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				EA4120D82618F4AA00243D13 /* Tutorial */,
 				BA2AD580240D8482006245E9 /* PauseView */,
 				BAFAC25623CC91D700C74D92 /* GameController.xib */,
 				BAFAC25523CC91D700C74D92 /* GameController.swift */,
@@ -372,7 +373,6 @@
 		BAFAC24A23CC8D6000C74D92 /* StartMenu */ = {
 			isa = PBXGroup;
 			children = (
-				EA4120D82618F4AA00243D13 /* Tutorial */,
 				BAFAC25C23CCA61200C74D92 /* Info */,
 				BAADABA323DA586900F36C8C /* StartMenuController.xib */,
 				BAADABA223DA586900F36C8C /* StartMenuController.swift */,
@@ -456,8 +456,8 @@
 		EA4120D82618F4AA00243D13 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				EA4120D92618F50C00243D13 /* TutorialViewController.swift */,
 				EA4120DA2618F50C00243D13 /* TutorialViewController.xib */,
+				EA4120D92618F50C00243D13 /* TutorialViewController.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
