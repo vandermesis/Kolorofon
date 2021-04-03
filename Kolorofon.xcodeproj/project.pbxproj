@@ -70,6 +70,8 @@
 		BAFEF4262402D791001FC2C3 /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFEF4242402D791001FC2C3 /* InfoController.xib */; };
 		BAFEF4282402D7D9001FC2C3 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */; };
 		BAFF547823D77F8300CC25ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF547723D77F8300CC25ED /* Constants.swift */; };
+		EA4120DB2618F50C00243D13 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4120D92618F50C00243D13 /* TutorialViewController.swift */; };
+		EA4120DC2618F50C00243D13 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4120DA2618F50C00243D13 /* TutorialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		BAFF547723D77F8300CC25ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC471DF7BA9E4ADF967D70A9 /* Pods-Kolorofon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.debug.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.debug.xcconfig"; sourceTree = "<group>"; };
+		EA4120D92618F50C00243D13 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		EA4120DA2618F50C00243D13 /* TutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.release.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -368,6 +372,7 @@
 		BAFAC24A23CC8D6000C74D92 /* StartMenu */ = {
 			isa = PBXGroup;
 			children = (
+				EA4120D82618F4AA00243D13 /* Tutorial */,
 				BAFAC25C23CCA61200C74D92 /* Info */,
 				BAADABA323DA586900F36C8C /* StartMenuController.xib */,
 				BAADABA223DA586900F36C8C /* StartMenuController.swift */,
@@ -446,6 +451,15 @@
 				25F88BFE55D77016DA3DF549 /* Pods_KolorofonTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA4120D82618F4AA00243D13 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				EA4120D92618F50C00243D13 /* TutorialViewController.swift */,
+				EA4120DA2618F50C00243D13 /* TutorialViewController.xib */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,6 +552,7 @@
 			files = (
 				BAFEF41D2402D4DE001FC2C3 /* note1.caf in Resources */,
 				BAD14BB523DA049600FF2D15 /* GameOverController.xib in Resources */,
+				EA4120DC2618F50C00243D13 /* TutorialViewController.xib in Resources */,
 				BAFEF41F2402D4DE001FC2C3 /* note6.caf in Resources */,
 				BAFEF41C2402D4DE001FC2C3 /* note3.caf in Resources */,
 				BAFAC25823CC91D700C74D92 /* GameController.xib in Resources */,
@@ -715,6 +730,7 @@
 				BA63DBBB2516533C000C77BA /* Starling.swift in Sources */,
 				BA280040241980780040674D /* String+URLConverter.swift in Sources */,
 				BAF38E5C23F45F9000BD772F /* Level+ChooseLeaderboard.swift in Sources */,
+				EA4120DB2618F50C00243D13 /* TutorialViewController.swift in Sources */,
 				BA20610523CD32FB00BA3222 /* Int+StringConverter.swift in Sources */,
 				BAADABA423DA586900F36C8C /* StartMenuController.swift in Sources */,
 				BAD14BB423DA049600FF2D15 /* GameOverController.swift in Sources */,

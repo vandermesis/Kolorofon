@@ -11,7 +11,7 @@ import GameKit
 
 final class StartMenuViewModel {
 
-    var difficulty: Level = .medium
+    var difficulty: Level = .easy
     var userIsAuthenticated = false
 
     weak var controller: StartMenuController?

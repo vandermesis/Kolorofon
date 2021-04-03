@@ -100,7 +100,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-G0-Sbs">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="64"/>
                             <subviews>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-Qi-gtv">
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-Qi-gtv">
                                     <rect key="frame" x="8" y="8" width="350" height="49"/>
                                     <color key="backgroundColor" red="0.15292179580000001" green="0.15295472739999999" blue="0.15291747450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <segments>
