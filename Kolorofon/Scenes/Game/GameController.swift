@@ -102,15 +102,19 @@ private extension GameController {
 
     private func setupViewForCurrentMode() {
         switch viewModel.mode {
-        case .game:
-            viewModel.startTimer()
         case .tutorial:
             presentTutorial()
+        case .game:
+            guard viewModel.isFirstGamePlayed else {
+                presentTutorial()
+                return
+            }
+            viewModel.startTimer()
         }
     }
 
     private func presentTutorial() {
-        let tutorialController = TutorialCreator().getController(mode: .game)
+        let tutorialController = TutorialCreator().getController(mode: viewModel.mode)
         tutorialController.delegate = self
         tutorialController.modalPresentationStyle = .overFullScreen
         present(tutorialController, animated: false, completion: nil)
@@ -153,6 +157,15 @@ extension GameController: PauseViewControlerDelegate {
 extension GameController: TutorialControllerDelegate {
     func didPressNextIn(step: Int) {
         print(#function, step)
+    }
+
+    func didFinishTutorial() {
+        switch viewModel.mode {
+        case .game:
+            viewModel.startTimer()
+        case .tutorial:
+            dismiss(animated: false, completion: nil)
+        }
     }
 
     func didPressQuit() {

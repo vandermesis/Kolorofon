@@ -20,15 +20,9 @@ final class TutorialViewModelImpl {
 
     weak var controller: TutorialController?
 
-    var currentStep: Int = 0
+    var currentStep: Int
 
     private var mode: Mode
-    private var firstStep: Int {
-        return mode == .game ? 0 : 1
-    }
-    private var isFirstGamePlayed: Bool {
-        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.firstGamePlayed)
-    }
     private var tutorialSteps: [String] = [
         R.string.localizable.tutorialStep0(),
         R.string.localizable.tutorialStep1(),
@@ -42,6 +36,7 @@ final class TutorialViewModelImpl {
     init(mode: Mode, userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
         self.mode = mode
+        self.currentStep = mode.rawValue
     }
 
 }
@@ -56,10 +51,8 @@ extension TutorialViewModelImpl: TutorialViewModel {
         case .tutorial:
             return tutorialSteps[currentStep]
         case .game:
-            guard !isFirstGamePlayed else {
-                return nil
-        }
-        return tutorialSteps[currentStep]
+            saveFirstGamePlayed()
+            return tutorialSteps[currentStep]
         }
     }
 

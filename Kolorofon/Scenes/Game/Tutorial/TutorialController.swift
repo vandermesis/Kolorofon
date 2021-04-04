@@ -10,6 +10,7 @@ import UIKit
 
 protocol TutorialControllerDelegate: class {
     func didPressNextIn(step: Int)
+    func didFinishTutorial()
     func didPressQuit()
 }
 
@@ -47,7 +48,13 @@ final class TutorialController: UIViewController {
     }
 
     private func setupViewForCurrentStep() {
-        messageLabel.text = viewModel.getTutorialMessage()
+        guard let message = viewModel.getTutorialMessage() else {
+            dismiss(animated: false) {
+                self.delegate?.didFinishTutorial()
+            }
+            return
+        }
+        messageLabel.text = message
     }
 
 }

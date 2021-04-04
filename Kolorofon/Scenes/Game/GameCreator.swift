@@ -21,7 +21,8 @@ struct GameCreator {
                                           gameEngine: gameEngine,
                                           gameTimer: gameTimer,
                                           gameSounds: gameSounds,
-                                          score: score)
+                                          score: score,
+                                          defaults: userDefaults)
         let controller = GameController(viewModel: viewModel)
         
         viewModel.controller = controller

@@ -8,14 +8,15 @@
 
 import UIKit
 
-enum Mode {
-    case tutorial
-    case game
+enum Mode: Int {
+    case game = 0
+    case tutorial = 1
 }
 
 protocol GameViewModel {
     var mode: Mode { get set }
-    
+    var isFirstGamePlayed: Bool { get }
+
     func startTimer()
     func pauseTimer()
     func shuffleColors() -> [UIColor]
@@ -25,9 +26,15 @@ protocol GameViewModel {
 
 final class GameViewModelImpl {
 
+    private let userDefaults: UserDefaults
+
     weak var controller: GameController?
 
     var mode: Mode
+
+    var isFirstGamePlayed: Bool {
+        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.firstGamePlayed)
+    }
 
     private var gameStarted = false
     private var gameEngine: GameEngine
@@ -39,12 +46,14 @@ final class GameViewModelImpl {
          gameEngine: GameEngine,
          gameTimer: GameTimer,
          gameSounds: GameSounds,
-         score: Score) {
+         score: Score,
+         defaults: UserDefaults) {
         self.mode = mode
         self.gameEngine = gameEngine
         self.gameTimer = gameTimer
         self.gameSounds = gameSounds
         self.userScore = score
+        self.userDefaults = defaults
     }
 }
 
