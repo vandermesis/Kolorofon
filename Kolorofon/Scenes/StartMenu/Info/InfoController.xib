@@ -30,85 +30,7 @@
                     <color key="tintColor" name="textTertiary"/>
                     <attributedString key="attributedText">
                         <fragment>
-                            <string key="content">KOLOROFON
-</string>
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content">How to use it
-Follow your colour!
-You have 90 seconds.
-Pick your favorite color and remember it.
-After colors change tap your chosen color to get a point.
-If your chosen color is not on the screen, swipe down to shuffle colors.
-If you tap wrong color you lose a point.
-To exit game before time ends simple swipe up.
-
-Levels:
-
-Easy - 12 colors
-Medium - 36 colors
-Hard - 72 colors
-
-Winning streak:
-
-4 streak - 1 point
-5 streak - 2 points
-10 streak - 3 points
-20 streak - 4 points
-30 streak - 5 points
-40 streak - 6 points
-50 streak - 7 points
-60 streak - 8 points
-70 streak - 9 points
-80 streak - 10 points
-
-Simple as that! Ho!
-</string>
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content">Credits
+                            <string key="content">CREDITS
 
 Kolorofon was developed 
 by Marek Skrzelowski
@@ -386,30 +308,7 @@ Cg
                                 </paragraphStyle>
                             </attributes>
                         </fragment>
-                        <fragment>
-                            <string key="content"> - express the expected outcomes of Swift or Objective-C expressions
-</string>
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment content="Gifski">
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <url key="NSLink" string="https://gif.ski/"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment content=" - converts videos to GIF animations">
+                        <fragment content=" - express the expected outcomes of Swift or Objective-C expressions">
                             <attributes>
                                 <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
