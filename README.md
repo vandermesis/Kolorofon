@@ -1,6 +1,6 @@
 ![logo](/Demo/logo.png)
 
-# ColorPatterns (Game)
+# Kolorofon
 
 *Simple game where you follow your favorite color. How funny is that?*
 
@@ -99,12 +99,8 @@ Ho!
 - *[Cocoapods](https://cocoapods.org)* - cocoa dependency manager
 - *[SwiftLint](https://github.com/realm/SwiftLint)* - enforce Swift style and conventions
 - *[R.swift](https://github.com/mac-cain13/R.swift)* - strong typed, autocompleted resources
-- *[Lottie-ios](https://github.com/airbnb/lottie-ios)* - library for Android and iOS that natively renders vector based animations
-- *[StartMenu Animation](https://lottiefiles.com/alboardman)* - by Al Boardman - Creative Commons License 2.0
 - *[Quick](https://github.com/Quick/Quick)* - behavior-driven development framework for Swift and Objective-C
 - *[Nimble](https://github.com/Quick/Nimble)* - express the expected outcomes of Swift or Objective-C expressions
-- *[Gifski](https://gif.ski)* - converts videos to GIF animations
-- *[Typora](https://typora.io)* - a truly minimal markdown editor
 - *[JetBrains](https://www.jetbrains.com/lp/mono/)* - a typeface for developers
 
 ## Who is who
