@@ -37,6 +37,7 @@ final class TutorialController: UIViewController {
     @IBAction private func nextButtonPressed(_ sender: UIButton) {
         viewModel.makeNextStep()
         setupViewForCurrentStep()
+        delegate?.didPressNextIn(step: viewModel.currentStep)
     }
     
     @IBAction private func quitButtonPressed(_ sender: UIButton) {

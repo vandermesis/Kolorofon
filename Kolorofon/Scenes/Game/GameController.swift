@@ -158,6 +158,4 @@ extension GameController: TutorialControllerDelegate {
     func didPressQuit() {
         dismiss(animated: false, completion: nil)
     }
-
-
 }
