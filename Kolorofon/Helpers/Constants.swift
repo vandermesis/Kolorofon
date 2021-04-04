@@ -22,6 +22,7 @@ struct Constants {
 
     struct UserDefaultsKeys {
         static let sound = "Sound"
+        static let firstGamePlayed = "FirstGamePlayed"
     }
 
     struct GameTimer {

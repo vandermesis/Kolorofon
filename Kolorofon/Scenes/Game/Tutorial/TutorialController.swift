@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol TutorialControllerDelegate: class {
+    func didPressNextIn(step: Int)
+    func didPressQuit()
+}
+
 final class TutorialController: UIViewController {
 
     @IBOutlet private weak var messageLabel: UILabel!
 
     private var viewModel: TutorialViewModel
+
+    weak var delegate: TutorialControllerDelegate?
 
     init(viewModel: TutorialViewModel) {
         self.viewModel = viewModel
@@ -24,12 +31,22 @@ final class TutorialController: UIViewController {
     }
 
     override func viewDidLoad() {
+        setupViewForCurrentStep()
     }
 
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
+    @IBAction private func nextButtonPressed(_ sender: UIButton) {
+        viewModel.makeNextStep()
+        setupViewForCurrentStep()
     }
     
-    @IBAction func quitButtonPressed(_ sender: UIButton) {
+    @IBAction private func quitButtonPressed(_ sender: UIButton) {
+        dismiss(animated: false) { [self] in
+            delegate?.didPressQuit()
+        }
+    }
+
+    private func setupViewForCurrentStep() {
+        messageLabel.text = viewModel.getTutorialMessage()
     }
 
 }

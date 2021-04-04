@@ -11,12 +11,12 @@
 "Error.Unknown" = "Unknown Error";
 
 // Tutorial
-"Tutorial.Step0" = "It looks like this is your first game. Let's start short tutorial!"
-"Tutorial.Step1" = "The goal of the game is to follow the chosen color."
-"Tutorial.Step2" = "After start game tap your favorite color and remember it."
-"Tutorial.Step3" = "After colors change tap your chosen color to get a point."
-"Tutorial.Step4" = "If your chosen color is not on the screen, swipe down to shuffle colors."
-"Tutorial.Step5" = "If you tap wrong color you lose a point and reset multiply counter."
-"Tutorial.Step6" = "Game time is 90 seconds."
-"Tutorial.Step6" = "For pause or exit game simply swipe up."
-"Tutorial.Step7" = "That’s it. Simple as that! Enjoy!"
+"Tutorial.Step0" = "It looks like this is your first game. Let's start short tutorial!";
+"Tutorial.Step1" = "The goal of the game is to follow the chosen color.";
+"Tutorial.Step2" = "After start game tap your favorite color and remember it.";
+"Tutorial.Step3" = "After colors change tap your chosen color to get a point.";
+"Tutorial.Step4" = "If your chosen color is not on the screen, swipe down to shuffle colors.";
+"Tutorial.Step5" = "If you tap wrong color you lose a point and reset multiply counter.";
+"Tutorial.Step6" = "Game time is 90 seconds.";
+"Tutorial.Step7" = "For pause or exit game simply swipe up.";
+"Tutorial.Step8" = "That’s it. Simple as that! Enjoy!";

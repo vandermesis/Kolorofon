@@ -110,7 +110,8 @@ private extension GameController {
     }
 
     private func presentTutorial() {
-        let tutorialController = TutorialCreator().getController()
+        let tutorialController = TutorialCreator().getController(mode: .game)
+        tutorialController.delegate = self
         tutorialController.modalPresentationStyle = .overFullScreen
         present(tutorialController, animated: false, completion: nil)
     }
@@ -147,4 +148,16 @@ extension GameController: PauseViewControlerDelegate {
     func didPressBackButton() {
         self.dismiss(animated: false, completion: nil)
     }
+}
+
+extension GameController: TutorialControllerDelegate {
+    func didPressNextIn(step: Int) {
+        print(#function, step)
+    }
+
+    func didPressQuit() {
+        dismiss(animated: false, completion: nil)
+    }
+
+
 }

@@ -28,8 +28,51 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-D6-dat">
+                    <rect key="frame" x="31" y="768" width="352" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdE-WV-1cv">
+                            <rect key="frame" x="0.0" y="0.0" width="170.5" height="64"/>
+                            <color key="backgroundColor" name="buttonPrimary"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="Wzk-NR-sr9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <state key="normal" title="NEXT">
+                                <color key="titleColor" name="textTertiary"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="Uzw-uc-J7R"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-BX-Y2n">
+                            <rect key="frame" x="181.5" y="0.0" width="170.5" height="64"/>
+                            <color key="backgroundColor" name="buttonPrimary"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="a2n-nO-A78"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <state key="normal" title="QUIT">
+                                <color key="titleColor" name="textTertiary"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="quitButtonPressed:" destination="-1" eventType="touchUpInside" id="16S-QT-Vze"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XSt-RH-ol1">
-                    <rect key="frame" x="30" y="382.5" width="354" height="141"/>
+                    <rect key="frame" x="30" y="429.5" width="354" height="47"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It looks like this is your first game. Let's start short tutorial!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-ay-BIB">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="47"/>
@@ -37,49 +80,6 @@
                             <color key="textColor" name="textTertiary"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-D6-dat">
-                            <rect key="frame" x="0.0" y="77" width="354" height="64"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdE-WV-1cv">
-                                    <rect key="frame" x="0.0" y="0.0" width="171.5" height="64"/>
-                                    <color key="backgroundColor" name="buttonPrimary"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="Wzk-NR-sr9"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
-                                    <state key="normal" title="NEXT">
-                                        <color key="titleColor" name="textTertiary"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="Uzw-uc-J7R"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-BX-Y2n">
-                                    <rect key="frame" x="182.5" y="0.0" width="171.5" height="64"/>
-                                    <color key="backgroundColor" name="buttonPrimary"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="a2n-nO-A78"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
-                                    <state key="normal" title="QUIT">
-                                        <color key="titleColor" name="textTertiary"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="quitButtonPressed:" destination="-1" eventType="touchUpInside" id="16S-QT-Vze"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>
@@ -87,8 +87,11 @@
             <color key="backgroundColor" name="backgroundTransparent"/>
             <constraints>
                 <constraint firstItem="XSt-RH-ol1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="GJI-Os-xen"/>
+                <constraint firstAttribute="bottom" secondItem="QBb-D6-dat" secondAttribute="bottom" constant="64" id="Nml-6t-9Yh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XSt-RH-ol1" secondAttribute="trailing" constant="30" id="OtE-QX-9i5"/>
                 <constraint firstItem="XSt-RH-ol1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Rax-Bx-N5V"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QBb-D6-dat" secondAttribute="trailing" constant="31" id="Uhg-hH-4dS"/>
+                <constraint firstItem="QBb-D6-dat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="gSt-ZD-pUT"/>
             </constraints>
             <point key="canvasLocation" x="386" y="113"/>
         </view>

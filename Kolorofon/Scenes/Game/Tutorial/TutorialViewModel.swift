@@ -8,13 +8,66 @@
 
 import Foundation
 
-final class TutorialViewModel {
+protocol TutorialViewModel {
+    var currentStep: Int { get set }
+    func getTutorialMessage() -> String?
+    func makeNextStep()
+}
 
-    
+final class TutorialViewModelImpl {
+
+    private let userDefaults: UserDefaults
 
     weak var controller: TutorialController?
 
+    var currentStep: Int = 0
 
+    private var mode: Mode
+    private var firstStep: Int {
+        return mode == .game ? 0 : 1
+    }
+    private var isFirstGamePlayed: Bool {
+        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.firstGamePlayed)
+    }
+    private var tutorialSteps: [String] = [
+        R.string.localizable.tutorialStep0(),
+        R.string.localizable.tutorialStep1(),
+        R.string.localizable.tutorialStep2(),
+        R.string.localizable.tutorialStep3(),
+        R.string.localizable.tutorialStep4(),
+        R.string.localizable.tutorialStep5(),
+        R.string.localizable.tutorialStep6(),
+        R.string.localizable.tutorialStep7()]
 
+    init(mode: Mode, userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+        self.mode = mode
+    }
 
+}
+
+extension TutorialViewModelImpl: TutorialViewModel {
+
+    func getTutorialMessage() -> String? {
+        guard currentStep < 7 else {
+            return nil
+        }
+        switch mode {
+        case .tutorial:
+            return tutorialSteps[currentStep]
+        case .game:
+            guard !isFirstGamePlayed else {
+                return nil
+        }
+        return tutorialSteps[currentStep]
+        }
+    }
+
+    func makeNextStep() {
+        currentStep += 1
+    }
+
+    private func saveFirstGamePlayed() {
+        userDefaults.set(true, forKey: Constants.UserDefaultsKeys.firstGamePlayed)
+    }
 }

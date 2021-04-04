@@ -10,9 +10,10 @@ import Foundation
 
 struct TutorialCreator {
 
-    func getController() -> TutorialController {
+    func getController(mode: Mode) -> TutorialController {
 
-        let viewModel = TutorialViewModel()
+        let userDefaults = UserDefaults.standard
+        let viewModel = TutorialViewModelImpl(mode: mode, userDefaults: userDefaults)
         let controller = TutorialController(viewModel: viewModel)
 
         viewModel.controller = controller
