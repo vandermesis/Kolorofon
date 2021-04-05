@@ -101,16 +101,11 @@ private extension GameController {
     }
 
     private func setupViewForCurrentMode() {
-        switch viewModel.mode {
-        case .tutorial:
-            presentTutorial()
-        case .game:
-            guard viewModel.isFirstGamePlayed else {
-                presentTutorial()
-                return
-            }
+        guard viewModel.shouldShowTutorial else {
             viewModel.startTimer()
+            return
         }
+        presentTutorial()
     }
 
     private func presentTutorial() {

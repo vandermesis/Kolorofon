@@ -15,7 +15,7 @@ enum Mode: Int {
 
 protocol GameViewModel {
     var mode: Mode { get set }
-    var isFirstGamePlayed: Bool { get }
+    var shouldShowTutorial: Bool { get }
 
     func startTimer()
     func pauseTimer()
@@ -32,7 +32,16 @@ final class GameViewModelImpl {
 
     var mode: Mode
 
-    var isFirstGamePlayed: Bool {
+    var shouldShowTutorial: Bool {
+        switch mode {
+        case .game:
+            return !isFirstGamePlayed
+        case .tutorial:
+            return true
+        }
+    }
+
+    private var isFirstGamePlayed: Bool {
         if userDefaults.bool(forKey: Constants.UserDefaultsKeys.firstGamePlayed) {
             return true
         } else {
