@@ -119,6 +119,7 @@ private extension GameController {
         tutorialController.modalPresentationStyle = .overFullScreen
         present(tutorialController, animated: false, completion: nil)
     }
+    
 }
 
 extension GameController: GamePresentable {
@@ -155,7 +156,9 @@ extension GameController: PauseViewControlerDelegate {
 }
 
 extension GameController: TutorialControllerDelegate {
+
     func didPressNextIn(step: Int) {
+        updateColorBars()
         print(#function, step)
     }
 

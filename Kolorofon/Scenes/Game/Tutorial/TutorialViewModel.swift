@@ -16,13 +16,10 @@ protocol TutorialViewModel {
 
 final class TutorialViewModelImpl {
 
-    private let userDefaults: UserDefaults
-
     weak var controller: TutorialController?
 
     var currentStep: Int
 
-    private var mode: Mode
     private var tutorialSteps: [String] = [
         R.string.localizable.tutorialStep0(),
         R.string.localizable.tutorialStep1(),
@@ -31,11 +28,11 @@ final class TutorialViewModelImpl {
         R.string.localizable.tutorialStep4(),
         R.string.localizable.tutorialStep5(),
         R.string.localizable.tutorialStep6(),
-        R.string.localizable.tutorialStep7()]
+        R.string.localizable.tutorialStep7(),
+        R.string.localizable.tutorialStep8()
+    ]
 
-    init(mode: Mode, userDefaults: UserDefaults) {
-        self.userDefaults = userDefaults
-        self.mode = mode
+    init(mode: Mode) {
         self.currentStep = mode.rawValue
     }
 
@@ -44,23 +41,14 @@ final class TutorialViewModelImpl {
 extension TutorialViewModelImpl: TutorialViewModel {
 
     func getTutorialMessage() -> String? {
-        guard currentStep < 7 else {
+        guard currentStep < 9 else {
             return nil
         }
-        switch mode {
-        case .tutorial:
-            return tutorialSteps[currentStep]
-        case .game:
-            saveFirstGamePlayed()
-            return tutorialSteps[currentStep]
-        }
+        return tutorialSteps[currentStep]
     }
 
     func makeNextStep() {
         currentStep += 1
     }
 
-    private func saveFirstGamePlayed() {
-        userDefaults.set(true, forKey: Constants.UserDefaultsKeys.firstGamePlayed)
-    }
 }

@@ -33,7 +33,12 @@ final class GameViewModelImpl {
     var mode: Mode
 
     var isFirstGamePlayed: Bool {
-        return userDefaults.bool(forKey: Constants.UserDefaultsKeys.firstGamePlayed)
+        if userDefaults.bool(forKey: Constants.UserDefaultsKeys.firstGamePlayed) {
+            return true
+        } else {
+            userDefaults.set(true, forKey: Constants.UserDefaultsKeys.firstGamePlayed)
+            return false
+        }
     }
 
     private var gameStarted = false
