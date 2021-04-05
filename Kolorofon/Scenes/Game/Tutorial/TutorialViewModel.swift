@@ -41,10 +41,8 @@ final class TutorialViewModelImpl {
 extension TutorialViewModelImpl: TutorialViewModel {
 
     func getTutorialMessage() -> String? {
-        guard currentStep < 9 else {
-            return nil
-        }
-        return tutorialSteps[currentStep]
+        guard let message = tutorialSteps[safe: currentStep] else { return nil }
+        return message
     }
 
     func makeNextStep() {

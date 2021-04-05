@@ -72,6 +72,7 @@
 		BAFEF4262402D791001FC2C3 /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFEF4242402D791001FC2C3 /* InfoController.xib */; };
 		BAFEF4282402D7D9001FC2C3 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */; };
 		BAFF547823D77F8300CC25ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF547723D77F8300CC25ED /* Constants.swift */; };
+		EA3A50C9261AF3BF003F19C5 /* Array+SafeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A50C8261AF3BF003F19C5 /* Array+SafeValue.swift */; };
 		EA4120DB2618F50C00243D13 /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4120D92618F50C00243D13 /* TutorialController.swift */; };
 		EA4120DC2618F50C00243D13 /* TutorialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4120DA2618F50C00243D13 /* TutorialController.xib */; };
 /* End PBXBuildFile section */
@@ -164,6 +165,7 @@
 		BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		BAFF547723D77F8300CC25ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC471DF7BA9E4ADF967D70A9 /* Pods-Kolorofon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.debug.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.debug.xcconfig"; sourceTree = "<group>"; };
+		EA3A50C8261AF3BF003F19C5 /* Array+SafeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SafeValue.swift"; sourceTree = "<group>"; };
 		EA4120D92618F50C00243D13 /* TutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
 		EA4120DA2618F50C00243D13 /* TutorialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialController.xib; sourceTree = "<group>"; };
 		F776F537145478439EA0D6A1 /* Pods-ColorPatternsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorPatternsTests.release.xcconfig"; path = "Target Support Files/Pods-ColorPatternsTests/Pods-ColorPatternsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				BA20610423CD32FB00BA3222 /* Int+StringConverter.swift */,
 				BAC495C523D89CC60041088C /* Error+FriendlyMessage.swift */,
 				BAF38E5B23F45F9000BD772F /* Level+ChooseLeaderboard.swift */,
+				EA3A50C8261AF3BF003F19C5 /* Array+SafeValue.swift */,
 				BA64C17C23F77FF100DE4FC1 /* UIColor+RandomColor.swift */,
 				BAF7A82723F808AD005A61B1 /* Double+CGFloatConverter.swift */,
 				BA28003F241980780040674D /* String+URLConverter.swift */,
@@ -720,6 +723,7 @@
 				BAFAC25423CC91A300C74D92 /* GameViewModel.swift in Sources */,
 				BAADABA723DA588D00F36C8C /* StartMenuViewModel.swift in Sources */,
 				BAE0E94D2619291800E3DFEA /* TutorialCreator.swift in Sources */,
+				EA3A50C9261AF3BF003F19C5 /* Array+SafeValue.swift in Sources */,
 				BA2AD583240D87B0006245E9 /* PauseViewController.swift in Sources */,
 				BAFEF4282402D7D9001FC2C3 /* InfoViewModel.swift in Sources */,
 				BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */,
