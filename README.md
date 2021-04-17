@@ -64,7 +64,7 @@ Ho!
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
 - Giflow
-- Danger with SwiftLint
+- Danger with Swiftlint
 - Game Center
 - Notification Center
 
