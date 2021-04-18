@@ -154,7 +154,6 @@ extension GameController: TutorialControllerDelegate {
 
     func didPressNextIn(step: Int) {
         updateColorBars()
-        print(#function, step)
     }
 
     func didFinishTutorial() {

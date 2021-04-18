@@ -72,7 +72,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XSt-RH-ol1">
-                    <rect key="frame" x="30" y="429.5" width="354" height="47"/>
+                    <rect key="frame" x="30" y="439.5" width="354" height="47"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It looks like this is your first game. Let's start short tutorial!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-ay-BIB">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="47"/>
@@ -86,14 +86,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundTransparent"/>
             <constraints>
-                <constraint firstItem="XSt-RH-ol1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="GJI-Os-xen"/>
+                <constraint firstItem="XSt-RH-ol1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="10" id="GJI-Os-xen"/>
                 <constraint firstAttribute="bottom" secondItem="QBb-D6-dat" secondAttribute="bottom" constant="64" id="Nml-6t-9Yh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XSt-RH-ol1" secondAttribute="trailing" constant="30" id="OtE-QX-9i5"/>
                 <constraint firstItem="XSt-RH-ol1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Rax-Bx-N5V"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QBb-D6-dat" secondAttribute="trailing" constant="31" id="Uhg-hH-4dS"/>
                 <constraint firstItem="QBb-D6-dat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="gSt-ZD-pUT"/>
             </constraints>
-            <point key="canvasLocation" x="386" y="113"/>
+            <point key="canvasLocation" x="-262" y="-31"/>
         </view>
     </objects>
     <resources>

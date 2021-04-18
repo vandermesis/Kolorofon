@@ -24,7 +24,7 @@
 		BA59EA8223DCB963001E6502 /* FakeGameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */; };
 		BA63DBBB2516533C000C77BA /* Starling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA63DBBA2516533C000C77BA /* Starling.swift */; };
 		BA64C17D23F77FF100DE4FC1 /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64C17C23F77FF100DE4FC1 /* UIColor+RandomColor.swift */; };
-		BA6B10AB241D7E2700A4B90E /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA6B10AA241D7E2700A4B90E /* animation.gif */; };
+		BA654CC9262BBA9300694CBA /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA654CC8262BBA9200694CBA /* animation.gif */; };
 		BA8A2C2823533B11002744CB /* GameSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2723533B11002744CB /* GameSounds.swift */; };
 		BA8A2C2A23533F85002744CB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A2C2923533F85002744CB /* Score.swift */; };
 		BA9484FD23535E0800375037 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9484FC23535E0800375037 /* GameTimer.swift */; };
@@ -113,7 +113,7 @@
 		BA59EA8123DCB963001E6502 /* FakeGameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGameTimer.swift; sourceTree = "<group>"; };
 		BA63DBBA2516533C000C77BA /* Starling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starling.swift; sourceTree = "<group>"; };
 		BA64C17C23F77FF100DE4FC1 /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
-		BA6B10AA241D7E2700A4B90E /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
+		BA654CC8262BBA9200694CBA /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BA8A2C2723533B11002744CB /* GameSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSounds.swift; sourceTree = "<group>"; };
 		BA8A2C2923533F85002744CB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		BA9484FC23535E0800375037 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 		BA2F742722C3597B007573FF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BA6B10AA241D7E2700A4B90E /* animation.gif */,
+				BA654CC8262BBA9200694CBA /* animation.gif */,
 				BAF6F08A23F5689100B03374 /* logo.png */,
 			);
 			path = Demo;
@@ -574,11 +574,11 @@
 				BAFEF41E2402D4DE001FC2C3 /* note2.caf in Resources */,
 				8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */,
 				BA1F02CF25D7378300BA7B1D /* Inter-Regular.ttf in Resources */,
+				BA654CC9262BBA9300694CBA /* animation.gif in Resources */,
 				BA2AD584240D87B0006245E9 /* PauseViewController.xib in Resources */,
 				BAFEF4262402D791001FC2C3 /* InfoController.xib in Resources */,
 				BAFAC25A23CC956D00C74D92 /* Colors.xcassets in Resources */,
 				BAC495C823D8B7940041088C /* Localizable.strings in Resources */,
-				BA6B10AB241D7E2700A4B90E /* animation.gif in Resources */,
 				BAFEF41B2402D4DE001FC2C3 /* note5.caf in Resources */,
 				BA02700422BC491000846DDC /* README.md in Resources */,
 			);
@@ -916,7 +916,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
 				INFOPLIST_FILE = Kolorofon/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -924,11 +924,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vandermesis.Kolorofon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -938,7 +938,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 6H3JCHA3QJ;
 				INFOPLIST_FILE = Kolorofon/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -946,11 +946,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vandermesis.Kolorofon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
