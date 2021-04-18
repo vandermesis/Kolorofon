@@ -17,6 +17,7 @@ protocol TutorialControllerDelegate: class {
 final class TutorialController: UIViewController {
 
     @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
 
     private var viewModel: TutorialViewModel
 
@@ -48,13 +49,14 @@ final class TutorialController: UIViewController {
     }
 
     private func setupViewForCurrentStep() {
-        guard let message = viewModel.getTutorialMessage() else {
+        guard let tutorialStep = viewModel.getTutorialStep() else {
             dismiss(animated: false) {
                 self.delegate?.didFinishTutorial()
             }
             return
         }
-        messageLabel.text = message
+        messageLabel.text = tutorialStep.message
+        iconImageView.image = tutorialStep.image
     }
 
 }

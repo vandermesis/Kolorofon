@@ -6,11 +6,11 @@
 //  Copyright © 2021 vandermesis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol TutorialViewModel {
     var currentStep: Int { get set }
-    func getTutorialMessage() -> String?
+    func getTutorialStep() -> (message: String, image: UIImage?)?
     func makeNextStep()
 }
 
@@ -20,16 +20,16 @@ final class TutorialViewModelImpl {
 
     var currentStep: Int
 
-    private var tutorialSteps: [String] = [
-        R.string.localizable.tutorialStep0(),
-        R.string.localizable.tutorialStep1(),
-        R.string.localizable.tutorialStep2(),
-        R.string.localizable.tutorialStep3(),
-        R.string.localizable.tutorialStep4(),
-        R.string.localizable.tutorialStep5(),
-        R.string.localizable.tutorialStep6(),
-        R.string.localizable.tutorialStep7(),
-        R.string.localizable.tutorialStep8()
+    private var tutorialSteps: [(String, UIImage?)] = [
+        (R.string.localizable.tutorialStep0(), R.image.tutorialStep0()),
+        (R.string.localizable.tutorialStep1(), R.image.tutorialStep1()),
+        (R.string.localizable.tutorialStep2(), R.image.tutorialStep2()),
+        (R.string.localizable.tutorialStep3(), R.image.tutorialStep3()),
+        (R.string.localizable.tutorialStep4(), R.image.tutorialStep4()),
+        (R.string.localizable.tutorialStep5(), R.image.tutorialStep5()),
+        (R.string.localizable.tutorialStep6(), R.image.tutorialStep6()),
+        (R.string.localizable.tutorialStep7(), R.image.tutorialStep7()),
+        (R.string.localizable.tutorialStep8(), R.image.tutorialStep8())
     ]
 
     init(mode: Mode) {
@@ -40,9 +40,9 @@ final class TutorialViewModelImpl {
 
 extension TutorialViewModelImpl: TutorialViewModel {
 
-    func getTutorialMessage() -> String? {
-        guard let message = tutorialSteps[safe: currentStep] else { return nil }
-        return message
+    func getTutorialStep() -> (message: String, image: UIImage?)? {
+        guard let step = tutorialSteps[safe: currentStep] else { return nil }
+        return step
     }
 
     func makeNextStep() {
