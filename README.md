@@ -1,13 +1,13 @@
 ![logo](/Demo/logo.png)
 
-# ColorPatterns (Game)
+# Kolorofon
 
 *Simple game where you follow your favorite color. How funny is that?*
 
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
-![xcode](https://img.shields.io/badge/xcode-11.3.1-blue.svg)
-[![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
+![ios](https://img.shields.io/badge/ios-11-blue.svg)
+![build status](https://app.bitrise.io/app/c3a2b1bd27cb8858/status.svg?token=KbJOI4y5fabvDR1J7xm1fw)
 
 ## How it looks like
 ![animation](/Demo/animation.gif)
@@ -64,7 +64,7 @@ Ho!
 - UISwipeGestureRecognizer for swipe down and shake
 - Observed properties
 - Giflow
-- Danger with SwiftLint
+- Danger with Swiftlint
 - Game Center
 - Notification Center
 
@@ -99,12 +99,8 @@ Ho!
 - *[Cocoapods](https://cocoapods.org)* - cocoa dependency manager
 - *[SwiftLint](https://github.com/realm/SwiftLint)* - enforce Swift style and conventions
 - *[R.swift](https://github.com/mac-cain13/R.swift)* - strong typed, autocompleted resources
-- *[Lottie-ios](https://github.com/airbnb/lottie-ios)* - library for Android and iOS that natively renders vector based animations
-- *[StartMenu Animation](https://lottiefiles.com/alboardman)* - by Al Boardman - Creative Commons License 2.0
 - *[Quick](https://github.com/Quick/Quick)* - behavior-driven development framework for Swift and Objective-C
 - *[Nimble](https://github.com/Quick/Nimble)* - express the expected outcomes of Swift or Objective-C expressions
-- *[Gifski](https://gif.ski)* - converts videos to GIF animations
-- *[Typora](https://typora.io)* - a truly minimal markdown editor
 - *[JetBrains](https://www.jetbrains.com/lp/mono/)* - a typeface for developers
 
 ## Who is who

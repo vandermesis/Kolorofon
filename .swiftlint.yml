@@ -1,6 +1,6 @@
 excluded:
  - Pods
- - ColorPatterns/Support/R.generated.swift
+ - Kolorofon/Support/R.generated.swift
 
 line_length:
  warning: 160

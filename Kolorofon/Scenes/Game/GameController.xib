@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameController" customModule="Kolorofon" customModuleProvider="target">
+            <connections>
+                <outlet property="scoreLabel" destination="bId-mJ-Tbd" id="oAk-M6-kUa"/>
+                <outlet property="scoreMultiplierLabel" destination="7HO-N9-iVI" id="I1p-gH-p7A"/>
+                <outlet property="timeLabel" destination="6Xy-5p-M5m" id="qaV-O0-CuZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="colorBars" destination="eSP-a1-KOT" collectionClass="NSMutableArray" id="gnk-X7-cWs"/>
+                <outletCollection property="colorBars" destination="toE-hA-bWZ" collectionClass="NSMutableArray" id="ysA-2o-BMg"/>
+                <outletCollection property="colorBars" destination="jTz-Ng-iAP" collectionClass="NSMutableArray" id="8Z3-LR-fg0"/>
+                <outletCollection property="colorBars" destination="tpj-px-Xha" collectionClass="NSMutableArray" id="4Q4-mu-W56"/>
+                <outletCollection property="colorBars" destination="Rdr-5w-WAl" collectionClass="NSMutableArray" id="twA-ab-GD1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVi-v7-n0P">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xy-5p-M5m">
+                            <rect key="frame" x="40" y="0.0" width="17" height="33"/>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                            <color key="textColor" name="textTertiary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-Os-zKl">
+                            <rect key="frame" x="300" y="0.0" width="48" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-N9-iVI">
+                                    <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="33"/>
+                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                    <color key="textColor" name="textTertiary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bId-mJ-Tbd">
+                                    <rect key="frame" x="39.333333333333314" y="0.0" width="8.6666666666666643" height="33"/>
+                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                    <color key="textColor" name="textTertiary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="backgroundPrimary"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6Xy-5p-M5m" secondAttribute="bottom" id="6Ba-KO-0lW"/>
+                        <constraint firstAttribute="height" constant="33" id="82p-Gr-JLX"/>
+                        <constraint firstItem="6Xy-5p-M5m" firstAttribute="leading" secondItem="vVi-v7-n0P" secondAttribute="leading" constant="40" id="9YZ-Zc-tEe"/>
+                        <constraint firstItem="6Xy-5p-M5m" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="top" id="bdk-ag-MRY"/>
+                        <constraint firstAttribute="bottom" secondItem="o9d-Os-zKl" secondAttribute="bottom" id="uVP-hP-HNg"/>
+                        <constraint firstAttribute="trailing" secondItem="o9d-Os-zKl" secondAttribute="trailing" constant="27" id="yXM-8O-DpQ"/>
+                        <constraint firstItem="o9d-Os-zKl" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="top" id="zMb-Qh-XeI"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HqB-CK-PGK">
+                    <rect key="frame" x="0.0" y="33" width="375" height="779"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSP-a1-KOT" customClass="SharedColorTile" customModule="Kolorofon" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="151.66666666666666"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <accessibility key="accessibilityConfiguration" label="0"/>
+                            <connections>
+                                <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="DCz-e3-m2u"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toE-hA-bWZ" customClass="SharedColorTile" customModule="Kolorofon" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="156.66666666666666" width="375" height="151.99999999999997"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <accessibility key="accessibilityConfiguration" label="1"/>
+                            <connections>
+                                <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="SBq-lI-dyW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Ng-iAP" customClass="SharedColorTile" customModule="Kolorofon" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="313.66666666666669" width="375" height="151.66666666666669"/>
+                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <accessibility key="accessibilityConfiguration" label="2"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Kjj-gy-TPY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-px-Xha" customClass="SharedColorTile" customModule="Kolorofon" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="470.33333333333326" width="375" height="152"/>
+                            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            <accessibility key="accessibilityConfiguration" label="3"/>
+                            <connections>
+                                <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="QhW-e1-5Go"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-5w-WAl" customClass="SharedColorTile" customModule="Kolorofon" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="627.33333333333337" width="375" height="151.66666666666663"/>
+                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            <accessibility key="accessibilityConfiguration" label="4"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <action selector="colorBarPressed:" destination="-1" eventType="touchUpInside" id="Tl7-8h-m7r"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="gameBackground"/>
+            <constraints>
+                <constraint firstItem="HqB-CK-PGK" firstAttribute="top" secondItem="vVi-v7-n0P" secondAttribute="bottom" id="N0i-W9-ZUR"/>
+                <constraint firstItem="vVi-v7-n0P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OKn-5S-s2g"/>
+                <constraint firstAttribute="bottom" secondItem="HqB-CK-PGK" secondAttribute="bottom" id="bjw-j1-Zna"/>
+                <constraint firstItem="vVi-v7-n0P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g60-oX-Xue"/>
+                <constraint firstItem="HqB-CK-PGK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mz6-JS-b3T"/>
+                <constraint firstAttribute="trailing" secondItem="HqB-CK-PGK" secondAttribute="trailing" id="p3c-ha-viq"/>
+                <constraint firstAttribute="trailing" secondItem="vVi-v7-n0P" secondAttribute="trailing" id="wfC-EU-pzk"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="0r4-GH-o9y" appends="YES" id="20L-kx-UDf"/>
+                <outletCollection property="gestureRecognizers" destination="YwT-bw-aIh" appends="YES" id="KH7-Br-DyL"/>
+            </connections>
+            <point key="canvasLocation" x="67" y="-242"/>
+        </view>
+        <swipeGestureRecognizer direction="down" id="0r4-GH-o9y">
+            <connections>
+                <action selector="didSwipeDown:" destination="-1" id="jHg-ke-kdP"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="up" id="YwT-bw-aIh">
+            <connections>
+                <action selector="didSwipeUp:" destination="-1" id="bZ3-AH-76K"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <namedColor name="backgroundPrimary">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gameBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textTertiary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
