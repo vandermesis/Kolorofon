@@ -25,15 +25,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNJ-3h-9rN">
-                    <rect key="frame" x="10" y="44" width="394" height="714"/>
+                    <rect key="frame" x="10" y="54" width="394" height="704"/>
                     <color key="backgroundColor" name="backgroundSecondary"/>
                     <color key="tintColor" name="textTertiary"/>
                     <attributedString key="attributedText">
-                        <fragment content="CREDITS">
+                        <fragment content="WHO IS WHO">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular_Bold"/>
+                                <font key="NSFont" size="18" name="Inter-Regular_Bold"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
@@ -47,7 +47,7 @@ by Marek Skrzelowski
 vandermesis - simple coding robot (c) 2020
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -57,7 +57,7 @@ vandermesis - simple coding robot (c) 2020
                         </fragment>
                         <fragment content="http://vandermesis.com">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="http://vandermesis.com"/>
@@ -72,7 +72,7 @@ If you have any feedback or questions
 you’re welcome to email me at
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -82,7 +82,7 @@ you’re welcome to email me at
                         </fragment>
                         <fragment content="mskrzelowski@vandermesis.com">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="mailto:mskrzelowski@vandermesis.com"/>
@@ -99,7 +99,7 @@ by Bartosz Kulesza
 Datasky
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -109,7 +109,7 @@ Datasky
                         </fragment>
                         <fragment content="https://www.datasky.pl">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://www.datasky.pl"/>
@@ -124,7 +124,7 @@ If you have any feedback or questions
 you’re welcome to email him at
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -134,7 +134,7 @@ you’re welcome to email him at
                         </fragment>
                         <fragment content="kontakt@datasky.pl">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="mailto:mskrzelowski@vandermesis.com"/>
@@ -144,13 +144,60 @@ you’re welcome to email him at
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content" base64-UTF8="YES">
-IAo
+                            <string key="content">  
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="WHAT WAS REALLY HELPFUL">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="18" name="Inter-Regular_Bold"/>
+                                <real key="NSKern" value="0.0"/>
+                                <font key="NSOriginalFont" size="18" name="Inter-Regular_Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.14118" green="0.16078000000000001" blue="0.18038999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="18" name="Inter-Regular_Bold"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.14118" green="0.16078000000000001" blue="0.18038999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> BigMug Icons
+</string>
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="Inter-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Starlight">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="Inter-Regular"/>
+                                <url key="NSLink" string="https://github.com/matthewreagan/Starling"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
@@ -161,30 +208,7 @@ IAo
 Cg
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment content="Starlight">
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
-                                <url key="NSLink" string="https://github.com/matthewreagan/Starling"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content"> - a simple audio library for iOS + macOS written in Swift
-</string>
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -194,7 +218,7 @@ Cg
                         </fragment>
                         <fragment content="Bundler">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://github.com/bundler/bundler"/>
@@ -204,10 +228,11 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> - makes sure Ruby applications run the same code on every machine
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -217,7 +242,7 @@ Cg
                         </fragment>
                         <fragment content="Cocoapods">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://cocoapods.org/"/>
@@ -227,10 +252,11 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> - cocoa dependency manager
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -240,7 +266,7 @@ Cg
                         </fragment>
                         <fragment content="SwiftLint">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://github.com/realm/SwiftLint"/>
@@ -250,10 +276,11 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> - enforce Swift style and conventions
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -263,7 +290,7 @@ Cg
                         </fragment>
                         <fragment content="R.swift">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://github.com/mac-cain13/R.swift"/>
@@ -273,10 +300,11 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> - strong typed, autocompleted resources
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -286,7 +314,7 @@ Cg
                         </fragment>
                         <fragment content="Quick">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://github.com/Quick/Quick"/>
@@ -296,10 +324,11 @@ Cg
                             </attributes>
                         </fragment>
                         <fragment>
-                            <string key="content"> - behavior-driven development framework for Swift and Objective-C
+                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -309,20 +338,10 @@ Cg
                         </fragment>
                         <fragment content="Nimble">
                             <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSBackgroundColor" red="0.19135281439999999" green="0.19138070939999999" blue="0.1913433075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <url key="NSLink" string="https://github.com/Quick/Nimble"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops/>
-                                </paragraphStyle>
-                            </attributes>
-                        </fragment>
-                        <fragment content=" - express the expected outcomes of Swift or Objective-C expressions">
-                            <attributes>
-                                <color key="NSBackgroundColor" red="0.19213384389999999" green="0.1921729445" blue="0.1921287179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="14" name="Inter-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                     <tabStops/>
                                 </paragraphStyle>
@@ -360,7 +379,7 @@ Cg
                 <constraint firstItem="58P-pd-zzn" firstAttribute="top" secondItem="zNJ-3h-9rN" secondAttribute="bottom" constant="10" id="Hcm-kg-Y67"/>
                 <constraint firstItem="zNJ-3h-9rN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="QfX-2h-6pY"/>
                 <constraint firstAttribute="bottom" secondItem="58P-pd-zzn" secondAttribute="bottom" constant="64" id="gdB-cK-VbE"/>
-                <constraint firstItem="zNJ-3h-9rN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jkt-7u-GfF"/>
+                <constraint firstItem="zNJ-3h-9rN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="jkt-7u-GfF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zNJ-3h-9rN" secondAttribute="trailing" constant="10" id="lrU-WV-auY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="58P-pd-zzn" secondAttribute="trailing" constant="31" id="mwE-FQ-EAV"/>
             </constraints>
