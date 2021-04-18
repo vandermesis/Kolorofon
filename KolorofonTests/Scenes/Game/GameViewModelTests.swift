@@ -26,10 +26,12 @@ final class GameViewModelTests: QuickSpec {
             gameTimer = FakeGameTimer()
             gameSounds = GameSounds(userDefaults: UserDefaults.standard)
             userScore = Score()
-            viewModel = GameViewModelImpl(gameEngine: gameEngine,
+            viewModel = GameViewModelImpl(mode: .game,
+                                          gameEngine: gameEngine,
                                           gameTimer: gameTimer,
                                           gameSounds: gameSounds,
-                                          score: userScore)
+                                          score: userScore,
+                                          defaults: UserDefaults.standard)
         }
 
         describe("starting Timer") {

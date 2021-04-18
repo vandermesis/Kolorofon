@@ -6,8 +6,8 @@
 
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-orange.svg)
-![xcode](https://img.shields.io/badge/xcode-11.3.1-blue.svg)
-[![Build Status](https://travis-ci.org/vandermesis/ColorPatterns.svg?branch=master)](https://travis-ci.org/vandermesis/ColorPatterns)
+![ios](https://img.shields.io/badge/ios-11-blue.svg)
+![build status](https://app.bitrise.io/app/c3a2b1bd27cb8858/status.svg?token=KbJOI4y5fabvDR1J7xm1fw)
 
 ## How it looks like
 ![animation](/Demo/animation.gif)

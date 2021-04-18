@@ -59,7 +59,7 @@ final class StartMenuViewModelTests: QuickSpec {
             context("button not pressed") {
 
                 it("should set difficulty level to medium") {
-                    expect(viewModel.difficulty).to(equal(.medium))
+                    expect(viewModel.difficulty).to(equal(.easy))
                 }
             }
         }
