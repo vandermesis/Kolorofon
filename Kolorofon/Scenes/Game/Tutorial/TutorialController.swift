@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TutorialControllerDelegate: class {
+protocol TutorialControllerDelegate: AnyObject {
     func didPressNextIn(step: Int)
     func didFinishTutorial()
     func didPressQuit()
