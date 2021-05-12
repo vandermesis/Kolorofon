@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GameTimerDelegate: class {
+protocol GameTimerDelegate: AnyObject {
     func timerDidEndCounting()
     func timerDidUpdate(seconds: Int)
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PauseViewControlerDelegate: class {
+protocol PauseViewControlerDelegate: AnyObject {
     func didPressRestart()
     func didPressBackButton()
 }
