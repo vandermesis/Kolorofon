@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4265ACB8833EC95FE6FE2B13 /* Pods_KolorofonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC4985D42C75897E9CABC64 /* Pods_KolorofonTests.framework */; };
 		8433BF4322766CA700EDC257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433BF4222766CA700EDC257 /* AppDelegate.swift */; };
 		8433BF4D22766CA800EDC257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433BF4B22766CA800EDC257 /* LaunchScreen.storyboard */; };
-		AA50E8DD584AD3D10C63D88A /* Pods_Kolorofon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8C711C328D46BFA790AC23 /* Pods_Kolorofon.framework */; };
 		BA02700422BC491000846DDC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA02700322BC491000846DDC /* README.md */; };
 		BA0929E9262BDD2B00A302DC /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA0929E8262BDD2B00A302DC /* animation.gif */; };
 		BA0C0CE82401B9C700C8A892 /* SharedColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */; };
@@ -72,6 +70,8 @@
 		BAFEF4262402D791001FC2C3 /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFEF4242402D791001FC2C3 /* InfoController.xib */; };
 		BAFEF4282402D7D9001FC2C3 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */; };
 		BAFF547823D77F8300CC25ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF547723D77F8300CC25ED /* Constants.swift */; };
+		CD9835F309DDFD44DB3FDF56 /* Pods_Kolorofon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AC553D85AE05D6CBA6D2F4 /* Pods_Kolorofon.framework */; };
+		D8869B9AF7FEBD74FFF376FE /* Pods_KolorofonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05252F42EA85E216BE75FEDD /* Pods_KolorofonTests.framework */; };
 		EA3A50C9261AF3BF003F19C5 /* Array+SafeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A50C8261AF3BF003F19C5 /* Array+SafeValue.swift */; };
 		EA4120DB2618F50C00243D13 /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4120D92618F50C00243D13 /* TutorialController.swift */; };
 		EA4120DC2618F50C00243D13 /* TutorialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4120DA2618F50C00243D13 /* TutorialController.xib */; };
@@ -88,15 +88,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B04DAD14973FF94DD57DF48 /* Pods-KolorofonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolorofonTests.debug.xcconfig"; path = "Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C8C711C328D46BFA790AC23 /* Pods_Kolorofon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kolorofon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F893E3365E5E10017851797 /* Pods-Kolorofon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.debug.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.debug.xcconfig"; sourceTree = "<group>"; };
-		7DF82DEC25B970959E179219 /* Pods-Kolorofon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.release.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.release.xcconfig"; sourceTree = "<group>"; };
+		05252F42EA85E216BE75FEDD /* Pods_KolorofonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KolorofonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42476CE94A9303DCBE53ABA6 /* Pods-KolorofonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolorofonTests.release.xcconfig"; path = "Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests.release.xcconfig"; sourceTree = "<group>"; };
 		8433BF3F22766CA700EDC257 /* Kolorofon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolorofon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433BF4222766CA700EDC257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8433BF4C22766CA800EDC257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8433BF4E22766CA800EDC257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7A3648312D202C8CC849709 /* Pods-KolorofonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolorofonTests.release.xcconfig"; path = "Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BD75F45D56F513C62EF8679 /* Pods-Kolorofon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.debug.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.debug.xcconfig"; sourceTree = "<group>"; };
+		B36166D240F12F6CB3DEB3CB /* Pods-Kolorofon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolorofon.release.xcconfig"; path = "Target Support Files/Pods-Kolorofon/Pods-Kolorofon.release.xcconfig"; sourceTree = "<group>"; };
 		BA02700322BC491000846DDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA0929E8262BDD2B00A302DC /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		BA0C0CE72401B9C700C8A892 /* SharedColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedColorTile.swift; sourceTree = "<group>"; };
@@ -161,10 +160,11 @@
 		BAFEF4242402D791001FC2C3 /* InfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoController.xib; sourceTree = "<group>"; };
 		BAFEF4272402D7D9001FC2C3 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		BAFF547723D77F8300CC25ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CCC4985D42C75897E9CABC64 /* Pods_KolorofonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KolorofonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23B860DB36EC3C939939DF0 /* Pods-KolorofonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KolorofonTests.debug.xcconfig"; path = "Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA3A50C8261AF3BF003F19C5 /* Array+SafeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SafeValue.swift"; sourceTree = "<group>"; };
 		EA4120D92618F50C00243D13 /* TutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
 		EA4120DA2618F50C00243D13 /* TutorialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialController.xib; sourceTree = "<group>"; };
+		F9AC553D85AE05D6CBA6D2F4 /* Pods_Kolorofon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kolorofon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC0B53923F341EF0073066A /* GameKit.framework in Frameworks */,
-				AA50E8DD584AD3D10C63D88A /* Pods_Kolorofon.framework in Frameworks */,
+				CD9835F309DDFD44DB3FDF56 /* Pods_Kolorofon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4265ACB8833EC95FE6FE2B13 /* Pods_KolorofonTests.framework in Frameworks */,
+				D8869B9AF7FEBD74FFF376FE /* Pods_KolorofonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,10 +434,10 @@
 		E89C705E715439D10AC0CC5C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6F893E3365E5E10017851797 /* Pods-Kolorofon.debug.xcconfig */,
-				7DF82DEC25B970959E179219 /* Pods-Kolorofon.release.xcconfig */,
-				1B04DAD14973FF94DD57DF48 /* Pods-KolorofonTests.debug.xcconfig */,
-				A7A3648312D202C8CC849709 /* Pods-KolorofonTests.release.xcconfig */,
+				8BD75F45D56F513C62EF8679 /* Pods-Kolorofon.debug.xcconfig */,
+				B36166D240F12F6CB3DEB3CB /* Pods-Kolorofon.release.xcconfig */,
+				D23B860DB36EC3C939939DF0 /* Pods-KolorofonTests.debug.xcconfig */,
+				42476CE94A9303DCBE53ABA6 /* Pods-KolorofonTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -446,8 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				BAC0B53823F341EF0073066A /* GameKit.framework */,
-				4C8C711C328D46BFA790AC23 /* Pods_Kolorofon.framework */,
-				CCC4985D42C75897E9CABC64 /* Pods_KolorofonTests.framework */,
+				F9AC553D85AE05D6CBA6D2F4 /* Pods_Kolorofon.framework */,
+				05252F42EA85E216BE75FEDD /* Pods_KolorofonTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -470,13 +470,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8433BF5122766CA800EDC257 /* Build configuration list for PBXNativeTarget "Kolorofon" */;
 			buildPhases = (
-				1D5D8C24E81A3A9EE242DA59 /* [CP] Check Pods Manifest.lock */,
+				F8815356DEE9AB98DFF05D3B /* [CP] Check Pods Manifest.lock */,
 				BA141A3723CBCD250039A5DC /* R.swift */,
 				8433BF3B22766CA700EDC257 /* Sources */,
 				BA141A3A23CBCEBE0039A5DC /* SwiftLint */,
 				8433BF3C22766CA700EDC257 /* Frameworks */,
 				8433BF3D22766CA700EDC257 /* Resources */,
-				A3171D73786B44C63F558B37 /* [CP] Embed Pods Frameworks */,
+				D1D844AC4CEF04E069425340 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,11 +491,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAC92D9B22BA7B2B00D3B025 /* Build configuration list for PBXNativeTarget "KolorofonTests" */;
 			buildPhases = (
-				B363F50F652D0B0C79751F82 /* [CP] Check Pods Manifest.lock */,
+				94912ADFDC4DD931776F2682 /* [CP] Check Pods Manifest.lock */,
 				BAC92D8E22BA7B2B00D3B025 /* Sources */,
 				BAC92D8F22BA7B2B00D3B025 /* Frameworks */,
 				BAC92D9022BA7B2B00D3B025 /* Resources */,
-				7518002B88448E77A079EFDB /* [CP] Embed Pods Frameworks */,
+				89680F15566705389A0CC123 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,29 +586,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D5D8C24E81A3A9EE242DA59 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kolorofon-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7518002B88448E77A079EFDB /* [CP] Embed Pods Frameworks */ = {
+		89680F15566705389A0CC123 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,24 +603,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KolorofonTests/Pods-KolorofonTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3171D73786B44C63F558B37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B363F50F652D0B0C79751F82 /* [CP] Check Pods Manifest.lock */ = {
+		94912ADFDC4DD931776F2682 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -678,7 +639,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/Kolorofon/Support/R.generated.swift,
+				"$SRCROOT/Kolorofon/Support/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -701,6 +662,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		D1D844AC4CEF04E069425340 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kolorofon/Pods-Kolorofon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8815356DEE9AB98DFF05D3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kolorofon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -904,7 +904,7 @@
 		};
 		8433BF5222766CA800EDC257 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F893E3365E5E10017851797 /* Pods-Kolorofon.debug.xcconfig */;
+			baseConfigurationReference = 8BD75F45D56F513C62EF8679 /* Pods-Kolorofon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -926,7 +926,7 @@
 		};
 		8433BF5322766CA800EDC257 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DF82DEC25B970959E179219 /* Pods-Kolorofon.release.xcconfig */;
+			baseConfigurationReference = B36166D240F12F6CB3DEB3CB /* Pods-Kolorofon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -948,7 +948,7 @@
 		};
 		BAC92D9922BA7B2B00D3B025 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B04DAD14973FF94DD57DF48 /* Pods-KolorofonTests.debug.xcconfig */;
+			baseConfigurationReference = D23B860DB36EC3C939939DF0 /* Pods-KolorofonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -970,7 +970,7 @@
 		};
 		BAC92D9A22BA7B2B00D3B025 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7A3648312D202C8CC849709 /* Pods-KolorofonTests.release.xcconfig */;
+			baseConfigurationReference = 42476CE94A9303DCBE53ABA6 /* Pods-KolorofonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
